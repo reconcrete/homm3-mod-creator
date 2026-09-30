@@ -1,4 +1,6 @@
 .DS_Store
 art/inbox/*
+art/masters/*
+!art/masters/.gitkeep
 !art/inbox/.gitkeep
 __pycache__/

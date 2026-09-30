@@ -168,6 +168,9 @@ def hero(t, hid, cls, female, name, ru_name, bio, ru_bio, spec, ru_spec, special
     skills: [(skill, level)]. army: [(creature, min, max)]. portrait_index / spec_icon:
     original hero whose portrait / specialty icon (UN44, UN32 frame) is borrowed."""
     large, small = portrait(portrait_index)
+    own = 'naruto/heroes/%s/' % hid           # Anton's portrait, made by tools/convert-art.py
+    if os.path.exists(os.path.join(ROOT, 'Content/sprites', own, 'portraitLarge.png')):
+        large, small = own + 'portraitLarge.png', own + 'portraitSmall.png'
     h = {
         'class': cls, 'female': female,
         'images': {'large': large, 'small': small,

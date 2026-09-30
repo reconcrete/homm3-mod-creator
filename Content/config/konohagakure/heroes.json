@@ -3,8 +3,8 @@
 		"class": "shinobi",
 		"female": false,
 		"images": {
-			"large": "HPL004KN",
-			"small": "HPS004KN",
+			"large": "naruto/heroes/narutoUzumaki/portraitLarge.png",
+			"small": "naruto/heroes/narutoUzumaki/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:1",
 			"specialtySmall": "UN32.DEF:0:1"
 		},
@@ -55,8 +55,8 @@
 		"class": "shinobi",
 		"female": false,
 		"images": {
-			"large": "HPL014CL",
-			"small": "HPS014CL",
+			"large": "naruto/heroes/sasukeUchiha/portraitLarge.png",
+			"small": "naruto/heroes/sasukeUchiha/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:44",
 			"specialtySmall": "UN32.DEF:0:44"
 		},
@@ -104,8 +104,8 @@
 		"class": "shinobi",
 		"female": false,
 		"images": {
-			"large": "HPL044WZ",
-			"small": "HPS044WZ",
+			"large": "naruto/heroes/kakashiHatake/portraitLarge.png",
+			"small": "naruto/heroes/kakashiHatake/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:13",
 			"specialtySmall": "UN32.DEF:0:13"
 		},
@@ -159,8 +159,8 @@
 		"class": "shinobi",
 		"female": false,
 		"images": {
-			"large": "HPL086OV",
-			"small": "HPS086OV",
+			"large": "naruto/heroes/rockLee/portraitLarge.png",
+			"small": "naruto/heroes/rockLee/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:102",
 			"specialtySmall": "UN32.DEF:0:102"
 		},
@@ -208,8 +208,8 @@
 		"class": "shinobi",
 		"female": false,
 		"images": {
-			"large": "HPL038AL",
-			"small": "HPS038AL",
+			"large": "naruto/heroes/mightGuy/portraitLarge.png",
+			"small": "naruto/heroes/mightGuy/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:144",
 			"specialtySmall": "UN32.DEF:0:144"
 		},
@@ -266,8 +266,8 @@
 		"class": "shinobi",
 		"female": false,
 		"images": {
-			"large": "HPL016RN",
-			"small": "HPS016RN",
+			"large": "naruto/heroes/nejiHyuga/portraitLarge.png",
+			"small": "naruto/heroes/nejiHyuga/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:12",
 			"specialtySmall": "UN32.DEF:0:12"
 		},
@@ -315,8 +315,8 @@
 		"class": "shinobi",
 		"female": true,
 		"images": {
-			"large": "HPL042WZ",
-			"small": "HPS042WZ",
+			"large": "naruto/heroes/tenten/portraitLarge.png",
+			"small": "naruto/heroes/tenten/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:6",
 			"specialtySmall": "UN32.DEF:0:6"
 		},
@@ -365,8 +365,8 @@
 		"class": "shinobi",
 		"female": false,
 		"images": {
-			"large": "HPL112BS",
-			"small": "HPS112BS",
+			"large": "naruto/heroes/kibaInuzuka/portraitLarge.png",
+			"small": "naruto/heroes/kibaInuzuka/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:48",
 			"specialtySmall": "UN32.DEF:0:48"
 		},
@@ -414,8 +414,8 @@
 		"class": "shinobi",
 		"female": true,
 		"images": {
-			"large": "HPL080OV",
-			"small": "HPS080OV",
+			"large": "naruto/heroes/hinataHyuga/portraitLarge.png",
+			"small": "naruto/heroes/hinataHyuga/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:16",
 			"specialtySmall": "UN32.DEF:0:16"
 		},
@@ -490,8 +490,8 @@
 		"class": "shinobi",
 		"female": false,
 		"images": {
-			"large": "HPL022RN",
-			"small": "HPS022RN",
+			"large": "naruto/heroes/chojiAkimichi/portraitLarge.png",
+			"small": "naruto/heroes/chojiAkimichi/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:15",
 			"specialtySmall": "UN32.DEF:0:15"
 		},
@@ -545,8 +545,8 @@
 		"class": "shinobi",
 		"female": false,
 		"images": {
-			"large": "HPL012CL",
-			"small": "HPS012CL",
+			"large": "naruto/heroes/shinoAburame/portraitLarge.png",
+			"small": "naruto/heroes/shinoAburame/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:10",
 			"specialtySmall": "UN32.DEF:0:10"
 		},
@@ -605,8 +605,8 @@
 		"class": "shinobi",
 		"female": false,
 		"images": {
-			"large": "HPL017RN",
-			"small": "HPS017RN",
+			"large": "naruto/heroes/asumaSarutobi/portraitLarge.png",
+			"small": "naruto/heroes/asumaSarutobi/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:141",
 			"specialtySmall": "UN32.DEF:0:141"
 		},
@@ -663,8 +663,8 @@
 		"class": "sage",
 		"female": false,
 		"images": {
-			"large": "HPL025DR",
-			"small": "HPS025DR",
+			"large": "naruto/heroes/jiraiya/portraitLarge.png",
+			"small": "naruto/heroes/jiraiya/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:149",
 			"specialtySmall": "UN32.DEF:0:149"
 		},
@@ -715,8 +715,8 @@
 		"class": "sage",
 		"female": true,
 		"images": {
-			"large": "HPL029DR",
-			"small": "HPS029DR",
+			"large": "naruto/heroes/tsunade/portraitLarge.png",
+			"small": "naruto/heroes/tsunade/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:21",
 			"specialtySmall": "UN32.DEF:0:21"
 		},
@@ -767,8 +767,8 @@
 		"class": "sage",
 		"female": true,
 		"images": {
-			"large": "HPL110BM",
-			"small": "HPS110BM",
+			"large": "naruto/heroes/sakuraHaruno/portraitLarge.png",
+			"small": "naruto/heroes/sakuraHaruno/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:8",
 			"specialtySmall": "UN32.DEF:0:8"
 		},
@@ -819,8 +819,8 @@
 		"class": "sage",
 		"female": false,
 		"images": {
-			"large": "HPL040WZ",
-			"small": "HPS040WZ",
+			"large": "naruto/heroes/hiruzenSarutobi/portraitLarge.png",
+			"small": "naruto/heroes/hiruzenSarutobi/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:26",
 			"specialtySmall": "UN32.DEF:0:26"
 		},
@@ -872,8 +872,8 @@
 		"class": "sage",
 		"female": false,
 		"images": {
-			"large": "HPL118BS",
-			"small": "HPS118BS",
+			"large": "naruto/heroes/minatoNamikaze/portraitLarge.png",
+			"small": "naruto/heroes/minatoNamikaze/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:46",
 			"specialtySmall": "UN32.DEF:0:46"
 		},
@@ -930,8 +930,8 @@
 		"class": "sage",
 		"female": false,
 		"images": {
-			"large": "HPL072NC",
-			"small": "HPS072NC",
+			"large": "naruto/heroes/itachiUchiha/portraitLarge.png",
+			"small": "naruto/heroes/itachiUchiha/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:57",
 			"specialtySmall": "UN32.DEF:0:57"
 		},
@@ -992,8 +992,8 @@
 		"class": "sage",
 		"female": false,
 		"images": {
-			"large": "HPL021RN",
-			"small": "HPS021RN",
+			"large": "naruto/heroes/shikamaruNara/portraitLarge.png",
+			"small": "naruto/heroes/shikamaruNara/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:72",
 			"specialtySmall": "UN32.DEF:0:72"
 		},
@@ -1050,8 +1050,8 @@
 		"class": "sage",
 		"female": true,
 		"images": {
-			"large": "HPL094WL",
-			"small": "HPS094WL",
+			"large": "naruto/heroes/kurenaiYuhi/portraitLarge.png",
+			"small": "naruto/heroes/kurenaiYuhi/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:121",
 			"specialtySmall": "UN32.DEF:0:121"
 		},
@@ -1112,8 +1112,8 @@
 		"class": "sage",
 		"female": true,
 		"images": {
-			"large": "HPL034AL",
-			"small": "HPS034AL",
+			"large": "naruto/heroes/inoYamanaka/portraitLarge.png",
+			"small": "naruto/heroes/inoYamanaka/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:40",
 			"specialtySmall": "UN32.DEF:0:40"
 		},
@@ -1174,8 +1174,8 @@
 		"class": "sage",
 		"female": false,
 		"images": {
-			"large": "HPL063DM",
-			"small": "HPS063DM",
+			"large": "naruto/heroes/yamato/portraitLarge.png",
+			"small": "naruto/heroes/yamato/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:19",
 			"specialtySmall": "UN32.DEF:0:19"
 		},
@@ -1233,8 +1233,8 @@
 		"class": "sage",
 		"female": false,
 		"images": {
-			"large": "HPL104BM",
-			"small": "HPS104BM",
+			"large": "naruto/heroes/hashiramaSenju/portraitLarge.png",
+			"small": "naruto/heroes/hashiramaSenju/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:25",
 			"specialtySmall": "UN32.DEF:0:25"
 		},
@@ -1291,8 +1291,8 @@
 		"class": "sage",
 		"female": false,
 		"images": {
-			"large": "HPL010CL",
-			"small": "HPS010CL",
+			"large": "naruto/heroes/tobiramaSenju/portraitLarge.png",
+			"small": "naruto/heroes/tobiramaSenju/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:131",
 			"specialtySmall": "UN32.DEF:0:131"
 		},
@@ -1350,8 +1350,8 @@
 		"class": "sage",
 		"female": false,
 		"images": {
-			"large": "HPL073NC",
-			"small": "HPS073NC",
+			"large": "naruto/heroes/orochimaru/portraitLarge.png",
+			"small": "naruto/heroes/orochimaru/portraitSmall.png",
 			"specialtyLarge": "UN44.DEF:0:88",
 			"specialtySmall": "UN32.DEF:0:88"
 		},
