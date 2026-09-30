@@ -1,0 +1,3 @@
+.DS_Store
+art/inbox/*
+!art/inbox/.gitkeep
