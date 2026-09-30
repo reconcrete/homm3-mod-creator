@@ -4,3 +4,6 @@ art/masters/*
 !art/masters/.gitkeep
 !art/inbox/.gitkeep
 __pycache__/
+art/logs/
+art/logs-*.txt
+art/rejected/
