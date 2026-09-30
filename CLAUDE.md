@@ -19,10 +19,13 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
 - `art/inbox/` — Anton's generated images (git-ignored); `art/masters/` — full-size
   copies of converted images (git-ignored, too big for git); `tools/` — scripts.
 - `python3 tools/convert-art.py` turns inbox images into game assets under
-  `Content/sprites/naruto/` (hero portraits so far: `heroes/<heroId>/portraitLarge.png`
-  58x64 and `portraitSmall.png` 48x32). Rerun it after images are regenerated, then rerun
-  the town generators: `townkit.hero()` uses Anton's portrait when it exists, the
-  borrowed original otherwise. Full validation checks that every image file exists.
+  `Content/sprites/naruto/`: hero portraits `heroes/<heroId>/portraitLarge.png` (58x64)
+  and `portraitSmall.png` (48x32); creature portraits `creatures/<creatureId>/...` (58x64
+  over the borrowed town's creature background, 32x32 transparent; crops centered on the
+  head, hand-set in `CROPS` where that fails). Rerun it after images are regenerated,
+  then rerun the town generators: `townkit.hero()` / `creature()` use Anton's portrait
+  when it exists, the borrowed original otherwise. Full validation checks every image
+  file exists. Combat and map sprites are still borrowed (M8).
 - The installed mod is a symlink: `~/Library/Application Support/vcmi/Mods/naruto-heroes`
   → this folder (VCMI follows it). Edits are live; no install step.
 

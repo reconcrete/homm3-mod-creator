@@ -1400,8 +1400,8 @@
 						"y": 127
 					}
 				},
-				"towerIconLarge": "TWCRPORT.DEF:0:140",
-				"towerIconSmall": "CPRSMALL.DEF:0:140"
+				"towerIconLarge": "naruto/creatures/genin/portraitLarge.png",
+				"towerIconSmall": "naruto/creatures/genin/portraitSmall.png"
 			}
 		}
 	}

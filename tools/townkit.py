@@ -107,6 +107,9 @@ def creature(t, faction, cid, level, name, ru_name, borrow, cranim_name, stats, 
         'animationTime': {'attack': anim['attack'], 'walk': anim['walk'], 'idle': 10},
         'timeBetweenFidgets': anim['fidget'],
     }
+    own = 'naruto/creatures/%s/' % cid       # Anton's portrait, made by tools/convert-art.py
+    if os.path.exists(os.path.join(ROOT, 'Content/sprites', own, 'portraitLarge.png')):
+        g['iconLarge'], g['iconSmall'] = own + 'portraitLarge.png', own + 'portraitSmall.png'
     if shots:
         m = {'attackClimaxFrame': anim['climax'], 'frameAngles': anim['angles'], 'offset': anim['offset']}
         if ray:
