@@ -1,0 +1,1408 @@
+{
+	"narutoUzumaki": {
+		"class": "shinobi",
+		"female": false,
+		"images": {
+			"large": "HPL004KN",
+			"small": "HPS004KN",
+			"specialtyLarge": "UN44.DEF:0:1",
+			"specialtySmall": "UN32.DEF:0:1"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			}
+		],
+		"skills": [
+			{
+				"skill": "offence",
+				"level": "basic"
+			},
+			{
+				"skill": "leadership",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"creature": "academyStudent"
+		},
+		"texts": {
+			"name": "Naruto Uzumaki",
+			"biography": "A loud, stubborn ninja of Konoha who never goes back on his word. His Shadow Clones fill the battlefield, and he believes every genin can become Hokage.",
+			"specialty": {
+				"name": "Genin",
+				"tooltip": "Creature bonus: Genin",
+				"description": "Increases the speed of any Academy Students or Genin by 1 and their Attack and Defense by 5% for every level of the hero divided by the creature tier."
+			}
+		},
+		"spellbook": [
+			"clone"
+		]
+	},
+	"sasukeUchiha": {
+		"class": "shinobi",
+		"female": false,
+		"images": {
+			"large": "HPL014CL",
+			"small": "HPS014CL",
+			"specialtyLarge": "UN44.DEF:0:44",
+			"specialtySmall": "UN32.DEF:0:44"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "offence",
+				"level": "basic"
+			},
+			{
+				"skill": "tactics",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"creature": "uchihaPolice"
+		},
+		"texts": {
+			"name": "Sasuke Uchiha",
+			"biography": "The last heir of the Uchiha clan, cold and brilliant. His Sharingan reads every move before it is made.",
+			"specialty": {
+				"name": "Uchiha",
+				"tooltip": "Creature bonus: Uchiha",
+				"description": "Increases the speed of any Uchiha Police or Sharingan Masters by 1 and their Attack and Defense by 5% for every level of the hero divided by the creature tier."
+			}
+		}
+	},
+	"kakashiHatake": {
+		"class": "shinobi",
+		"female": false,
+		"images": {
+			"large": "HPL044WZ",
+			"small": "HPS044WZ",
+			"specialtyLarge": "UN44.DEF:0:13",
+			"specialtySmall": "UN32.DEF:0:13"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "eagleEye",
+				"level": "basic"
+			},
+			{
+				"skill": "offence",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"secondary": "eagleEye",
+			"bonuses": {
+				"copyNinja": {
+					"type": "LEARN_BATTLE_SPELL_LEVEL_LIMIT",
+					"val": 1
+				}
+			}
+		},
+		"texts": {
+			"name": "Kakashi Hatake",
+			"biography": "The Copy Ninja, said to know a thousand jutsu. Behind the mask and the orange book is one of Konoha's sharpest minds.",
+			"specialty": {
+				"name": "Copy Ninja",
+				"tooltip": "Eagle Eye and copying",
+				"description": "Increases the chance to learn spells cast in battle by 5% for every level, and allows copying spells one level higher than Eagle Eye allows."
+			}
+		}
+	},
+	"rockLee": {
+		"class": "shinobi",
+		"female": false,
+		"images": {
+			"large": "HPL086OV",
+			"small": "HPS086OV",
+			"specialtyLarge": "UN44.DEF:0:102",
+			"specialtySmall": "UN32.DEF:0:102"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "offence",
+				"level": "basic"
+			},
+			{
+				"skill": "armorer",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"secondary": "offence"
+		},
+		"texts": {
+			"name": "Rock Lee",
+			"biography": "A ninja who cannot use ninjutsu or genjutsu, and trains taijutsu until his fists speak for him.",
+			"specialty": {
+				"name": "Offense",
+				"tooltip": "Secondary skill bonus: Offense",
+				"description": "Increases the bonus of the Offense skill by 5% for every level."
+			}
+		}
+	},
+	"mightGuy": {
+		"class": "shinobi",
+		"female": false,
+		"images": {
+			"large": "HPL038AL",
+			"small": "HPS038AL",
+			"specialtyLarge": "UN44.DEF:0:144",
+			"specialtySmall": "UN32.DEF:0:144"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "offence",
+				"level": "basic"
+			},
+			{
+				"skill": "logistics",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"eightGates": {
+					"type": "STACKS_SPEED",
+					"updater": {
+						"type": "GROWS_WITH_LEVEL",
+						"valPer20": 2,
+						"stepSize": 1
+					}
+				}
+			}
+		},
+		"texts": {
+			"name": "Might Guy",
+			"biography": "The Sublime Green Beast of Konoha. When he opens the Eight Gates, his whole army moves in a blur.",
+			"specialty": {
+				"name": "Eight Gates",
+				"tooltip": "Speed bonus",
+				"description": "All creatures in his army get +1 speed, +2 from level 11 and +3 from level 21."
+			}
+		}
+	},
+	"nejiHyuga": {
+		"class": "shinobi",
+		"female": false,
+		"images": {
+			"large": "HPL016RN",
+			"small": "HPS016RN",
+			"specialtyLarge": "UN44.DEF:0:12",
+			"specialtySmall": "UN32.DEF:0:12"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "tactics",
+				"level": "basic"
+			},
+			{
+				"skill": "offence",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"creature": "hyugaGuard"
+		},
+		"texts": {
+			"name": "Neji Hyuga",
+			"biography": "A branch-family prodigy of the Hyuga clan whose Byakugan sees every chakra point on the field.",
+			"specialty": {
+				"name": "Hyuga",
+				"tooltip": "Creature bonus: Hyuga",
+				"description": "Increases the speed of any Hyuga Guards or Hyuga Main Branch by 1 and their Attack and Defense by 5% for every level of the hero divided by the creature tier."
+			}
+		}
+	},
+	"tenten": {
+		"class": "shinobi",
+		"female": true,
+		"images": {
+			"large": "HPL042WZ",
+			"small": "HPS042WZ",
+			"specialtyLarge": "UN44.DEF:0:6",
+			"specialtySmall": "UN32.DEF:0:6"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ballista",
+				"min": 1,
+				"max": 1
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "artillery",
+				"level": "basic"
+			},
+			{
+				"skill": "archery",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"creature": "ballista",
+			"creatureLevel": 5
+		},
+		"texts": {
+			"name": "Tenten",
+			"biography": "A weapons specialist who never misses. Her scrolls hold more blades than an armory.",
+			"specialty": {
+				"name": "Ballista",
+				"tooltip": "Ballista bonus",
+				"description": "The Ballista gains +1 speed and +5% Attack and Defense for every 5 levels of the hero."
+			}
+		}
+	},
+	"kibaInuzuka": {
+		"class": "shinobi",
+		"female": false,
+		"images": {
+			"large": "HPL112BS",
+			"small": "HPS112BS",
+			"specialtyLarge": "UN44.DEF:0:48",
+			"specialtySmall": "UN32.DEF:0:48"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			}
+		],
+		"skills": [
+			{
+				"skill": "scouting",
+				"level": "basic"
+			},
+			{
+				"skill": "offence",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"creature": "ninjaHound"
+		},
+		"texts": {
+			"name": "Kiba Inuzuka",
+			"biography": "A wild Inuzuka tracker who fights back to back with Akamaru and a pack of ninken.",
+			"specialty": {
+				"name": "Ninja Hounds",
+				"tooltip": "Creature bonus: Ninja Hounds",
+				"description": "Increases the speed of any Ninja Hounds or Ninken Pack Leaders by 1 and their Attack and Defense by 5% for every level of the hero divided by the creature tier."
+			}
+		}
+	},
+	"hinataHyuga": {
+		"class": "shinobi",
+		"female": true,
+		"images": {
+			"large": "HPL080OV",
+			"small": "HPS080OV",
+			"specialtyLarge": "UN44.DEF:0:16",
+			"specialtySmall": "UN32.DEF:0:16"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "armorer",
+				"level": "basic"
+			},
+			{
+				"skill": "leadership",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"base": {
+				"limiters": [
+					{
+						"type": "CREATURE_TYPE_LIMITER",
+						"creature": "hyugaGuard",
+						"includeUpgrades": true
+					}
+				]
+			},
+			"bonuses": {
+				"retaliation": {
+					"type": "ADDITIONAL_RETALIATION",
+					"val": 1
+				},
+				"speed": {
+					"type": "STACKS_SPEED",
+					"val": 1
+				},
+				"defence": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence",
+					"updater": {
+						"type": "GROWS_WITH_LEVEL",
+						"valPer20": 6,
+						"stepSize": 1
+					}
+				}
+			}
+		},
+		"texts": {
+			"name": "Hinata Hyuga",
+			"biography": "The gentle heiress of the Hyuga, far stronger than she believes. Her Protective Eight Trigrams guard everyone behind her.",
+			"specialty": {
+				"name": "Protective Palms",
+				"tooltip": "Hyuga defense bonus",
+				"description": "Hyuga Guards and Hyuga Main Branch get +1 speed and one extra retaliation, and their Defense grows by 1 for every 3–4 levels of the hero (+6 at level 20)."
+			}
+		}
+	},
+	"chojiAkimichi": {
+		"class": "shinobi",
+		"female": false,
+		"images": {
+			"large": "HPL022RN",
+			"small": "HPS022RN",
+			"specialtyLarge": "UN44.DEF:0:15",
+			"specialtySmall": "UN32.DEF:0:15"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "armorer",
+				"level": "basic"
+			},
+			{
+				"skill": "estates",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"gold": {
+					"type": "GENERATE_RESOURCE",
+					"subtype": "resource.gold",
+					"val": 350
+				}
+			}
+		},
+		"texts": {
+			"name": "Choji Akimichi",
+			"biography": "A big-hearted Akimichi who fights best on a full stomach. Wherever he goes, food and gold follow.",
+			"specialty": {
+				"name": "Gold",
+				"tooltip": "+350 gold per day",
+				"description": "Adds 350 gold to your treasury every day."
+			}
+		}
+	},
+	"shinoAburame": {
+		"class": "shinobi",
+		"female": false,
+		"images": {
+			"large": "HPL012CL",
+			"small": "HPS012CL",
+			"specialtyLarge": "UN44.DEF:0:10",
+			"specialtySmall": "UN32.DEF:0:10"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "scouting",
+				"level": "basic"
+			},
+			{
+				"skill": "resistance",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"insects": {
+					"type": "OPENING_BATTLE_SPELL",
+					"subtype": "spell.weakness",
+					"addInfo": 3,
+					"updater": {
+						"type": "GROWS_WITH_LEVEL",
+						"valPer20": 4,
+						"stepSize": 1
+					}
+				}
+			}
+		},
+		"texts": {
+			"name": "Shino Aburame",
+			"biography": "A quiet Aburame whose body is a hive of chakra-eating insects. By the time the enemy notices the swarm, it is too late.",
+			"specialty": {
+				"name": "Insect Swarm",
+				"tooltip": "Opening Weakness",
+				"description": "Each battle opens with expert Weakness on all enemies. It lasts 1 round, 2 from level 6, 3 from level 11 and 4 from level 16."
+			}
+		}
+	},
+	"asumaSarutobi": {
+		"class": "shinobi",
+		"female": false,
+		"images": {
+			"large": "HPL017RN",
+			"small": "HPS017RN",
+			"specialtyLarge": "UN44.DEF:0:141",
+			"specialtySmall": "UN32.DEF:0:141"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "offence",
+				"level": "basic"
+			},
+			{
+				"skill": "leadership",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"windBlades": {
+					"type": "ENEMY_DEFENCE_REDUCTION",
+					"updater": {
+						"type": "GROWS_WITH_LEVEL",
+						"valPer20": 25,
+						"stepSize": 1
+					}
+				}
+			}
+		},
+		"texts": {
+			"name": "Asuma Sarutobi",
+			"biography": "The Third Hokage's son, a guardian of the Fire Temple, who channels wind chakra through his trench knives.",
+			"specialty": {
+				"name": "Wind Blades",
+				"tooltip": "Armor-piercing attacks",
+				"description": "His troops ignore 1.25% of the enemy's Defense for every level (25% at level 20)."
+			}
+		}
+	},
+	"jiraiya": {
+		"class": "sage",
+		"female": false,
+		"images": {
+			"large": "HPL025DR",
+			"small": "HPS025DR",
+			"specialtyLarge": "UN44.DEF:0:149",
+			"specialtySmall": "UN32.DEF:0:149"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			},
+			{
+				"skill": "leadership",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"creature": "toadWarrior"
+		},
+		"texts": {
+			"name": "Jiraiya",
+			"biography": "One of the Legendary Sannin, toad sage of Mount Myoboku and a famously bad influence. The toads answer his summons.",
+			"specialty": {
+				"name": "Toads",
+				"tooltip": "Creature bonus: Toads",
+				"description": "Increases the speed of any Toad Warriors or Gamabunta by 1 and their Attack and Defense by 5% for every level of the hero divided by the creature tier."
+			}
+		},
+		"spellbook": [
+			"haste"
+		]
+	},
+	"tsunade": {
+		"class": "sage",
+		"female": true,
+		"images": {
+			"large": "HPL029DR",
+			"small": "HPS029DR",
+			"specialtyLarge": "UN44.DEF:0:21",
+			"specialtySmall": "UN32.DEF:0:21"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "firstAid",
+				"level": "basic"
+			},
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"creature": "medicalNinja"
+		},
+		"texts": {
+			"name": "Tsunade",
+			"biography": "Legendary Sannin and the greatest medical ninja alive. Her strength can split the earth; her hands can mend almost anything.",
+			"specialty": {
+				"name": "Medics",
+				"tooltip": "Creature bonus: Medics",
+				"description": "Increases the speed of any Medical Ninja or Senior Medics by 1 and their Attack and Defense by 5% for every level of the hero divided by the creature tier."
+			}
+		},
+		"spellbook": [
+			"cure"
+		]
+	},
+	"sakuraHaruno": {
+		"class": "sage",
+		"female": true,
+		"images": {
+			"large": "HPL110BM",
+			"small": "HPS110BM",
+			"specialtyLarge": "UN44.DEF:0:8",
+			"specialtySmall": "UN32.DEF:0:8"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "firstAidTent",
+				"min": 1,
+				"max": 1
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "firstAid",
+				"level": "basic"
+			},
+			{
+				"skill": "offence",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"secondary": "firstAid"
+		},
+		"texts": {
+			"name": "Sakura Haruno",
+			"biography": "Tsunade's apprentice, with precise chakra control and a punch to match. No wounded ally is left behind.",
+			"specialty": {
+				"name": "First Aid",
+				"tooltip": "Secondary skill bonus: First Aid",
+				"description": "Increases the healing of the First Aid skill by 5% for every level."
+			}
+		},
+		"spellbook": [
+			"cure"
+		]
+	},
+	"hiruzenSarutobi": {
+		"class": "sage",
+		"female": false,
+		"images": {
+			"large": "HPL040WZ",
+			"small": "HPS040WZ",
+			"specialtyLarge": "UN44.DEF:0:26",
+			"specialtySmall": "UN32.DEF:0:26"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "wisdom",
+				"level": "advanced"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"professor": {
+					"type": "SPELLS_OF_LEVEL",
+					"subtype": "spellLevel1"
+				}
+			}
+		},
+		"texts": {
+			"name": "Hiruzen Sarutobi",
+			"biography": "The Third Hokage, called the Professor, who is said to know every jutsu of the Leaf.",
+			"specialty": {
+				"name": "The Professor",
+				"tooltip": "Knows every level 1 spell",
+				"description": "Can cast every level 1 spell, as if it were in his spellbook."
+			}
+		},
+		"spellbook": [
+			"magicArrow"
+		]
+	},
+	"minatoNamikaze": {
+		"class": "sage",
+		"female": false,
+		"images": {
+			"large": "HPL118BS",
+			"small": "HPS118BS",
+			"specialtyLarge": "UN44.DEF:0:46",
+			"specialtySmall": "UN32.DEF:0:46"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "logistics",
+				"level": "basic"
+			},
+			{
+				"skill": "airMagic",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"haste": {
+					"type": "SPECIAL_PECULIAR_ENCHANT",
+					"subtype": "spell.haste",
+					"addInfo": 0
+				}
+			}
+		},
+		"texts": {
+			"name": "Minato Namikaze",
+			"biography": "The Fourth Hokage, the Yellow Flash of the Leaf. With his Flying Thunder God, whole armies move before the enemy can blink.",
+			"specialty": {
+				"name": "Haste",
+				"tooltip": "Spell bonus: Haste",
+				"description": "His Haste gives extra speed by creature tier: +3 for tiers 1–2, +2 for tiers 3–4, +1 for tiers 5–6."
+			}
+		},
+		"spellbook": [
+			"haste"
+		]
+	},
+	"itachiUchiha": {
+		"class": "sage",
+		"female": false,
+		"images": {
+			"large": "HPL072NC",
+			"small": "HPS072NC",
+			"specialtyLarge": "UN44.DEF:0:57",
+			"specialtySmall": "UN32.DEF:0:57"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			},
+			{
+				"skill": "fireMagic",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"tsukuyomi": {
+					"type": "SPELL_DURATION",
+					"subtype": "spell.blind",
+					"updater": {
+						"type": "GROWS_WITH_LEVEL",
+						"valPer20": 4,
+						"stepSize": 1
+					}
+				}
+			}
+		},
+		"texts": {
+			"name": "Itachi Uchiha",
+			"biography": "A genius of the Uchiha who carries a terrible secret. One look into his Mangekyo Sharingan and the enemy is lost in Tsukuyomi.",
+			"specialty": {
+				"name": "Tsukuyomi",
+				"tooltip": "Spell bonus: Blind",
+				"description": "His Blind lasts 1 round longer for every 5 levels (rounded up)."
+			}
+		},
+		"spellbook": [
+			"blind"
+		]
+	},
+	"shikamaruNara": {
+		"class": "sage",
+		"female": false,
+		"images": {
+			"large": "HPL021RN",
+			"small": "HPS021RN",
+			"specialtyLarge": "UN44.DEF:0:72",
+			"specialtySmall": "UN32.DEF:0:72"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "tactics",
+				"level": "basic"
+			},
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"shadow": {
+					"type": "SPECIAL_ADD_VALUE_ENCHANT",
+					"subtype": "spell.slow",
+					"addInfo": -15
+				}
+			}
+		},
+		"texts": {
+			"name": "Shikamaru Nara",
+			"biography": "A lazy genius of the Nara clan who plans twenty moves ahead. His shadow holds the enemy in place.",
+			"specialty": {
+				"name": "Shadow Possession",
+				"tooltip": "Spell bonus: Slow",
+				"description": "His Slow reduces the target's speed by an extra 15%."
+			}
+		},
+		"spellbook": [
+			"slow"
+		]
+	},
+	"kurenaiYuhi": {
+		"class": "sage",
+		"female": true,
+		"images": {
+			"large": "HPL094WL",
+			"small": "HPS094WL",
+			"specialtyLarge": "UN44.DEF:0:121",
+			"specialtySmall": "UN32.DEF:0:121"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			},
+			{
+				"skill": "intelligence",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"genjutsu": {
+					"type": "SPELL_DURATION",
+					"subtype": "spell.forgetfulness",
+					"updater": {
+						"type": "GROWS_WITH_LEVEL",
+						"valPer20": 4,
+						"stepSize": 1
+					}
+				}
+			}
+		},
+		"texts": {
+			"name": "Kurenai Yuhi",
+			"biography": "Konoha's mistress of genjutsu. Her illusions make enemy archers forget which end of the bow to hold.",
+			"specialty": {
+				"name": "Genjutsu",
+				"tooltip": "Spell bonus: Forgetfulness",
+				"description": "Her Forgetfulness lasts 1 round longer for every 5 levels (rounded up)."
+			}
+		},
+		"spellbook": [
+			"forgetfulness"
+		]
+	},
+	"inoYamanaka": {
+		"class": "sage",
+		"female": true,
+		"images": {
+			"large": "HPL034AL",
+			"small": "HPS034AL",
+			"specialtyLarge": "UN44.DEF:0:40",
+			"specialtySmall": "UN32.DEF:0:40"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			},
+			{
+				"skill": "scholar",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"mindTransfer": {
+					"type": "SPELL_DURATION",
+					"subtype": "spell.hypnotize",
+					"updater": {
+						"type": "GROWS_WITH_LEVEL",
+						"valPer20": 4,
+						"stepSize": 1
+					}
+				}
+			}
+		},
+		"texts": {
+			"name": "Ino Yamanaka",
+			"biography": "The Yamanaka heiress, who can slip her mind into an enemy's body and turn it against its own side.",
+			"specialty": {
+				"name": "Mind Transfer",
+				"tooltip": "Spell bonus: Hypnotize",
+				"description": "Her Hypnotize lasts 1 round longer for every 5 levels (rounded up)."
+			}
+		},
+		"spellbook": [
+			"hypnotize"
+		]
+	},
+	"yamato": {
+		"class": "sage",
+		"female": false,
+		"images": {
+			"large": "HPL063DM",
+			"small": "HPS063DM",
+			"specialtyLarge": "UN44.DEF:0:19",
+			"specialtySmall": "UN32.DEF:0:19"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "earthMagic",
+				"level": "basic"
+			},
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"woodRelease": {
+					"type": "SPELL_DAMAGE",
+					"subtype": "spellSchool.earth",
+					"val": 2,
+					"updater": "TIMES_HERO_LEVEL"
+				}
+			}
+		},
+		"texts": {
+			"name": "Yamato",
+			"biography": "A former ANBU captain and the only living user of Wood Release besides the First Hokage. He raises walls and houses from nothing.",
+			"specialty": {
+				"name": "Wood Release",
+				"tooltip": "Earth magic bonus",
+				"description": "Earth spells cast by him are 2% more effective for every level."
+			}
+		},
+		"spellbook": [
+			"stoneSkin"
+		]
+	},
+	"hashiramaSenju": {
+		"class": "sage",
+		"female": false,
+		"images": {
+			"large": "HPL104BM",
+			"small": "HPS104BM",
+			"specialtyLarge": "UN44.DEF:0:25",
+			"specialtySmall": "UN32.DEF:0:25"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "earthMagic",
+				"level": "basic"
+			},
+			{
+				"skill": "leadership",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"regeneration": {
+					"type": "HP_REGENERATION",
+					"val": 2,
+					"updater": "TIMES_HERO_LEVEL"
+				}
+			}
+		},
+		"texts": {
+			"name": "Hashirama Senju",
+			"biography": "The First Hokage and founder of Konoha, the God of Shinobi. Forests rise where he walks, and his cells heal any wound.",
+			"specialty": {
+				"name": "Wood Release Cells",
+				"tooltip": "Regeneration",
+				"description": "All creatures in his army regenerate 2 health per hero level at the start of each round."
+			}
+		},
+		"spellbook": [
+			"stoneSkin"
+		]
+	},
+	"tobiramaSenju": {
+		"class": "sage",
+		"female": false,
+		"images": {
+			"large": "HPL010CL",
+			"small": "HPS010CL",
+			"specialtyLarge": "UN44.DEF:0:131",
+			"specialtySmall": "UN32.DEF:0:131"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "waterMagic",
+				"level": "basic"
+			},
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"waterRelease": {
+					"type": "SPELL_DAMAGE",
+					"subtype": "spellSchool.water",
+					"val": 2,
+					"updater": "TIMES_HERO_LEVEL"
+				}
+			}
+		},
+		"texts": {
+			"name": "Tobirama Senju",
+			"biography": "The Second Hokage, a stern master of Water Release who founded the Academy and the ANBU.",
+			"specialty": {
+				"name": "Water Release",
+				"tooltip": "Water magic bonus",
+				"description": "Water spells cast by him are 2% more effective for every level."
+			}
+		},
+		"spellbook": [
+			"dispel"
+		]
+	},
+	"orochimaru": {
+		"class": "sage",
+		"female": false,
+		"images": {
+			"large": "HPL073NC",
+			"small": "HPS073NC",
+			"specialtyLarge": "UN44.DEF:0:88",
+			"specialtySmall": "UN32.DEF:0:88"
+		},
+		"army": [
+			{
+				"creature": "academyStudent",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "ninjaHound",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hyugaGuard",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			},
+			{
+				"skill": "mysticism",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"edoTensei": {
+					"type": "SPECIFIC_SPELL_DAMAGE",
+					"subtype": "spell.resurrection",
+					"val": 3,
+					"updater": "TIMES_HERO_LEVEL"
+				}
+			}
+		},
+		"texts": {
+			"name": "Orochimaru",
+			"biography": "A Legendary Sannin who chose forbidden jutsu and immortality over his village. Even the dead answer to him.",
+			"specialty": {
+				"name": "Impure World Reincarnation",
+				"tooltip": "Spell bonus: Resurrection",
+				"description": "His Resurrection restores 3% more health for every level."
+			}
+		},
+		"spellbook": [
+			"curse"
+		]
+	}
+}

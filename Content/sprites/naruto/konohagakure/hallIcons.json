@@ -1,0 +1,169 @@
+{
+	"images": [
+		{
+			"frame": 0,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 0
+		},
+		{
+			"frame": 1,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 1
+		},
+		{
+			"frame": 2,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 2
+		},
+		{
+			"frame": 3,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 3
+		},
+		{
+			"frame": 5,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 5
+		},
+		{
+			"frame": 7,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 7
+		},
+		{
+			"frame": 8,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 8
+		},
+		{
+			"frame": 9,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 9
+		},
+		{
+			"frame": 10,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 10
+		},
+		{
+			"frame": 11,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 11
+		},
+		{
+			"frame": 12,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 12
+		},
+		{
+			"frame": 13,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 13
+		},
+		{
+			"frame": 14,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 14
+		},
+		{
+			"frame": 15,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 15
+		},
+		{
+			"frame": 16,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 16
+		},
+		{
+			"frame": 17,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 17
+		},
+		{
+			"frame": 21,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 21
+		},
+		{
+			"frame": 26,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 26
+		},
+		{
+			"frame": 30,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 30
+		},
+		{
+			"frame": 31,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 31
+		},
+		{
+			"frame": 32,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 32
+		},
+		{
+			"frame": 33,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 33
+		},
+		{
+			"frame": 34,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 34
+		},
+		{
+			"frame": 35,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 35
+		},
+		{
+			"frame": 36,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 36
+		},
+		{
+			"frame": 37,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 37
+		},
+		{
+			"frame": 38,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 38
+		},
+		{
+			"frame": 39,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 39
+		},
+		{
+			"frame": 40,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 40
+		},
+		{
+			"frame": 41,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 41
+		},
+		{
+			"frame": 42,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 42
+		},
+		{
+			"frame": 43,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 43
+		},
+		{
+			"frame": 4,
+			"defFile": "HALLRAMP.DEF",
+			"defFrame": 4
+		}
+	]
+}

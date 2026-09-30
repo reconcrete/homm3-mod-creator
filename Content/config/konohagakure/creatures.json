@@ -1,0 +1,965 @@
+{
+	"academyStudent": {
+		"name": {
+			"singular": "Academy Student",
+			"plural": "Academy Students"
+		},
+		"faction": "konohagakure",
+		"level": 1,
+		"cost": {
+			"gold": 50
+		},
+		"hitPoints": 8,
+		"speed": 5,
+		"attack": 4,
+		"defense": 4,
+		"damage": {
+			"min": 1,
+			"max": 3
+		},
+		"growth": 14,
+		"horde": 0,
+		"fightValue": 80,
+		"aiValue": 75,
+		"advMapAmount": {
+			"min": 20,
+			"max": 50
+		},
+		"abilities": {},
+		"graphics": {
+			"animation": "CROGUE.DEF",
+			"map": "AVWrog.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:287",
+			"mapAttackFromRight": "AvWattak.def:0:286",
+			"iconLarge": "TWCRPORT.DEF:0:145",
+			"iconSmall": "CPRSMALL.DEF:0:145",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "ROGUATTK.wav",
+			"defend": "ROGUDFND.wav",
+			"killed": "ROGUKILL.wav",
+			"move": "ROGUMOVE.wav",
+			"wince": "ROGUWNCE.wav"
+		},
+		"upgrades": [
+			"genin"
+		]
+	},
+	"genin": {
+		"name": {
+			"singular": "Genin",
+			"plural": "Genin"
+		},
+		"faction": "konohagakure",
+		"level": 1,
+		"cost": {
+			"gold": 75
+		},
+		"hitPoints": 8,
+		"speed": 6,
+		"attack": 5,
+		"defense": 4,
+		"damage": {
+			"min": 1,
+			"max": 3
+		},
+		"growth": 14,
+		"horde": 0,
+		"fightValue": 100,
+		"aiValue": 115,
+		"advMapAmount": {
+			"min": 20,
+			"max": 50
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			}
+		},
+		"graphics": {
+			"animation": "CHALF.DEF",
+			"map": "AVWhalf.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:277",
+			"mapAttackFromRight": "AvWattak.def:0:276",
+			"iconLarge": "TWCRPORT.DEF:0:140",
+			"iconSmall": "CPRSMALL.DEF:0:140",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0,
+			"missile": {
+				"attackClimaxFrame": 10,
+				"frameAngles": [
+					90.0,
+					72.0,
+					45.0,
+					27.0,
+					0.0,
+					-27.0,
+					-45.0,
+					-72.0,
+					-90.0
+				],
+				"offset": {
+					"upperX": 32,
+					"upperY": -77,
+					"middleX": 40,
+					"middleY": -61,
+					"lowerX": 18,
+					"lowerY": -55
+				},
+				"projectile": "PHALF.DEF"
+			}
+		},
+		"sound": {
+			"attack": "HALFATTK.wav",
+			"defend": "HALFDFND.wav",
+			"killed": "HALFKILL.wav",
+			"move": "HALFMOVE.wav",
+			"shoot": "HALFSHOT.wav",
+			"wince": "HALFWNCE.wav"
+		},
+		"shots": 8
+	},
+	"ninjaHound": {
+		"name": {
+			"singular": "Ninja Hound",
+			"plural": "Ninja Hounds"
+		},
+		"faction": "konohagakure",
+		"level": 2,
+		"cost": {
+			"gold": 100
+		},
+		"hitPoints": 10,
+		"speed": 7,
+		"attack": 6,
+		"defense": 4,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"growth": 9,
+		"horde": 0,
+		"fightValue": 130,
+		"aiValue": 140,
+		"advMapAmount": {
+			"min": 16,
+			"max": 30
+		},
+		"abilities": {},
+		"graphics": {
+			"animation": "CHHOUN.DEF",
+			"map": "AVWhoun0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:93",
+			"mapAttackFromRight": "AvWattak.def:0:92",
+			"iconLarge": "TWCRPORT.DEF:0:48",
+			"iconSmall": "CPRSMALL.DEF:0:48",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "HHNDATTK.wav",
+			"defend": "HHNDDFND.wav",
+			"killed": "HHNDKILL.wav",
+			"move": "HHNDMOVE.wav",
+			"wince": "HHNDWNCE.wav"
+		},
+		"upgrades": [
+			"ninkenPackLeader"
+		],
+		"doubleWide": true
+	},
+	"ninkenPackLeader": {
+		"name": {
+			"singular": "Ninken Pack Leader",
+			"plural": "Ninken Pack Leaders"
+		},
+		"faction": "konohagakure",
+		"level": 2,
+		"cost": {
+			"gold": 140
+		},
+		"hitPoints": 10,
+		"speed": 9,
+		"attack": 7,
+		"defense": 5,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"growth": 9,
+		"horde": 0,
+		"fightValue": 180,
+		"aiValue": 200,
+		"advMapAmount": {
+			"min": 16,
+			"max": 30
+		},
+		"abilities": {
+			"bitesTwice": {
+				"type": "ADDITIONAL_ATTACK",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "CCERBU.DEF",
+			"map": "AVWhoux0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:95",
+			"mapAttackFromRight": "AvWattak.def:0:94",
+			"iconLarge": "TWCRPORT.DEF:0:49",
+			"iconSmall": "CPRSMALL.DEF:0:49",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "CERBATTK.wav",
+			"defend": "CERBDFND.wav",
+			"killed": "CERBKILL.wav",
+			"move": "CERBMOVE.wav",
+			"wince": "CERBWNCE.wav"
+		},
+		"doubleWide": true
+	},
+	"hyugaGuard": {
+		"name": {
+			"singular": "Hyuga Guard",
+			"plural": "Hyuga Guards"
+		},
+		"faction": "konohagakure",
+		"level": 3,
+		"cost": {
+			"gold": 200
+		},
+		"hitPoints": 25,
+		"speed": 5,
+		"attack": 8,
+		"defense": 8,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"growth": 7,
+		"horde": 0,
+		"fightValue": 300,
+		"aiValue": 320,
+		"advMapAmount": {
+			"min": 12,
+			"max": 25
+		},
+		"abilities": {
+			"gentleFist": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "spell.dispelHelpful",
+				"val": 100
+			}
+		},
+		"graphics": {
+			"animation": "CMONKK.DEF",
+			"map": "AvWMonk.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:17",
+			"mapAttackFromRight": "AvWattak.def:0:16",
+			"iconLarge": "TWCRPORT.DEF:0:10",
+			"iconSmall": "CPRSMALL.DEF:0:10",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "MONKATTK.wav",
+			"defend": "MONKDFND.wav",
+			"killed": "MONKKILL.wav",
+			"move": "MONKMOVE.wav",
+			"shoot": "MONKSHOT.wav",
+			"wince": "MONKWNCE.wav"
+		},
+		"upgrades": [
+			"hyugaMainBranch"
+		]
+	},
+	"hyugaMainBranch": {
+		"name": {
+			"singular": "Hyuga Main Branch",
+			"plural": "Hyuga Main Branch"
+		},
+		"faction": "konohagakure",
+		"level": 3,
+		"cost": {
+			"gold": 250
+		},
+		"hitPoints": 28,
+		"speed": 7,
+		"attack": 10,
+		"defense": 9,
+		"damage": {
+			"min": 3,
+			"max": 6
+		},
+		"growth": 7,
+		"horde": 0,
+		"fightValue": 370,
+		"aiValue": 420,
+		"advMapAmount": {
+			"min": 12,
+			"max": 25
+		},
+		"abilities": {
+			"gentleFist": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "spell.dispelHelpful",
+				"val": 100
+			},
+			"chakraPoints": {
+				"type": "ENEMY_DEFENCE_REDUCTION",
+				"val": 30
+			}
+		},
+		"graphics": {
+			"animation": "CZEALT.DEF",
+			"map": "AVWmonx0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:19",
+			"mapAttackFromRight": "AvWattak.def:0:18",
+			"iconLarge": "TWCRPORT.DEF:0:11",
+			"iconSmall": "CPRSMALL.DEF:0:11",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "ZELTATTK.wav",
+			"defend": "ZELTDFND.wav",
+			"killed": "ZELTKILL.wav",
+			"move": "ZELTMOVE.wav",
+			"shoot": "ZELTSHOT.wav",
+			"wince": "ZELTWNCE.wav"
+		}
+	},
+	"medicalNinja": {
+		"name": {
+			"singular": "Medical Ninja",
+			"plural": "Medical Ninja"
+		},
+		"faction": "konohagakure",
+		"level": 4,
+		"cost": {
+			"gold": 300
+		},
+		"hitPoints": 30,
+		"speed": 5,
+		"attack": 7,
+		"defense": 9,
+		"damage": {
+			"min": 4,
+			"max": 6
+		},
+		"growth": 4,
+		"horde": 0,
+		"fightValue": 380,
+		"aiValue": 420,
+		"advMapAmount": {
+			"min": 10,
+			"max": 20
+		},
+		"abilities": {
+			"heals": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.cure",
+				"val": 1
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 2
+			},
+			"healPower": {
+				"type": "SPECIFIC_SPELL_POWER",
+				"subtype": "spell.cure",
+				"val": 8
+			}
+		},
+		"graphics": {
+			"animation": "CELF.DEF",
+			"map": "AVWelfw0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:37",
+			"mapAttackFromRight": "AvWattak.def:0:36",
+			"iconLarge": "TWCRPORT.DEF:0:20",
+			"iconSmall": "CPRSMALL.DEF:0:20",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.02,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "WELFATTK.wav",
+			"defend": "WELFDFND.wav",
+			"killed": "WELFKILL.wav",
+			"move": "WELFMOVE.wav",
+			"shoot": "WELFSHOT.wav",
+			"wince": "WELFWNCE.wav"
+		},
+		"upgrades": [
+			"seniorMedic"
+		]
+	},
+	"seniorMedic": {
+		"name": {
+			"singular": "Senior Medic",
+			"plural": "Senior Medics"
+		},
+		"faction": "konohagakure",
+		"level": 4,
+		"cost": {
+			"gold": 400
+		},
+		"hitPoints": 35,
+		"speed": 6,
+		"attack": 8,
+		"defense": 10,
+		"damage": {
+			"min": 5,
+			"max": 7
+		},
+		"growth": 4,
+		"horde": 0,
+		"fightValue": 480,
+		"aiValue": 560,
+		"advMapAmount": {
+			"min": 10,
+			"max": 20
+		},
+		"abilities": {
+			"heals": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.cure",
+				"val": 2
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 3
+			},
+			"healPower": {
+				"type": "SPECIFIC_SPELL_POWER",
+				"subtype": "spell.cure",
+				"val": 12
+			}
+		},
+		"graphics": {
+			"animation": "CGRELF.DEF",
+			"map": "AVWelfx0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:39",
+			"mapAttackFromRight": "AvWattak.def:0:38",
+			"iconLarge": "TWCRPORT.DEF:0:21",
+			"iconSmall": "CPRSMALL.DEF:0:21",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.02,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "GELFATTK.wav",
+			"defend": "GELFDFND.wav",
+			"killed": "GELFKILL.wav",
+			"move": "GELFMOVE.wav",
+			"shoot": "GELFSHOT.wav",
+			"wince": "GELFWNCE.wav"
+		}
+	},
+	"uchihaPolice": {
+		"name": {
+			"singular": "Uchiha Police",
+			"plural": "Uchiha Police"
+		},
+		"faction": "konohagakure",
+		"level": 5,
+		"cost": {
+			"gold": 400
+		},
+		"hitPoints": 30,
+		"speed": 6,
+		"attack": 11,
+		"defense": 8,
+		"damage": {
+			"min": 8,
+			"max": 12
+		},
+		"growth": 3,
+		"horde": 0,
+		"fightValue": 450,
+		"aiValue": 520,
+		"advMapAmount": {
+			"min": 8,
+			"max": 16
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"sharingan": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "spell.blind",
+				"val": 10,
+				"addInfo": [
+					1,
+					0
+				]
+			}
+		},
+		"graphics": {
+			"animation": "CMAGE.DEF",
+			"map": "AVWmage0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:69",
+			"mapAttackFromRight": "AvWattak.def:0:68",
+			"iconLarge": "TWCRPORT.DEF:0:36",
+			"iconSmall": "CPRSMALL.DEF:0:36",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0,
+			"missile": {
+				"attackClimaxFrame": 9,
+				"frameAngles": [
+					90.0,
+					72.0,
+					45.0,
+					27.0,
+					0.0,
+					-27.0,
+					-45.0,
+					-72.0,
+					-90.0
+				],
+				"offset": {
+					"upperX": 25,
+					"upperY": -105,
+					"middleX": 38,
+					"middleY": -98,
+					"lowerX": 16,
+					"lowerY": -92
+				},
+				"projectile": "CPRGOGX.DEF"
+			}
+		},
+		"sound": {
+			"attack": "MAGEATTK.wav",
+			"defend": "MAGEDFND.wav",
+			"killed": "MAGEKILL.wav",
+			"move": "MAGEMOVE.wav",
+			"shoot": "MAGESHOT.wav",
+			"wince": "MAGEWNCE.wav"
+		},
+		"upgrades": [
+			"sharinganMaster"
+		],
+		"shots": 12
+	},
+	"sharinganMaster": {
+		"name": {
+			"singular": "Sharingan Master",
+			"plural": "Sharingan Masters"
+		},
+		"faction": "konohagakure",
+		"level": 5,
+		"cost": {
+			"gold": 475
+		},
+		"hitPoints": 30,
+		"speed": 7,
+		"attack": 12,
+		"defense": 10,
+		"damage": {
+			"min": 9,
+			"max": 12
+		},
+		"growth": 3,
+		"horde": 0,
+		"fightValue": 520,
+		"aiValue": 700,
+		"advMapAmount": {
+			"min": 8,
+			"max": 16
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"noMeleePenalty": {
+				"type": "NO_MELEE_PENALTY"
+			},
+			"greatFireball": {
+				"type": "SPELL_LIKE_ATTACK",
+				"subtype": "spell.fireballAbility"
+			},
+			"sharingan": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "spell.blind",
+				"val": 20,
+				"addInfo": [
+					1,
+					0
+				]
+			}
+		},
+		"graphics": {
+			"animation": "CAMAGE.DEF",
+			"map": "AVWmagx0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:71",
+			"mapAttackFromRight": "AvWattak.def:0:70",
+			"iconLarge": "TWCRPORT.DEF:0:37",
+			"iconSmall": "CPRSMALL.DEF:0:37",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0,
+			"missile": {
+				"attackClimaxFrame": 9,
+				"frameAngles": [
+					90.0,
+					72.0,
+					45.0,
+					27.0,
+					0.0,
+					-27.0,
+					-45.0,
+					-72.0,
+					-90.0
+				],
+				"offset": {
+					"upperX": 28,
+					"upperY": -107,
+					"middleX": 43,
+					"middleY": -99,
+					"lowerX": 18,
+					"lowerY": -92
+				},
+				"projectile": "CPRGOGX.DEF"
+			}
+		},
+		"sound": {
+			"attack": "AMAGATTK.wav",
+			"defend": "AMAGDFND.wav",
+			"killed": "AMAGKILL.wav",
+			"move": "AMAGMOVE.wav",
+			"shoot": "AMAGSHOT.wav",
+			"wince": "AMAGWNCE.wav"
+		},
+		"shots": 16
+	},
+	"anbuOperative": {
+		"name": {
+			"singular": "ANBU Operative",
+			"plural": "ANBU Operatives"
+		},
+		"faction": "konohagakure",
+		"level": 6,
+		"cost": {
+			"gold": 1000
+		},
+		"hitPoints": 80,
+		"speed": 8,
+		"attack": 16,
+		"defense": 12,
+		"damage": {
+			"min": 15,
+			"max": 20
+		},
+		"growth": 2,
+		"horde": 0,
+		"fightValue": 1300,
+		"aiValue": 1500,
+		"advMapAmount": {
+			"min": 4,
+			"max": 10
+		},
+		"abilities": {
+			"fromTheShadows": {
+				"type": "BLOCKS_RETALIATION"
+			}
+		},
+		"graphics": {
+			"animation": "CVAMP.DEF",
+			"map": "AVWvamp0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:125",
+			"mapAttackFromRight": "AvWattak.def:0:124",
+			"iconLarge": "TWCRPORT.DEF:0:64",
+			"iconSmall": "CPRSMALL.DEF:0:64",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "VAMPATTK.wav",
+			"defend": "VAMPDFND.wav",
+			"killed": "VAMPKILL.wav",
+			"move": "VAMPMOVE.wav",
+			"wince": "VAMPWNCE.wav",
+			"startMoving": "VAMPEXT1.wav",
+			"endMoving": "VAMPEXT2.wav"
+		},
+		"upgrades": [
+			"anbuCaptain"
+		]
+	},
+	"anbuCaptain": {
+		"name": {
+			"singular": "ANBU Captain",
+			"plural": "ANBU Captains"
+		},
+		"faction": "konohagakure",
+		"level": 6,
+		"cost": {
+			"gold": 1250
+		},
+		"hitPoints": 90,
+		"speed": 10,
+		"attack": 18,
+		"defense": 14,
+		"damage": {
+			"min": 18,
+			"max": 24
+		},
+		"growth": 2,
+		"horde": 0,
+		"fightValue": 1650,
+		"aiValue": 2000,
+		"advMapAmount": {
+			"min": 4,
+			"max": 10
+		},
+		"abilities": {
+			"fromTheShadows": {
+				"type": "BLOCKS_RETALIATION"
+			},
+			"vanish": {
+				"type": "RETURN_AFTER_STRIKE"
+			}
+		},
+		"graphics": {
+			"animation": "CNOSFE.DEF",
+			"map": "AVWvamx0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:127",
+			"mapAttackFromRight": "AvWattak.def:0:126",
+			"iconLarge": "TWCRPORT.DEF:0:65",
+			"iconSmall": "CPRSMALL.DEF:0:65",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "NOSFATTK.wav",
+			"defend": "NOSFDFND.wav",
+			"killed": "NOSFKILL.wav",
+			"move": "NOSFMOVE.wav",
+			"shoot": "NOSFSHOT.wav",
+			"wince": "NOSFWNCE.wav",
+			"startMoving": "NOSFEXT1.wav",
+			"endMoving": "NOSFEXT2.wav"
+		}
+	},
+	"toadWarrior": {
+		"name": {
+			"singular": "Toad Warrior",
+			"plural": "Toad Warriors"
+		},
+		"faction": "konohagakure",
+		"level": 7,
+		"cost": {
+			"gold": 2800,
+			"gems": 1
+		},
+		"hitPoints": 180,
+		"speed": 8,
+		"attack": 19,
+		"defense": 17,
+		"damage": {
+			"min": 30,
+			"max": 45
+		},
+		"growth": 1,
+		"horde": 0,
+		"fightValue": 3300,
+		"aiValue": 4200,
+		"advMapAmount": {
+			"min": 1,
+			"max": 4
+		},
+		"abilities": {
+			"leaps": {
+				"type": "FLYING"
+			}
+		},
+		"graphics": {
+			"animation": "CYBEHE.DEF",
+			"map": "AVWbhmt0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:193",
+			"mapAttackFromRight": "AvWattak.def:0:192",
+			"iconLarge": "TWCRPORT.DEF:0:98",
+			"iconSmall": "CPRSMALL.DEF:0:98",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.17,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "YBMHATTK.wav",
+			"defend": "YBMHDFND.wav",
+			"killed": "YBMHKILL.wav",
+			"move": "YBMHMOVE.wav",
+			"wince": "YBMHWNCE.wav"
+		},
+		"upgrades": [
+			"gamabunta"
+		],
+		"doubleWide": true
+	},
+	"gamabunta": {
+		"name": {
+			"singular": "Gamabunta",
+			"plural": "Gamabunta"
+		},
+		"faction": "konohagakure",
+		"level": 7,
+		"cost": {
+			"gold": 4500,
+			"gems": 2
+		},
+		"hitPoints": 300,
+		"speed": 11,
+		"attack": 25,
+		"defense": 24,
+		"damage": {
+			"min": 40,
+			"max": 50
+		},
+		"growth": 1,
+		"horde": 0,
+		"fightValue": 6000,
+		"aiValue": 8000,
+		"advMapAmount": {
+			"min": 1,
+			"max": 4
+		},
+		"abilities": {
+			"leaps": {
+				"type": "FLYING"
+			},
+			"swordSweep": {
+				"type": "ATTACKS_ALL_ADJACENT"
+			}
+		},
+		"graphics": {
+			"animation": "CABEHE.DEF",
+			"map": "AVWbhmx0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:195",
+			"mapAttackFromRight": "AvWattak.def:0:194",
+			"iconLarge": "TWCRPORT.DEF:0:99",
+			"iconSmall": "CPRSMALL.DEF:0:99",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.17,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "BMTHATTK.wav",
+			"defend": "BMTHDFND.wav",
+			"killed": "BMTHKILL.wav",
+			"move": "BMTHMOVE.wav",
+			"wince": "BMTHWNCE.wav"
+		},
+		"doubleWide": true
+	}
+}

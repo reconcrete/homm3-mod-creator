@@ -1,16 +1,40 @@
 {
-	"name" : "Naruto Heroes",
-	"description" : "Three hidden villages from Naruto as playable towns: Konohagakure, Sunagakure and Kirigakure, with their shinobi, heroes, tailed-beast bosses and artifacts.",
-	"author" : "Anton Morozov",
-	"version" : "0.1.0",
-	"modType" : "Town",
-	"compatibility" : { "min" : "1.7.0" },
-	"changelog" : {
-		"0.1.0" : [ "Mod skeleton" ]
+	"name": "Naruto Heroes",
+	"description": "Three hidden villages from Naruto as playable towns: Konohagakure, Sunagakure and Kirigakure, with their shinobi, heroes, tailed-beast bosses and artifacts.",
+	"author": "Anton Morozov",
+	"version": "0.2.0",
+	"modType": "Town",
+	"compatibility": {
+		"min": "1.7.0"
 	},
-	"russian" : {
-		"name" : "Герои Наруто",
-		"description" : "Три скрытые деревни из «Наруто» как играбельные города: Коноха, Суна и Кири — с их шиноби, героями, хвостатыми зверями-боссами и артефактами.",
-		"translations" : [ "config/translations/russian.json" ]
-	}
+	"changelog": {
+		"0.2.0": [
+			"Konohagakure town: 14 creatures, 2 hero classes, 25 heroes, borrowed original graphics"
+		],
+		"0.1.0": [
+			"Mod skeleton"
+		]
+	},
+	"russian": {
+		"name": "Герои Наруто",
+		"description": "Три скрытые деревни из «Наруто» как играбельные города: Коноха, Суна и Кири — с их шиноби, героями, хвостатыми зверями-боссами и артефактами.",
+		"translations": [
+			"config/translations/russian-konohagakure.json"
+		]
+	},
+	"factions": [
+		"config/konohagakure/faction.json"
+	],
+	"creatures": [
+		"config/konohagakure/creatures.json"
+	],
+	"heroClasses": [
+		"config/konohagakure/heroClasses.json"
+	],
+	"heroes": [
+		"config/konohagakure/heroes.json"
+	],
+	"objects": [
+		"config/konohagakure/dwellings.json"
+	]
 }

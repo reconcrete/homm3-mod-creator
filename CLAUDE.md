@@ -21,6 +21,21 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
 - The installed mod is a symlink: `~/Library/Application Support/vcmi/Mods/naruto-heroes`
   → this folder (VCMI follows it). Edits are live; no install step.
 
+## Generated content (don't hand-edit the JSON)
+
+Each town's JSON is generated from a data script: `tools/towns/<faction>.py` (numbers from
+the vault Details spec, English and Russian side by side) using helpers in
+`tools/townkit.py`. Edit the script, run `python3 tools/towns/<faction>.py`, then verify.
+The script writes `Content/config/<faction>/*.json`, `Content/config/translations/
+russian-<faction>.json` and registers the files in `mod.json`. Borrowed graphics are
+looked up from the installed game (core VCMI config, CRANIM.TXT and Objects.txt inside
+the H3 .lod archives), so a creature only names the original creature it borrows.
+
+Helpers: `tools/lod.py` (read .lod archives), `tools/h3def.py` / `tools/h3pcx.py` (decode
+original sprites and pictures, e.g. contact sheets to pick borrowed art), `tools/vjson.py`
+(load VCMI's lenient JSON), `tools/make-testmap.py` (copy of a small random map with a
+player on one of our factions, written to the VCMI Maps folder).
+
 ## Conventions
 
 - Ids are camelCase, English: faction `konohagakure`, creatures `academyStudent`,
@@ -35,7 +50,12 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
 - Translation keys: get the full list with
   `vcmiserver --translate-mod naruto-heroes` (see tools/export-translation-keys.sh).
 - Borrowed graphics until Anton's art exists: reference original DEF names (e.g.
-  `CPKMAN.DEF`). Replace them in M7–M9 without changing ids.
+  `CPKMAN.DEF`); single frames as `FILE.DEF:group:frame` (VCMI supports this for any
+  image field; creature portraits are `TWCRPORT.DEF` / `CPRSMALL.DEF` frame = core
+  index + 2, hero specialty icons `UN44.DEF` / `UN32.DEF` frame = original hero index).
+  Replace them in M7–M9 without changing ids.
+- Adventure-map dwellings are required for every town creature line (random dwellings
+  on maps fail with "failed to find dwelling for <town> of level N" otherwise).
 - Balance yardstick: the original game's numbers (H3 CRTRAITS / HCTRAITS values).
 
 ## Verify (every change)
@@ -45,10 +65,22 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   `~/Library/Logs/vcmi/VCMI_Server_log.txt`. Must print `OK`.
 - `tools/client-check.sh` — starts the real client, waits for the main menu, quits,
   scans `VCMI_Client_log.txt`. Run before each commit.
+- `python3 tools/check-assets.py` — every borrowed image/animation reference exists in the
+  game archives, including DEF frames. Must print `0 problems`.
+- `tools/check-translations.sh` — our Russian keys vs the keys VCMI exports for the mod
+  (export made with our translations switched off). Must show no MISSING/UNKNOWN.
+- In-game checks need Anton: `vcmiclient --testmap` crashes in VCMI 1.7.5 (it builds a
+  human interface for player "invalid"), and `--headless` crashes on connect.
+- **Never drive the GUI** (keystrokes via osascript, screenshots): Anton works on this
+  Mac at the same time, keystrokes can land in his terminal, screenshots capture his
+  screen. Ask him for a playtest instead.
 
 ## Rules
 
 - Don't touch other mods. Back up VCMI config files before editing
   (backups in `~/Library/Application Support/vcmi/config-backups/`).
 - Vault (`~/O`): notes only, no code or images, dash-separated file names, never git there.
-- Commit in this repo at the end of each milestone.
+- Commit in this repo at the end of each milestone. Other sessions (e.g. the art session
+  with `tools/generate-art.py`, `art/reference/`, `art/logs*`) may work in this repo at
+  the same time: commit only your own paths, never `git add -A`. Re-read the vault build
+  log right before editing it.

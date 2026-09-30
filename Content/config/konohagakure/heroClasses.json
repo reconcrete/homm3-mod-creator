@@ -1,0 +1,150 @@
+{
+	"shinobi": {
+		"name": "Shinobi",
+		"faction": "konohagakure",
+		"affinity": "might",
+		"commander": "zealot",
+		"defaultTavern": 5,
+		"tavern": {
+			"konohagakure": 6,
+			"inferno": 3,
+			"necropolis": 3
+		},
+		"mapObject": {
+			"templates": {
+				"default": {
+					"animation": "AH00_.def",
+					"editorAnimation": "AH00_E.def"
+				}
+			}
+		},
+		"animation": {
+			"battle": {
+				"male": "CH00.DEF",
+				"female": "CH01.DEF"
+			}
+		},
+		"primarySkills": {
+			"attack": 2,
+			"defence": 2,
+			"spellpower": 1,
+			"knowledge": 1
+		},
+		"lowLevelChance": {
+			"attack": 40,
+			"defence": 35,
+			"spellpower": 12,
+			"knowledge": 13
+		},
+		"highLevelChance": {
+			"attack": 30,
+			"defence": 30,
+			"spellpower": 20,
+			"knowledge": 20
+		},
+		"secondarySkills": {
+			"pathfinding": 5,
+			"archery": 6,
+			"logistics": 7,
+			"scouting": 6,
+			"diplomacy": 3,
+			"navigation": 2,
+			"leadership": 7,
+			"wisdom": 3,
+			"mysticism": 2,
+			"luck": 4,
+			"ballistics": 5,
+			"eagleEye": 2,
+			"necromancy": 0,
+			"estates": 3,
+			"fireMagic": 2,
+			"airMagic": 3,
+			"waterMagic": 2,
+			"earthMagic": 2,
+			"scholar": 1,
+			"tactics": 8,
+			"artillery": 4,
+			"learning": 3,
+			"offence": 8,
+			"armorer": 6,
+			"intelligence": 1,
+			"sorcery": 1,
+			"resistance": 4,
+			"firstAid": 3
+		}
+	},
+	"sage": {
+		"name": "Sage",
+		"faction": "konohagakure",
+		"affinity": "magic",
+		"commander": "zealot",
+		"defaultTavern": 5,
+		"tavern": {
+			"konohagakure": 6,
+			"inferno": 3,
+			"necropolis": 3
+		},
+		"mapObject": {
+			"templates": {
+				"default": {
+					"animation": "AH01_.def",
+					"editorAnimation": "AH01_E.def"
+				}
+			}
+		},
+		"animation": {
+			"battle": {
+				"male": "CH00.DEF",
+				"female": "CH01.DEF"
+			}
+		},
+		"primarySkills": {
+			"attack": 1,
+			"defence": 0,
+			"spellpower": 2,
+			"knowledge": 2
+		},
+		"lowLevelChance": {
+			"attack": 20,
+			"defence": 15,
+			"spellpower": 30,
+			"knowledge": 35
+		},
+		"highLevelChance": {
+			"attack": 20,
+			"defence": 20,
+			"spellpower": 30,
+			"knowledge": 30
+		},
+		"secondarySkills": {
+			"pathfinding": 2,
+			"archery": 1,
+			"logistics": 3,
+			"scouting": 3,
+			"diplomacy": 4,
+			"navigation": 2,
+			"leadership": 3,
+			"wisdom": 8,
+			"mysticism": 5,
+			"luck": 3,
+			"ballistics": 1,
+			"eagleEye": 5,
+			"necromancy": 0,
+			"estates": 3,
+			"fireMagic": 4,
+			"airMagic": 4,
+			"waterMagic": 5,
+			"earthMagic": 5,
+			"scholar": 5,
+			"tactics": 2,
+			"artillery": 1,
+			"learning": 4,
+			"offence": 2,
+			"armorer": 2,
+			"intelligence": 6,
+			"sorcery": 4,
+			"resistance": 2,
+			"firstAid": 5
+		}
+	}
+}

@@ -1,0 +1,167 @@
+{
+	"core:creatureGeneratorCommon": {
+		"types": {
+			"ninjaAcademy": {
+				"name": "Ninja Academy",
+				"creatures": [
+					[
+						"academyStudent"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPPIKE"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGpike0",
+						"mask": [
+							"VVV",
+							"VBV",
+							"VBA"
+						]
+					}
+				}
+			},
+			"inuzukaKennels": {
+				"name": "Inuzuka Kennels",
+				"creatures": [
+					[
+						"ninjaHound"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPDOG"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGhell0",
+						"mask": [
+							"VV",
+							"BA"
+						]
+					}
+				}
+			},
+			"hyugaCompound": {
+				"name": "Hyuga Compound",
+				"creatures": [
+					[
+						"hyugaGuard"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPMONK"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGmonk0",
+						"mask": [
+							"VVV",
+							"VVV",
+							"VBA"
+						]
+					}
+				}
+			},
+			"medicalCorps": {
+				"name": "Medical Corps",
+				"creatures": [
+					[
+						"medicalNinja"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPELF"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGelf0",
+						"mask": [
+							"VVV",
+							"VVV",
+							"VAB"
+						]
+					}
+				}
+			},
+			"uchihaDistrict": {
+				"name": "Uchiha District",
+				"creatures": [
+					[
+						"uchihaPolice"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPMAGI"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGmage0",
+						"mask": [
+							"VVV",
+							"VVV",
+							"VVV",
+							"VVV",
+							"VBA"
+						]
+					}
+				}
+			},
+			"anbuHeadquarters": {
+				"name": "ANBU Headquarters",
+				"creatures": [
+					[
+						"anbuOperative"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPDEAD"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGvamp0",
+						"mask": [
+							"VVV",
+							"VAB"
+						]
+					}
+				}
+			},
+			"mountMyobokuGate": {
+				"name": "Mount Myoboku Gate",
+				"creatures": [
+					[
+						"toadWarrior"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPBEHE"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGbhmt0",
+						"mask": [
+							"VVV",
+							"VVV",
+							"VBA"
+						]
+					}
+				}
+			}
+		}
+	}
+}

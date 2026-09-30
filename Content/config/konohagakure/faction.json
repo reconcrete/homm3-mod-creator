@@ -1,0 +1,1408 @@
+{
+	"konohagakure": {
+		"name": "Konohagakure",
+		"description": "{Konohagakure}\n\nThe Village Hidden in the Leaves, in the Land of Fire. Shinobi and Sages fight side by side with ninja hounds, clan warriors, medics and the giant toads of Mount Myoboku. Balanced troops: every tier knows a clan technique.",
+		"alignment": "good",
+		"nativeTerrain": "grass",
+		"boat": "boatCastle",
+		"creatureBackground": {
+			"120px": "TPCASCAS",
+			"130px": "CRBKGCAS"
+		},
+		"puzzleMap": {
+			"prefix": "PUZCAS",
+			"pieces": [
+				{
+					"x": 7,
+					"y": 8,
+					"index": 39
+				},
+				{
+					"x": 7,
+					"y": 30,
+					"index": 41
+				},
+				{
+					"x": 7,
+					"y": 102,
+					"index": 1
+				},
+				{
+					"x": 7,
+					"y": 156,
+					"index": 23
+				},
+				{
+					"x": 7,
+					"y": 202,
+					"index": 6
+				},
+				{
+					"x": 7,
+					"y": 320,
+					"index": 13
+				},
+				{
+					"x": 16,
+					"y": 8,
+					"index": 39
+				},
+				{
+					"x": 22,
+					"y": 406,
+					"index": 2
+				},
+				{
+					"x": 70,
+					"y": 301,
+					"index": 22
+				},
+				{
+					"x": 72,
+					"y": 194,
+					"index": 11
+				},
+				{
+					"x": 101,
+					"y": 332,
+					"index": 8
+				},
+				{
+					"x": 106,
+					"y": 8,
+					"index": 9
+				},
+				{
+					"x": 106,
+					"y": 31,
+					"index": 29
+				},
+				{
+					"x": 114,
+					"y": 60,
+					"index": 7
+				},
+				{
+					"x": 126,
+					"y": 329,
+					"index": 17
+				},
+				{
+					"x": 128,
+					"y": 191,
+					"index": 21
+				},
+				{
+					"x": 152,
+					"y": 347,
+					"index": 27
+				},
+				{
+					"x": 154,
+					"y": 239,
+					"index": 31
+				},
+				{
+					"x": 157,
+					"y": 429,
+					"index": 34
+				},
+				{
+					"x": 166,
+					"y": 470,
+					"index": 4
+				},
+				{
+					"x": 185,
+					"y": 127,
+					"index": 30
+				},
+				{
+					"x": 212,
+					"y": 335,
+					"index": 36
+				},
+				{
+					"x": 214,
+					"y": 191,
+					"index": 48
+				},
+				{
+					"x": 217,
+					"y": 226,
+					"index": 43
+				},
+				{
+					"x": 235,
+					"y": 147,
+					"index": 35
+				},
+				{
+					"x": 245,
+					"y": 77,
+					"index": 16
+				},
+				{
+					"x": 266,
+					"y": 384,
+					"index": 42
+				},
+				{
+					"x": 288,
+					"y": 288,
+					"index": 45
+				},
+				{
+					"x": 298,
+					"y": 8,
+					"index": 26
+				},
+				{
+					"x": 321,
+					"y": 177,
+					"index": 46
+				},
+				{
+					"x": 346,
+					"y": 67,
+					"index": 38
+				},
+				{
+					"x": 354,
+					"y": 459,
+					"index": 20
+				},
+				{
+					"x": 355,
+					"y": 397,
+					"index": 25
+				},
+				{
+					"x": 375,
+					"y": 162,
+					"index": 28
+				},
+				{
+					"x": 382,
+					"y": 255,
+					"index": 32
+				},
+				{
+					"x": 408,
+					"y": 32,
+					"index": 37
+				},
+				{
+					"x": 408,
+					"y": 111,
+					"index": 14
+				},
+				{
+					"x": 421,
+					"y": 147,
+					"index": 19
+				},
+				{
+					"x": 422,
+					"y": 466,
+					"index": 12
+				},
+				{
+					"x": 426,
+					"y": 8,
+					"index": 15
+				},
+				{
+					"x": 436,
+					"y": 238,
+					"index": 24
+				},
+				{
+					"x": 458,
+					"y": 336,
+					"index": 44
+				},
+				{
+					"x": 486,
+					"y": 8,
+					"index": 40
+				},
+				{
+					"x": 487,
+					"y": 144,
+					"index": 33
+				},
+				{
+					"x": 517,
+					"y": 145,
+					"index": 18
+				},
+				{
+					"x": 520,
+					"y": 68,
+					"index": 5
+				},
+				{
+					"x": 524,
+					"y": 234,
+					"index": 10
+				},
+				{
+					"x": 525,
+					"y": 327,
+					"index": 3
+				}
+			]
+		},
+		"town": {
+			"mapObject": {
+				"templates": {
+					"castle": {
+						"animation": "AVCcasx0.def"
+					},
+					"citadel": {
+						"animation": "AVCcasx0.def"
+					},
+					"fort": {
+						"animation": "AVCcasx0.def"
+					},
+					"village": {
+						"animation": "AVCCAST0.DEF"
+					},
+					"capitol": {
+						"animation": "AVCCASZ0.DEF"
+					}
+				}
+			},
+			"icons": {
+				"village": {
+					"normal": {
+						"large": "ITPT.DEF:0:18",
+						"small": "ITPA.DEF:0:20"
+					},
+					"built": {
+						"large": "ITPT.DEF:0:19",
+						"small": "ITPA.DEF:0:21"
+					}
+				},
+				"fort": {
+					"normal": {
+						"large": "ITPT.DEF:0:0",
+						"small": "ITPA.DEF:0:2"
+					},
+					"built": {
+						"large": "ITPT.DEF:0:1",
+						"small": "ITPA.DEF:0:3"
+					}
+				}
+			},
+			"musicTheme": [
+				"music/CstleTown"
+			],
+			"defaultTavern": 5,
+			"tavernVideo": "TAVERN.BIK",
+			"guildBackground": [
+				"TPMAGE.bmp"
+			],
+			"townBackground": "TBCSBACK.bmp",
+			"guildWindow": [
+				"TPMAGERM.bmp"
+			],
+			"guildWindowPosition": {
+				"x": 332,
+				"y": 76
+			},
+			"guildSpellPositions": [
+				[
+					{
+						"x": 222,
+						"y": 445
+					},
+					{
+						"x": 312,
+						"y": 445
+					},
+					{
+						"x": 402,
+						"y": 445
+					},
+					{
+						"x": 520,
+						"y": 445
+					},
+					{
+						"x": 610,
+						"y": 445
+					},
+					{
+						"x": 700,
+						"y": 445
+					}
+				],
+				[
+					{
+						"x": 48,
+						"y": 53
+					},
+					{
+						"x": 48,
+						"y": 147
+					},
+					{
+						"x": 48,
+						"y": 241
+					},
+					{
+						"x": 48,
+						"y": 335
+					},
+					{
+						"x": 48,
+						"y": 429
+					}
+				],
+				[
+					{
+						"x": 570,
+						"y": 82
+					},
+					{
+						"x": 672,
+						"y": 82
+					},
+					{
+						"x": 570,
+						"y": 157
+					},
+					{
+						"x": 672,
+						"y": 157
+					}
+				],
+				[
+					{
+						"x": 183,
+						"y": 42
+					},
+					{
+						"x": 183,
+						"y": 148
+					},
+					{
+						"x": 183,
+						"y": 253
+					}
+				],
+				[
+					{
+						"x": 491,
+						"y": 325
+					},
+					{
+						"x": 591,
+						"y": 325
+					}
+				]
+			],
+			"buildingsIcons": "naruto/konohagakure/hallIcons",
+			"hallBackground": "TPTHBKCS.BMP",
+			"hallSlots": [
+				[
+					[
+						"villageHall",
+						"townHall",
+						"cityHall",
+						"capitol"
+					],
+					[
+						"fort",
+						"citadel",
+						"castle"
+					],
+					[
+						"tavern"
+					],
+					[
+						"blacksmith"
+					]
+				],
+				[
+					[
+						"marketplace",
+						"resourceSilo"
+					],
+					[
+						"mageGuild1",
+						"mageGuild2",
+						"mageGuild3",
+						"mageGuild4",
+						"mageGuild5"
+					],
+					[
+						"special1"
+					]
+				],
+				[
+					[
+						"special2"
+					]
+				],
+				[
+					[
+						"dwellingLvl1",
+						"dwellingUpLvl1"
+					],
+					[
+						"dwellingLvl2",
+						"dwellingUpLvl2"
+					],
+					[
+						"dwellingLvl3",
+						"dwellingUpLvl3"
+					],
+					[
+						"dwellingLvl4",
+						"dwellingUpLvl4"
+					]
+				],
+				[
+					[
+						"dwellingLvl5",
+						"dwellingUpLvl5"
+					],
+					[
+						"dwellingLvl6",
+						"dwellingUpLvl6"
+					],
+					[
+						"dwellingLvl7",
+						"dwellingUpLvl7"
+					]
+				]
+			],
+			"creatures": [
+				[
+					"academyStudent",
+					"genin"
+				],
+				[
+					"ninjaHound",
+					"ninkenPackLeader"
+				],
+				[
+					"hyugaGuard",
+					"hyugaMainBranch"
+				],
+				[
+					"medicalNinja",
+					"seniorMedic"
+				],
+				[
+					"uchihaPolice",
+					"sharinganMaster"
+				],
+				[
+					"anbuOperative",
+					"anbuCaptain"
+				],
+				[
+					"toadWarrior",
+					"gamabunta"
+				]
+			],
+			"horde": [],
+			"mageGuild": 5,
+			"guildSpells": {
+				"magicArrow": 30,
+				"shield": 8,
+				"protectFire": 3,
+				"protectWater": 3,
+				"dispel": 12,
+				"cure": 12,
+				"bless": 8,
+				"stoneSkin": 5,
+				"haste": 10,
+				"slow": 10,
+				"bloodlust": 3,
+				"summonBoat": 2,
+				"viewEarth": 3,
+				"viewAir": 3,
+				"iceBolt": 20,
+				"lightningBolt": 25,
+				"fireWall": 10,
+				"quicksand": 4,
+				"scuttleBoat": 2,
+				"visions": 2,
+				"disguise": 4,
+				"protectAir": 2,
+				"precision": 6,
+				"weakness": 4,
+				"disruptingRay": 5,
+				"fortune": 4,
+				"blind": 12,
+				"removeObstacle": 4,
+				"fireball": 16,
+				"frostRing": 8,
+				"landMine": 6,
+				"forceField": 4,
+				"earthquake": 6,
+				"destroyUndead": 4,
+				"airShield": 6,
+				"protectEarth": 4,
+				"antiMagic": 8,
+				"mirth": 4,
+				"misfortune": 4,
+				"hypnotize": 10,
+				"forgetfulness": 10,
+				"teleport": 8,
+				"chainLightning": 10,
+				"inferno": 8,
+				"meteorShower": 10,
+				"fireShield": 5,
+				"resurrection": 8,
+				"prayer": 10,
+				"sorrow": 5,
+				"slayer": 5,
+				"frenzy": 5,
+				"counterstrike": 5,
+				"berserk": 5,
+				"clone": 14,
+				"waterWalk": 10,
+				"townPortal": 10,
+				"fly": 10,
+				"dimensionDoor": 18,
+				"implosion": 12,
+				"magicMirror": 12,
+				"fireElemental": 10,
+				"earthElemental": 12,
+				"waterElemental": 12,
+				"airElemental": 10
+			},
+			"moatAbility": "castleMoat",
+			"names": [
+				"Konohagakure",
+				"Hidden Leaf",
+				"Tanzaku Town",
+				"Fire Temple",
+				"Otafuku Town",
+				"Valley of the End",
+				"Naka River",
+				"Forest of Death",
+				"Shukuba Town",
+				"Nakano Shrine"
+			],
+			"structures": {
+				"extraAnimation": {
+					"animation": "TBCSEXT2.def",
+					"x": 46,
+					"y": 119
+				},
+				"mageGuild1": {
+					"animation": "TBCSMAGE.def",
+					"x": 707,
+					"y": 166,
+					"z": 1,
+					"campaignBonus": "BoCsMag1.pcx",
+					"border": "TOCSMAG1.bmp",
+					"area": "TZCSMAG1.bmp"
+				},
+				"mageGuild2": {
+					"animation": "TBCSMAG2.def",
+					"x": 706,
+					"y": 135,
+					"z": 1,
+					"campaignBonus": "BoCsMag2.pcx",
+					"border": "TOCSMAG2.bmp",
+					"area": "TZCSMAG2.bmp"
+				},
+				"mageGuild3": {
+					"animation": "TBCSMAG3.def",
+					"x": 704,
+					"y": 107,
+					"z": 1,
+					"campaignBonus": "BoCsMag3.pcx",
+					"border": "TOCSM301.bmp",
+					"area": "TZCSM301.bmp"
+				},
+				"mageGuild4": {
+					"animation": "TBCSMAG4.def",
+					"x": 704,
+					"y": 76,
+					"z": 1,
+					"campaignBonus": "BoCsMag4.pcx",
+					"border": "TOCSM401.bmp",
+					"area": "TZCSM401.bmp"
+				},
+				"tavern": {
+					"animation": "TBCSTVRN.def",
+					"x": 0,
+					"y": 230,
+					"z": 2,
+					"campaignBonus": "BoCsTav1.pcx",
+					"border": "TOCSTAV1.bmp",
+					"area": "TZCSTAV1.bmp"
+				},
+				"fort": {
+					"animation": "TBCSCSTL.def",
+					"x": 595,
+					"y": 66,
+					"z": -5,
+					"campaignBonus": "BoCsCas1.pcx",
+					"border": "TOCSCAS1.bmp",
+					"area": "TZCSCAS1.bmp"
+				},
+				"citadel": {
+					"animation": "TBCSCAS2.def",
+					"x": 478,
+					"y": 66,
+					"z": -5,
+					"campaignBonus": "BoCsCas2.pcx",
+					"border": "TOCSCAS2.bmp",
+					"area": "TZCSCAS2.bmp"
+				},
+				"castle": {
+					"animation": "TBCSCAS3.def",
+					"x": 478,
+					"y": 37,
+					"z": -5,
+					"campaignBonus": "BoCsCas3.pcx",
+					"border": "TOCSCAS3.bmp",
+					"area": "TZCSCAS3.bmp"
+				},
+				"villageHall": {
+					"animation": "TBCSHALL.def",
+					"x": 0,
+					"y": 209,
+					"z": 1,
+					"campaignBonus": "BoCsHal1.pcx",
+					"border": "TOCSH101.bmp",
+					"area": "TZCSH101.bmp"
+				},
+				"townHall": {
+					"animation": "TBCSHAL2.def",
+					"x": 0,
+					"y": 176,
+					"z": 1,
+					"campaignBonus": "BoCsHal2.pcx",
+					"border": "TOCSH201.bmp",
+					"area": "TZCSH201.bmp"
+				},
+				"cityHall": {
+					"animation": "TBCSHAL3.def",
+					"x": 0,
+					"y": 164,
+					"z": 1,
+					"campaignBonus": "BoCsHal3.pcx",
+					"border": "TOCSH301.bmp",
+					"area": "TZCSH301.bmp"
+				},
+				"capitol": {
+					"animation": "TBCSHAL4.def",
+					"x": 0,
+					"y": 154,
+					"z": 1,
+					"campaignBonus": "BoCsHal4.pcx",
+					"border": "TOCSH401.bmp",
+					"area": "TZCSH401.bmp"
+				},
+				"marketplace": {
+					"animation": "TBCSMARK.def",
+					"x": 413,
+					"y": 264,
+					"z": 0,
+					"campaignBonus": "BoCsMrk1.pcx",
+					"border": "TOCSMRK1.bmp",
+					"area": "TZCSMRK1.bmp"
+				},
+				"resourceSilo": {
+					"animation": "TBCSSILO.def",
+					"x": 488,
+					"y": 228,
+					"z": 1,
+					"campaignBonus": "BoCsMrk2.pcx",
+					"border": "TOCSMRK2.bmp",
+					"area": "TZCSMRK2.bmp"
+				},
+				"blacksmith": {
+					"animation": "TBCSBLAK.def",
+					"x": 213,
+					"y": 251,
+					"z": 0,
+					"campaignBonus": "BoCsBlak.pcx",
+					"border": "TOCSBLAK.bmp",
+					"area": "TZCSBLAK.bmp"
+				},
+				"special1": {
+					"animation": "TBCSSPEC.def",
+					"x": 533,
+					"y": 71,
+					"z": -4,
+					"campaignBonus": "BoCsLite.pcx",
+					"border": "TOCSLT01.bmp",
+					"area": "TZCSLT01.bmp"
+				},
+				"special2": {
+					"animation": "TBCSEXT0.def",
+					"x": 384,
+					"y": 193,
+					"z": -2,
+					"campaignBonus": "BoCsCv2S.pcx",
+					"border": "TOCSCAVM.bmp",
+					"area": "TZCSCAVM.bmp"
+				},
+				"grail": {
+					"animation": "TBCSHOLY.def",
+					"x": 456,
+					"y": 109,
+					"z": -6,
+					"campaignBonus": "BoCsHoly.pcx",
+					"border": "TOCSHOLY.bmp",
+					"area": "TZCSHOLY.bmp"
+				},
+				"dwellingLvl1": {
+					"animation": "TBCSDW_0.def",
+					"x": 304,
+					"y": 92,
+					"z": -1,
+					"campaignBonus": "BoCsPik1.pcx",
+					"border": "TOCSPIK1.bmp",
+					"area": "TZCSPIK1.bmp"
+				},
+				"dwellingLvl2": {
+					"animation": "TBCSDW_1.def",
+					"x": 360,
+					"y": 130,
+					"z": 0,
+					"campaignBonus": "BoCsCrs1.pcx",
+					"border": "TOCSCRS1.bmp",
+					"area": "TZCSCRS1.bmp"
+				},
+				"dwellingLvl3": {
+					"animation": "TBCSDW_2.def",
+					"x": 76,
+					"y": 57,
+					"z": -1,
+					"campaignBonus": "BoCsGr1.pcx",
+					"border": "TOCSGR1N.bmp",
+					"area": "TZCSGR1N.bmp"
+				},
+				"dwellingLvl4": {
+					"animation": "TBCSDW_3.def",
+					"x": 176,
+					"y": 101,
+					"z": 0,
+					"campaignBonus": "BoCsSwd1.pcx",
+					"border": "TOCSSWD1.bmp",
+					"area": "TZCSSWD1.bmp"
+				},
+				"dwellingLvl5": {
+					"animation": "TBCSDW_4.def",
+					"x": 563,
+					"y": 211,
+					"z": 1,
+					"campaignBonus": "BoCsMon1.pcx",
+					"border": "TOCSMON1.bmp",
+					"area": "TZCSMON1.bmp"
+				},
+				"dwellingLvl6": {
+					"animation": "TBCSDW_5.def",
+					"x": 174,
+					"y": 190,
+					"z": -1,
+					"campaignBonus": "BoCsCv1.pcx",
+					"border": "TOCSC101.bmp",
+					"area": "TZCSCAV1.bmp"
+				},
+				"dwellingLvl7": {
+					"animation": "TBCSDW_6.def",
+					"x": 303,
+					"y": 0,
+					"z": -2,
+					"campaignBonus": "BoCsAng1.pcx",
+					"border": "TOCSANG1.bmp",
+					"area": "TZCSANG1.bmp"
+				},
+				"dwellingUpLvl1": {
+					"animation": "TBCSUP_0.def",
+					"x": 304,
+					"y": 65,
+					"z": -1,
+					"campaignBonus": "BoCsPik2.pcx",
+					"border": "TOCSPIK2.bmp",
+					"area": "TZCSPIK2.bmp"
+				},
+				"dwellingUpLvl2": {
+					"animation": "TBCSUP_1.def",
+					"x": 360,
+					"y": 115,
+					"z": 0,
+					"campaignBonus": "BoCsCrs2.pcx",
+					"border": "TOCSCRS2.bmp",
+					"area": "TZCSCRS2.bmp"
+				},
+				"dwellingUpLvl3": {
+					"animation": "TBCSUP_2.def",
+					"x": 76,
+					"y": 35,
+					"z": -1,
+					"campaignBonus": "BoCsGr2.pcx",
+					"border": "TOCSGR2N.bmp",
+					"area": "TZCSGR2N.bmp"
+				},
+				"dwellingUpLvl4": {
+					"animation": "TBCSUP_3.def",
+					"x": 176,
+					"y": 85,
+					"z": 0,
+					"campaignBonus": "BoCsSwd2.pcx",
+					"border": "TOCSSWD2.bmp",
+					"area": "TZCSSWD2.bmp"
+				},
+				"dwellingUpLvl5": {
+					"animation": "TBCSUP_4.def",
+					"x": 563,
+					"y": 173,
+					"z": 1,
+					"campaignBonus": "BoCsMon2.pcx",
+					"border": "TOCSMON2.bmp",
+					"area": "TZCSMON2.bmp"
+				},
+				"dwellingUpLvl6": {
+					"animation": "TBCSUP_5.def",
+					"x": 160,
+					"y": 190,
+					"z": -1,
+					"campaignBonus": "BoCsCv2.pcx",
+					"border": "TOCSCAV2.bmp",
+					"area": "TZCSCAV2.bmp"
+				},
+				"dwellingUpLvl7": {
+					"animation": "TBCSUP_6.def",
+					"x": 303,
+					"y": 0,
+					"z": -2,
+					"campaignBonus": "BoCsAng2.pcx",
+					"border": "TOCSANG2.bmp",
+					"area": "TZCSANG2.bmp"
+				},
+				"mageGuild5": {
+					"animation": "TBCSMAG4.def",
+					"x": 704,
+					"y": 76,
+					"z": 1,
+					"campaignBonus": "BoCsMag4.pcx",
+					"border": "TOCSM401.bmp",
+					"area": "TZCSM401.bmp"
+				}
+			},
+			"buildings": {
+				"villageHall": {
+					"name": "Hokage Office",
+					"description": "The Hokage Office allows you to purchase town structures and earns your village 500 gold per day."
+				},
+				"townHall": {
+					"name": "Hokage Chambers",
+					"description": "The Hokage Chambers allows you to purchase town structures and earns your village 1000 gold per day.",
+					"cost": {
+						"gold": 2500
+					}
+				},
+				"cityHall": {
+					"name": "Hokage Tower",
+					"description": "The Hokage Tower allows you to purchase town structures and earns your village 2000 gold per day.",
+					"cost": {
+						"gold": 5000
+					}
+				},
+				"capitol": {
+					"name": "Hokage Residence",
+					"description": "The Hokage Residence earns your village 4000 gold per day.",
+					"cost": {
+						"gold": 10000
+					}
+				},
+				"fort": {
+					"name": "Village Gate",
+					"description": "The Village Gate surrounds Konoha with defensive walls.",
+					"cost": {
+						"gold": 5000,
+						"wood": 20,
+						"ore": 20
+					}
+				},
+				"citadel": {
+					"name": "Fortified Gate",
+					"description": "Adds a keep and a moat to the defenses and increases base creature growth by 50%.",
+					"cost": {
+						"gold": 2500,
+						"ore": 5
+					}
+				},
+				"castle": {
+					"name": "Great Wall of Konoha",
+					"description": "Adds two arrow towers, strengthens the walls and doubles base creature growth.",
+					"cost": {
+						"gold": 5000,
+						"wood": 10,
+						"ore": 10
+					}
+				},
+				"tavern": {
+					"name": "Ichiraku Ramen",
+					"description": "Heroes gather over a bowl of ramen here: hire heroes, hear rumors and visit the Thieves' Guild. Defenders fight with +1 morale.",
+					"cost": {
+						"gold": 500,
+						"wood": 5
+					}
+				},
+				"blacksmith": {
+					"name": "Tenten's Weapon Shop",
+					"description": "Tenten's Weapon Shop sells Ballistas to your armies.",
+					"cost": {
+						"gold": 1000,
+						"wood": 5
+					},
+					"warMachine": "ballista"
+				},
+				"marketplace": {
+					"name": "Konoha Market",
+					"description": "Trade resources here; the more markets you own, the better the rates.",
+					"cost": {
+						"gold": 500,
+						"wood": 5
+					}
+				},
+				"resourceSilo": {
+					"name": "Market Storehouse",
+					"description": "The Market Storehouse adds 1 wood and 1 ore to your stock every day.",
+					"cost": {
+						"gold": 5000,
+						"ore": 5
+					},
+					"produce": {
+						"wood": 1,
+						"ore": 1
+					}
+				},
+				"mageGuild1": {
+					"name": "Jutsu Library, Level 1",
+					"description": "Scrolls of level 1 jutsu. A visiting hero learns the spells kept here.",
+					"cost": {
+						"gold": 2000,
+						"wood": 5,
+						"ore": 5
+					}
+				},
+				"mageGuild2": {
+					"name": "Jutsu Library, Level 2",
+					"description": "Scrolls of level 2 jutsu. A visiting hero learns the spells kept here.",
+					"cost": {
+						"gold": 1000,
+						"wood": 5,
+						"ore": 5,
+						"mercury": 6,
+						"sulfur": 6,
+						"crystal": 6,
+						"gems": 6
+					}
+				},
+				"mageGuild3": {
+					"name": "Jutsu Library, Level 3",
+					"description": "Scrolls of level 3 jutsu. A visiting hero learns the spells kept here.",
+					"cost": {
+						"gold": 1000,
+						"wood": 5,
+						"ore": 5,
+						"mercury": 8,
+						"sulfur": 8,
+						"crystal": 8,
+						"gems": 8
+					}
+				},
+				"mageGuild4": {
+					"name": "Jutsu Library, Level 4",
+					"description": "Scrolls of level 4 jutsu. A visiting hero learns the spells kept here.",
+					"cost": {
+						"gold": 1000,
+						"wood": 5,
+						"ore": 5,
+						"mercury": 10,
+						"sulfur": 10,
+						"crystal": 10,
+						"gems": 10
+					}
+				},
+				"mageGuild5": {
+					"name": "Jutsu Library, Level 5",
+					"description": "Scrolls of level 5 jutsu. A visiting hero learns the spells kept here.",
+					"cost": {
+						"gold": 1000,
+						"wood": 5,
+						"ore": 5,
+						"mercury": 12,
+						"sulfur": 12,
+						"crystal": 12,
+						"gems": 12
+					}
+				},
+				"special1": {
+					"name": "Konoha Hospital",
+					"description": "The hospital sells First Aid Tents. During a siege, defending troops get +2 Defense and regenerate 20 health each round.",
+					"cost": {
+						"gold": 2500,
+						"wood": 5,
+						"ore": 5
+					},
+					"requires": [
+						"dwellingLvl4"
+					],
+					"warMachine": "firstAidTent",
+					"bonuses": [
+						{
+							"type": "PRIMARY_SKILL",
+							"subtype": "primarySkill.defence",
+							"val": 2
+						},
+						{
+							"type": "HP_REGENERATION",
+							"val": 20
+						}
+					]
+				},
+				"special2": {
+					"name": "Training Ground 3",
+					"description": "Each hero may train here once and choose +1 Attack, Defense, Spell Power or Knowledge.",
+					"cost": {
+						"gold": 1500,
+						"ore": 5
+					},
+					"requires": [
+						"dwellingLvl1"
+					],
+					"configuration": {
+						"visitMode": "hero",
+						"selectMode": "selectPlayer",
+						"onSelectMessage": "Kakashi holds up two bells. What will you train?",
+						"onVisitedMessage": "You have already trained at Training Ground 3.",
+						"rewards": [
+							{
+								"message": "Training pays off: +1 Attack.",
+								"primary": {
+									"attack": 1
+								}
+							},
+							{
+								"message": "Training pays off: +1 Defense.",
+								"primary": {
+									"defence": 1
+								}
+							},
+							{
+								"message": "Training pays off: +1 Spell Power.",
+								"primary": {
+									"spellpower": 1
+								}
+							},
+							{
+								"message": "Training pays off: +1 Knowledge.",
+								"primary": {
+									"knowledge": 1
+								}
+							}
+						]
+					}
+				},
+				"grail": {
+					"name": "Hokage Rock",
+					"description": "The faces of the Hokage watch over the village: +5000 gold per day, +50% creature growth and +2 morale for all your heroes.",
+					"bonuses": [
+						{
+							"type": "MORALE",
+							"val": 2,
+							"propagator": "PLAYER"
+						}
+					]
+				},
+				"dwellingLvl1": {
+					"name": "Ninja Academy",
+					"description": "The Ninja Academy allows you to recruit Academy Students.",
+					"cost": {
+						"gold": 500,
+						"ore": 10
+					},
+					"requires": [
+						"fort"
+					]
+				},
+				"dwellingLvl2": {
+					"name": "Inuzuka Kennels",
+					"description": "The Inuzuka Kennels allows you to recruit Ninja Hounds.",
+					"cost": {
+						"gold": 1000,
+						"wood": 5,
+						"ore": 5
+					},
+					"requires": [
+						"dwellingLvl1"
+					]
+				},
+				"dwellingLvl3": {
+					"name": "Hyuga Compound",
+					"description": "The Hyuga Compound allows you to recruit Hyuga Guards.",
+					"cost": {
+						"gold": 1000,
+						"ore": 5
+					},
+					"requires": [
+						"dwellingLvl1"
+					]
+				},
+				"dwellingLvl4": {
+					"name": "Medical Corps",
+					"description": "The Medical Corps allows you to recruit Medical Ninja.",
+					"cost": {
+						"gold": 2000,
+						"wood": 5,
+						"ore": 5
+					},
+					"requires": [
+						"allOf",
+						[
+							"dwellingLvl1"
+						],
+						[
+							"mageGuild1"
+						]
+					]
+				},
+				"dwellingLvl5": {
+					"name": "Uchiha District",
+					"description": "The Uchiha District allows you to recruit Uchiha Police.",
+					"cost": {
+						"gold": 3000,
+						"wood": 5,
+						"ore": 5,
+						"mercury": 2,
+						"sulfur": 2,
+						"crystal": 2,
+						"gems": 2
+					},
+					"requires": [
+						"allOf",
+						[
+							"dwellingLvl3"
+						],
+						[
+							"mageGuild1"
+						]
+					]
+				},
+				"dwellingLvl6": {
+					"name": "ANBU Headquarters",
+					"description": "The ANBU Headquarters allows you to recruit ANBU Operatives.",
+					"cost": {
+						"gold": 5000,
+						"wood": 10,
+						"ore": 10
+					},
+					"requires": [
+						"dwellingLvl5"
+					]
+				},
+				"dwellingLvl7": {
+					"name": "Mount Myoboku Gate",
+					"description": "The Mount Myoboku Gate allows you to recruit Toad Warriors.",
+					"cost": {
+						"gold": 20000,
+						"mercury": 10,
+						"sulfur": 10,
+						"crystal": 10,
+						"gems": 10
+					},
+					"requires": [
+						"allOf",
+						[
+							"dwellingLvl6"
+						],
+						[
+							"mageGuild2"
+						]
+					]
+				},
+				"dwellingUpLvl1": {
+					"name": "Upg. Ninja Academy",
+					"description": "The upgraded Ninja Academy allows you to recruit Genin.",
+					"cost": {
+						"gold": 1000,
+						"ore": 5
+					},
+					"upgrades": "dwellingLvl1"
+				},
+				"dwellingUpLvl2": {
+					"name": "Upg. Inuzuka Kennels",
+					"description": "The upgraded Inuzuka Kennels allows you to recruit Ninken Pack Leaders.",
+					"cost": {
+						"gold": 1000,
+						"wood": 5,
+						"ore": 5
+					},
+					"upgrades": "dwellingLvl2"
+				},
+				"dwellingUpLvl3": {
+					"name": "Upg. Hyuga Compound",
+					"description": "The upgraded Hyuga Compound allows you to recruit Hyuga Main Branch fighters.",
+					"cost": {
+						"gold": 1000,
+						"ore": 5
+					},
+					"upgrades": "dwellingLvl3"
+				},
+				"dwellingUpLvl4": {
+					"name": "Upg. Medical Corps",
+					"description": "The upgraded Medical Corps allows you to recruit Senior Medics.",
+					"cost": {
+						"gold": 2000,
+						"ore": 5,
+						"mercury": 5
+					},
+					"upgrades": "dwellingLvl4"
+				},
+				"dwellingUpLvl5": {
+					"name": "Upg. Uchiha District",
+					"description": "The upgraded Uchiha District allows you to recruit Sharingan Masters.",
+					"cost": {
+						"gold": 1000,
+						"mercury": 2,
+						"sulfur": 2,
+						"crystal": 2,
+						"gems": 2
+					},
+					"upgrades": "dwellingLvl5"
+				},
+				"dwellingUpLvl6": {
+					"name": "Upg. ANBU Headquarters",
+					"description": "The upgraded ANBU Headquarters allows you to recruit ANBU Captains.",
+					"cost": {
+						"gold": 3000,
+						"wood": 10
+					},
+					"upgrades": "dwellingLvl6"
+				},
+				"dwellingUpLvl7": {
+					"name": "Upg. Mount Myoboku Gate",
+					"description": "The upgraded Mount Myoboku Gate allows you to recruit Gamabunta.",
+					"cost": {
+						"gold": 20000,
+						"mercury": 10,
+						"sulfur": 10,
+						"crystal": 10,
+						"gems": 10
+					},
+					"upgrades": "dwellingLvl7"
+				}
+			},
+			"siege": {
+				"shooter": "genin",
+				"imagePrefix": "SGCS",
+				"gate": {
+					"arch": {
+						"x": 477,
+						"y": 238
+					},
+					"gate": {
+						"x": 399,
+						"y": 274
+					}
+				},
+				"moat": {
+					"bank": {
+						"x": 403,
+						"y": 80
+					},
+					"moat": {
+						"x": 410,
+						"y": 90
+					}
+				},
+				"static": {
+					"background": {
+						"x": 600,
+						"y": 49
+					},
+					"bottom": {
+						"x": 512,
+						"y": 347
+					},
+					"top": {
+						"x": 489,
+						"y": 79
+					}
+				},
+				"towers": {
+					"bottom": {
+						"battlement": {
+							"x": 602,
+							"y": 500
+						},
+						"creature": {
+							"x": 394,
+							"y": 299
+						},
+						"tower": {
+							"x": 602,
+							"y": 500
+						}
+					},
+					"keep": {
+						"battlement": {
+							"x": 720,
+							"y": 158
+						},
+						"creature": {
+							"x": 526,
+							"y": -29
+						},
+						"tower": {
+							"x": 720,
+							"y": 158
+						}
+					},
+					"top": {
+						"battlement": {
+							"x": 557,
+							"y": 24
+						},
+						"creature": {
+							"x": 342,
+							"y": -187
+						},
+						"tower": {
+							"x": 569,
+							"y": 35
+						}
+					}
+				},
+				"walls": {
+					"bottom": {
+						"x": 528,
+						"y": 350
+					},
+					"bottomMid": {
+						"x": 469,
+						"y": 291
+					},
+					"upper": {
+						"x": 524,
+						"y": 32
+					},
+					"upperMid": {
+						"x": 470,
+						"y": 127
+					}
+				},
+				"towerIconLarge": "TWCRPORT.DEF:0:140",
+				"towerIconSmall": "CPRSMALL.DEF:0:140"
+			}
+		}
+	}
+}
