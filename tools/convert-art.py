@@ -270,7 +270,7 @@ def convert_creatures(force):
         out = os.path.join(SPRITES, 'creatures', camel(slug))
         large, small = os.path.join(out, 'portraitLarge.png'), os.path.join(out, 'portraitSmall.png')
         battle = os.path.join(out, 'battle.json')
-        need_battle = slug in BATTLE and stale(src, battle, force)
+        need_battle = slug in BATTLE and slug not in RENDERED and stale(src, battle, force)
         if not stale(src, large, force) and not need_battle:
             skipped += 1
             continue
@@ -279,11 +279,100 @@ def convert_creatures(force):
         shutil.copy2(src, os.path.join(MASTERS, 'creatures', f))
         fig = figure(Image.open(src))
         creature_portraits(fig, towns.get(slug), slug, large, small)
-        if slug in BATTLE:
+        if slug in BATTLE and slug not in RENDERED:
             battle_sprite(fig, slug, out)
             sprites += 1
         done += 1
     print('creatures: %d converted (%d with battle sprites), %d up to date' % (done, sprites, skipped))
+
+# ---------------------------------------------------------------- creatures: rendered animation
+
+# Creatures with real animation frames (rendered from a 3D model by the art session).
+# Every frame of a creature gets the same scale and offset, so the animation doesn't
+# jitter: the source ground point lands on the hex center line of the battle layout.
+#   frames: folder with <action>/NN.png (transparent RGBA, creature facing right)
+#   ground: pixel under the body center in the source frames
+#   scale:  source pixels -> battle pixels (Azure Dragon is 87x111 standing)
+#   lift:   pixels to raise the ground point above the feet line; a 3/4 view puts the near
+#           paws of a big creature below the point under its body center
+#   groups: VCMI animation group -> (action, frame numbers or None for all)
+RENDERED = {
+    'kurama': {
+        'frames': 'art/3d/kurama/work/frames', 'ground': (450, 562), 'scale': 0.32, 'lift': 10, 'wide': True,
+        'groups': {
+            0: ('walk', None), 1: ('idle', None), 2: ('idle', None),
+            3: ('hit', None), 4: ('hit', None), 5: ('death', None),
+            7: ('idle', [0]), 8: ('idle', [0]),
+            11: ('attack', None), 12: ('attack', None), 13: ('attack', None),
+        },
+        'map': ('idle', 0),      # frame used for the adventure-map sprite
+    },
+}
+MAP_CANVAS, MAP_BOX = (64, 64), (44, 50)   # original map creatures: 64x64, body about 40x47, standing on the bottom edge, centered on x = 40
+
+def premultiplied_resize(im, size):
+    out = im.convert('RGBa').resize(size, Image.LANCZOS).convert('RGBA')
+    rgb = out.convert('RGB').filter(ImageFilter.UnsharpMask(radius=0.8, percent=60, threshold=2))
+    rgb.putalpha(out.split()[-1].point(lambda v: 0 if v < 24 else v))
+    return rgb
+
+def rendered_creature(slug, spec, force):
+    src_root = os.path.join(ROOT, spec['frames'])
+    out = os.path.join(SPRITES, 'creatures', camel(slug))
+    target = os.path.join(out, 'battle.json')
+    sources = [os.path.join(dp, f) for dp, _, fs in os.walk(src_root) for f in fs if f.endswith('.png')]
+    if not sources:
+        print('rendered %s: no frames in %s' % (slug, spec['frames'])); return
+    newest = max(os.path.getmtime(f) for f in sources)
+    if not force and os.path.exists(target) and os.path.getmtime(target) >= max(newest, SELF_MTIME):
+        print('rendered %s: up to date' % slug); return
+    frames_dir = os.path.join(out, 'battle')
+    if os.path.isdir(frames_dir):
+        shutil.rmtree(frames_dir)
+    os.makedirs(frames_dir)
+    k = spec['scale']; gx, gy = spec['ground']
+    cx = CENTER_2 if spec['wide'] else CENTER_1
+    made, clipped = {}, 0
+    def frame(action, n):
+        nonlocal clipped
+        if (action, n) not in made:
+            im = Image.open(os.path.join(src_root, action, '%02d.png' % n)).convert('RGBA')
+            small = premultiplied_resize(im, (round(im.width * k), round(im.height * k)))
+            left, top = round(cx - gx * k), round(BASELINE - spec.get('lift', 0) - gy * k)
+            canvas = Image.new('RGBA', CANVAS, (0, 0, 0, 0))
+            canvas.alpha_composite(small, (left, top)) if left >= 0 and top >= 0 else canvas.paste(small, (left, top), small)
+            box = small.split()[-1].getbbox()
+            if box and (left + box[0] < 0 or top + box[1] < 0 or left + box[2] > CANVAS[0] or top + box[3] > CANVAS[1]):
+                clipped += 1
+            name = '%s_%02d.png' % (action, n)
+            canvas.save(os.path.join(frames_dir, name), optimize=True)
+            made[(action, n)] = name
+        return made[(action, n)]
+    sequences = []
+    for group, (action, numbers) in sorted(spec['groups'].items()):
+        if numbers is None:
+            numbers = sorted(int(f[:-4]) for f in os.listdir(os.path.join(src_root, action)) if f.endswith('.png'))
+        sequences.append({'group': group, 'frames': [frame(action, n) for n in numbers],
+                          'generateShadow': 1, 'generateOverlay': 1})
+    with open(target, 'w') as f:
+        json.dump({'basepath': 'naruto/creatures/%s/battle/' % camel(slug), 'sequences': sequences}, f, indent='\t')
+        f.write('\n')
+    # adventure-map sprite: one frame, fitted into the box original map creatures occupy
+    action, n = spec['map']
+    im = Image.open(os.path.join(src_root, action, '%02d.png' % n)).convert('RGBA')
+    im = im.crop(im.split()[-1].point(lambda v: 255 if v > 128 else 0).getbbox())
+    r = min(MAP_BOX[0] / im.width, MAP_BOX[1] / im.height)
+    small = premultiplied_resize(im, (max(1, round(im.width * r)), max(1, round(im.height * r))))
+    canvas = Image.new('RGBA', MAP_CANVAS, (0, 0, 0, 0))
+    canvas.alpha_composite(small, (40 - small.width // 2, 63 - small.height))
+    os.makedirs(os.path.join(out, 'map'), exist_ok=True)
+    canvas.save(os.path.join(out, 'map', '0.png'), optimize=True)
+    with open(os.path.join(out, 'map.json'), 'w') as f:
+        json.dump({'basepath': 'naruto/creatures/%s/map/' % camel(slug),
+                   'sequences': [{'group': 0, 'frames': ['0.png'], 'generateShadow': 2}]}, f, indent='\t')
+        f.write('\n')
+    print('rendered %s: %d battle frames in %d groups%s, map sprite' %
+          (slug, len(made), len(sequences), ', %d CLIPPED by the 450x400 canvas' % clipped if clipped else ''))
 
 def prune():
     """Remove converted assets whose inbox image is gone (withdrawn for a redraw), so the
@@ -300,4 +389,6 @@ if __name__ == '__main__':
     force = '--force' in sys.argv
     convert_heroes(force)
     convert_creatures(force)
+    for slug, spec in RENDERED.items():
+        rendered_creature(slug, spec, force)
     prune()

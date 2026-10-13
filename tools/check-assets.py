@@ -86,7 +86,7 @@ for f in sorted(glob.glob(os.path.join(ROOT, 'Content/sprites/**/*.json'), recur
             checked += 1
             if not os.path.exists(os.path.join(ROOT, 'Content/sprites', anim.get('basepath', ''), frame)):
                 problems.append('%s: frame %s missing' % (os.path.relpath(f, ROOT), frame))
-    if '/creatures/' in f and anim.get('sequences') and not {0, 2, 5} <= groups:
+    if f.endswith('/battle.json') and not {0, 2, 5} <= groups:
         problems.append('%s: a creature animation needs groups 0 (move), 2 (idle) and 5 (death)' % os.path.relpath(f, ROOT))
 
 for p in problems: print('PROBLEM', p)

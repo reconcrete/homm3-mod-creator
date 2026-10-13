@@ -2,12 +2,17 @@
 	"name": "Naruto Heroes",
 	"description": "Three hidden villages from Naruto as playable towns: Konohagakure, Sunagakure and Kirigakure, with their shinobi, heroes, tailed-beast bosses and artifacts.",
 	"author": "Anton Morozov",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"modType": "Town",
 	"compatibility": {
 		"min": "1.7.0"
 	},
 	"changelog": {
+		"0.3.0": [
+			"Hero and creature portraits from the generated art",
+			"Static battle sprites for the Konohagakure creatures",
+			"Kurama, the first tailed-beast boss, with rendered animation"
+		],
 		"0.2.0": [
 			"Konohagakure town: 14 creatures, 2 hero classes, 25 heroes, borrowed original graphics"
 		],
@@ -19,14 +24,16 @@
 		"name": "Герои Наруто",
 		"description": "Три скрытые деревни из «Наруто» как играбельные города: Коноха, Суна и Кири — с их шиноби, героями, хвостатыми зверями-боссами и артефактами.",
 		"translations": [
-			"config/translations/russian-konohagakure.json"
+			"config/translations/russian-konohagakure.json",
+			"config/translations/russian-neutral.json"
 		]
 	},
 	"factions": [
 		"config/konohagakure/faction.json"
 	],
 	"creatures": [
-		"config/konohagakure/creatures.json"
+		"config/konohagakure/creatures.json",
+		"config/neutral/creatures.json"
 	],
 	"heroClasses": [
 		"config/konohagakure/heroClasses.json"

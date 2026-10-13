@@ -1,0 +1,70 @@
+{
+	"kurama": {
+		"name": {
+			"singular": "Kurama",
+			"plural": "Kurama"
+		},
+		"faction": "neutral",
+		"level": 10,
+		"cost": {
+			"gold": 30000,
+			"sulfur": 20
+		},
+		"hitPoints": 1000,
+		"speed": 16,
+		"attack": 50,
+		"defense": 45,
+		"damage": {
+			"min": 70,
+			"max": 90
+		},
+		"growth": 1,
+		"horde": 0,
+		"fightValue": 58000,
+		"aiValue": 80000,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"fireBreath": {
+				"type": "ATTACKS_ALL_ADJACENT"
+			},
+			"fireImmunity": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "spellSchool.fire"
+			},
+			"spellImmunity": {
+				"type": "LEVEL_SPELL_IMMUNITY",
+				"val": 3
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/kurama/battle",
+			"map": "naruto/creatures/kurama/map",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:265",
+			"mapAttackFromRight": "AvWattak.def:0:264",
+			"iconLarge": "naruto/creatures/kurama/portraitLarge.png",
+			"iconSmall": "naruto/creatures/kurama/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 0.6,
+				"idle": 7
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "AZURATTK.wav",
+			"defend": "AZURDFND.wav",
+			"killed": "AZURKILL.wav",
+			"move": "AZURMOVE.wav",
+			"wince": "AZURWNCE.wav"
+		},
+		"doubleWide": true,
+		"excludeFromRandomization": true
+	}
+}

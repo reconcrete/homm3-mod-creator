@@ -57,7 +57,7 @@ MAP_DEF = {
     'cerberus': 'AVWhoux0.def', 'monk': 'AvWMonk.def', 'zealot': 'AVWmonx0.def',
     'woodElf': 'AVWelfw0.def', 'grandElf': 'AVWelfx0.def', 'mage': 'AVWmage0.def',
     'archMage': 'AVWmagx0.def', 'vampire': 'AVWvamp0.def', 'vampireLord': 'AVWvamx0.def',
-    'behemoth': 'AVWbhmt0.def', 'ancientBehemoth': 'AVWbhmx0.def',
+    'behemoth': 'AVWbhmt0.def', 'ancientBehemoth': 'AVWbhmx0.def', 'azureDragon': 'AVWazure.def',
 }
 
 def portrait(index):
@@ -89,7 +89,8 @@ def write_json(rel, data):
 # ---------------------------------------------------------------- creatures
 
 def creature(t, faction, cid, level, name, ru_name, borrow, cranim_name, stats, upgrades=None,
-             abilities=None, shots=None, projectile=None, ray=None, double_wide=None):
+             abilities=None, shots=None, projectile=None, ray=None, double_wide=None, extra=None,
+             idle=10):
     """name / ru_name: (singular, plural). borrow: original creature id whose graphics and
     sounds are reused. stats: dict with cost, hp, speed, attack, defense, dmg (min, max),
     growth, fight, ai, amount (min, max)."""
@@ -104,15 +105,17 @@ def creature(t, faction, cid, level, name, ru_name, borrow, cranim_name, stats, 
         'mapAttackFromRight': core['graphics']['mapAttackFromRight'],
         'iconLarge': 'TWCRPORT.DEF:0:%d' % icon,
         'iconSmall': 'CPRSMALL.DEF:0:%d' % icon,
-        'animationTime': {'attack': anim['attack'], 'walk': anim['walk'], 'idle': 10},
+        'animationTime': {'attack': anim['attack'], 'walk': anim['walk'], 'idle': idle},
         'timeBetweenFidgets': anim['fidget'],
     }
     own = 'naruto/creatures/%s/' % cid       # Anton's portrait, made by tools/convert-art.py
     if os.path.exists(os.path.join(ROOT, 'Content/sprites', own, 'portraitLarge.png')):
         g['iconLarge'], g['iconSmall'] = own + 'portraitLarge.png', own + 'portraitSmall.png'
     static = os.path.exists(os.path.join(ROOT, 'Content/sprites', own, 'battle.json'))
-    if static:   # static battle sprite from Anton's still (tools/convert-art.py); the map sprite stays borrowed
+    if static:   # battle sprite made by tools/convert-art.py (static from the still, or rendered frames)
         g['animation'] = own + 'battle'
+    if os.path.exists(os.path.join(ROOT, 'Content/sprites', own, 'map.json')):
+        g['map'] = own + 'map'               # own adventure-map sprite; otherwise the borrowed DEF
     if shots:
         m = {'attackClimaxFrame': anim['climax'], 'frameAngles': anim['angles'], 'offset': anim['offset']}
         if ray:
@@ -147,6 +150,8 @@ def creature(t, faction, cid, level, name, ru_name, borrow, cranim_name, stats, 
         c['shots'] = shots
     if double_wide if double_wide is not None else core.get('doubleWide'):
         c['doubleWide'] = True
+    if extra:
+        c.update(extra)
     t.add('creatures.%s.%s.name.singular' % (MOD, cid), ru_name[0])
     t.add('creatures.%s.%s.name.plural' % (MOD, cid), ru_name[1])
     return cid, c

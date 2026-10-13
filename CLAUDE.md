@@ -36,6 +36,16 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   the town is built. Adventure-map sprites are still borrowed.
 - The converter removes converted assets whose inbox image is gone (withdrawn for a
   redraw), so generators fall back to borrowed art.
+- Rendered animation (creatures listed in `RENDERED` in `convert-art.py`, first: Kurama,
+  frames from the art session in `art/3d/<name>/work/frames/<action>/NN.png`): one scale
+  and one offset for all frames, ground point onto the hex line, written to the same
+  `battle.json` layout plus a one-frame adventure-map sprite (`map.json`).
+- Neutral creatures and bosses: `tools/towns/neutral.py` -> `Content/config/neutral/`
+  (so far only Kurama, provisional numbers; the rest is M5).
+- Test maps: `tools/make-testmap.py` (see its docstring). `naruto-test-konohagakure` is
+  the plain Konoha map; `naruto-test-kurama` adds Kurama at (55, 60), three tiles east
+  of the red town gate, and a strong town garrison. Maps can't be validated from the
+  command line; Anton's playtest is the check.
 - The installed mod is a symlink: `~/Library/Application Support/vcmi/Mods/naruto-heroes`
   → this folder (VCMI follows it). Edits are live; no install step.
 
