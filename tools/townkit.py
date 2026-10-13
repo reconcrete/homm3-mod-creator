@@ -110,12 +110,17 @@ def creature(t, faction, cid, level, name, ru_name, borrow, cranim_name, stats, 
     own = 'naruto/creatures/%s/' % cid       # Anton's portrait, made by tools/convert-art.py
     if os.path.exists(os.path.join(ROOT, 'Content/sprites', own, 'portraitLarge.png')):
         g['iconLarge'], g['iconSmall'] = own + 'portraitLarge.png', own + 'portraitSmall.png'
+    static = os.path.exists(os.path.join(ROOT, 'Content/sprites', own, 'battle.json'))
+    if static:   # static battle sprite from Anton's still (tools/convert-art.py); the map sprite stays borrowed
+        g['animation'] = own + 'battle'
     if shots:
         m = {'attackClimaxFrame': anim['climax'], 'frameAngles': anim['angles'], 'offset': anim['offset']}
         if ray:
             m['ray'] = ray
         else:
             m['projectile'] = projectile or core['graphics']['missile']['projectile']
+        if static:
+            m['attackClimaxFrame'] = 3     # counted from 1: frame index SHOOT_CLIMAX (2) of convert-art.py's 6-frame shoot groups
         g['missile'] = m
     c = {
         'name': {'singular': name[0], 'plural': name[1]},

@@ -27,7 +27,7 @@
 		},
 		"abilities": {},
 		"graphics": {
-			"animation": "CROGUE.DEF",
+			"animation": "naruto/creatures/academyStudent/battle",
 			"map": "AVWrog.def",
 			"mapMask": [
 				"VVV",
@@ -87,7 +87,7 @@
 			}
 		},
 		"graphics": {
-			"animation": "CHALF.DEF",
+			"animation": "naruto/creatures/genin/battle",
 			"map": "AVWhalf.def",
 			"mapMask": [
 				"VVV",
@@ -104,7 +104,7 @@
 			},
 			"timeBetweenFidgets": 1.0,
 			"missile": {
-				"attackClimaxFrame": 10,
+				"attackClimaxFrame": 3,
 				"frameAngles": [
 					90.0,
 					72.0,
@@ -165,7 +165,7 @@
 		},
 		"abilities": {},
 		"graphics": {
-			"animation": "CHHOUN.DEF",
+			"animation": "naruto/creatures/ninjaHound/battle",
 			"map": "AVWhoun0.def",
 			"mapMask": [
 				"VVV",
@@ -227,7 +227,7 @@
 			}
 		},
 		"graphics": {
-			"animation": "CCERBU.DEF",
+			"animation": "naruto/creatures/ninkenPackLeader/battle",
 			"map": "AVWhoux0.def",
 			"mapMask": [
 				"VVV",
@@ -287,7 +287,7 @@
 			}
 		},
 		"graphics": {
-			"animation": "CMONKK.DEF",
+			"animation": "naruto/creatures/hyugaGuard/battle",
 			"map": "AvWMonk.def",
 			"mapMask": [
 				"VVV",
@@ -354,7 +354,7 @@
 			}
 		},
 		"graphics": {
-			"animation": "CZEALT.DEF",
+			"animation": "naruto/creatures/hyugaMainBranch/battle",
 			"map": "AVWmonx0.def",
 			"mapMask": [
 				"VVV",
@@ -423,7 +423,7 @@
 			}
 		},
 		"graphics": {
-			"animation": "CELF.DEF",
+			"animation": "naruto/creatures/medicalNinja/battle",
 			"map": "AVWelfw0.def",
 			"mapMask": [
 				"VVV",
@@ -495,7 +495,7 @@
 			}
 		},
 		"graphics": {
-			"animation": "CGRELF.DEF",
+			"animation": "naruto/creatures/seniorMedic/battle",
 			"map": "AVWelfx0.def",
 			"mapMask": [
 				"VVV",
@@ -562,7 +562,7 @@
 			}
 		},
 		"graphics": {
-			"animation": "CMAGE.DEF",
+			"animation": "naruto/creatures/uchihaPolice/battle",
 			"map": "AVWmage0.def",
 			"mapMask": [
 				"VVV",
@@ -579,7 +579,7 @@
 			},
 			"timeBetweenFidgets": 1.0,
 			"missile": {
-				"attackClimaxFrame": 9,
+				"attackClimaxFrame": 3,
 				"frameAngles": [
 					90.0,
 					72.0,
@@ -663,7 +663,7 @@
 			}
 		},
 		"graphics": {
-			"animation": "CAMAGE.DEF",
+			"animation": "naruto/creatures/sharinganMaster/battle",
 			"map": "AVWmagx0.def",
 			"mapMask": [
 				"VVV",
@@ -680,7 +680,7 @@
 			},
 			"timeBetweenFidgets": 1.0,
 			"missile": {
-				"attackClimaxFrame": 9,
+				"attackClimaxFrame": 3,
 				"frameAngles": [
 					90.0,
 					72.0,
@@ -745,7 +745,7 @@
 			}
 		},
 		"graphics": {
-			"animation": "CVAMP.DEF",
+			"animation": "naruto/creatures/anbuOperative/battle",
 			"map": "AVWvamp0.def",
 			"mapMask": [
 				"VVV",
@@ -810,7 +810,7 @@
 			}
 		},
 		"graphics": {
-			"animation": "CNOSFE.DEF",
+			"animation": "naruto/creatures/anbuCaptain/battle",
 			"map": "AVWvamx0.def",
 			"mapMask": [
 				"VVV",
@@ -871,7 +871,7 @@
 			}
 		},
 		"graphics": {
-			"animation": "CYBEHE.DEF",
+			"animation": "naruto/creatures/toadWarrior/battle",
 			"map": "AVWbhmt0.def",
 			"mapMask": [
 				"VVV",
@@ -936,7 +936,7 @@
 			}
 		},
 		"graphics": {
-			"animation": "CABEHE.DEF",
+			"animation": "naruto/creatures/gamabunta/battle",
 			"map": "AVWbhmx0.def",
 			"mapMask": [
 				"VVV",

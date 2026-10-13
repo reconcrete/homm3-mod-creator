@@ -25,7 +25,17 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   head, hand-set in `CROPS` where that fails). Rerun it after images are regenerated,
   then rerun the town generators: `townkit.hero()` / `creature()` use Anton's portrait
   when it exists, the borrowed original otherwise. Full validation checks every image
-  file exists. Combat and map sprites are still borrowed (M8).
+  file exists.
+- Static battle sprites (first half of M8): for creatures listed in `BATTLE` in
+  `convert-art.py` (body height in px, two-hex flag) it also writes
+  `creatures/<creatureId>/battle.json` + `battle/*.png`: 450x400 canvases, feet on y=267,
+  centered on x=196 (one hex) or 218 (two hexes), like the original DEFs. Each action
+  gets a few frames derived from the one still (hop, lunge, recoil, flinch, topple),
+  because VCMI times actions by frame count. `townkit.creature()` uses it when it exists
+  and sets `attackClimaxFrame` to 3 (1-based). Add a town's creatures to `BATTLE` when
+  the town is built. Adventure-map sprites are still borrowed.
+- The converter removes converted assets whose inbox image is gone (withdrawn for a
+  redraw), so generators fall back to borrowed art.
 - The installed mod is a symlink: `~/Library/Application Support/vcmi/Mods/naruto-heroes`
   → this folder (VCMI follows it). Edits are live; no install step.
 

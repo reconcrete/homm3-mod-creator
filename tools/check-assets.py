@@ -74,9 +74,20 @@ for f in sorted(glob.glob(os.path.join(ROOT, 'Content/config/**/*.json'), recurs
     if '/translations/' in f: continue
     walk(load(f), os.path.relpath(f, ROOT))
 for f in sorted(glob.glob(os.path.join(ROOT, 'Content/sprites/**/*.json'), recursive=True)):
-    for img in load(f).get('images', []):
+    anim = load(f)
+    for img in anim.get('images', []):
         if 'defFile' in img:
             check('%s:%d:%d' % (img['defFile'], img.get('defGroup', 0), img.get('defFrame', 0)), os.path.relpath(f, ROOT))
+    # our own PNG animations (e.g. creature battle sprites): every listed frame must exist
+    groups = set()
+    for seq in anim.get('sequences', []):
+        groups.add(seq['group'])
+        for frame in seq['frames']:
+            checked += 1
+            if not os.path.exists(os.path.join(ROOT, 'Content/sprites', anim.get('basepath', ''), frame)):
+                problems.append('%s: frame %s missing' % (os.path.relpath(f, ROOT), frame))
+    if '/creatures/' in f and anim.get('sequences') and not {0, 2, 5} <= groups:
+        problems.append('%s: a creature animation needs groups 0 (move), 2 (idle) and 5 (death)' % os.path.relpath(f, ROOT))
 
 for p in problems: print('PROBLEM', p)
 print('%d references checked, %d problems' % (checked, len(problems)))
