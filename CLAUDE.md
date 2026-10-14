@@ -43,9 +43,15 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
 - Neutral creatures and bosses: `tools/towns/neutral.py` -> `Content/config/neutral/`
   (so far only Kurama, provisional numbers; the rest is M5).
 - Test maps: `tools/make-testmap.py` (see its docstring). `naruto-test-konohagakure` is
-  the plain Konoha map; `naruto-test-kurama` adds Kurama at (55, 60), three tiles east
-  of the red town gate, and a strong town garrison. Maps can't be validated from the
-  command line; Anton's playtest is the check.
+  the plain Konoha map; `naruto-test-kurama` adds Kurama at (48, 61), four tiles west and
+  two south of the red town gate, and a strong town garrison. The script checks that every
+  tile under a placed monster's sprite can be clicked (`--find` lists good spots). Maps
+  can't be validated from the command line; Anton's playtest is the check.
+- Town hall (`hallSlots`): rows must keep the borrowed background's counts (Castle: 4 / 3 /
+  2 / 4 / 3), or the frames painted into the background show as black boxes. Hall labels
+  hold about 22 characters; keep Russian names within that ("Ул." for upgrades).
+- Copy `~/Library/Logs/vcmi/VCMI_Client_log.txt` before running any check after Anton has
+  played: the next client start overwrites it.
 - The installed mod is a symlink: `~/Library/Application Support/vcmi/Mods/naruto-heroes`
   → this folder (VCMI follows it). Edits are live; no install step.
 

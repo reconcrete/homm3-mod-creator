@@ -100,7 +100,8 @@ def b(name, ru_name, desc, ru_desc, cost=None, **extra):
 
 HALL_DESC = ('The {0} allows you to purchase town structures and earns your village {1} gold per day.',
              '{0} позволяет возводить постройки и приносит деревне {1} золота в день.')
-guild = lambda lvl: b('Jutsu Library, Level %d' % lvl, 'Библиотека техник, уровень %d' % lvl,
+# Hall labels hold about 22 characters (the original Russian "Гильдия Магов 1 Уровня" is 22).
+guild = lambda lvl: b('Jutsu Library Level %d' % lvl, 'Библиотека техник %d' % lvl,
                       'Scrolls of level %d jutsu. A visiting hero learns the spells kept here.' % lvl,
                       'Свитки техник %d уровня. Герой может изучить хранящиеся здесь заклинания.' % lvl,
                       {'gold': 2000, 'wood': 5, 'ore': 5} if lvl == 1 else
@@ -108,7 +109,7 @@ guild = lambda lvl: b('Jutsu Library, Level %d' % lvl, 'Библиотека т�
                        'crystal': 2 + 2 * lvl, 'gems': 2 + 2 * lvl})
 def dwelling(name, ru_name, cname, ru_cname, cost, requires=None, up=False):
     what, ru_what = (('upgraded ' if up else '') + name, ('улучшенное здание «%s»' % ru_name) if up else ru_name)
-    return b(('Upg. ' if up else '') + name, ('Улучш. ' if up else '') + ru_name,
+    return b(('Upg. ' if up else '') + name, ('Ул. ' if up else '') + ru_name,   # "Ул." as in the original Russian
              'The %s allows you to recruit %s.' % (what, cname),
              '%s позволяет нанимать существ: %s.' % (ru_what[0].upper() + ru_what[1:], ru_cname),
              cost, **({'requires': requires} if requires else {}),
@@ -161,7 +162,7 @@ buildings = {
                   {'gold': 2500, 'wood': 5, 'ore': 5}, requires=['dwellingLvl4'], warMachine='firstAidTent',
                   bonuses=[{'type': 'PRIMARY_SKILL', 'subtype': 'primarySkill.defence', 'val': 2},
                            {'type': 'HP_REGENERATION', 'val': 20}]),
-    'special2': b('Training Ground 3', 'Тренировочная площадка №3',
+    'special2': b('Training Ground 3', 'Полигон №3',
                   'Each hero may train here once and choose +1 Attack, Defense, Spell Power or Knowledge.',
                   'Каждый герой может один раз потренироваться здесь и выбрать +1 к атаке, защите, силе магии или знаниям.',
                   {'gold': 1500, 'ore': 5}, requires=['dwellingLvl1'],
@@ -208,7 +209,7 @@ buildings = {
 BUILDING_RU = {k: (v[1], v[2]) for k, v in buildings.items()}
 buildings = {k: v[0] for k, v in buildings.items()}
 TRAIN_RU = {'onSelectMessage': 'Какаши показывает два колокольчика. Что будете тренировать?',
-            'onVisitedMessage': 'Вы уже тренировались на площадке №3.',
+            'onVisitedMessage': 'Вы уже тренировались на полигоне №3.',
             'rewards': [(ru, 'Тренировка окупилась: %s.' % ru) for _, _, ru in TRAIN]}
 
 # Town screen: Castle's screen and structures (borrowed), minus the dock, hordes and
@@ -285,8 +286,11 @@ faction = {F: {
         'hallBackground': castle['town']['hallBackground'],
         'hallSlots': [
             [['villageHall', 'townHall', 'cityHall', 'capitol'], ['fort', 'citadel', 'castle'], ['tavern'], ['blacksmith']],
-            [['marketplace', 'resourceSilo'], ['mageGuild1', 'mageGuild2', 'mageGuild3', 'mageGuild4', 'mageGuild5'], ['special1']],
-            [['special2']],
+            # The hall background (Castle's, borrowed) has empty frames painted in for Castle's
+            # slots: rows must keep Castle's counts 4 / 3 / 2 / 4 / 3, or frames show as black
+            # boxes. Row 3 is Training Ground 3 + Market Storehouse (Castle: Stables + horde).
+            [['marketplace'], ['mageGuild1', 'mageGuild2', 'mageGuild3', 'mageGuild4', 'mageGuild5'], ['special1']],
+            [['special2'], ['resourceSilo']],
             [['dwellingLvl1', 'dwellingUpLvl1'], ['dwellingLvl2', 'dwellingUpLvl2'], ['dwellingLvl3', 'dwellingUpLvl3'], ['dwellingLvl4', 'dwellingUpLvl4']],
             [['dwellingLvl5', 'dwellingUpLvl5'], ['dwellingLvl6', 'dwellingUpLvl6'], ['dwellingLvl7', 'dwellingUpLvl7']],
         ],

@@ -428,8 +428,7 @@
 				],
 				[
 					[
-						"marketplace",
-						"resourceSilo"
+						"marketplace"
 					],
 					[
 						"mageGuild1",
@@ -445,6 +444,9 @@
 				[
 					[
 						"special2"
+					],
+					[
+						"resourceSilo"
 					]
 				],
 				[
@@ -985,7 +987,7 @@
 					}
 				},
 				"mageGuild1": {
-					"name": "Jutsu Library, Level 1",
+					"name": "Jutsu Library Level 1",
 					"description": "Scrolls of level 1 jutsu. A visiting hero learns the spells kept here.",
 					"cost": {
 						"gold": 2000,
@@ -994,7 +996,7 @@
 					}
 				},
 				"mageGuild2": {
-					"name": "Jutsu Library, Level 2",
+					"name": "Jutsu Library Level 2",
 					"description": "Scrolls of level 2 jutsu. A visiting hero learns the spells kept here.",
 					"cost": {
 						"gold": 1000,
@@ -1007,7 +1009,7 @@
 					}
 				},
 				"mageGuild3": {
-					"name": "Jutsu Library, Level 3",
+					"name": "Jutsu Library Level 3",
 					"description": "Scrolls of level 3 jutsu. A visiting hero learns the spells kept here.",
 					"cost": {
 						"gold": 1000,
@@ -1020,7 +1022,7 @@
 					}
 				},
 				"mageGuild4": {
-					"name": "Jutsu Library, Level 4",
+					"name": "Jutsu Library Level 4",
 					"description": "Scrolls of level 4 jutsu. A visiting hero learns the spells kept here.",
 					"cost": {
 						"gold": 1000,
@@ -1033,7 +1035,7 @@
 					}
 				},
 				"mageGuild5": {
-					"name": "Jutsu Library, Level 5",
+					"name": "Jutsu Library Level 5",
 					"description": "Scrolls of level 5 jutsu. A visiting hero learns the spells kept here.",
 					"cost": {
 						"gold": 1000,

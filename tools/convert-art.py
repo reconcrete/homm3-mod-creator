@@ -126,6 +126,7 @@ def background(town):
 CROPS = {
     'ninja-hound': {'large': (0.71, -0.05, 0.81), 'small': (0.82, -0.03, 0.43)},
     'ninken-pack-leader': {'large': (0.73, -0.02, 0.72), 'small': (0.83, -0.01, 0.42)},
+    'kurama': {'large': (0.78, 0.30, 0.62), 'small': (0.83, 0.32, 0.43)},   # head at the right, tails on top
 }
 
 def head_crop(fig, height_share, aspect, spec=None):
