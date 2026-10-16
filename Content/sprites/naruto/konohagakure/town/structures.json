@@ -1,0 +1,291 @@
+{
+	"background": "naruto/konohagakure/town/background.png",
+	"structures": {
+		"villageHall": {
+			"animation": "naruto/konohagakure/town/villageHall",
+			"x": 320,
+			"y": 168,
+			"z": 0,
+			"area": "naruto/konohagakure/town/villageHall-area.png",
+			"border": "naruto/konohagakure/town/villageHall-border.png"
+		},
+		"townHall": {
+			"animation": "naruto/konohagakure/town/townHall",
+			"x": 316,
+			"y": 176,
+			"z": 0,
+			"area": "naruto/konohagakure/town/townHall-area.png",
+			"border": "naruto/konohagakure/town/townHall-border.png"
+		},
+		"cityHall": {
+			"animation": "naruto/konohagakure/town/cityHall",
+			"x": 329,
+			"y": 163,
+			"z": 0,
+			"area": "naruto/konohagakure/town/cityHall-area.png",
+			"border": "naruto/konohagakure/town/cityHall-border.png"
+		},
+		"capitol": {
+			"animation": "naruto/konohagakure/town/capitol",
+			"x": 310,
+			"y": 131,
+			"z": 0,
+			"area": "naruto/konohagakure/town/capitol-area.png",
+			"border": "naruto/konohagakure/town/capitol-border.png"
+		},
+		"fort": {
+			"animation": "naruto/konohagakure/town/fort",
+			"x": 174,
+			"y": 104,
+			"z": -98,
+			"area": "naruto/konohagakure/town/fort-area.png",
+			"border": "naruto/konohagakure/town/fort-border.png"
+		},
+		"citadel": {
+			"animation": "naruto/konohagakure/town/citadel",
+			"x": 193,
+			"y": 67,
+			"z": -98,
+			"area": "naruto/konohagakure/town/citadel-area.png",
+			"border": "naruto/konohagakure/town/citadel-border.png"
+		},
+		"castle": {
+			"animation": "naruto/konohagakure/town/castle",
+			"x": 117,
+			"y": 99,
+			"z": -98,
+			"area": "naruto/konohagakure/town/castle-area.png",
+			"border": "naruto/konohagakure/town/castle-border.png"
+		},
+		"mageGuild1": {
+			"animation": "naruto/konohagakure/town/mageGuild1",
+			"x": 614,
+			"y": 134,
+			"z": -76,
+			"area": "naruto/konohagakure/town/mageGuild1-area.png",
+			"border": "naruto/konohagakure/town/mageGuild1-border.png"
+		},
+		"mageGuild2": {
+			"animation": "naruto/konohagakure/town/mageGuild2",
+			"x": 610,
+			"y": 119,
+			"z": -76,
+			"area": "naruto/konohagakure/town/mageGuild2-area.png",
+			"border": "naruto/konohagakure/town/mageGuild2-border.png"
+		},
+		"mageGuild3": {
+			"animation": "naruto/konohagakure/town/mageGuild3",
+			"x": 606,
+			"y": 112,
+			"z": -76,
+			"area": "naruto/konohagakure/town/mageGuild3-area.png",
+			"border": "naruto/konohagakure/town/mageGuild3-border.png"
+		},
+		"mageGuild4": {
+			"animation": "naruto/konohagakure/town/mageGuild4",
+			"x": 602,
+			"y": 103,
+			"z": -76,
+			"area": "naruto/konohagakure/town/mageGuild4-area.png",
+			"border": "naruto/konohagakure/town/mageGuild4-border.png"
+		},
+		"mageGuild5": {
+			"animation": "naruto/konohagakure/town/mageGuild5",
+			"x": 598,
+			"y": 95,
+			"z": -76,
+			"area": "naruto/konohagakure/town/mageGuild5-area.png",
+			"border": "naruto/konohagakure/town/mageGuild5-border.png"
+		},
+		"tavern": {
+			"animation": "naruto/konohagakure/town/tavern",
+			"x": 25,
+			"y": 277,
+			"z": 70,
+			"area": "naruto/konohagakure/town/tavern-area.png",
+			"border": "naruto/konohagakure/town/tavern-border.png"
+		},
+		"blacksmith": {
+			"animation": "naruto/konohagakure/town/blacksmith",
+			"x": 515,
+			"y": 281,
+			"z": 64,
+			"area": "naruto/konohagakure/town/blacksmith-area.png",
+			"border": "naruto/konohagakure/town/blacksmith-border.png"
+		},
+		"marketplace": {
+			"animation": "naruto/konohagakure/town/marketplace",
+			"x": 230,
+			"y": 270,
+			"z": 60,
+			"area": "naruto/konohagakure/town/marketplace-area.png",
+			"border": "naruto/konohagakure/town/marketplace-border.png"
+		},
+		"resourceSilo": {
+			"animation": "naruto/konohagakure/town/resourceSilo",
+			"x": 329,
+			"y": 308,
+			"z": 73,
+			"area": "naruto/konohagakure/town/resourceSilo-area.png",
+			"border": "naruto/konohagakure/town/resourceSilo-border.png"
+		},
+		"special1": {
+			"animation": "naruto/konohagakure/town/special1",
+			"x": 691,
+			"y": 207,
+			"z": 0,
+			"area": "naruto/konohagakure/town/special1-area.png",
+			"border": "naruto/konohagakure/town/special1-border.png"
+		},
+		"special2": {
+			"animation": "naruto/konohagakure/town/special2",
+			"x": 601,
+			"y": 257,
+			"z": 62,
+			"area": "naruto/konohagakure/town/special2-area.png",
+			"border": "naruto/konohagakure/town/special2-border.png"
+		},
+		"grail": {
+			"animation": "naruto/konohagakure/town/grail",
+			"x": 707,
+			"y": 114,
+			"z": -98,
+			"area": "naruto/konohagakure/town/grail-area.png",
+			"border": "naruto/konohagakure/town/grail-border.png"
+		},
+		"dwellingLvl1": {
+			"animation": "naruto/konohagakure/town/dwellingLvl1",
+			"x": 692,
+			"y": 273,
+			"z": 73,
+			"area": "naruto/konohagakure/town/dwellingLvl1-area.png",
+			"border": "naruto/konohagakure/town/dwellingLvl1-border.png"
+		},
+		"dwellingUpLvl1": {
+			"animation": "naruto/konohagakure/town/dwellingUpLvl1",
+			"x": 690,
+			"y": 264,
+			"z": 73,
+			"area": "naruto/konohagakure/town/dwellingUpLvl1-area.png",
+			"border": "naruto/konohagakure/town/dwellingUpLvl1-border.png"
+		},
+		"dwellingLvl2": {
+			"animation": "naruto/konohagakure/town/dwellingLvl2",
+			"x": 139,
+			"y": 251,
+			"z": 38,
+			"area": "naruto/konohagakure/town/dwellingLvl2-area.png",
+			"border": "naruto/konohagakure/town/dwellingLvl2-border.png"
+		},
+		"dwellingUpLvl2": {
+			"animation": "naruto/konohagakure/town/dwellingUpLvl2",
+			"x": 137,
+			"y": 233,
+			"z": 38,
+			"area": "naruto/konohagakure/town/dwellingUpLvl2-area.png",
+			"border": "naruto/konohagakure/town/dwellingUpLvl2-border.png"
+		},
+		"dwellingLvl3": {
+			"animation": "naruto/konohagakure/town/dwellingLvl3",
+			"x": 3,
+			"y": 221,
+			"z": 2,
+			"area": "naruto/konohagakure/town/dwellingLvl3-area.png",
+			"border": "naruto/konohagakure/town/dwellingLvl3-border.png"
+		},
+		"dwellingUpLvl3": {
+			"animation": "naruto/konohagakure/town/dwellingUpLvl3",
+			"x": 1,
+			"y": 199,
+			"z": 2,
+			"area": "naruto/konohagakure/town/dwellingUpLvl3-area.png",
+			"border": "naruto/konohagakure/town/dwellingUpLvl3-border.png"
+		},
+		"dwellingLvl4": {
+			"animation": "naruto/konohagakure/town/dwellingLvl4",
+			"x": 416,
+			"y": 287,
+			"z": 72,
+			"area": "naruto/konohagakure/town/dwellingLvl4-area.png",
+			"border": "naruto/konohagakure/town/dwellingLvl4-border.png"
+		},
+		"dwellingUpLvl4": {
+			"animation": "naruto/konohagakure/town/dwellingUpLvl4",
+			"x": 414,
+			"y": 266,
+			"z": 72,
+			"area": "naruto/konohagakure/town/dwellingUpLvl4-area.png",
+			"border": "naruto/konohagakure/town/dwellingUpLvl4-border.png"
+		},
+		"dwellingLvl5": {
+			"animation": "naruto/konohagakure/town/dwellingLvl5",
+			"x": 492,
+			"y": 151,
+			"z": -30,
+			"area": "naruto/konohagakure/town/dwellingLvl5-area.png",
+			"border": "naruto/konohagakure/town/dwellingLvl5-border.png"
+		},
+		"dwellingUpLvl5": {
+			"animation": "naruto/konohagakure/town/dwellingUpLvl5",
+			"x": 490,
+			"y": 143,
+			"z": -30,
+			"area": "naruto/konohagakure/town/dwellingUpLvl5-area.png",
+			"border": "naruto/konohagakure/town/dwellingUpLvl5-border.png"
+		},
+		"dwellingLvl6": {
+			"animation": "naruto/konohagakure/town/dwellingLvl6",
+			"x": 110,
+			"y": 162,
+			"z": -38,
+			"area": "naruto/konohagakure/town/dwellingLvl6-area.png",
+			"border": "naruto/konohagakure/town/dwellingLvl6-border.png"
+		},
+		"dwellingUpLvl6": {
+			"animation": "naruto/konohagakure/town/dwellingUpLvl6",
+			"x": 110,
+			"y": 170,
+			"z": -38,
+			"area": "naruto/konohagakure/town/dwellingUpLvl6-area.png",
+			"border": "naruto/konohagakure/town/dwellingUpLvl6-border.png"
+		},
+		"dwellingLvl7": {
+			"animation": "naruto/konohagakure/town/dwellingLvl7",
+			"x": 16,
+			"y": 107,
+			"z": -92,
+			"area": "naruto/konohagakure/town/dwellingLvl7-area.png",
+			"border": "naruto/konohagakure/town/dwellingLvl7-border.png"
+		},
+		"dwellingUpLvl7": {
+			"animation": "naruto/konohagakure/town/dwellingUpLvl7",
+			"x": 16,
+			"y": 105,
+			"z": -92,
+			"area": "naruto/konohagakure/town/dwellingUpLvl7-area.png",
+			"border": "naruto/konohagakure/town/dwellingUpLvl7-border.png"
+		}
+	},
+	"icons": {
+		"village": {
+			"normal": {
+				"large": "naruto/konohagakure/town/icons/villageLarge.png",
+				"small": "naruto/konohagakure/town/icons/villageSmall.png"
+			},
+			"built": {
+				"large": "naruto/konohagakure/town/icons/villageLargeBuilt.png",
+				"small": "naruto/konohagakure/town/icons/villageSmallBuilt.png"
+			}
+		},
+		"fort": {
+			"normal": {
+				"large": "naruto/konohagakure/town/icons/fortLarge.png",
+				"small": "naruto/konohagakure/town/icons/fortSmall.png"
+			},
+			"built": {
+				"large": "naruto/konohagakure/town/icons/fortLargeBuilt.png",
+				"small": "naruto/konohagakure/town/icons/fortSmallBuilt.png"
+			}
+		}
+	}
+}

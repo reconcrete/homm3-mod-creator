@@ -2,168 +2,190 @@
 	"images": [
 		{
 			"frame": 0,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 0
+			"file": "naruto/konohagakure/town/hall/mageGuild1.png"
 		},
 		{
 			"frame": 1,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 1
+			"file": "naruto/konohagakure/town/hall/mageGuild2.png"
 		},
 		{
 			"frame": 2,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 2
+			"file": "naruto/konohagakure/town/hall/mageGuild3.png"
 		},
 		{
 			"frame": 3,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 3
-		},
-		{
-			"frame": 5,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 5
-		},
-		{
-			"frame": 7,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 7
-		},
-		{
-			"frame": 8,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 8
-		},
-		{
-			"frame": 9,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 9
-		},
-		{
-			"frame": 10,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 10
-		},
-		{
-			"frame": 11,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 11
-		},
-		{
-			"frame": 12,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 12
-		},
-		{
-			"frame": 13,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 13
-		},
-		{
-			"frame": 14,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 14
-		},
-		{
-			"frame": 15,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 15
-		},
-		{
-			"frame": 16,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 16
-		},
-		{
-			"frame": 17,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 17
-		},
-		{
-			"frame": 21,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 21
-		},
-		{
-			"frame": 26,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 26
-		},
-		{
-			"frame": 30,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 30
-		},
-		{
-			"frame": 31,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 31
-		},
-		{
-			"frame": 32,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 32
-		},
-		{
-			"frame": 33,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 33
-		},
-		{
-			"frame": 34,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 34
-		},
-		{
-			"frame": 35,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 35
-		},
-		{
-			"frame": 36,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 36
-		},
-		{
-			"frame": 37,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 37
-		},
-		{
-			"frame": 38,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 38
-		},
-		{
-			"frame": 39,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 39
-		},
-		{
-			"frame": 40,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 40
-		},
-		{
-			"frame": 41,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 41
-		},
-		{
-			"frame": 42,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 42
-		},
-		{
-			"frame": 43,
-			"defFile": "HALLCSTL.DEF",
-			"defFrame": 43
+			"file": "naruto/konohagakure/town/hall/mageGuild4.png"
 		},
 		{
 			"frame": 4,
-			"defFile": "HALLRAMP.DEF",
-			"defFrame": 4
+			"file": "naruto/konohagakure/town/hall/mageGuild5.png"
+		},
+		{
+			"frame": 5,
+			"file": "naruto/konohagakure/town/hall/tavern.png"
+		},
+		{
+			"frame": 6,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 6
+		},
+		{
+			"frame": 7,
+			"file": "naruto/konohagakure/town/hall/fort.png"
+		},
+		{
+			"frame": 8,
+			"file": "naruto/konohagakure/town/hall/citadel.png"
+		},
+		{
+			"frame": 9,
+			"file": "naruto/konohagakure/town/hall/castle.png"
+		},
+		{
+			"frame": 10,
+			"file": "naruto/konohagakure/town/hall/villageHall.png"
+		},
+		{
+			"frame": 11,
+			"file": "naruto/konohagakure/town/hall/townHall.png"
+		},
+		{
+			"frame": 12,
+			"file": "naruto/konohagakure/town/hall/cityHall.png"
+		},
+		{
+			"frame": 13,
+			"file": "naruto/konohagakure/town/hall/capitol.png"
+		},
+		{
+			"frame": 14,
+			"file": "naruto/konohagakure/town/hall/marketplace.png"
+		},
+		{
+			"frame": 15,
+			"file": "naruto/konohagakure/town/hall/resourceSilo.png"
+		},
+		{
+			"frame": 16,
+			"file": "naruto/konohagakure/town/hall/blacksmith.png"
+		},
+		{
+			"frame": 17,
+			"file": "naruto/konohagakure/town/hall/special1.png"
+		},
+		{
+			"frame": 18,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 18
+		},
+		{
+			"frame": 19,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 19
+		},
+		{
+			"frame": 20,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 20
+		},
+		{
+			"frame": 21,
+			"file": "naruto/konohagakure/town/hall/special2.png"
+		},
+		{
+			"frame": 22,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 22
+		},
+		{
+			"frame": 23,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 23
+		},
+		{
+			"frame": 24,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 24
+		},
+		{
+			"frame": 25,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 25
+		},
+		{
+			"frame": 26,
+			"file": "naruto/konohagakure/town/hall/grail.png"
+		},
+		{
+			"frame": 27,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 27
+		},
+		{
+			"frame": 28,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 28
+		},
+		{
+			"frame": 29,
+			"defFile": "HALLCSTL.DEF",
+			"defFrame": 29
+		},
+		{
+			"frame": 30,
+			"file": "naruto/konohagakure/town/hall/dwellingLvl1.png"
+		},
+		{
+			"frame": 31,
+			"file": "naruto/konohagakure/town/hall/dwellingLvl2.png"
+		},
+		{
+			"frame": 32,
+			"file": "naruto/konohagakure/town/hall/dwellingLvl3.png"
+		},
+		{
+			"frame": 33,
+			"file": "naruto/konohagakure/town/hall/dwellingLvl4.png"
+		},
+		{
+			"frame": 34,
+			"file": "naruto/konohagakure/town/hall/dwellingLvl5.png"
+		},
+		{
+			"frame": 35,
+			"file": "naruto/konohagakure/town/hall/dwellingLvl6.png"
+		},
+		{
+			"frame": 36,
+			"file": "naruto/konohagakure/town/hall/dwellingLvl7.png"
+		},
+		{
+			"frame": 37,
+			"file": "naruto/konohagakure/town/hall/dwellingUpLvl1.png"
+		},
+		{
+			"frame": 38,
+			"file": "naruto/konohagakure/town/hall/dwellingUpLvl2.png"
+		},
+		{
+			"frame": 39,
+			"file": "naruto/konohagakure/town/hall/dwellingUpLvl3.png"
+		},
+		{
+			"frame": 40,
+			"file": "naruto/konohagakure/town/hall/dwellingUpLvl4.png"
+		},
+		{
+			"frame": 41,
+			"file": "naruto/konohagakure/town/hall/dwellingUpLvl5.png"
+		},
+		{
+			"frame": 42,
+			"file": "naruto/konohagakure/town/hall/dwellingUpLvl6.png"
+		},
+		{
+			"frame": 43,
+			"file": "naruto/konohagakure/town/hall/dwellingUpLvl7.png"
 		}
 	]
 }

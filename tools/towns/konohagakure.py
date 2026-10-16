@@ -1,7 +1,7 @@
 """Konohagakure: generates the town's JSON from the spec in the vault note
 ~/O/Projects/HoMM3-Naruto/Plans/Naruto-Mod-Konohagakure.md ("Details").
 Run: python3 tools/towns/konohagakure.py   (then tools/check.sh)"""
-import copy, os, sys
+import copy, json, os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from townkit import *
 
@@ -212,18 +212,31 @@ TRAIN_RU = {'onSelectMessage': 'Какаши показывает два кол�
             'onVisitedMessage': 'Вы уже тренировались на полигоне №3.',
             'rewards': [(ru, 'Тренировка окупилась: %s.' % ru) for _, _, ru in TRAIN]}
 
-# Town screen: Castle's screen and structures (borrowed), minus the dock, hordes and
-# Brotherhood; Hospital uses the Lighthouse picture, Training Ground the Stables picture,
-# Jutsu Library 5 repeats the level-4 guild picture.
-structures = copy.deepcopy(castle['town']['structures'])
-for k in ('shipyard', 'ship', 'horde1', 'horde1Upgr', 'special3'):
-    del structures[k]
-structures['mageGuild5'] = dict(structures['mageGuild4'])
-
-hall_icons = write_json('Content/sprites/naruto/konohagakure/hallIcons.json', {'images': [
-    {'frame': i, 'defFile': 'HALLCSTL.DEF', 'defFrame': i} for i in
-    list(range(0, 4)) + [5] + list(range(7, 18)) + [21, 26] + list(range(30, 44))
-] + [{'frame': 4, 'defFile': 'HALLRAMP.DEF', 'defFrame': 4}]})
+# Town screen: Anton's town art when tools/townscreen.py has built it (background, building
+# pictures and positions, hall icons, town icons); otherwise Castle's borrowed screen, minus
+# the dock, hordes and Brotherhood (Hospital on the Lighthouse picture, Training Ground on
+# the Stables picture, Jutsu Library 5 repeating level 4) with Castle's hall icons.
+SCREEN = os.path.join(ROOT, 'Content/sprites/naruto/konohagakure/town/structures.json')
+screen = json.load(open(SCREEN)) if os.path.exists(SCREEN) else None
+if screen:
+    structures = screen['structures']
+    town_background, town_icons = screen['background'], screen['icons']
+else:
+    structures = copy.deepcopy(castle['town']['structures'])
+    for k in ('shipyard', 'ship', 'horde1', 'horde1Upgr', 'special3'):
+        del structures[k]
+    structures['mageGuild5'] = dict(structures['mageGuild4'])
+    town_background = castle['town']['townBackground']
+    town_icons = {
+        'village': {'normal': {'large': 'ITPT.DEF:0:18', 'small': 'ITPA.DEF:0:20'},
+                    'built': {'large': 'ITPT.DEF:0:19', 'small': 'ITPA.DEF:0:21'}},
+        'fort': {'normal': {'large': 'ITPT.DEF:0:0', 'small': 'ITPA.DEF:0:2'},
+                 'built': {'large': 'ITPT.DEF:0:1', 'small': 'ITPA.DEF:0:3'}},
+    }
+    hall_icons = write_json('Content/sprites/naruto/konohagakure/hallIcons.json', {'images': [
+        {'frame': i, 'defFile': 'HALLCSTL.DEF', 'defFrame': i} for i in
+        list(range(0, 4)) + [5] + list(range(7, 18)) + [21, 26] + list(range(30, 44))
+    ] + [{'frame': 4, 'defFile': 'HALLRAMP.DEF', 'defFrame': 4}]})
 
 siege = copy.deepcopy(castle['town']['siege'])
 siege['shooter'] = 'genin'
@@ -268,17 +281,12 @@ faction = {F: {
     'puzzleMap': castle['puzzleMap'],
     'town': {
         'mapObject': castle['town']['mapObject'],
-        'icons': {
-            'village': {'normal': {'large': 'ITPT.DEF:0:18', 'small': 'ITPA.DEF:0:20'},
-                        'built': {'large': 'ITPT.DEF:0:19', 'small': 'ITPA.DEF:0:21'}},
-            'fort': {'normal': {'large': 'ITPT.DEF:0:0', 'small': 'ITPA.DEF:0:2'},
-                     'built': {'large': 'ITPT.DEF:0:1', 'small': 'ITPA.DEF:0:3'}},
-        },
+        'icons': town_icons,
         'musicTheme': castle['town']['musicTheme'],
         'defaultTavern': 5,
         'tavernVideo': castle['town']['tavernVideo'],
         'guildBackground': castle['town']['guildBackground'],
-        'townBackground': castle['town']['townBackground'],
+        'townBackground': town_background,
         'guildWindow': rampart['town']['guildWindow'],
         'guildWindowPosition': rampart['town']['guildWindowPosition'],
         'guildSpellPositions': rampart['town']['guildSpellPositions'],

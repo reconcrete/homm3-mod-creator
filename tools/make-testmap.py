@@ -6,6 +6,9 @@ python3 tools/make-testmap.py konohagakure
 python3 tools/make-testmap.py konohagakure --out naruto-test-kurama --name "Naruto test: Kurama" \
         --monster kurama:1:48:61 --garrison genin:80,hyugaMainBranch:25
     -> the same map plus a monster stack at tile (48, 61) and an army in the town garrison
+python3 tools/make-testmap.py konohagakure --out naruto-test-konoha-town-full --buildings all
+    -> the town starts with every building built (or --buildings base: no upgrades), to
+       review the town screen without playing for weeks
 
 Map files reference mod content by plain id (the map scope sees every active mod).
 The base map is 72x72; the red town's gate is at (52, 59) and row 60 below it is open."""
@@ -24,6 +27,8 @@ ap.add_argument('--name', help='map title in the scenario list')
 ap.add_argument('--monster', action='append', default=[], metavar='ID:AMOUNT:X:Y',
                 help='place a hostile stack of one of our creatures; repeatable')
 ap.add_argument('--find', action='store_true', help='list free tiles near the gate where a monster can be clicked all over')
+ap.add_argument('--buildings', choices=['base', 'all'],
+                help="pre-build the player's town: every base building, or everything incl. upgrades and grail")
 ap.add_argument('--garrison', metavar='ID:AMOUNT,...', help="army in the player's town garrison (up to 7 stacks)")
 args = ap.parse_args()
 
@@ -44,6 +49,15 @@ for o in objects:
     if o.get('type') == 'town' and o['options'].get('owner') == args.player:
         o['subtype'] = args.faction
         o['template']['animation'] = 'AVCcasx0'
+        if args.buildings:
+            built = list(json.load(open(os.path.join(ROOT, 'Content/config', args.faction, 'faction.json'),
+                                        encoding='utf-8'))[args.faction]['town']['buildings'])
+            if args.buildings == 'base':
+                upgrades = {'townHall', 'cityHall', 'capitol', 'citadel', 'castle', 'grail',
+                            'mageGuild2', 'mageGuild3', 'mageGuild4', 'mageGuild5'}
+                built = [b for b in built if b not in upgrades and not b.startswith('dwellingUp')]
+            # canonical "<mod>:<building>" ids, as VCMI writes them ("core:fort" for original towns)
+            o['options']['buildings'] = {'allOf': ['naruto-heroes:' + b for b in built]}
         if args.garrison:
             army = []
             for part in args.garrison.split(','):

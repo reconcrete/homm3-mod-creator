@@ -47,6 +47,16 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   two south of the red town gate, and a strong town garrison. The script checks that every
   tile under a placed monster's sprite can be clicked (`--find` lists good spots). Maps
   can't be validated from the command line; Anton's playtest is the check.
+- Town screen from Anton's art (M9): `python3 tools/townscreen.py <faction> [--preview DIR]`
+  reads `art/inbox/town-<faction>-background.png` + one picture per building, and writes
+  `Content/sprites/naruto/<faction>/town/` (800x374 background, each building scaled with
+  an `-area` click mask and a gold `-border` outline, 150x70 hall icons, town-list icons,
+  `structures.json`) plus `../hallIcons.json`. The layout (spot = center x, ground y,
+  width; upgrades share their base's spot; z from the ground line) is the `TOWNS` table in
+  that script; tune it with the preview images. The town generator uses `structures.json`
+  when it exists, Castle's borrowed screen otherwise. Without `area` a building gets no
+  hover text or outline in VCMI. Review maps: `naruto-test-konoha-town-base` / `-full`
+  (`make-testmap.py --buildings base|all`).
 - Town hall (`hallSlots`): rows must keep the borrowed background's counts (Castle: 4 / 3 /
   2 / 4 / 3), or the frames painted into the background show as black boxes. Hall labels
   hold about 22 characters; keep Russian names within that ("Ул." for upgrades).
