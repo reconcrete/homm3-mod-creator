@@ -57,6 +57,9 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   when it exists, Castle's borrowed screen otherwise. Without `area` a building gets no
   hover text or outline in VCMI. Review maps: `naruto-test-konoha-town-base` / `-full`
   (`make-testmap.py --buildings base|all`).
+- Showcase map: `python3 tools/make-showcase-map.py` -> "Naruto Heroes: all towns", red owns
+  one fully built town of every faction (ours + the 9 originals) on a fresh 36x36 grass map,
+  blue AI in a corner so the game doesn't end on day 1. Add new factions to `OURS`.
 - Town hall (`hallSlots`): rows must keep the borrowed background's counts (Castle: 4 / 3 /
   2 / 4 / 3), or the frames painted into the background show as black boxes. Hall labels
   hold about 22 characters; keep Russian names within that ("Ул." for upgrades).
