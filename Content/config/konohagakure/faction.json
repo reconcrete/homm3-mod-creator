@@ -1035,7 +1035,7 @@
 				},
 				"special2": {
 					"name": "Training Ground 3",
-					"description": "Each hero may train here once and choose +1 Attack, Defense, Spell Power or Knowledge.",
+					"description": "Click it with a hero in town: each hero may train here once and choose +1 Attack, Defense, Spell Power or Knowledge.",
 					"cost": {
 						"gold": 1500,
 						"ore": 5
@@ -1043,6 +1043,7 @@
 					"requires": [
 						"dwellingLvl1"
 					],
+					"manualHeroVisit": true,
 					"configuration": {
 						"visitMode": "hero",
 						"selectMode": "selectPlayer",

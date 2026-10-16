@@ -57,7 +57,7 @@
 	"building.naruto-heroes.konohagakure.resourceSilo.name": "Склад рынка",
 	"building.naruto-heroes.konohagakure.special1.description": "Госпиталь продаёт палатки первой помощи. При осаде защитники получают +2 к защите и восстанавливают 20 здоровья каждый раунд.",
 	"building.naruto-heroes.konohagakure.special1.name": "Госпиталь Конохи",
-	"building.naruto-heroes.konohagakure.special2.description": "Каждый герой может один раз потренироваться здесь и выбрать +1 к атаке, защите, силе магии или знаниям.",
+	"building.naruto-heroes.konohagakure.special2.description": "Щёлкните по нему, когда герой в городе: каждый герой может один раз потренироваться здесь и выбрать +1 к атаке, защите, силе магии или знаниям.",
 	"building.naruto-heroes.konohagakure.special2.name": "Полигон №3",
 	"building.naruto-heroes.konohagakure.special2.onSelect": "Какаши показывает два колокольчика. Что будете тренировать?",
 	"building.naruto-heroes.konohagakure.special2.onVisited": "Вы уже тренировались на полигоне №3.",

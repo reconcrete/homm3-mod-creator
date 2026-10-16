@@ -163,9 +163,14 @@ buildings = {
                   bonuses=[{'type': 'PRIMARY_SKILL', 'subtype': 'primarySkill.defence', 'val': 2},
                            {'type': 'HP_REGENERATION', 'val': 20}]),
     'special2': b('Training Ground 3', 'Полигон №3',
-                  'Each hero may train here once and choose +1 Attack, Defense, Spell Power or Knowledge.',
-                  'Каждый герой может один раз потренироваться здесь и выбрать +1 к атаке, защите, силе магии или знаниям.',
+                  'Click it with a hero in town: each hero may train here once and choose +1 Attack, Defense, Spell Power or Knowledge.',
+                  'Щёлкните по нему, когда герой в городе: каждый герой может один раз потренироваться здесь и выбрать +1 к атаке, защите, силе магии или знаниям.',
                   {'gold': 1500, 'ore': 5}, requires=['dwellingLvl1'],
+                  # Visited on click only. An automatic visit asks its question when a hero enters
+                  # town, and at game start (hero generated in a town that has it) the question is
+                  # lost before the screen is ready: the server then waits forever and refuses
+                  # every move ("has to answer queries").
+                  manualHeroVisit=True,
                   configuration={
                       'visitMode': 'hero', 'selectMode': 'selectPlayer',
                       'onSelectMessage': 'Kakashi holds up two bells. What will you train?',
