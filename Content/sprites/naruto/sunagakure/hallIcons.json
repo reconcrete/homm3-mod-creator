@@ -1,0 +1,191 @@
+{
+	"images": [
+		{
+			"frame": 0,
+			"file": "naruto/sunagakure/town/hall/mageGuild1.png"
+		},
+		{
+			"frame": 1,
+			"file": "naruto/sunagakure/town/hall/mageGuild2.png"
+		},
+		{
+			"frame": 2,
+			"file": "naruto/sunagakure/town/hall/mageGuild3.png"
+		},
+		{
+			"frame": 3,
+			"file": "naruto/sunagakure/town/hall/mageGuild4.png"
+		},
+		{
+			"frame": 4,
+			"file": "naruto/sunagakure/town/hall/mageGuild5.png"
+		},
+		{
+			"frame": 5,
+			"file": "naruto/sunagakure/town/hall/tavern.png"
+		},
+		{
+			"frame": 6,
+			"defFile": "HallTowr.def",
+			"defFrame": 6
+		},
+		{
+			"frame": 7,
+			"file": "naruto/sunagakure/town/hall/fort.png"
+		},
+		{
+			"frame": 8,
+			"file": "naruto/sunagakure/town/hall/citadel.png"
+		},
+		{
+			"frame": 9,
+			"file": "naruto/sunagakure/town/hall/castle.png"
+		},
+		{
+			"frame": 10,
+			"file": "naruto/sunagakure/town/hall/villageHall.png"
+		},
+		{
+			"frame": 11,
+			"file": "naruto/sunagakure/town/hall/townHall.png"
+		},
+		{
+			"frame": 12,
+			"file": "naruto/sunagakure/town/hall/cityHall.png"
+		},
+		{
+			"frame": 13,
+			"file": "naruto/sunagakure/town/hall/capitol.png"
+		},
+		{
+			"frame": 14,
+			"file": "naruto/sunagakure/town/hall/marketplace.png"
+		},
+		{
+			"frame": 15,
+			"file": "naruto/sunagakure/town/hall/resourceSilo.png"
+		},
+		{
+			"frame": 16,
+			"file": "naruto/sunagakure/town/hall/blacksmith.png"
+		},
+		{
+			"frame": 17,
+			"file": "naruto/sunagakure/town/hall/special1.png"
+		},
+		{
+			"frame": 18,
+			"defFile": "HallTowr.def",
+			"defFrame": 18
+		},
+		{
+			"frame": 19,
+			"defFile": "HallTowr.def",
+			"defFrame": 19
+		},
+		{
+			"frame": 20,
+			"defFile": "HallTowr.def",
+			"defFrame": 20
+		},
+		{
+			"frame": 21,
+			"file": "naruto/sunagakure/town/hall/special2.png"
+		},
+		{
+			"frame": 22,
+			"defFile": "HallTowr.def",
+			"defFrame": 22
+		},
+		{
+			"frame": 23,
+			"defFile": "HallTowr.def",
+			"defFrame": 23
+		},
+		{
+			"frame": 24,
+			"defFile": "HallTowr.def",
+			"defFrame": 24
+		},
+		{
+			"frame": 25,
+			"defFile": "HallTowr.def",
+			"defFrame": 25
+		},
+		{
+			"frame": 26,
+			"file": "naruto/sunagakure/town/hall/grail.png"
+		},
+		{
+			"frame": 27,
+			"defFile": "HallTowr.def",
+			"defFrame": 27
+		},
+		{
+			"frame": 28,
+			"defFile": "HallTowr.def",
+			"defFrame": 28
+		},
+		{
+			"frame": 29,
+			"defFile": "HallTowr.def",
+			"defFrame": 29
+		},
+		{
+			"frame": 30,
+			"file": "naruto/sunagakure/town/hall/dwellingLvl1.png"
+		},
+		{
+			"frame": 31,
+			"file": "naruto/sunagakure/town/hall/dwellingLvl2.png"
+		},
+		{
+			"frame": 32,
+			"file": "naruto/sunagakure/town/hall/dwellingLvl3.png"
+		},
+		{
+			"frame": 33,
+			"file": "naruto/sunagakure/town/hall/dwellingLvl4.png"
+		},
+		{
+			"frame": 34,
+			"file": "naruto/sunagakure/town/hall/dwellingLvl5.png"
+		},
+		{
+			"frame": 35,
+			"file": "naruto/sunagakure/town/hall/dwellingLvl6.png"
+		},
+		{
+			"frame": 36,
+			"file": "naruto/sunagakure/town/hall/dwellingLvl7.png"
+		},
+		{
+			"frame": 37,
+			"file": "naruto/sunagakure/town/hall/dwellingUpLvl1.png"
+		},
+		{
+			"frame": 38,
+			"file": "naruto/sunagakure/town/hall/dwellingUpLvl2.png"
+		},
+		{
+			"frame": 39,
+			"file": "naruto/sunagakure/town/hall/dwellingUpLvl3.png"
+		},
+		{
+			"frame": 40,
+			"file": "naruto/sunagakure/town/hall/dwellingUpLvl4.png"
+		},
+		{
+			"frame": 41,
+			"file": "naruto/sunagakure/town/hall/dwellingUpLvl5.png"
+		},
+		{
+			"frame": 42,
+			"file": "naruto/sunagakure/town/hall/dwellingUpLvl6.png"
+		},
+		{
+			"frame": 43,
+			"file": "naruto/sunagakure/town/hall/dwellingUpLvl7.png"
+		}
+	]
+}
