@@ -95,6 +95,10 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
 - Town hall (`hallSlots`): rows must keep the borrowed background's counts (Castle: 4 / 3 /
   2 / 4 / 3), or the frames painted into the background show as black boxes. Hall labels
   hold about 22 characters; keep Russian names within that ("Ул." for upgrades).
+- Network play needs the identical mod on both computers (VCMI compares mod checksums):
+  `tools/package-mod.sh [out]` writes `naruto-heroes.zip` (mod.json + Content, as loaded here)
+  and the Naruto vs Sasuke map to `~/Desktop/naruto-heroes-share`; the other computer imports
+  both with the launcher's "Import files". Re-send after every mod change.
 - Copy `~/Library/Logs/vcmi/VCMI_Client_log.txt` before running any check after Anton has
   played: the next client start overwrites it.
 - The installed mod is a symlink: `~/Library/Application Support/vcmi/Mods/naruto-heroes`
