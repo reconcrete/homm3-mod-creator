@@ -27,7 +27,7 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   when it exists, the borrowed original otherwise. Full validation checks every image
   file exists.
 - Static battle sprites (first half of M8): for creatures listed in `BATTLE` in
-  `convert-art.py` (body height in px, two-hex flag) it also writes
+  `convert-art.py` (body height in px, two-hex flag; all built towns listed) it also writes
   `creatures/<creatureId>/battle.json` + `battle/*.png`: 450x400 canvases, feet on y=267,
   centered on x=196 (one hex) or 218 (two hexes), like the original DEFs. Each action
   gets a few frames derived from the one still (hop, lunge, recoil, flinch, topple),
@@ -69,6 +69,14 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   → this folder (VCMI follows it). Edits are live; no install step.
 
 ## Generated content (don't hand-edit the JSON)
+
+Towns: `konohagakure`, `sunagakure`, `kirigakure` (all built; Suna and Kiri use the shared
+helpers in `townkit.py`: `hall_chain`, `fort_chain`, `guild_chain`, `dwelling_pair`,
+`faction_texts`, `register`, `town_screen`, `dwelling_object_like`; Konoha keeps its own
+inline copies). Borrowed looks: Konoha = Castle; Suna = Stronghold (map, siege, music,
+creature backgrounds) + Tower's mage-guild window + Castle's hall layout; Kiri = Fortress +
+Dungeon's mage-guild window. A borrowed original dwelling must fit a 2x2 random-dwelling
+footprint (the Water Conflux doesn't).
 
 Each town's JSON is generated from a data script: `tools/towns/<faction>.py` (numbers from
 the vault Details spec, English and Russian side by side) using helpers in
