@@ -57,6 +57,7 @@
 	"objects": [
 		"config/konohagakure/dwellings.json",
 		"config/sunagakure/dwellings.json",
-		"config/kirigakure/dwellings.json"
+		"config/kirigakure/dwellings.json",
+		"config/neutral/dwellings.json"
 	]
 }

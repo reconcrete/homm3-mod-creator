@@ -40,8 +40,11 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   frames from the art session in `art/3d/<name>/work/frames/<action>/NN.png`): one scale
   and one offset for all frames, ground point onto the hex line, written to the same
   `battle.json` layout plus a one-frame adventure-map sprite (`map.json`).
-- Neutral creatures and bosses: `tools/towns/neutral.py` -> `Content/config/neutral/`
-  (so far only Kurama, provisional numbers; the rest is M5).
+- Neutral creatures and bosses: `tools/towns/neutral.py` -> `Content/config/neutral/` (11
+  neutrals, 4 tailed beasts at level 10 excluded from random monsters, 11 lairs with the
+  artist's map pictures via `own_dwelling_object`). Test map: `tools/make-neutral-testmap.py`
+  ("Naruto test: neutrals and bosses"). Map pictures: `convert-art.py` turns
+  `map-dwelling-*.png` into `naruto/map/dwellings/<slug>` (96x96, mask VVV/VBB/VBA).
 - Test maps: `tools/make-testmap.py` (see its docstring). `naruto-test-konohagakure` is
   the plain Konoha map; `naruto-test-kurama` adds Kurama at (48, 61), four tiles west and
   two south of the red town gate, and a strong town garrison. The script checks that every

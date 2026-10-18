@@ -191,6 +191,12 @@ BATTLE = {
     'yuki-clan-adept': (86, False), 'ice-mirror-master': (88, False),
     'mist-swordsman': (86, False), 'swordsman-of-the-seven': (90, False),
     'water-dragon': (116, True), 'great-water-dragon': (128, True),
+    # neutrals and tailed beasts (Kurama has rendered animation, see RENDERED)
+    'white-zetsu': (80, False), 'ninja-cat': (56, False), 'rogue-ninja': (84, False),
+    'sound-ninja': (84, False), 'rain-ninja': (84, False), 'stone-ninja': (86, False),
+    'cloud-ninja': (86, False), 'curse-mark-warrior': (90, False), 'monkey-king-enma': (110, True),
+    'manda': (104, True), 'akatsuki-member': (90, False),
+    'shukaku': (140, True), 'isobu': (124, True), 'gyuki': (140, True),
 }
 CANVAS, BASELINE, CENTER_1, CENTER_2 = (450, 400), 267, 196, 218
 SHOOT_CLIMAX = 2      # frame of the shoot groups at which the projectile leaves
@@ -393,6 +399,42 @@ def rendered_creature(slug, spec, force):
     print('rendered %s: %d battle frames in %d groups%s, map sprite' %
           (slug, len(made), len(sequences), ', %d CLIPPED by the 450x400 canvas' % clipped if clipped else ''))
 
+# ---------------------------------------------------------------- adventure-map objects
+
+# map-dwelling-<slug>.png -> Content/sprites/naruto/map/dwellings/<slug>.json + <slug>/0.png:
+# a one-frame map object on a 96x96 canvas (3x3 tiles), the picture standing on the bottom
+# edge and centered over the two right columns, which the dwelling blocks (mask VVV/VBB/VBA,
+# entered from below; fits VCMI's 2x2 rule for random dwellings). VCMI adds the shadow.
+DWELLING_CANVAS, DWELLING_BOX, DWELLING_CENTER = (96, 96), (94, 92), 58
+
+def map_object(src, folder, slug, canvas, box, center_x):
+    im = Image.open(src).convert('RGBA')
+    im = im.crop(im.split()[-1].point(lambda v: 255 if v > 128 else 0).getbbox())
+    k = min(box[0] / im.width, box[1] / im.height)
+    small = im.convert('RGBa').resize((max(1, round(im.width * k)), max(1, round(im.height * k))), Image.LANCZOS).convert('RGBA')
+    rgb = small.convert('RGB').filter(ImageFilter.UnsharpMask(radius=0.6, percent=50, threshold=2))
+    rgb.putalpha(small.split()[-1].point(lambda v: 0 if v < 24 else v))
+    out = Image.new('RGBA', canvas, (0, 0, 0, 0))
+    out.alpha_composite(rgb, (min(max(0, round(center_x - rgb.width / 2)), canvas[0] - rgb.width), canvas[1] - 1 - rgb.height))
+    d = os.path.join(SPRITES, 'map', folder, slug)
+    os.makedirs(d, exist_ok=True)
+    out.save(os.path.join(d, '0.png'), optimize=True)
+    with open(os.path.join(SPRITES, 'map', folder, slug + '.json'), 'w') as f:
+        json.dump({'basepath': 'naruto/map/%s/%s/' % (folder, slug),
+                   'sequences': [{'group': 0, 'frames': ['0.png'], 'generateShadow': 2}]}, f, indent='\t')
+        f.write('\n')
+
+def convert_map_objects(force):
+    done = 0
+    for f in sorted(os.listdir(INBOX)):
+        if f.startswith('map-dwelling-') and f.endswith('.png'):
+            slug = f[len('map-dwelling-'):-4]
+            target = os.path.join(SPRITES, 'map', 'dwellings', slug + '.json')
+            if stale(os.path.join(INBOX, f), target, force):
+                map_object(os.path.join(INBOX, f), 'dwellings', slug, DWELLING_CANVAS, DWELLING_BOX, DWELLING_CENTER)
+                done += 1
+    print('map objects: %d converted' % done)
+
 def prune():
     """Remove converted assets whose inbox image is gone (withdrawn for a redraw), so the
     town generators fall back to borrowed art instead of showing a rejected version."""
@@ -410,4 +452,5 @@ if __name__ == '__main__':
     convert_creatures(force)
     for slug, spec in RENDERED.items():
         rendered_creature(slug, spec, force)
+    convert_map_objects(force)
     prune()

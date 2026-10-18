@@ -1,0 +1,12 @@
+{
+	"basepath": "naruto/map/dwellings/monkey-king-enma/",
+	"sequences": [
+		{
+			"group": 0,
+			"frames": [
+				"0.png"
+			],
+			"generateShadow": 2
+		}
+	]
+}

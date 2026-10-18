@@ -1,0 +1,200 @@
+{
+	"basepath": "naruto/creatures/isobu/battle/",
+	"sequences": [
+		{
+			"group": 0,
+			"frames": [
+				"s_0_0.png",
+				"s_0_-2.png",
+				"s_0_-3.png",
+				"s_0_-1.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 1,
+			"frames": [
+				"s_0_0.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 2,
+			"frames": [
+				"s_0_0.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 3,
+			"frames": [
+				"s_-3_0.png",
+				"s_-6_0.png",
+				"s_-4_0.png",
+				"s_-1_0.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 4,
+			"frames": [
+				"s_-1_0.png",
+				"s_-3_0.png",
+				"s_-3_0.png",
+				"s_-1_0.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 5,
+			"frames": [
+				"d_0.png",
+				"d_1.png",
+				"d_2.png",
+				"d_3.png",
+				"d_4.png",
+				"d_5.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 7,
+			"frames": [
+				"s_0_0.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 8,
+			"frames": [
+				"s_0_0.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 11,
+			"frames": [
+				"s_3_-2.png",
+				"s_9_-5.png",
+				"s_15_-8.png",
+				"s_15_-8.png",
+				"s_8_-4.png",
+				"s_2_-1.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 12,
+			"frames": [
+				"s_3_0.png",
+				"s_9_0.png",
+				"s_15_0.png",
+				"s_15_0.png",
+				"s_8_0.png",
+				"s_2_0.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 13,
+			"frames": [
+				"s_3_1.png",
+				"s_9_4.png",
+				"s_15_7.png",
+				"s_15_7.png",
+				"s_8_4.png",
+				"s_2_1.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 14,
+			"frames": [
+				"s_0_0.png",
+				"s_-2_0.png",
+				"s_-4_0.png",
+				"s_-3_0.png",
+				"s_-1_0.png",
+				"s_0_0.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 15,
+			"frames": [
+				"s_0_0.png",
+				"s_-2_0.png",
+				"s_-4_0.png",
+				"s_-3_0.png",
+				"s_-1_0.png",
+				"s_0_0.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 16,
+			"frames": [
+				"s_0_0.png",
+				"s_-2_0.png",
+				"s_-4_0.png",
+				"s_-3_0.png",
+				"s_-1_0.png",
+				"s_0_0.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 17,
+			"frames": [
+				"s_0_0.png",
+				"s_0_-1.png",
+				"s_0_-2.png",
+				"s_0_-2.png",
+				"s_0_-1.png",
+				"s_0_0.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 18,
+			"frames": [
+				"s_0_0.png",
+				"s_0_-1.png",
+				"s_0_-2.png",
+				"s_0_-2.png",
+				"s_0_-1.png",
+				"s_0_0.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 19,
+			"frames": [
+				"s_0_0.png",
+				"s_0_-1.png",
+				"s_0_-2.png",
+				"s_0_-2.png",
+				"s_0_-1.png",
+				"s_0_0.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		}
+	]
+}

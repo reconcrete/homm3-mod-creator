@@ -372,3 +372,15 @@ def town_screen(faction):
     """Town screen made by tools/townscreen.py from the artist's art, or None."""
     path = os.path.join(ROOT, 'Content/sprites/naruto', faction, 'town/structures.json')
     return json.load(open(path)) if os.path.exists(path) else None
+
+def own_dwelling_object(t, oid, name, ru_name, creature_id, slug, ambient='LOOPCAVE'):
+    """Map dwelling with the artist's picture (tools/convert-art.py: naruto/map/dwellings/<slug>),
+    falling back to nothing: call only when the sprite exists."""
+    o = {'name': name, 'creatures': [[creature_id]], 'sounds': {'ambient': [ambient]},
+         'templates': {'default': {'animation': 'naruto/map/dwellings/' + slug,
+                                   'mask': ['VVV', 'VBB', 'VBA'], 'visitableFrom': ['---', '+++', '+++']}}}
+    t.add('mapObject.%s.creatureGeneratorCommon.%s.name' % (MOD, oid), ru_name)
+    return oid, o
+
+def has_map_sprite(folder, slug):
+    return os.path.exists(os.path.join(ROOT, 'Content/sprites/naruto/map', folder, slug + '.json'))

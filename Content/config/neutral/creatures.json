@@ -1,4 +1,942 @@
 {
+	"whiteZetsu": {
+		"name": {
+			"singular": "White Zetsu",
+			"plural": "White Zetsu"
+		},
+		"faction": "neutral",
+		"level": 1,
+		"cost": {
+			"gold": 35
+		},
+		"hitPoints": 5,
+		"speed": 4,
+		"attack": 3,
+		"defense": 3,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"growth": 20,
+		"horde": 0,
+		"fightValue": 45,
+		"aiValue": 40,
+		"advMapAmount": {
+			"min": 40,
+			"max": 90
+		},
+		"abilities": {
+			"noWill": {
+				"type": "MIND_IMMUNITY"
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/whiteZetsu/battle",
+			"map": "AVWpeas.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:279",
+			"mapAttackFromRight": "AvWattak.def:0:278",
+			"iconLarge": "naruto/creatures/whiteZetsu/portraitLarge.png",
+			"iconSmall": "naruto/creatures/whiteZetsu/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "PSNTATTK.wav",
+			"defend": "PSNTDFND.wav",
+			"killed": "PSNTKILL.wav",
+			"move": "PSNTMOVE.wav",
+			"wince": "PSNTWNCE.wav"
+		}
+	},
+	"ninjaCat": {
+		"name": {
+			"singular": "Ninja Cat",
+			"plural": "Ninja Cats"
+		},
+		"faction": "neutral",
+		"level": 2,
+		"cost": {
+			"gold": 90
+		},
+		"hitPoints": 10,
+		"speed": 9,
+		"attack": 6,
+		"defense": 4,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"growth": 9,
+		"horde": 0,
+		"fightValue": 120,
+		"aiValue": 140,
+		"advMapAmount": {
+			"min": 16,
+			"max": 30
+		},
+		"abilities": {
+			"thief": {
+				"type": "RETURN_AFTER_STRIKE"
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/ninjaCat/battle",
+			"map": "AVWharp0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:145",
+			"mapAttackFromRight": "AvWattak.def:0:144",
+			"iconLarge": "naruto/creatures/ninjaCat/portraitLarge.png",
+			"iconSmall": "naruto/creatures/ninjaCat/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 0.85,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "HARPATTK.wav",
+			"defend": "HARPDFND.wav",
+			"killed": "HARPKILL.wav",
+			"move": "HARPMOVE.wav",
+			"wince": "HARPWNCE.wav"
+		}
+	},
+	"rogueNinja": {
+		"name": {
+			"singular": "Rogue Ninja",
+			"plural": "Rogue Ninja"
+		},
+		"faction": "neutral",
+		"level": 2,
+		"cost": {
+			"gold": 100
+		},
+		"hitPoints": 12,
+		"speed": 6,
+		"attack": 7,
+		"defense": 4,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"growth": 8,
+		"horde": 0,
+		"fightValue": 130,
+		"aiValue": 130,
+		"advMapAmount": {
+			"min": 16,
+			"max": 30
+		},
+		"abilities": {},
+		"graphics": {
+			"animation": "naruto/creatures/rogueNinja/battle",
+			"map": "AVWrog.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:287",
+			"mapAttackFromRight": "AvWattak.def:0:286",
+			"iconLarge": "naruto/creatures/rogueNinja/portraitLarge.png",
+			"iconSmall": "naruto/creatures/rogueNinja/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "ROGUATTK.wav",
+			"defend": "ROGUDFND.wav",
+			"killed": "ROGUKILL.wav",
+			"move": "ROGUMOVE.wav",
+			"wince": "ROGUWNCE.wav"
+		}
+	},
+	"soundNinja": {
+		"name": {
+			"singular": "Sound Ninja",
+			"plural": "Sound Ninja"
+		},
+		"faction": "neutral",
+		"level": 3,
+		"cost": {
+			"gold": 220
+		},
+		"hitPoints": 20,
+		"speed": 6,
+		"attack": 8,
+		"defense": 6,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"growth": 6,
+		"horde": 0,
+		"fightValue": 260,
+		"aiValue": 300,
+		"advMapAmount": {
+			"min": 12,
+			"max": 25
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"soundWave": {
+				"type": "ENEMY_DEFENCE_REDUCTION",
+				"val": 30
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/soundNinja/battle",
+			"map": "AVWsharp.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:275",
+			"mapAttackFromRight": "AvWattak.def:0:274",
+			"iconLarge": "naruto/creatures/soundNinja/portraitLarge.png",
+			"iconSmall": "naruto/creatures/soundNinja/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.02,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0,
+			"missile": {
+				"attackClimaxFrame": 3,
+				"frameAngles": [
+					90.0,
+					72.0,
+					45.0,
+					27.0,
+					0.0,
+					-27.0,
+					-45.0,
+					-72.0,
+					-90.0
+				],
+				"offset": {
+					"upperX": 32,
+					"upperY": -77,
+					"middleX": 40,
+					"middleY": -61,
+					"lowerX": 18,
+					"lowerY": -55
+				},
+				"projectile": "PELFX.DEF"
+			}
+		},
+		"sound": {
+			"attack": "HCRSATTK.wav",
+			"defend": "HCRSDFND.wav",
+			"killed": "HCRSKILL.wav",
+			"move": "HCRSMOVE.wav",
+			"shoot": "HCRSSHOT.wav",
+			"wince": "HCRSWNCE.wav"
+		},
+		"shots": 12
+	},
+	"rainNinja": {
+		"name": {
+			"singular": "Rain Ninja",
+			"plural": "Rain Ninja"
+		},
+		"faction": "neutral",
+		"level": 3,
+		"cost": {
+			"gold": 200
+		},
+		"hitPoints": 22,
+		"speed": 6,
+		"attack": 8,
+		"defense": 7,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"growth": 6,
+		"horde": 0,
+		"fightValue": 250,
+		"aiValue": 260,
+		"advMapAmount": {
+			"min": 12,
+			"max": 25
+		},
+		"abilities": {
+			"rainSwampAttack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 3,
+				"limiters": [
+					{
+						"type": "TERRAIN_LIMITER",
+						"terrain": "swamp"
+					}
+				]
+			},
+			"rainSwampDefense": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.defence",
+				"val": 3,
+				"limiters": [
+					{
+						"type": "TERRAIN_LIMITER",
+						"terrain": "swamp"
+					}
+				]
+			},
+			"rainWaterAttack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 3,
+				"limiters": [
+					{
+						"type": "TERRAIN_LIMITER",
+						"terrain": "water"
+					}
+				]
+			},
+			"rainWaterDefense": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.defence",
+				"val": 3,
+				"limiters": [
+					{
+						"type": "TERRAIN_LIMITER",
+						"terrain": "water"
+					}
+				]
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/rainNinja/battle",
+			"map": "AVWnomd.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:285",
+			"mapAttackFromRight": "AvWattak.def:0:284",
+			"iconLarge": "naruto/creatures/rainNinja/portraitLarge.png",
+			"iconSmall": "naruto/creatures/rainNinja/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "NMADATTK.wav",
+			"defend": "NMADDFND.wav",
+			"killed": "NMADKILL.wav",
+			"move": "NMADMOVE.wav",
+			"wince": "NMADWNCE.wav"
+		}
+	},
+	"stoneNinja": {
+		"name": {
+			"singular": "Stone Ninja",
+			"plural": "Stone Ninja"
+		},
+		"faction": "neutral",
+		"level": 4,
+		"cost": {
+			"gold": 350
+		},
+		"hitPoints": 40,
+		"speed": 5,
+		"attack": 10,
+		"defense": 14,
+		"damage": {
+			"min": 5,
+			"max": 8
+		},
+		"growth": 4,
+		"horde": 0,
+		"fightValue": 430,
+		"aiValue": 440,
+		"advMapAmount": {
+			"min": 10,
+			"max": 20
+		},
+		"abilities": {
+			"earthStyle": {
+				"type": "DEFENSIVE_STANCE",
+				"val": 5
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/stoneNinja/battle",
+			"map": "AVWdwrx0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:35",
+			"mapAttackFromRight": "AvWattak.def:0:34",
+			"iconLarge": "naruto/creatures/stoneNinja/portraitLarge.png",
+			"iconSmall": "naruto/creatures/stoneNinja/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 0.97,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "BDRFATTK.wav",
+			"defend": "BDRFDFND.wav",
+			"killed": "BDRFKILL.wav",
+			"move": "BDRFMOVE.wav",
+			"wince": "BDRFWNCE.wav"
+		}
+	},
+	"cloudNinja": {
+		"name": {
+			"singular": "Cloud Ninja",
+			"plural": "Cloud Ninja"
+		},
+		"faction": "neutral",
+		"level": 5,
+		"cost": {
+			"gold": 500
+		},
+		"hitPoints": 35,
+		"speed": 9,
+		"attack": 13,
+		"defense": 10,
+		"damage": {
+			"min": 9,
+			"max": 14
+		},
+		"growth": 3,
+		"horde": 0,
+		"fightValue": 580,
+		"aiValue": 680,
+		"advMapAmount": {
+			"min": 8,
+			"max": 16
+		},
+		"abilities": {
+			"lightning": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "spell.thunderbolt",
+				"val": 20
+			},
+			"lightningStrength": {
+				"type": "SPECIFIC_SPELL_POWER",
+				"subtype": "spell.thunderbolt",
+				"val": 10
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/cloudNinja/battle",
+			"map": "AVWstorm.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:255",
+			"mapAttackFromRight": "AvWattak.def:0:254",
+			"iconLarge": "naruto/creatures/cloudNinja/portraitLarge.png",
+			"iconSmall": "naruto/creatures/cloudNinja/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.33,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "STORATTK.wav",
+			"defend": "STORDFND.wav",
+			"killed": "STORKILL.wav",
+			"move": "STORMOVE.wav",
+			"shoot": "STORSHOT.wav",
+			"wince": "STORWNCE.wav"
+		}
+	},
+	"curseMarkWarrior": {
+		"name": {
+			"singular": "Curse Mark Warrior",
+			"plural": "Curse Mark Warriors"
+		},
+		"faction": "neutral",
+		"level": 5,
+		"cost": {
+			"gold": 550
+		},
+		"hitPoints": 45,
+		"speed": 7,
+		"attack": 15,
+		"defense": 9,
+		"damage": {
+			"min": 12,
+			"max": 16
+		},
+		"growth": 3,
+		"horde": 0,
+		"fightValue": 640,
+		"aiValue": 720,
+		"advMapAmount": {
+			"min": 8,
+			"max": 16
+		},
+		"abilities": {
+			"berserkPower": {
+				"type": "REVENGE"
+			},
+			"mindless": {
+				"type": "MIND_IMMUNITY"
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/curseMarkWarrior/battle",
+			"map": "AVWtrll.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:289",
+			"mapAttackFromRight": "AvWattak.def:0:288",
+			"iconLarge": "naruto/creatures/curseMarkWarrior/portraitLarge.png",
+			"iconSmall": "naruto/creatures/curseMarkWarrior/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "TRLLATTK.wav",
+			"defend": "TRLLDFND.wav",
+			"killed": "TRLLKILL.wav",
+			"move": "TRLLMOVE.wav",
+			"wince": "TRLLWNCE.wav"
+		}
+	},
+	"monkeyKingEnma": {
+		"name": {
+			"singular": "Monkey King Enma",
+			"plural": "Monkey King Enma"
+		},
+		"faction": "neutral",
+		"level": 6,
+		"cost": {
+			"gold": 1100
+		},
+		"hitPoints": 100,
+		"speed": 8,
+		"attack": 17,
+		"defense": 17,
+		"damage": {
+			"min": 18,
+			"max": 26
+		},
+		"growth": 2,
+		"horde": 0,
+		"fightValue": 1500,
+		"aiValue": 1700,
+		"advMapAmount": {
+			"min": 4,
+			"max": 10
+		},
+		"abilities": {
+			"adamantineStaff": {
+				"type": "UNLIMITED_RETALIATIONS"
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/monkeyKingEnma/battle",
+			"map": "AVWogre0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:181",
+			"mapAttackFromRight": "AvWattak.def:0:180",
+			"iconLarge": "naruto/creatures/monkeyKingEnma/portraitLarge.png",
+			"iconSmall": "naruto/creatures/monkeyKingEnma/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.28,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "OGREATTK.wav",
+			"defend": "OGREDFND.wav",
+			"killed": "OGREKILL.wav",
+			"move": "OGREMOVE.wav",
+			"wince": "OGREWNCE.wav"
+		},
+		"doubleWide": true
+	},
+	"manda": {
+		"name": {
+			"singular": "Manda",
+			"plural": "Manda"
+		},
+		"faction": "neutral",
+		"level": 7,
+		"cost": {
+			"gold": 3000
+		},
+		"hitPoints": 250,
+		"speed": 9,
+		"attack": 22,
+		"defense": 20,
+		"damage": {
+			"min": 35,
+			"max": 50
+		},
+		"growth": 1,
+		"horde": 0,
+		"fightValue": 4000,
+		"aiValue": 4800,
+		"advMapAmount": {
+			"min": 1,
+			"max": 4
+		},
+		"abilities": {
+			"poisonBite": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "spell.poison",
+				"val": 50
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/manda/battle",
+			"map": "AvWHydr.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:221",
+			"mapAttackFromRight": "AvWattak.def:0:220",
+			"iconLarge": "naruto/creatures/manda/portraitLarge.png",
+			"iconSmall": "naruto/creatures/manda/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "HYDRATTK.wav",
+			"defend": "HYDRDFND.wav",
+			"killed": "HYDRKILL.wav",
+			"move": "HYDRMOVE.wav",
+			"wince": "HYDRWNCE.wav"
+		},
+		"doubleWide": true
+	},
+	"akatsukiMember": {
+		"name": {
+			"singular": "Akatsuki Member",
+			"plural": "Akatsuki Members"
+		},
+		"faction": "neutral",
+		"level": 7,
+		"cost": {
+			"gold": 3500
+		},
+		"hitPoints": 180,
+		"speed": 11,
+		"attack": 24,
+		"defense": 20,
+		"damage": {
+			"min": 40,
+			"max": 55
+		},
+		"growth": 1,
+		"horde": 0,
+		"fightValue": 4600,
+		"aiValue": 5600,
+		"advMapAmount": {
+			"min": 1,
+			"max": 4
+		},
+		"abilities": {
+			"deadly": {
+				"type": "DOUBLE_DAMAGE_CHANCE",
+				"val": 20
+			},
+			"spellImmunity": {
+				"type": "LEVEL_SPELL_IMMUNITY",
+				"val": 2
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/akatsukiMember/battle",
+			"map": "AVWench.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:273",
+			"mapAttackFromRight": "AvWattak.def:0:272",
+			"iconLarge": "naruto/creatures/akatsukiMember/portraitLarge.png",
+			"iconSmall": "naruto/creatures/akatsukiMember/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "ENCHATTK.wav",
+			"defend": "ENCHDFND.wav",
+			"killed": "ENCHKILL.wav",
+			"move": "ENCHMOVE.wav",
+			"shoot": "ENCHSHOT.wav",
+			"wince": "ENCHWNCE.wav"
+		}
+	},
+	"shukaku": {
+		"name": {
+			"singular": "Shukaku",
+			"plural": "Shukaku"
+		},
+		"faction": "neutral",
+		"level": 10,
+		"cost": {
+			"gold": 20000,
+			"crystal": 10
+		},
+		"hitPoints": 800,
+		"speed": 10,
+		"attack": 40,
+		"defense": 45,
+		"damage": {
+			"min": 50,
+			"max": 60
+		},
+		"growth": 1,
+		"horde": 0,
+		"fightValue": 36000,
+		"aiValue": 46000,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"sandArmor": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 30
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"windSandBlast": {
+				"type": "SHOOTS_ALL_ADJACENT"
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/shukaku/battle",
+			"map": "AVWbhmx0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:195",
+			"mapAttackFromRight": "AvWattak.def:0:194",
+			"iconLarge": "naruto/creatures/shukaku/portraitLarge.png",
+			"iconSmall": "naruto/creatures/shukaku/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.38,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0,
+			"missile": {
+				"attackClimaxFrame": 3,
+				"frameAngles": [
+					90.0,
+					72.0,
+					45.0,
+					27.0,
+					0.0,
+					-27.0,
+					-45.0,
+					-72.0,
+					-90.0
+				],
+				"offset": {
+					"upperX": 11,
+					"upperY": -131,
+					"middleX": 76,
+					"middleY": -87,
+					"lowerX": 19,
+					"lowerY": -1
+				},
+				"projectile": "PHALF.DEF"
+			}
+		},
+		"sound": {
+			"attack": "BMTHATTK.wav",
+			"defend": "BMTHDFND.wav",
+			"killed": "BMTHKILL.wav",
+			"move": "BMTHMOVE.wav",
+			"wince": "BMTHWNCE.wav"
+		},
+		"shots": 8,
+		"doubleWide": true,
+		"excludeFromRandomization": true
+	},
+	"isobu": {
+		"name": {
+			"singular": "Isobu",
+			"plural": "Isobu"
+		},
+		"faction": "neutral",
+		"level": 10,
+		"cost": {
+			"gold": 22000,
+			"mercury": 10
+		},
+		"hitPoints": 1100,
+		"speed": 8,
+		"attack": 38,
+		"defense": 55,
+		"damage": {
+			"min": 45,
+			"max": 60
+		},
+		"growth": 1,
+		"horde": 0,
+		"fightValue": 40000,
+		"aiValue": 52000,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"coralArmor": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 40
+			},
+			"coralSpellArmor": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.any",
+				"val": 50
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/isobu/battle",
+			"map": "AVWrust.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:271",
+			"mapAttackFromRight": "AvWattak.def:0:270",
+			"iconLarge": "naruto/creatures/isobu/portraitLarge.png",
+			"iconSmall": "naruto/creatures/isobu/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 0.6,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "RUSTATTK.wav",
+			"defend": "RUSTDFND.wav",
+			"killed": "RUSTKILL.wav",
+			"move": "RUSTMOVE.wav",
+			"wince": "RUSTWNCE.wav"
+		},
+		"doubleWide": true,
+		"excludeFromRandomization": true
+	},
+	"gyuki": {
+		"name": {
+			"singular": "Gyuki",
+			"plural": "Gyuki"
+		},
+		"faction": "neutral",
+		"level": 10,
+		"cost": {
+			"gold": 26000,
+			"sulfur": 15
+		},
+		"hitPoints": 950,
+		"speed": 14,
+		"attack": 45,
+		"defense": 40,
+		"damage": {
+			"min": 50,
+			"max": 70
+		},
+		"growth": 1,
+		"horde": 0,
+		"fightValue": 50000,
+		"aiValue": 66000,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"tentacles": {
+				"type": "ADDITIONAL_ATTACK",
+				"val": 2
+			},
+			"tentacleGuard": {
+				"type": "UNLIMITED_RETALIATIONS"
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/gyuki/battle",
+			"map": "AVWhydx0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:223",
+			"mapAttackFromRight": "AvWattak.def:0:222",
+			"iconLarge": "naruto/creatures/gyuki/portraitLarge.png",
+			"iconSmall": "naruto/creatures/gyuki/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "CHYDATTK.wav",
+			"defend": "CHYDDFND.wav",
+			"killed": "CHYDKILL.wav",
+			"move": "CHYDMOVE.wav",
+			"wince": "CHYDWNCE.wav"
+		},
+		"doubleWide": true,
+		"excludeFromRandomization": true
+	},
 	"kurama": {
 		"name": {
 			"singular": "Kurama",

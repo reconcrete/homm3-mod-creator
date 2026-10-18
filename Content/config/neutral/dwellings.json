@@ -1,0 +1,314 @@
+{
+	"core:creatureGeneratorCommon": {
+		"types": {
+			"rogueNinjaHideout": {
+				"name": "Rogue Ninja Hideout",
+				"creatures": [
+					[
+						"rogueNinja"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPCAMP"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "naruto/map/dwellings/rogue-ninja",
+						"mask": [
+							"VVV",
+							"VBB",
+							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
+					}
+				}
+			},
+			"soundVillageOutpost": {
+				"name": "Sound Village Outpost",
+				"creatures": [
+					[
+						"soundNinja"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPCAVE"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "naruto/map/dwellings/sound-ninja",
+						"mask": [
+							"VVV",
+							"VBB",
+							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
+					}
+				}
+			},
+			"rainVillageTower": {
+				"name": "Rain Village Tower",
+				"creatures": [
+					[
+						"rainNinja"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPFOUN"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "naruto/map/dwellings/rain-ninja",
+						"mask": [
+							"VVV",
+							"VBB",
+							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
+					}
+				}
+			},
+			"stoneVillageCliff": {
+				"name": "Stone Village Cliff",
+				"creatures": [
+					[
+						"stoneNinja"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPCAVE"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "naruto/map/dwellings/stone-ninja",
+						"mask": [
+							"VVV",
+							"VBB",
+							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
+					}
+				}
+			},
+			"cloudVillageLighthouse": {
+				"name": "Cloud Village Lighthouse",
+				"creatures": [
+					[
+						"cloudNinja"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPAIR"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "naruto/map/dwellings/cloud-ninja",
+						"mask": [
+							"VVV",
+							"VBB",
+							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
+					}
+				}
+			},
+			"curseMarkLair": {
+				"name": "Curse Mark Lair",
+				"creatures": [
+					[
+						"curseMarkWarrior"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPCAVE"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "naruto/map/dwellings/curse-mark-warrior",
+						"mask": [
+							"VVV",
+							"VBB",
+							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
+					}
+				}
+			},
+			"zetsuTree": {
+				"name": "Zetsu Tree",
+				"creatures": [
+					[
+						"whiteZetsu"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPELF"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "naruto/map/dwellings/white-zetsu",
+						"mask": [
+							"VVV",
+							"VBB",
+							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
+					}
+				}
+			},
+			"catHideout": {
+				"name": "Cat Hideout",
+				"creatures": [
+					[
+						"ninjaCat"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPCAMP"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "naruto/map/dwellings/ninja-cat",
+						"mask": [
+							"VVV",
+							"VBB",
+							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
+					}
+				}
+			},
+			"enmasCave": {
+				"name": "Enma's Cave",
+				"creatures": [
+					[
+						"monkeyKingEnma"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPCAVE"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "naruto/map/dwellings/monkey-king-enma",
+						"mask": [
+							"VVV",
+							"VBB",
+							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
+					}
+				}
+			},
+			"mandasLair": {
+				"name": "Manda's Lair",
+				"creatures": [
+					[
+						"manda"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPMONS"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "naruto/map/dwellings/manda",
+						"mask": [
+							"VVV",
+							"VBB",
+							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
+					}
+				}
+			},
+			"akatsukiHideout": {
+				"name": "Akatsuki Hideout",
+				"creatures": [
+					[
+						"akatsukiMember"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPCAVE"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "naruto/map/dwellings/akatsuki-member",
+						"mask": [
+							"VVV",
+							"VBB",
+							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
+					}
+				}
+			}
+		}
+	}
+}
