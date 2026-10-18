@@ -20,7 +20,7 @@ this script) is newer. Then rerun the town generators (tools/towns/*.py), which 
 JSON at whatever exists here and fall back to borrowed originals otherwise.
 python3 tools/convert-art.py [--force]"""
 import json, math, os, re, shutil, sys
-from PIL import Image, ImageEnhance, ImageFilter
+from PIL import Image, ImageChops, ImageEnhance, ImageFilter
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -473,6 +473,40 @@ def convert_map_objects(force):
                 done += 1
     print('map objects: %d converted' % done)
 
+# hero specialty icons: specialty-<slug>.png -> heroes/<heroId>/specialtyLarge.png (44x44) and
+# specialtySmall.png (32x32), opaque like UN44.DEF / UN32.DEF; the artist's bevelled frame is kept
+SPECIALTY = {'shadow-clone-jutsu': 'narutoUzumaki', 'copy-ninja': 'kakashiHatake', 'eight-gates': 'mightGuy',
+             'insect-swarm': 'shinoAburame', 'wind-blades': 'asumaSarutobi', 'sand-shield': 'gaara', 'gold-dust': 'rasa',
+             'mirage': 'gengetsuHozuki', 'bubbles': 'utakata', 'explosive-sword': 'jinpachiMunashi',
+             'silent-killing': 'zabuzaMomochi', 'puppets': 'kankuro'}
+
+def icon(im, size):
+    im = im.convert('RGB')
+    plain = Image.new('RGB', im.size, im.getpixel((0, 0)))   # some tiles sit on a plain margin: cut it off
+    im = im.crop(ImageChops.difference(im, plain).convert('L').point(lambda v: 255 if v > 30 else 0).getbbox())
+    m = round(im.width * 0.006)              # a few light pixels at the very edge of some pictures
+    im = im.crop((m, m, im.width - m, im.height - m)).resize((size, size), Image.LANCZOS)
+    return im.filter(ImageFilter.UnsharpMask(radius=0.6, percent=60, threshold=2))
+
+def convert_specialties(force):
+    done = 0
+    for slug, hid in SPECIALTY.items():
+        src = os.path.join(INBOX, 'specialty-%s.png' % slug)
+        out = os.path.join(SPRITES, 'heroes', hid)
+        if not os.path.exists(src) or not stale(src, os.path.join(out, 'specialtyLarge.png'), force):
+            continue
+        os.makedirs(out, exist_ok=True)
+        im = Image.open(src)
+        icon(im, 44).save(os.path.join(out, 'specialtyLarge.png'))
+        icon(im, 32).save(os.path.join(out, 'specialtySmall.png'))
+        done += 1
+    # the mod icon: VCMI 1.7.5's launcher has no place for one, so it waits at the repo root
+    src = os.path.join(INBOX, 'mod-icon.png')
+    if os.path.exists(src) and stale(src, os.path.join(ROOT, 'mod-icon.png'), force):
+        icon(Image.open(src), 256).save(os.path.join(ROOT, 'mod-icon.png'))
+        done += 1
+    print('specialty icons and mod icon: %d converted' % done)
+
 def prune():
     """Remove converted assets whose inbox image is gone (withdrawn for a redraw), so the
     town generators fall back to borrowed art instead of showing a rejected version."""
@@ -492,4 +526,5 @@ if __name__ == '__main__':
         rendered_creature(slug, spec, force)
     convert_map_objects(force)
     convert_artifacts(force)
+    convert_specialties(force)
     prune()

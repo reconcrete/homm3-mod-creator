@@ -5,8 +5,8 @@
 		"images": {
 			"large": "naruto/heroes/narutoUzumaki/portraitLarge.png",
 			"small": "naruto/heroes/narutoUzumaki/portraitSmall.png",
-			"specialtyLarge": "UN44.DEF:0:1",
-			"specialtySmall": "UN32.DEF:0:1"
+			"specialtyLarge": "naruto/heroes/narutoUzumaki/specialtyLarge.png",
+			"specialtySmall": "naruto/heroes/narutoUzumaki/specialtySmall.png"
 		},
 		"army": [
 			{
@@ -106,8 +106,8 @@
 		"images": {
 			"large": "naruto/heroes/kakashiHatake/portraitLarge.png",
 			"small": "naruto/heroes/kakashiHatake/portraitSmall.png",
-			"specialtyLarge": "UN44.DEF:0:13",
-			"specialtySmall": "UN32.DEF:0:13"
+			"specialtyLarge": "naruto/heroes/kakashiHatake/specialtyLarge.png",
+			"specialtySmall": "naruto/heroes/kakashiHatake/specialtySmall.png"
 		},
 		"army": [
 			{
@@ -210,8 +210,8 @@
 		"images": {
 			"large": "naruto/heroes/mightGuy/portraitLarge.png",
 			"small": "naruto/heroes/mightGuy/portraitSmall.png",
-			"specialtyLarge": "UN44.DEF:0:144",
-			"specialtySmall": "UN32.DEF:0:144"
+			"specialtyLarge": "naruto/heroes/mightGuy/specialtyLarge.png",
+			"specialtySmall": "naruto/heroes/mightGuy/specialtySmall.png"
 		},
 		"army": [
 			{
@@ -547,8 +547,8 @@
 		"images": {
 			"large": "naruto/heroes/shinoAburame/portraitLarge.png",
 			"small": "naruto/heroes/shinoAburame/portraitSmall.png",
-			"specialtyLarge": "UN44.DEF:0:10",
-			"specialtySmall": "UN32.DEF:0:10"
+			"specialtyLarge": "naruto/heroes/shinoAburame/specialtyLarge.png",
+			"specialtySmall": "naruto/heroes/shinoAburame/specialtySmall.png"
 		},
 		"army": [
 			{
@@ -607,8 +607,8 @@
 		"images": {
 			"large": "naruto/heroes/asumaSarutobi/portraitLarge.png",
 			"small": "naruto/heroes/asumaSarutobi/portraitSmall.png",
-			"specialtyLarge": "UN44.DEF:0:141",
-			"specialtySmall": "UN32.DEF:0:141"
+			"specialtyLarge": "naruto/heroes/asumaSarutobi/specialtyLarge.png",
+			"specialtySmall": "naruto/heroes/asumaSarutobi/specialtySmall.png"
 		},
 		"army": [
 			{

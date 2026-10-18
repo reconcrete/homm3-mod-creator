@@ -45,6 +45,14 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   artist's map pictures via `own_dwelling_object`). Test map: `tools/make-neutral-testmap.py`
   ("Naruto test: neutrals and bosses"). Map pictures: `convert-art.py` turns
   `map-dwelling-*.png` into `naruto/map/dwellings/<slug>` (96x96, mask VVV/VBB/VBA).
+- Artifacts: `tools/towns/artifacts.py` -> `Content/config/artifacts/artifacts.json` (43, the
+  three Kage combinations are class SPECIAL with `components`). `convert-art.py` turns
+  `artifact-<slug>.png` into `naruto/artifacts/<artifactId>/` (icon 44x44, bonus 58x64, map
+  64x32 one-frame animation). The neutrals test map also lays out every artifact.
+- Hero specialty icons: `SPECIALTY` in `convert-art.py` maps `specialty-<slug>.png` to a hero
+  (`heroes/<heroId>/specialtyLarge.png` 44x44, `specialtySmall.png` 32x32); `townkit.hero()`
+  uses them when they exist, the borrowed UN44/UN32 frame otherwise. `mod-icon.png` (256x256)
+  sits at the repo root: VCMI 1.7.5's launcher has no per-mod icon.
 - Test maps: `tools/make-testmap.py` (see its docstring). `naruto-test-konohagakure` is
   the plain Konoha map; `naruto-test-kurama` adds Kurama at (48, 61), four tiles west and
   two south of the red town gate, and a strong town garrison. The script checks that every

@@ -5,8 +5,8 @@
 		"images": {
 			"large": "naruto/heroes/kankuro/portraitLarge.png",
 			"small": "naruto/heroes/kankuro/portraitSmall.png",
-			"specialtyLarge": "UN44.DEF:0:32",
-			"specialtySmall": "UN32.DEF:0:32"
+			"specialtyLarge": "naruto/heroes/kankuro/specialtyLarge.png",
+			"specialtySmall": "naruto/heroes/kankuro/specialtySmall.png"
 		},
 		"army": [
 			{
@@ -309,8 +309,8 @@
 		"images": {
 			"large": "naruto/heroes/gaara/portraitLarge.png",
 			"small": "naruto/heroes/gaara/portraitSmall.png",
-			"specialtyLarge": "UN44.DEF:0:77",
-			"specialtySmall": "UN32.DEF:0:77"
+			"specialtyLarge": "naruto/heroes/gaara/specialtyLarge.png",
+			"specialtySmall": "naruto/heroes/gaara/specialtySmall.png"
 		},
 		"army": [
 			{
@@ -419,8 +419,8 @@
 		"images": {
 			"large": "naruto/heroes/rasa/portraitLarge.png",
 			"small": "naruto/heroes/rasa/portraitSmall.png",
-			"specialtyLarge": "UN44.DEF:0:15",
-			"specialtySmall": "UN32.DEF:0:15"
+			"specialtyLarge": "naruto/heroes/rasa/specialtyLarge.png",
+			"specialtySmall": "naruto/heroes/rasa/specialtySmall.png"
 		},
 		"army": [
 			{

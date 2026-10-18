@@ -199,11 +199,13 @@ def hero(t, hid, cls, female, name, ru_name, bio, ru_bio, spec, ru_spec, special
     own = 'naruto/heroes/%s/' % hid           # Anton's portrait, made by tools/convert-art.py
     if os.path.exists(os.path.join(ROOT, 'Content/sprites', own, 'portraitLarge.png')):
         large, small = own + 'portraitLarge.png', own + 'portraitSmall.png'
+    spec_large, spec_small = 'UN44.DEF:0:%d' % spec_icon, 'UN32.DEF:0:%d' % spec_icon
+    if os.path.exists(os.path.join(ROOT, 'Content/sprites', own, 'specialtyLarge.png')):   # the artist's icon
+        spec_large, spec_small = own + 'specialtyLarge.png', own + 'specialtySmall.png'
     h = {
         'class': cls, 'female': female,
         'images': {'large': large, 'small': small,
-                   'specialtyLarge': 'UN44.DEF:0:%d' % spec_icon,
-                   'specialtySmall': 'UN32.DEF:0:%d' % spec_icon},
+                   'specialtyLarge': spec_large, 'specialtySmall': spec_small},
         'army': [{'creature': c, 'min': a, 'max': b} for c, a, b in army],
         'skills': [{'skill': s, 'level': l} for s, l in skills],
         'specialty': specialty,

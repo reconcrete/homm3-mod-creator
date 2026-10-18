@@ -5,8 +5,8 @@
 		"images": {
 			"large": "naruto/heroes/zabuzaMomochi/portraitLarge.png",
 			"small": "naruto/heroes/zabuzaMomochi/portraitSmall.png",
-			"specialtyLarge": "UN44.DEF:0:152",
-			"specialtySmall": "UN32.DEF:0:152"
+			"specialtyLarge": "naruto/heroes/zabuzaMomochi/specialtyLarge.png",
+			"specialtySmall": "naruto/heroes/zabuzaMomochi/specialtySmall.png"
 		},
 		"army": [
 			{
@@ -377,8 +377,8 @@
 		"images": {
 			"large": "naruto/heroes/jinpachiMunashi/portraitLarge.png",
 			"small": "naruto/heroes/jinpachiMunashi/portraitSmall.png",
-			"specialtyLarge": "UN44.DEF:0:118",
-			"specialtySmall": "UN32.DEF:0:118"
+			"specialtyLarge": "naruto/heroes/jinpachiMunashi/specialtyLarge.png",
+			"specialtySmall": "naruto/heroes/jinpachiMunashi/specialtySmall.png"
 		},
 		"army": [
 			{
@@ -642,8 +642,8 @@
 		"images": {
 			"large": "naruto/heroes/utakata/portraitLarge.png",
 			"small": "naruto/heroes/utakata/portraitSmall.png",
-			"specialtyLarge": "UN44.DEF:0:122",
-			"specialtySmall": "UN32.DEF:0:122"
+			"specialtyLarge": "naruto/heroes/utakata/specialtyLarge.png",
+			"specialtySmall": "naruto/heroes/utakata/specialtySmall.png"
 		},
 		"army": [
 			{
@@ -701,8 +701,8 @@
 		"images": {
 			"large": "naruto/heroes/gengetsuHozuki/portraitLarge.png",
 			"small": "naruto/heroes/gengetsuHozuki/portraitSmall.png",
-			"specialtyLarge": "UN44.DEF:0:40",
-			"specialtySmall": "UN32.DEF:0:40"
+			"specialtyLarge": "naruto/heroes/gengetsuHozuki/specialtyLarge.png",
+			"specialtySmall": "naruto/heroes/gengetsuHozuki/specialtySmall.png"
 		},
 		"army": [
 			{
