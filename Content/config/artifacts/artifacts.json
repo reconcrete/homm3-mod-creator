@@ -1,0 +1,1383 @@
+{
+	"kunai": {
+		"type": [
+			"HERO"
+		],
+		"slot": "RIGHT_HAND",
+		"class": "TREASURE",
+		"value": 1000,
+		"text": {
+			"name": "Kunai",
+			"description": "+2 Attack.",
+			"event": "You find Kunai."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/kunai/icon.png",
+			"scenarioBonus": "naruto/artifacts/kunai/bonus.png",
+			"map": "naruto/artifacts/kunai/map"
+		},
+		"bonuses": {
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"leafForeheadProtector": {
+		"type": [
+			"HERO"
+		],
+		"slot": "HEAD",
+		"class": "TREASURE",
+		"value": 1500,
+		"text": {
+			"name": "Leaf Forehead Protector",
+			"description": "+2 Defense; Konoha creatures +1 morale.",
+			"event": "You find Leaf Forehead Protector."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/leafForeheadProtector/icon.png",
+			"scenarioBonus": "naruto/artifacts/leafForeheadProtector/bonus.png",
+			"map": "naruto/artifacts/leafForeheadProtector/map"
+		},
+		"bonuses": {
+			"defence": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.defence",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			},
+			"konoha": {
+				"type": "MORALE",
+				"val": 1,
+				"valueType": "BASE_NUMBER",
+				"limiters": [
+					"CREATURES_ONLY",
+					{
+						"type": "FACTION_LIMITER",
+						"faction": "konohagakure"
+					}
+				]
+			}
+		}
+	},
+	"sandForeheadProtector": {
+		"type": [
+			"HERO"
+		],
+		"slot": "HEAD",
+		"class": "TREASURE",
+		"value": 1500,
+		"text": {
+			"name": "Sand Forehead Protector",
+			"description": "+2 Defense; Suna creatures +1 Defense.",
+			"event": "You find Sand Forehead Protector."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/sandForeheadProtector/icon.png",
+			"scenarioBonus": "naruto/artifacts/sandForeheadProtector/bonus.png",
+			"map": "naruto/artifacts/sandForeheadProtector/map"
+		},
+		"bonuses": {
+			"defence": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.defence",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			},
+			"suna": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.defence",
+				"val": 1,
+				"valueType": "BASE_NUMBER",
+				"limiters": [
+					"CREATURES_ONLY",
+					{
+						"type": "FACTION_LIMITER",
+						"faction": "sunagakure"
+					}
+				]
+			}
+		}
+	},
+	"mistForeheadProtector": {
+		"type": [
+			"HERO"
+		],
+		"slot": "HEAD",
+		"class": "TREASURE",
+		"value": 1500,
+		"text": {
+			"name": "Mist Forehead Protector",
+			"description": "+2 Defense; Kiri creatures +1 Attack.",
+			"event": "You find Mist Forehead Protector."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/mistForeheadProtector/icon.png",
+			"scenarioBonus": "naruto/artifacts/mistForeheadProtector/bonus.png",
+			"map": "naruto/artifacts/mistForeheadProtector/map"
+		},
+		"bonuses": {
+			"defence": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.defence",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			},
+			"kiri": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 1,
+				"valueType": "BASE_NUMBER",
+				"limiters": [
+					"CREATURES_ONLY",
+					{
+						"type": "FACTION_LIMITER",
+						"faction": "kirigakure"
+					}
+				]
+			}
+		}
+	},
+	"chuninVest": {
+		"type": [
+			"HERO"
+		],
+		"slot": "TORSO",
+		"class": "MINOR",
+		"value": 2500,
+		"text": {
+			"name": "Chunin Vest",
+			"description": "+3 Defense.",
+			"event": "You find Chunin Vest."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/chuninVest/icon.png",
+			"scenarioBonus": "naruto/artifacts/chuninVest/bonus.png",
+			"map": "naruto/artifacts/chuninVest/map"
+		},
+		"bonuses": {
+			"defence": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.defence",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"explosiveTags": {
+		"type": [
+			"HERO"
+		],
+		"slot": "MISC",
+		"class": "TREASURE",
+		"value": 1500,
+		"text": {
+			"name": "Explosive Tags",
+			"description": "+1 Attack; the Ballista deals 50% more damage.",
+			"event": "You find Explosive Tags."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/explosiveTags/icon.png",
+			"scenarioBonus": "naruto/artifacts/explosiveTags/bonus.png",
+			"map": "naruto/artifacts/explosiveTags/map"
+		},
+		"bonuses": {
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			},
+			"ballista": {
+				"type": "PERCENTAGE_DAMAGE_BOOST",
+				"val": 50,
+				"valueType": "ADDITIVE_VALUE",
+				"subtype": "damageTypeRanged",
+				"limiters": [
+					{
+						"type": "CREATURE_TYPE_LIMITER",
+						"creature": "ballista"
+					}
+				]
+			}
+		}
+	},
+	"soldierPills": {
+		"type": [
+			"HERO"
+		],
+		"slot": "MISC",
+		"class": "MINOR",
+		"value": 2500,
+		"text": {
+			"name": "Soldier Pills",
+			"description": "+1 morale, +1 Attack.",
+			"event": "You find Soldier Pills."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/soldierPills/icon.png",
+			"scenarioBonus": "naruto/artifacts/soldierPills/bonus.png",
+			"map": "naruto/artifacts/soldierPills/map"
+		},
+		"bonuses": {
+			"morale": {
+				"type": "MORALE",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			},
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"chakraPills": {
+		"type": [
+			"HERO"
+		],
+		"slot": "MISC",
+		"class": "TREASURE",
+		"value": 1500,
+		"text": {
+			"name": "Chakra Pills",
+			"description": "+3 spell points per day.",
+			"event": "You find Chakra Pills."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/chakraPills/icon.png",
+			"scenarioBonus": "naruto/artifacts/chakraPills/bonus.png",
+			"map": "naruto/artifacts/chakraPills/map"
+		},
+		"bonuses": {
+			"mana": {
+				"type": "MANA_REGENERATION",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"gamaChanWallet": {
+		"type": [
+			"HERO"
+		],
+		"slot": "MISC",
+		"class": "TREASURE",
+		"value": 1500,
+		"text": {
+			"name": "Gama-chan Wallet",
+			"description": "+250 gold per day.",
+			"event": "You find Gama-chan Wallet."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/gamaChanWallet/icon.png",
+			"scenarioBonus": "naruto/artifacts/gamaChanWallet/bonus.png",
+			"map": "naruto/artifacts/gamaChanWallet/map"
+		},
+		"instanceBonuses": {
+			"gold": {
+				"type": "GENERATE_RESOURCE",
+				"val": 250,
+				"valueType": "BASE_NUMBER",
+				"subtype": "resource.gold",
+				"stacking": "ALWAYS"
+			}
+		}
+	},
+	"ichirakuRamenCoupon": {
+		"type": [
+			"HERO"
+		],
+		"slot": "MISC",
+		"class": "TREASURE",
+		"value": 1000,
+		"text": {
+			"name": "Ichiraku Ramen Coupon",
+			"description": "+1 morale, +1 luck.",
+			"event": "You find Ichiraku Ramen Coupon."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/ichirakuRamenCoupon/icon.png",
+			"scenarioBonus": "naruto/artifacts/ichirakuRamenCoupon/bonus.png",
+			"map": "naruto/artifacts/ichirakuRamenCoupon/map"
+		},
+		"bonuses": {
+			"morale": {
+				"type": "MORALE",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			},
+			"luck": {
+				"type": "LUCK",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"flyingThunderGodKunai": {
+		"type": [
+			"HERO"
+		],
+		"slot": "MISC",
+		"class": "MAJOR",
+		"value": 10000,
+		"text": {
+			"name": "Flying Thunder God Kunai",
+			"description": "The hero can cast Dimension Door (basic).",
+			"event": "You find Flying Thunder God Kunai."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/flyingThunderGodKunai/icon.png",
+			"scenarioBonus": "naruto/artifacts/flyingThunderGodKunai/bonus.png",
+			"map": "naruto/artifacts/flyingThunderGodKunai/map"
+		},
+		"bonuses": {
+			"teleport": {
+				"type": "SPELL",
+				"val": 1,
+				"valueType": "BASE_NUMBER",
+				"subtype": "spell.dimensionDoor"
+			}
+		}
+	},
+	"mightGuysLegWeights": {
+		"type": [
+			"HERO"
+		],
+		"slot": "FEET",
+		"class": "MAJOR",
+		"value": 6000,
+		"text": {
+			"name": "Might Guy's Leg Weights",
+			"description": "Troops +2 speed.",
+			"event": "You find Might Guy's Leg Weights."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/mightGuysLegWeights/icon.png",
+			"scenarioBonus": "naruto/artifacts/mightGuysLegWeights/bonus.png",
+			"map": "naruto/artifacts/mightGuysLegWeights/map"
+		},
+		"bonuses": {
+			"speed": {
+				"type": "STACKS_SPEED",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"hunterNinMask": {
+		"type": [
+			"HERO"
+		],
+		"slot": "HEAD",
+		"class": "MINOR",
+		"value": 3000,
+		"text": {
+			"name": "Hunter-nin Mask",
+			"description": "+2 sight on the map, +1 Attack.",
+			"event": "You find Hunter-nin Mask."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/hunterNinMask/icon.png",
+			"scenarioBonus": "naruto/artifacts/hunterNinMask/bonus.png",
+			"map": "naruto/artifacts/hunterNinMask/map"
+		},
+		"bonuses": {
+			"sight": {
+				"type": "SIGHT_RADIUS",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			},
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"temarisGiantFan": {
+		"type": [
+			"HERO"
+		],
+		"slot": "LEFT_HAND",
+		"class": "MAJOR",
+		"value": 7000,
+		"text": {
+			"name": "Temari's Giant Fan",
+			"description": "Troops take 25% less damage from shooters.",
+			"event": "You find Temari's Giant Fan."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/temarisGiantFan/icon.png",
+			"scenarioBonus": "naruto/artifacts/temarisGiantFan/bonus.png",
+			"map": "naruto/artifacts/temarisGiantFan/map"
+		},
+		"bonuses": {
+			"wind": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"val": 25,
+				"valueType": "BASE_NUMBER",
+				"subtype": "damageTypeRanged"
+			}
+		}
+	},
+	"hiruko": {
+		"type": [
+			"HERO"
+		],
+		"slot": "TORSO",
+		"class": "MAJOR",
+		"value": 6000,
+		"text": {
+			"name": "Hiruko",
+			"description": "+5 Defense.",
+			"event": "You find Hiruko."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/hiruko/icon.png",
+			"scenarioBonus": "naruto/artifacts/hiruko/bonus.png",
+			"map": "naruto/artifacts/hiruko/map"
+		},
+		"bonuses": {
+			"defence": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.defence",
+				"val": 5,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"akatsukiCloak": {
+		"type": [
+			"HERO"
+		],
+		"slot": "SHOULDERS",
+		"class": "MAJOR",
+		"value": 8000,
+		"text": {
+			"name": "Akatsuki Cloak",
+			"description": "+3 Defense, +3 Spell Power.",
+			"event": "You find Akatsuki Cloak."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/akatsukiCloak/icon.png",
+			"scenarioBonus": "naruto/artifacts/akatsukiCloak/bonus.png",
+			"map": "naruto/artifacts/akatsukiCloak/map"
+		},
+		"bonuses": {
+			"defence": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.defence",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			},
+			"spellpower": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.spellpower",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"scrollOfSeals": {
+		"type": [
+			"HERO"
+		],
+		"slot": "MISC",
+		"class": "RELIC",
+		"value": 15000,
+		"text": {
+			"name": "Scroll of Seals",
+			"description": "The hero can cast every level 4 spell.",
+			"event": "You find Scroll of Seals."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/scrollOfSeals/icon.png",
+			"scenarioBonus": "naruto/artifacts/scrollOfSeals/bonus.png",
+			"map": "naruto/artifacts/scrollOfSeals/map"
+		},
+		"bonuses": {
+			"spells": {
+				"type": "SPELLS_OF_LEVEL",
+				"val": 3,
+				"valueType": "BASE_NUMBER",
+				"subtype": "spellLevel4"
+			}
+		}
+	},
+	"summoningContractToads": {
+		"type": [
+			"HERO"
+		],
+		"slot": "MISC",
+		"class": "MAJOR",
+		"value": 5000,
+		"text": {
+			"name": "Summoning Contract: Toads",
+			"description": "A Konoha town the hero visits or guards gains 1 more tier 7 creature per week.",
+			"event": "You find Summoning Contract: Toads."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/summoningContractToads/icon.png",
+			"scenarioBonus": "naruto/artifacts/summoningContractToads/bonus.png",
+			"map": "naruto/artifacts/summoningContractToads/map"
+		},
+		"instanceBonuses": {
+			"toads": {
+				"type": "CREATURE_GROWTH",
+				"subtype": "creatureLevel7",
+				"val": 1,
+				"propagator": "TOWN_AND_VISITOR",
+				"limiters": [
+					{
+						"type": "FACTION_LIMITER",
+						"faction": "konohagakure"
+					}
+				]
+			}
+		}
+	},
+	"summoningContractSlugs": {
+		"type": [
+			"HERO"
+		],
+		"slot": "MISC",
+		"class": "MAJOR",
+		"value": 5000,
+		"text": {
+			"name": "Summoning Contract: Slugs",
+			"description": "A Konoha town the hero visits or guards gains 3 more tier 4 creatures (medics) per week.",
+			"event": "You find Summoning Contract: Slugs."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/summoningContractSlugs/icon.png",
+			"scenarioBonus": "naruto/artifacts/summoningContractSlugs/bonus.png",
+			"map": "naruto/artifacts/summoningContractSlugs/map"
+		},
+		"instanceBonuses": {
+			"slugs": {
+				"type": "CREATURE_GROWTH",
+				"subtype": "creatureLevel4",
+				"val": 3,
+				"propagator": "TOWN_AND_VISITOR",
+				"limiters": [
+					{
+						"type": "FACTION_LIMITER",
+						"faction": "konohagakure"
+					}
+				]
+			}
+		}
+	},
+	"summoningContractSnakes": {
+		"type": [
+			"HERO"
+		],
+		"slot": "MISC",
+		"class": "MAJOR",
+		"value": 5000,
+		"text": {
+			"name": "Summoning Contract: Snakes",
+			"description": "Any town the hero visits or guards gains 1 more tier 6 creature per week.",
+			"event": "You find Summoning Contract: Snakes."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/summoningContractSnakes/icon.png",
+			"scenarioBonus": "naruto/artifacts/summoningContractSnakes/bonus.png",
+			"map": "naruto/artifacts/summoningContractSnakes/map"
+		},
+		"instanceBonuses": {
+			"snakes": {
+				"type": "CREATURE_GROWTH",
+				"subtype": "creatureLevel6",
+				"val": 1,
+				"propagator": "TOWN_AND_VISITOR"
+			}
+		}
+	},
+	"sharingan": {
+		"type": [
+			"HERO"
+		],
+		"slot": "NECK",
+		"class": "RELIC",
+		"value": 15000,
+		"text": {
+			"name": "Sharingan",
+			"description": "+3 Spell Power; troops immune to Blind; +20% chance to learn spells of level 1-3 cast in battle.",
+			"event": "You find Sharingan."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/sharingan/icon.png",
+			"scenarioBonus": "naruto/artifacts/sharingan/bonus.png",
+			"map": "naruto/artifacts/sharingan/map"
+		},
+		"bonuses": {
+			"spellpower": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.spellpower",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			},
+			"noBlind": {
+				"type": "SPELL_IMMUNITY",
+				"val": 0,
+				"valueType": "BASE_NUMBER",
+				"subtype": "spell.blind"
+			},
+			"copy": {
+				"type": "LEARN_BATTLE_SPELL_CHANCE",
+				"val": 20,
+				"valueType": "ADDITIVE_VALUE"
+			},
+			"copyLevel": {
+				"type": "LEARN_BATTLE_SPELL_LEVEL_LIMIT",
+				"val": 3,
+				"valueType": "INDEPENDENT_MAX"
+			}
+		}
+	},
+	"byakugan": {
+		"type": [
+			"HERO"
+		],
+		"slot": "NECK",
+		"class": "RELIC",
+		"value": 12000,
+		"text": {
+			"name": "Byakugan",
+			"description": "+3 sight; shooters ignore distance and wall penalties.",
+			"event": "You find Byakugan."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/byakugan/icon.png",
+			"scenarioBonus": "naruto/artifacts/byakugan/bonus.png",
+			"map": "naruto/artifacts/byakugan/map"
+		},
+		"bonuses": {
+			"sight": {
+				"type": "SIGHT_RADIUS",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			},
+			"noDistance": {
+				"type": "NO_DISTANCE_PENALTY",
+				"val": 0,
+				"valueType": "BASE_NUMBER",
+				"limiters": [
+					"SHOOTER_ONLY"
+				]
+			},
+			"noWall": {
+				"type": "NO_WALL_PENALTY",
+				"val": 0,
+				"valueType": "BASE_NUMBER",
+				"limiters": [
+					"SHOOTER_ONLY"
+				]
+			}
+		}
+	},
+	"rinnegan": {
+		"type": [
+			"HERO"
+		],
+		"slot": "NECK",
+		"class": "RELIC",
+		"value": 25000,
+		"text": {
+			"name": "Rinnegan",
+			"description": "Expert mastery of all four schools of magic.",
+			"event": "You find Rinnegan."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/rinnegan/icon.png",
+			"scenarioBonus": "naruto/artifacts/rinnegan/bonus.png",
+			"map": "naruto/artifacts/rinnegan/map"
+		},
+		"bonuses": {
+			"schools": {
+				"type": "MAGIC_SCHOOL_SKILL",
+				"val": 3,
+				"valueType": "BASE_NUMBER",
+				"subtype": "spellSchool.any"
+			}
+		}
+	},
+	"kusanagi": {
+		"type": [
+			"HERO"
+		],
+		"slot": "RIGHT_HAND",
+		"class": "RELIC",
+		"value": 12000,
+		"text": {
+			"name": "Kusanagi",
+			"description": "+3 Attack; troops ignore 30% of the enemy's Defense.",
+			"event": "You find Kusanagi."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/kusanagi/icon.png",
+			"scenarioBonus": "naruto/artifacts/kusanagi/bonus.png",
+			"map": "naruto/artifacts/kusanagi/map"
+		},
+		"bonuses": {
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			},
+			"pierce": {
+				"type": "ENEMY_DEFENCE_REDUCTION",
+				"val": 30,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"kubikiribocho": {
+		"type": [
+			"HERO"
+		],
+		"slot": "RIGHT_HAND",
+		"class": "MAJOR",
+		"value": 7000,
+		"text": {
+			"name": "Kubikiribocho",
+			"description": "+5 Attack.",
+			"event": "You find Kubikiribocho."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/kubikiribocho/icon.png",
+			"scenarioBonus": "naruto/artifacts/kubikiribocho/bonus.png",
+			"map": "naruto/artifacts/kubikiribocho/map"
+		},
+		"bonuses": {
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 5,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"samehada": {
+		"type": [
+			"HERO"
+		],
+		"slot": "RIGHT_HAND",
+		"class": "RELIC",
+		"value": 12000,
+		"text": {
+			"name": "Samehada",
+			"description": "+3 Attack; enemy spells cost 3 more mana.",
+			"event": "You find Samehada."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/samehada/icon.png",
+			"scenarioBonus": "naruto/artifacts/samehada/bonus.png",
+			"map": "naruto/artifacts/samehada/map"
+		},
+		"bonuses": {
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			},
+			"chakraEater": {
+				"type": "CHANGES_SPELL_COST_FOR_ENEMY",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"hiramekarei": {
+		"type": [
+			"HERO"
+		],
+		"slot": "RIGHT_HAND",
+		"class": "MAJOR",
+		"value": 7000,
+		"text": {
+			"name": "Hiramekarei",
+			"description": "+2 Attack, +3 Knowledge.",
+			"event": "You find Hiramekarei."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/hiramekarei/icon.png",
+			"scenarioBonus": "naruto/artifacts/hiramekarei/bonus.png",
+			"map": "naruto/artifacts/hiramekarei/map"
+		},
+		"bonuses": {
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			},
+			"knowledge": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.knowledge",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"kiba": {
+		"type": [
+			"HERO"
+		],
+		"slot": "RIGHT_HAND",
+		"class": "MAJOR",
+		"value": 7000,
+		"text": {
+			"name": "Kiba Blades",
+			"description": "+3 Attack; air spells +20%.",
+			"event": "You find Kiba Blades."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/kiba/icon.png",
+			"scenarioBonus": "naruto/artifacts/kiba/bonus.png",
+			"map": "naruto/artifacts/kiba/map"
+		},
+		"bonuses": {
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			},
+			"air": {
+				"type": "SPELL_DAMAGE",
+				"val": 20,
+				"valueType": "BASE_NUMBER",
+				"subtype": "spellSchool.air"
+			}
+		}
+	},
+	"nuibari": {
+		"type": [
+			"HERO"
+		],
+		"slot": "RIGHT_HAND",
+		"class": "MAJOR",
+		"value": 8000,
+		"text": {
+			"name": "Nuibari",
+			"description": "+3 Attack; troops' melee hits bind the target 10% of the time.",
+			"event": "You find Nuibari."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/nuibari/icon.png",
+			"scenarioBonus": "naruto/artifacts/nuibari/bonus.png",
+			"map": "naruto/artifacts/nuibari/map"
+		},
+		"bonuses": {
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			},
+			"thread": {
+				"type": "SPELL_AFTER_ATTACK",
+				"val": 10,
+				"valueType": "BASE_NUMBER",
+				"subtype": "spell.bind",
+				"addInfo": [
+					1,
+					2
+				]
+			}
+		}
+	},
+	"shibuki": {
+		"type": [
+			"HERO"
+		],
+		"slot": "RIGHT_HAND",
+		"class": "MAJOR",
+		"value": 7000,
+		"text": {
+			"name": "Shibuki",
+			"description": "+3 Attack; fire spells +20%.",
+			"event": "You find Shibuki."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/shibuki/icon.png",
+			"scenarioBonus": "naruto/artifacts/shibuki/bonus.png",
+			"map": "naruto/artifacts/shibuki/map"
+		},
+		"bonuses": {
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			},
+			"fire": {
+				"type": "SPELL_DAMAGE",
+				"val": 20,
+				"valueType": "BASE_NUMBER",
+				"subtype": "spellSchool.fire"
+			}
+		}
+	},
+	"kabutowari": {
+		"type": [
+			"HERO"
+		],
+		"slot": "RIGHT_HAND",
+		"class": "MAJOR",
+		"value": 8000,
+		"text": {
+			"name": "Kabutowari",
+			"description": "+3 Attack; troops ignore 15% of the enemy's Defense.",
+			"event": "You find Kabutowari."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/kabutowari/icon.png",
+			"scenarioBonus": "naruto/artifacts/kabutowari/bonus.png",
+			"map": "naruto/artifacts/kabutowari/map"
+		},
+		"bonuses": {
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			},
+			"split": {
+				"type": "ENEMY_DEFENCE_REDUCTION",
+				"val": 15,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"hokageHat": {
+		"type": [
+			"HERO"
+		],
+		"slot": "HEAD",
+		"class": "MAJOR",
+		"value": 6000,
+		"text": {
+			"name": "Hokage Hat",
+			"description": "+1 morale, +2 Spell Power, +2 Knowledge.",
+			"event": "You find Hokage Hat."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/hokageHat/icon.png",
+			"scenarioBonus": "naruto/artifacts/hokageHat/bonus.png",
+			"map": "naruto/artifacts/hokageHat/map"
+		},
+		"bonuses": {
+			"morale": {
+				"type": "MORALE",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			},
+			"spellpower": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.spellpower",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			},
+			"knowledge": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.knowledge",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"hokageCloak": {
+		"type": [
+			"HERO"
+		],
+		"slot": "SHOULDERS",
+		"class": "MAJOR",
+		"value": 6000,
+		"text": {
+			"name": "Hokage Cloak",
+			"description": "+3 Defense; Konoha creatures +1 morale.",
+			"event": "You find Hokage Cloak."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/hokageCloak/icon.png",
+			"scenarioBonus": "naruto/artifacts/hokageCloak/bonus.png",
+			"map": "naruto/artifacts/hokageCloak/map"
+		},
+		"bonuses": {
+			"defence": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.defence",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			},
+			"konoha": {
+				"type": "MORALE",
+				"val": 1,
+				"valueType": "BASE_NUMBER",
+				"limiters": [
+					"CREATURES_ONLY",
+					{
+						"type": "FACTION_LIMITER",
+						"faction": "konohagakure"
+					}
+				]
+			}
+		}
+	},
+	"firstHokagesNecklace": {
+		"type": [
+			"HERO"
+		],
+		"slot": "NECK",
+		"class": "MAJOR",
+		"value": 7000,
+		"text": {
+			"name": "First Hokage's Necklace",
+			"description": "Troops regenerate 10 health per round.",
+			"event": "You find First Hokage's Necklace."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/firstHokagesNecklace/icon.png",
+			"scenarioBonus": "naruto/artifacts/firstHokagesNecklace/bonus.png",
+			"map": "naruto/artifacts/firstHokagesNecklace/map"
+		},
+		"bonuses": {
+			"regeneration": {
+				"type": "HP_REGENERATION",
+				"val": 10,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"willOfFire": {
+		"type": [
+			"HERO"
+		],
+		"slot": "HEAD",
+		"class": "SPECIAL",
+		"value": 40000,
+		"text": {
+			"name": "Will of Fire",
+			"description": "Hokage Hat, Hokage Cloak and First Hokage's Necklace combined: +2 morale; Konoha creatures +2 Attack and +2 Defense.",
+			"event": "You find Will of Fire."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/willOfFire/icon.png",
+			"scenarioBonus": "naruto/artifacts/willOfFire/bonus.png",
+			"map": "naruto/artifacts/willOfFire/map"
+		},
+		"bonuses": {
+			"morale": {
+				"type": "MORALE",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			},
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 2,
+				"valueType": "BASE_NUMBER",
+				"limiters": [
+					"CREATURES_ONLY",
+					{
+						"type": "FACTION_LIMITER",
+						"faction": "konohagakure"
+					}
+				]
+			},
+			"defence": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.defence",
+				"val": 2,
+				"valueType": "BASE_NUMBER",
+				"limiters": [
+					"CREATURES_ONLY",
+					{
+						"type": "FACTION_LIMITER",
+						"faction": "konohagakure"
+					}
+				]
+			}
+		},
+		"components": [
+			"hokageHat",
+			"hokageCloak",
+			"firstHokagesNecklace"
+		]
+	},
+	"kazekageHat": {
+		"type": [
+			"HERO"
+		],
+		"slot": "HEAD",
+		"class": "MAJOR",
+		"value": 6000,
+		"text": {
+			"name": "Kazekage Hat",
+			"description": "+2 Defense, +2 Spell Power.",
+			"event": "You find Kazekage Hat."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/kazekageHat/icon.png",
+			"scenarioBonus": "naruto/artifacts/kazekageHat/bonus.png",
+			"map": "naruto/artifacts/kazekageHat/map"
+		},
+		"bonuses": {
+			"defence": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.defence",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			},
+			"spellpower": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.spellpower",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"gourdOfSand": {
+		"type": [
+			"HERO"
+		],
+		"slot": "SHOULDERS",
+		"class": "MAJOR",
+		"value": 7000,
+		"text": {
+			"name": "Gourd of Sand",
+			"description": "Troops take 10% less damage from attacks.",
+			"event": "You find Gourd of Sand."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/gourdOfSand/icon.png",
+			"scenarioBonus": "naruto/artifacts/gourdOfSand/bonus.png",
+			"map": "naruto/artifacts/gourdOfSand/map"
+		},
+		"bonuses": {
+			"sand": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"val": 10,
+				"valueType": "BASE_NUMBER",
+				"subtype": "damageTypeAll"
+			}
+		}
+	},
+	"kazekageRobe": {
+		"type": [
+			"HERO"
+		],
+		"slot": "TORSO",
+		"class": "MAJOR",
+		"value": 6000,
+		"text": {
+			"name": "Kazekage Robe",
+			"description": "+4 Defense.",
+			"event": "You find Kazekage Robe."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/kazekageRobe/icon.png",
+			"scenarioBonus": "naruto/artifacts/kazekageRobe/bonus.png",
+			"map": "naruto/artifacts/kazekageRobe/map"
+		},
+		"bonuses": {
+			"defence": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.defence",
+				"val": 4,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"sandCoffin": {
+		"type": [
+			"HERO"
+		],
+		"slot": "HEAD",
+		"class": "SPECIAL",
+		"value": 40000,
+		"text": {
+			"name": "Sand Coffin",
+			"description": "Kazekage Hat, Gourd of Sand and Kazekage Robe combined: each battle opens with expert Stone Skin on the army for the whole battle; Suna creatures +2 Defense.",
+			"event": "You find Sand Coffin."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/sandCoffin/icon.png",
+			"scenarioBonus": "naruto/artifacts/sandCoffin/bonus.png",
+			"map": "naruto/artifacts/sandCoffin/map"
+		},
+		"bonuses": {
+			"stoneSkin": {
+				"type": "OPENING_BATTLE_SPELL",
+				"val": 50,
+				"valueType": "BASE_NUMBER",
+				"subtype": "spell.stoneSkin",
+				"addInfo": 3
+			},
+			"defence": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.defence",
+				"val": 2,
+				"valueType": "BASE_NUMBER",
+				"limiters": [
+					"CREATURES_ONLY",
+					{
+						"type": "FACTION_LIMITER",
+						"faction": "sunagakure"
+					}
+				]
+			}
+		},
+		"components": [
+			"kazekageHat",
+			"gourdOfSand",
+			"kazekageRobe"
+		]
+	},
+	"mizukageHat": {
+		"type": [
+			"HERO"
+		],
+		"slot": "HEAD",
+		"class": "MAJOR",
+		"value": 6000,
+		"text": {
+			"name": "Mizukage Hat",
+			"description": "+2 Attack, +2 Knowledge.",
+			"event": "You find Mizukage Hat."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/mizukageHat/icon.png",
+			"scenarioBonus": "naruto/artifacts/mizukageHat/bonus.png",
+			"map": "naruto/artifacts/mizukageHat/map"
+		},
+		"bonuses": {
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			},
+			"knowledge": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.knowledge",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"mizukageRobe": {
+		"type": [
+			"HERO"
+		],
+		"slot": "TORSO",
+		"class": "MAJOR",
+		"value": 6000,
+		"text": {
+			"name": "Mizukage Robe",
+			"description": "+3 Attack, +1 Defense.",
+			"event": "You find Mizukage Robe."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/mizukageRobe/icon.png",
+			"scenarioBonus": "naruto/artifacts/mizukageRobe/bonus.png",
+			"map": "naruto/artifacts/mizukageRobe/map"
+		},
+		"bonuses": {
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			},
+			"defence": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.defence",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"hozukiWaterFlask": {
+		"type": [
+			"HERO"
+		],
+		"slot": "MISC",
+		"class": "MAJOR",
+		"value": 5000,
+		"text": {
+			"name": "Hozuki Water Flask",
+			"description": "Troops take 10% less damage in melee.",
+			"event": "You find Hozuki Water Flask."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/hozukiWaterFlask/icon.png",
+			"scenarioBonus": "naruto/artifacts/hozukiWaterFlask/bonus.png",
+			"map": "naruto/artifacts/hozukiWaterFlask/map"
+		},
+		"bonuses": {
+			"water": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"val": 10,
+				"valueType": "BASE_NUMBER",
+				"subtype": "damageTypeMelee"
+			}
+		}
+	},
+	"bloodyMist": {
+		"type": [
+			"HERO"
+		],
+		"slot": "HEAD",
+		"class": "SPECIAL",
+		"value": 40000,
+		"text": {
+			"name": "Bloody Mist",
+			"description": "Mizukage Hat, Mizukage Robe and Hozuki Water Flask combined: each battle opens with expert Bloodlust on the army for the whole battle; Kiri creatures +2 Attack.",
+			"event": "You find Bloody Mist."
+		},
+		"graphics": {
+			"image": "naruto/artifacts/bloodyMist/icon.png",
+			"scenarioBonus": "naruto/artifacts/bloodyMist/bonus.png",
+			"map": "naruto/artifacts/bloodyMist/map"
+		},
+		"bonuses": {
+			"bloodlust": {
+				"type": "OPENING_BATTLE_SPELL",
+				"val": 50,
+				"valueType": "BASE_NUMBER",
+				"subtype": "spell.bloodlust",
+				"addInfo": 3
+			},
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "primarySkill.attack",
+				"val": 2,
+				"valueType": "BASE_NUMBER",
+				"limiters": [
+					"CREATURES_ONLY",
+					{
+						"type": "FACTION_LIMITER",
+						"faction": "kirigakure"
+					}
+				]
+			}
+		},
+		"components": [
+			"mizukageHat",
+			"mizukageRobe",
+			"hozukiWaterFlask"
+		]
+	}
+}

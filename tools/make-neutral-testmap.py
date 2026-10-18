@@ -1,6 +1,7 @@
 """Test map for the neutrals: an open 36x36 grass map where red starts in a fully built
 Konohagakure with a strong garrison, next to every neutral creature and tailed beast (one
-stack each, spaced so every tile around them can be clicked) and every neutral lair.
+stack each, spaced so every tile around them can be clicked), every neutral lair and every
+artifact (two rows along a free road at y = 16, so a hero can walk along and pick them up).
 Blue, an AI in the far corner, keeps the game going. Written to the VCMI Maps folder as
 naruto-test-neutrals.vmap ("Naruto test: neutrals and bosses").
 python3 tools/make-neutral-testmap.py"""
@@ -22,6 +23,7 @@ ours = lambda f: json.load(open(os.path.join(ROOT, 'Content/config', f), encodin
 konoha = ours('konohagakure/faction.json')['konohagakure']
 neutral = ours('neutral/creatures.json')
 lairs = ours('neutral/dwellings.json')['core:creatureGeneratorCommon']['types']
+artifacts = ours('artifacts/artifacts.json')
 
 def town_template(conf):
     t = townkit.h3_template(conf['town']['mapObject']['templates']['castle']['animation'])
@@ -52,13 +54,18 @@ for n, (oid, d) in enumerate(lairs.items()):
     tpl = dict(d['templates']['default'], editorAnimation='')
     objects.append({'instanceName': 'lair_%s' % oid, 'type': 'creatureGeneratorCommon', 'subtype': oid,
                     'x': x, 'y': y, 'l': 0, 'template': tpl})
+for n, aid in enumerate(artifacts):
+    x, y = 2 + n % 22, 15 + 2 * (n // 22)
+    objects.append({'instanceName': 'artifact_%s' % aid, 'type': 'artifact', 'subtype': aid, 'x': x, 'y': y, 'l': 0,
+                    'options': {}, 'template': {'animation': artifacts[aid]['graphics']['map'], 'editorAnimation': '',
+                                                'mask': ['VA'], 'visitableFrom': ['+++', '+-+', '+++']}})
 
 random.seed(36)
 terrain = [['gr%d_' % random.randint(49, 72) for _ in range(SIZE)] for _ in range(SIZE)]
 header['mapLevels'] = {'surface': {'height': SIZE, 'index': 0, 'layer': 'core:surface', 'width': SIZE}}
 header['name'] = {'exactStrings': ['Naruto test: neutrals and bosses'], 'localStrings': None, 'message': [0],
                   'numbers': None, 'stringsTextID': None}
-header['description'] = {'exactStrings': ['Every neutral creature and tailed beast next to a fully built Konoha with a strong garrison, plus every neutral lair. Take the garrison before you fight.'],
+header['description'] = {'exactStrings': ['Every neutral creature and tailed beast next to a fully built Konoha with a strong garrison, plus every neutral lair and every artifact (the two rows at the middle of the map; the Kage set parts combine). Take the garrison before you fight.'],
                          'localStrings': None, 'message': [0], 'numbers': None, 'stringsTextID': None}
 header['players'] = {
     'red': {'allowedFactions': {'anyOf': ['naruto-heroes:konohagakure']}, 'canPlay': 'PlayerOrAI',
@@ -71,4 +78,4 @@ with zipfile.ZipFile(OUT, 'w', zipfile.ZIP_DEFLATED) as z:
     z.writestr('header.json', json.dumps(header, indent='\t', ensure_ascii=False).encode('utf-8'))
     z.writestr('objects.json', json.dumps(objects, indent='\t', ensure_ascii=False).encode('utf-8'))
     z.writestr('surface_terrain.json', json.dumps(terrain).encode('utf-8'))
-print(OUT, '-', len(neutral), 'monsters,', len(lairs), 'lairs')
+print(OUT, '-', len(neutral), 'monsters,', len(lairs), 'lairs,', len(artifacts), 'artifacts')

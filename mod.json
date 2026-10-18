@@ -30,7 +30,8 @@
 			"config/translations/russian-konohagakure.json",
 			"config/translations/russian-neutral.json",
 			"config/translations/russian-sunagakure.json",
-			"config/translations/russian-kirigakure.json"
+			"config/translations/russian-kirigakure.json",
+			"config/translations/russian-artifacts.json"
 		]
 	},
 	"factions": [
@@ -59,5 +60,8 @@
 		"config/sunagakure/dwellings.json",
 		"config/kirigakure/dwellings.json",
 		"config/neutral/dwellings.json"
+	],
+	"artifacts": [
+		"config/artifacts/artifacts.json"
 	]
 }

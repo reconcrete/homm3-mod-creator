@@ -424,6 +424,44 @@ def map_object(src, folder, slug, canvas, box, center_x):
                    'sequences': [{'group': 0, 'frames': ['0.png'], 'generateShadow': 2}]}, f, indent='\t')
         f.write('\n')
 
+# artifact-<slug>.png -> Content/sprites/naruto/artifacts/<artifactId>/: icon.png 44x44 (hero
+# screen, transparent), bonus.png 58x64 (campaign bonus picture) and map.json + map/0.png
+# (adventure map, 64x32, the artifact in the right tile like the originals).
+def fit(im, box):
+    im = im.crop(im.split()[-1].point(lambda v: 255 if v > 128 else 0).getbbox())
+    k = min(box[0] / im.width, box[1] / im.height)
+    small = im.convert('RGBa').resize((max(1, round(im.width * k)), max(1, round(im.height * k))), Image.LANCZOS).convert('RGBA')
+    rgb = small.convert('RGB').filter(ImageFilter.UnsharpMask(radius=0.6, percent=60, threshold=2))
+    rgb.putalpha(small.split()[-1].point(lambda v: 0 if v < 24 else v))
+    return rgb
+
+def convert_artifacts(force):
+    done = 0
+    for f in sorted(os.listdir(INBOX)):
+        if not (f.startswith('artifact-') and f.endswith('.png')):
+            continue
+        aid = camel(f[len('artifact-'):-4])
+        src = os.path.join(INBOX, f)
+        out = os.path.join(SPRITES, 'artifacts', aid)
+        if not stale(src, os.path.join(out, 'map.json'), force):
+            continue
+        os.makedirs(os.path.join(out, 'map'), exist_ok=True)
+        im = Image.open(src).convert('RGBA')
+        for name, canvas, box, anchor in (('icon.png', (44, 44), (42, 42), 'center'), ('bonus.png', (58, 64), (54, 58), 'center'),
+                                          ('map/0.png', (64, 32), (31, 31), 'right')):
+            pic = fit(im, box)
+            c = Image.new('RGBA', canvas, (0, 0, 0, 0))
+            pos = ((canvas[0] - pic.width) // 2, (canvas[1] - pic.height) // 2) if anchor == 'center' else \
+                (48 - pic.width // 2, canvas[1] - 1 - pic.height)
+            c.alpha_composite(pic, pos)
+            c.save(os.path.join(out, name), optimize=True)
+        with open(os.path.join(out, 'map.json'), 'w') as fh:
+            json.dump({'basepath': 'naruto/artifacts/%s/map/' % aid,
+                       'sequences': [{'group': 0, 'frames': ['0.png'], 'generateShadow': 2}]}, fh, indent='\t')
+            fh.write('\n')
+        done += 1
+    print('artifacts: %d converted' % done)
+
 def convert_map_objects(force):
     done = 0
     for f in sorted(os.listdir(INBOX)):
@@ -453,4 +491,5 @@ if __name__ == '__main__':
     for slug, spec in RENDERED.items():
         rendered_creature(slug, spec, force)
     convert_map_objects(force)
+    convert_artifacts(force)
     prune()
