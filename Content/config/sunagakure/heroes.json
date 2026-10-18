@@ -1,0 +1,650 @@
+{
+	"kankuro": {
+		"class": "puppeteer",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/kankuro/portraitLarge.png",
+			"small": "naruto/heroes/kankuro/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:32",
+			"specialtySmall": "UN32.DEF:0:32"
+		},
+		"army": [
+			{
+				"creature": "sunaGenin",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "woodenPuppet",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "woodenPuppet",
+				"min": 4,
+				"max": 7
+			}
+		],
+		"skills": [
+			{
+				"skill": "artillery",
+				"level": "basic"
+			},
+			{
+				"skill": "armorer",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"creature": "woodenPuppet"
+		},
+		"texts": {
+			"name": "Kankuro",
+			"biography": "Gaara's elder brother, a master puppeteer who fights from behind Karasu, Kuroari and Sanshouo.",
+			"specialty": {
+				"name": "Puppets",
+				"tooltip": "Creature bonus: Puppets",
+				"description": "Increases the speed of any Wooden or Battle Puppets by 1 and their Attack and Defense by 5% for every level of the hero divided by the creature tier."
+			}
+		}
+	},
+	"sasori": {
+		"class": "puppeteer",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/sasori/portraitLarge.png",
+			"small": "naruto/heroes/sasori/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:34",
+			"specialtySmall": "UN32.DEF:0:34"
+		},
+		"army": [
+			{
+				"creature": "sunaGenin",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "woodenPuppet",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "windKunoichi",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "armorer",
+				"level": "basic"
+			},
+			{
+				"skill": "tactics",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"creature": "humanPuppet"
+		},
+		"texts": {
+			"name": "Sasori",
+			"biography": "Sasori of the Red Sand, who turned himself into a puppet and keeps a hundred more for battle.",
+			"specialty": {
+				"name": "Human Puppets",
+				"tooltip": "Creature bonus: Human Puppets",
+				"description": "Increases the speed of any Human or Kazekage Puppets by 1 and their Attack and Defense by 5% for every level of the hero divided by the creature tier."
+			}
+		}
+	},
+	"chiyo": {
+		"class": "puppeteer",
+		"female": true,
+		"images": {
+			"large": "naruto/heroes/chiyo/portraitLarge.png",
+			"small": "naruto/heroes/chiyo/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:25",
+			"specialtySmall": "UN32.DEF:0:25"
+		},
+		"army": [
+			{
+				"creature": "sunaGenin",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "woodenPuppet",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "windKunoichi",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "firstAid",
+				"level": "basic"
+			},
+			{
+				"skill": "tactics",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"lifeTransfer": {
+					"type": "SPECIFIC_SPELL_DAMAGE",
+					"subtype": "spell.cure",
+					"val": 5,
+					"updater": "TIMES_HERO_LEVEL"
+				}
+			}
+		},
+		"texts": {
+			"name": "Chiyo",
+			"biography": "Lady Chiyo, the elder of Suna, inventor of puppet combat and of the jutsu that gives one's life to another.",
+			"specialty": {
+				"name": "Life Transfer",
+				"tooltip": "Spell bonus: Cure",
+				"description": "Her Cure heals 5% more for every level."
+			}
+		},
+		"spellbook": [
+			"cure"
+		]
+	},
+	"baki": {
+		"class": "puppeteer",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/baki/portraitLarge.png",
+			"small": "naruto/heroes/baki/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:102",
+			"specialtySmall": "UN32.DEF:0:102"
+		},
+		"army": [
+			{
+				"creature": "sunaGenin",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "woodenPuppet",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "windKunoichi",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "offence",
+				"level": "basic"
+			},
+			{
+				"skill": "tactics",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"secondary": "offence"
+		},
+		"texts": {
+			"name": "Baki",
+			"biography": "The stern jonin who leads Suna's teams, with a wind blade that cuts before it is seen.",
+			"specialty": {
+				"name": "Offense",
+				"tooltip": "Secondary skill bonus: Offense",
+				"description": "Increases the effect of the Offense skill by 5% for every level."
+			}
+		}
+	},
+	"matsuri": {
+		"class": "puppeteer",
+		"female": true,
+		"images": {
+			"large": "naruto/heroes/matsuri/portraitLarge.png",
+			"small": "naruto/heroes/matsuri/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:5",
+			"specialtySmall": "UN32.DEF:0:5"
+		},
+		"army": [
+			{
+				"creature": "sunaGenin",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "sunaGenin",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "woodenPuppet",
+				"min": 4,
+				"max": 7
+			}
+		],
+		"skills": [
+			{
+				"skill": "archery",
+				"level": "basic"
+			},
+			{
+				"skill": "offence",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"creature": "sunaGenin"
+		},
+		"texts": {
+			"name": "Matsuri",
+			"biography": "Gaara's devoted student, who trains the village's young genin with a rope dart.",
+			"specialty": {
+				"name": "Suna Genin",
+				"tooltip": "Creature bonus: Suna Genin",
+				"description": "Increases the speed of any Suna Genin or Suna Chunin by 1 and their Attack and Defense by 5% for every level of the hero divided by the creature tier."
+			}
+		}
+	},
+	"yashamaru": {
+		"class": "puppeteer",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/yashamaru/portraitLarge.png",
+			"small": "naruto/heroes/yashamaru/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:8",
+			"specialtySmall": "UN32.DEF:0:8"
+		},
+		"army": [
+			{
+				"creature": "sunaGenin",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "firstAidTent",
+				"min": 1,
+				"max": 1
+			},
+			{
+				"creature": "woodenPuppet",
+				"min": 4,
+				"max": 7
+			}
+		],
+		"skills": [
+			{
+				"skill": "firstAid",
+				"level": "basic"
+			},
+			{
+				"skill": "armorer",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"secondary": "firstAid"
+		},
+		"texts": {
+			"name": "Yashamaru",
+			"biography": "A gentle medical ninja who raised the young Gaara, and knows every wound sand can make.",
+			"specialty": {
+				"name": "First Aid",
+				"tooltip": "Secondary skill bonus: First Aid",
+				"description": "Increases the effect of the First Aid skill by 5% for every level."
+			}
+		}
+	},
+	"gaara": {
+		"class": "windSage",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/gaara/portraitLarge.png",
+			"small": "naruto/heroes/gaara/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:77",
+			"specialtySmall": "UN32.DEF:0:77"
+		},
+		"army": [
+			{
+				"creature": "sunaGenin",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "woodenPuppet",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "windKunoichi",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "earthMagic",
+				"level": "basic"
+			},
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"sandShield": {
+					"type": "SPECIAL_PECULIAR_ENCHANT",
+					"subtype": "spell.stoneSkin",
+					"addInfo": 0
+				}
+			}
+		},
+		"texts": {
+			"name": "Gaara",
+			"biography": "The Fifth Kazekage, whose sand moves on its own to shield him and those he protects.",
+			"specialty": {
+				"name": "Sand Shield",
+				"tooltip": "Spell bonus: Stone Skin",
+				"description": "His Stone Skin gives extra Defense by creature tier: +3 for tiers 1–2, +2 for tiers 3–4, +1 for tiers 5–6."
+			}
+		},
+		"spellbook": [
+			"stoneSkin"
+		]
+	},
+	"temari": {
+		"class": "windSage",
+		"female": true,
+		"images": {
+			"large": "naruto/heroes/temari/portraitLarge.png",
+			"small": "naruto/heroes/temari/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:99",
+			"specialtySmall": "UN32.DEF:0:99"
+		},
+		"army": [
+			{
+				"creature": "sunaGenin",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "woodenPuppet",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "windKunoichi",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "airMagic",
+				"level": "basic"
+			},
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"creature": "kamaitachi"
+		},
+		"texts": {
+			"name": "Temari",
+			"biography": "The eldest of the Sand siblings, whose giant fan raises gales and calls the Kamaitachi.",
+			"specialty": {
+				"name": "Kamaitachi",
+				"tooltip": "Creature bonus: Kamaitachi",
+				"description": "Increases the speed of any Kamaitachi or Great Kamaitachi by 1 and their Attack and Defense by 5% for every level of the hero divided by the creature tier."
+			}
+		},
+		"spellbook": [
+			"disruptingRay"
+		]
+	},
+	"rasa": {
+		"class": "windSage",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/rasa/portraitLarge.png",
+			"small": "naruto/heroes/rasa/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:15",
+			"specialtySmall": "UN32.DEF:0:15"
+		},
+		"army": [
+			{
+				"creature": "sunaGenin",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "woodenPuppet",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "windKunoichi",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			},
+			{
+				"skill": "estates",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"gold": {
+					"type": "GENERATE_RESOURCE",
+					"subtype": "resource.gold",
+					"val": 350
+				}
+			}
+		},
+		"texts": {
+			"name": "Rasa",
+			"biography": "The Fourth Kazekage, whose Gold Dust filled the village's coffers.",
+			"specialty": {
+				"name": "Gold Dust",
+				"tooltip": "+350 gold per day",
+				"description": "Adds 350 gold to your treasury every day."
+			}
+		},
+		"spellbook": [
+			"shield"
+		]
+	},
+	"pakura": {
+		"class": "windSage",
+		"female": true,
+		"images": {
+			"large": "naruto/heroes/pakura/portraitLarge.png",
+			"small": "naruto/heroes/pakura/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:145",
+			"specialtySmall": "UN32.DEF:0:145"
+		},
+		"army": [
+			{
+				"creature": "sunaGenin",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "woodenPuppet",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "windKunoichi",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "fireMagic",
+				"level": "basic"
+			},
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"school": {
+					"type": "SPELL_DAMAGE",
+					"subtype": "spellSchool.fire",
+					"val": 2,
+					"updater": "TIMES_HERO_LEVEL"
+				}
+			}
+		},
+		"texts": {
+			"name": "Pakura",
+			"biography": "The Hero of the Sand, whose Scorch Release dries an enemy to dust in a heartbeat.",
+			"specialty": {
+				"name": "Scorch Release",
+				"tooltip": "Fire magic bonus",
+				"description": "Fire spells cast by the hero are 2% more effective for every level."
+			}
+		},
+		"spellbook": [
+			"magicArrow"
+		]
+	},
+	"thirdKazekage": {
+		"class": "windSage",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/thirdKazekage/portraitLarge.png",
+			"small": "naruto/heroes/thirdKazekage/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:129",
+			"specialtySmall": "UN32.DEF:0:129"
+		},
+		"army": [
+			{
+				"creature": "sunaGenin",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "woodenPuppet",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "windKunoichi",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "earthMagic",
+				"level": "basic"
+			},
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"school": {
+					"type": "SPELL_DAMAGE",
+					"subtype": "spellSchool.earth",
+					"val": 2,
+					"updater": "TIMES_HERO_LEVEL"
+				}
+			}
+		},
+		"texts": {
+			"name": "Third Kazekage",
+			"biography": "The strongest Kazekage in Suna's history, master of iron sand.",
+			"specialty": {
+				"name": "Iron Sand",
+				"tooltip": "Earth magic bonus",
+				"description": "Earth spells cast by the hero are 2% more effective for every level."
+			}
+		},
+		"spellbook": [
+			"slow"
+		]
+	},
+	"ebizo": {
+		"class": "windSage",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/ebizo/portraitLarge.png",
+			"small": "naruto/heroes/ebizo/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:56",
+			"specialtySmall": "UN32.DEF:0:56"
+		},
+		"army": [
+			{
+				"creature": "sunaGenin",
+				"min": 10,
+				"max": 20
+			},
+			{
+				"creature": "woodenPuppet",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "windKunoichi",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "wisdom",
+				"level": "advanced"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"knowledge": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.knowledge",
+					"updater": {
+						"type": "GROWS_WITH_LEVEL",
+						"valPer20": 5,
+						"stepSize": 1
+					}
+				}
+			}
+		},
+		"texts": {
+			"name": "Ebizo",
+			"biography": "Chiyo's younger brother, an elder of the council who has seen every trick the desert knows.",
+			"specialty": {
+				"name": "Elder's Knowledge",
+				"tooltip": "Knowledge bonus",
+				"description": "+1 Knowledge, and 1 more for every 4 levels (rounded up)."
+			}
+		},
+		"spellbook": [
+			"dispel"
+		]
+	}
+}

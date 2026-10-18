@@ -48,10 +48,12 @@ header['name'] = {'exactStrings': [args.name or 'Naruto test: ' + args.faction],
 for o in objects:
     if o.get('type') == 'town' and o['options'].get('owner') == args.player:
         o['subtype'] = args.faction
-        o['template']['animation'] = 'AVCcasx0'
+        fconf = json.load(open(os.path.join(ROOT, 'Content/config', args.faction, 'faction.json'), encoding='utf-8'))
+        o['template']['animation'] = os.path.splitext(fconf[args.faction]['town']['mapObject']['templates']['castle']['animation'])[0]
         if args.buildings:
             built = list(json.load(open(os.path.join(ROOT, 'Content/config', args.faction, 'faction.json'),
                                         encoding='utf-8'))[args.faction]['town']['buildings'])
+            built = [b for b in built if b not in ('shipyard', 'ship')]   # the test town is inland
             if args.buildings == 'base':
                 upgrades = {'townHall', 'cityHall', 'capitol', 'citadel', 'castle', 'grail',
                             'mageGuild2', 'mageGuild3', 'mageGuild4', 'mageGuild5'}

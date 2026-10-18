@@ -96,7 +96,7 @@ def figure(im):
 PROMPTS = os.path.expanduser('~/O/Projects/HoMM3-Naruto/Knowledge/Art/Naruto-Heroes-Creature-Prompts.md')
 H3BITMAP = os.path.expanduser('~/Library/Application Support/vcmi/Data/H3bitmap.lod')
 # creature-window background (100x120) of the original town each village borrows its look from
-BACKGROUND = {'Konohagakure': 'TPCASCAS.PCX', 'Sunagakure': 'TPCASTOW.PCX',
+BACKGROUND = {'Konohagakure': 'TPCASCAS.PCX', 'Sunagakure': 'TPCASSTR.PCX',
               'Kirigakure': 'TPCASFOR.PCX', None: 'tpcasneu.pcx'}
 CR_LARGE, CR_SMALL = (58, 64), (32, 32)
 
@@ -127,6 +127,8 @@ CROPS = {
     'ninja-hound': {'large': (0.71, -0.05, 0.81), 'small': (0.82, -0.03, 0.43)},
     'ninken-pack-leader': {'large': (0.73, -0.02, 0.72), 'small': (0.83, -0.01, 0.42)},
     'kurama': {'large': (0.78, 0.30, 0.62), 'small': (0.83, 0.32, 0.43)},   # head at the right, tails on top
+    'desert-scorpion': {'large': (0.62, 0.32, 0.66), 'small': (0.70, 0.48, 0.44)},   # tail on top, head low right
+    'poison-scorpion': {'large': (0.62, 0.32, 0.66), 'small': (0.70, 0.48, 0.44)},
 }
 
 def head_crop(fig, height_share, aspect, spec=None):
@@ -173,6 +175,19 @@ BATTLE = {
     'uchiha-police': (84, False), 'sharingan-master': (88, False),
     'anbu-operative': (86, False), 'anbu-captain': (90, False),
     'toad-warrior': (96, True), 'gamabunta': (110, True),
+    # Sunagakure (Great Kamaitachi: image still missing)
+    'suna-genin': (82, False), 'suna-chunin': (84, False),
+    'wooden-puppet': (82, False), 'battle-puppet': (86, False),
+    'wind-kunoichi': (86, False), 'fan-master': (88, False),
+    'desert-scorpion': (70, True), 'poison-scorpion': (78, True),
+    'human-puppet': (90, False), 'kazekage-puppet': (92, False),
+    'kamaitachi': (96, True),
+    'sand-colossus': (112, True), 'gaaras-sand-tsunami': (124, True),
+    # Kirigakure (upgrades of tiers 1, 2, 4, 5, 6: images still missing)
+    'mist-genin': (82, False), 'hunter-nin': (84, False),
+    'hozuki-brawler': (86, False), 'hozuki-hydrifier': (88, False),
+    'summoned-shark': (96, True), 'yuki-clan-adept': (86, False), 'mist-swordsman': (86, False),
+    'water-dragon': (116, True), 'great-water-dragon': (128, True),
 }
 CANVAS, BASELINE, CENTER_1, CENTER_2 = (450, 400), 267, 196, 218
 SHOOT_CLIMAX = 2      # frame of the shoot groups at which the projectile leaves

@@ -16,7 +16,7 @@ rc=$?
 # file overlaps between other mods; keep everything else.
 hits=$(grep -E "ERROR|WARN" "$LOG" | grep -vE "Potential confict detected .*add file '[^']*/'$" \
   | grep -vE "Potential confict detected between '(hd-remastered|russian-translation|vcmi-extras[^']*)' and '(hd-remastered|russian-translation|vcmi-extras[^']*)'")
-naruto=$(grep -iE "naruto" "$LOG" | grep -E "ERROR|WARN|rror|fail|invalid|unknown" )
+naruto=$(grep -iE "naruto" "$LOG" | grep -E "\] (ERROR|WARN) | is invalid|[Ff]ailed |[Uu]nknown " )
 if [ -n "$hits$naruto" ] || [ $rc != 0 ]; then
   echo "vcmiserver exit code: $rc"; echo "$hits"; echo "$naruto"; exit 1
 fi

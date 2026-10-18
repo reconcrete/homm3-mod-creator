@@ -1,0 +1,146 @@
+{
+	"swordsman": {
+		"name": "Swordsman",
+		"faction": "kirigakure",
+		"affinity": "might",
+		"commander": "lizardWarrior",
+		"defaultTavern": 5,
+		"tavern": {
+			"kirigakure": 6
+		},
+		"mapObject": {
+			"templates": {
+				"default": {
+					"animation": "AH14_.def",
+					"editorAnimation": "AH14_E.def"
+				}
+			}
+		},
+		"animation": {
+			"battle": {
+				"male": "CH014.DEF",
+				"female": "CH015.DEF"
+			}
+		},
+		"primarySkills": {
+			"attack": 3,
+			"defence": 1,
+			"spellpower": 1,
+			"knowledge": 1
+		},
+		"lowLevelChance": {
+			"attack": 50,
+			"defence": 25,
+			"spellpower": 10,
+			"knowledge": 15
+		},
+		"highLevelChance": {
+			"attack": 35,
+			"defence": 25,
+			"spellpower": 20,
+			"knowledge": 20
+		},
+		"secondarySkills": {
+			"pathfinding": 6,
+			"archery": 4,
+			"logistics": 6,
+			"scouting": 6,
+			"diplomacy": 2,
+			"navigation": 5,
+			"leadership": 4,
+			"wisdom": 2,
+			"mysticism": 2,
+			"luck": 5,
+			"ballistics": 4,
+			"eagleEye": 2,
+			"necromancy": 0,
+			"estates": 2,
+			"fireMagic": 1,
+			"airMagic": 3,
+			"waterMagic": 4,
+			"earthMagic": 1,
+			"scholar": 1,
+			"tactics": 7,
+			"artillery": 3,
+			"learning": 3,
+			"offence": 9,
+			"armorer": 4,
+			"intelligence": 1,
+			"sorcery": 1,
+			"resistance": 3,
+			"firstAid": 2
+		}
+	},
+	"mistSage": {
+		"name": "Mist Sage",
+		"faction": "kirigakure",
+		"affinity": "magic",
+		"commander": "lizardWarrior",
+		"defaultTavern": 5,
+		"tavern": {
+			"kirigakure": 6
+		},
+		"mapObject": {
+			"templates": {
+				"default": {
+					"animation": "AH15_.def",
+					"editorAnimation": "AH15_E.def"
+				}
+			}
+		},
+		"animation": {
+			"battle": {
+				"male": "CH014.DEF",
+				"female": "CH015.DEF"
+			}
+		},
+		"primarySkills": {
+			"attack": 1,
+			"defence": 0,
+			"spellpower": 2,
+			"knowledge": 2
+		},
+		"lowLevelChance": {
+			"attack": 20,
+			"defence": 10,
+			"spellpower": 35,
+			"knowledge": 35
+		},
+		"highLevelChance": {
+			"attack": 20,
+			"defence": 20,
+			"spellpower": 30,
+			"knowledge": 30
+		},
+		"secondarySkills": {
+			"pathfinding": 3,
+			"archery": 1,
+			"logistics": 3,
+			"scouting": 4,
+			"diplomacy": 3,
+			"navigation": 4,
+			"leadership": 2,
+			"wisdom": 8,
+			"mysticism": 5,
+			"luck": 3,
+			"ballistics": 1,
+			"eagleEye": 5,
+			"necromancy": 0,
+			"estates": 2,
+			"fireMagic": 2,
+			"airMagic": 4,
+			"waterMagic": 9,
+			"earthMagic": 3,
+			"scholar": 4,
+			"tactics": 2,
+			"artillery": 1,
+			"learning": 3,
+			"offence": 2,
+			"armorer": 1,
+			"intelligence": 5,
+			"sorcery": 5,
+			"resistance": 2,
+			"firstAid": 3
+		}
+	}
+}

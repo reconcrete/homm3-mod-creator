@@ -60,6 +60,21 @@ MAP_DEF = {
     'behemoth': 'AVWbhmt0.def', 'ancientBehemoth': 'AVWbhmx0.def', 'azureDragon': 'AVWazure.def',
 }
 
+_mapdefs = None
+def map_def(borrow):
+    """Adventure-map DEF of an original creature (Objects.txt, object type 54 = monster)."""
+    global _mapdefs
+    if borrow in MAP_DEF:
+        return MAP_DEF[borrow]
+    if _mapdefs is None:
+        text = lod.read(H3DATA + '/H3bitmap.lod', 'Objects.txt')[1].decode('cp1252')
+        _mapdefs = {}
+        for line in text.replace('\r', '').split('\n')[1:]:
+            c = line.split()
+            if len(c) >= 9 and c[5] == '54':
+                _mapdefs.setdefault(int(c[6]), c[0])
+    return _mapdefs[core_creatures()[borrow]['index']]
+
 def portrait(index):
     """Large and small portrait resource names of original hero #index."""
     names = [n for n, *_ in lod.entries(H3DATA + '/H3bitmap.lod')]
@@ -99,7 +114,7 @@ def creature(t, faction, cid, level, name, ru_name, borrow, cranim_name, stats, 
     icon = core['index'] + 2   # TWCRPORT / CPRSMALL frame of the original creature
     g = {
         'animation': core['graphics']['animation'],
-        'map': MAP_DEF[borrow],
+        'map': map_def(borrow),
         'mapMask': ['VVV', 'VAV'],
         'mapAttackFromLeft': core['graphics']['mapAttackFromLeft'],
         'mapAttackFromRight': core['graphics']['mapAttackFromRight'],
@@ -159,12 +174,12 @@ def creature(t, faction, cid, level, name, ru_name, borrow, cranim_name, stats, 
 # ---------------------------------------------------------------- hero classes and heroes
 
 def hero_class(t, faction, cid, name, ru_name, affinity, borrow_index, primary, low, high, skills,
-               tavern, commander):
+               tavern, commander=None):
     """borrow_index: original class index whose look is reused (0 knight, 1 cleric, ...)."""
     core = load(VCMI_CONFIG + '/heroClasses.json')
     orig = next(v for v in core.values() if v['index'] == borrow_index)
     c = {
-        'name': name, 'faction': faction, 'affinity': affinity, 'commander': commander,
+        'name': name, 'faction': faction, 'affinity': affinity, 'commander': commander or orig['commander'],
         'defaultTavern': 5, 'tavern': tavern,
         'mapObject': orig['mapObject'], 'animation': orig['animation'],
         'primarySkills': dict(zip(('attack', 'defence', 'spellpower', 'knowledge'), primary)),
@@ -239,9 +254,121 @@ def h3_template(def_name):
         rows.append(row)
     return {'animation': os.path.splitext(c[0])[0], 'mask': rows}
 
+def original_dwelling(borrow):
+    """(map DEF, ambient sound) of the original adventure-map dwelling of a creature."""
+    core = load(VCMI_CONFIG + '/objects/dwellings.json')['creatureGeneratorCommon']['types']
+    for typ in core.values():
+        if typ['creatures'][0][0] == borrow:
+            text = lod.read(H3DATA + '/H3bitmap.lod', 'Objects.txt')[1].decode('cp1252')
+            for line in text.replace('\r', '').split('\n')[1:]:
+                c = line.split()
+                if len(c) >= 9 and c[5] == '17' and int(c[6]) == typ['index']:
+                    return c[0], typ.get('sounds', {}).get('ambient', ['LOOPSWOR'])[0]
+    raise KeyError('no original dwelling for ' + borrow)
+
+def dwelling_object_like(t, oid, name, ru_name, creature_id, borrow):
+    """Map dwelling for one of our creatures, borrowing the original dwelling of `borrow`."""
+    def_name, ambient = original_dwelling(borrow)
+    return dwelling_object(t, oid, name, ru_name, creature_id, def_name, ambient)
+
 def dwelling_object(t, oid, name, ru_name, creature_id, borrow_def, ambient):
     """A creatureGeneratorCommon map object (external dwelling) for one creature."""
     o = {'name': name, 'creatures': [[creature_id]], 'sounds': {'ambient': [ambient]},
          'templates': {'default': h3_template(borrow_def)}}
     t.add('mapObject.%s.creatureGeneratorCommon.%s.name' % (MOD, oid), ru_name)
     return oid, o
+
+
+# ---------------------------------------------------------------- town buildings and output
+
+def building(name, ru_name, desc, ru_desc, cost=None, **extra):
+    """(building config, Russian name, Russian description)."""
+    d = {'name': name, 'description': desc}
+    if cost is not None:
+        d['cost'] = cost
+    d.update(extra)
+    return d, ru_name, ru_desc
+
+def hall_chain(names, ru_names, place, ru_place):
+    """Village hall .. capitol. place / ru_place: 'your village' / 'деревне'."""
+    gold = [500, 1000, 2000, 4000]
+    cost = [None, {'gold': 2500}, {'gold': 5000}, {'gold': 10000}]
+    out = {}
+    for i, bid in enumerate(['villageHall', 'townHall', 'cityHall', 'capitol']):
+        if bid == 'capitol':
+            desc = 'The %s earns %s %d gold per day.' % (names[i], place, gold[i])
+            ru = '%s приносит %s %d золота в день.' % (ru_names[i], ru_place, gold[i])
+        else:
+            desc = 'The %s allows you to purchase town structures and earns %s %d gold per day.' % (names[i], place, gold[i])
+            ru = '%s позволяет возводить постройки и приносит %s %d золота в день.' % (ru_names[i], ru_place, gold[i])
+        out[bid] = building(names[i], ru_names[i], desc, ru, cost[i])
+    return out
+
+def fort_chain(names, ru_names):
+    return {
+        'fort': building(names[0], ru_names[0], 'The %s surrounds the town with defensive walls.' % names[0],
+                         '%s окружает город защитными стенами.' % ru_names[0], {'gold': 5000, 'wood': 20, 'ore': 20}),
+        'citadel': building(names[1], ru_names[1],
+                            'Adds a keep and a moat to the defenses and increases base creature growth by 50%.',
+                            'Добавляет к обороне башню и ров и увеличивает прирост существ на 50%.', {'gold': 2500, 'ore': 5}),
+        'castle': building(names[2], ru_names[2],
+                           'Adds two arrow towers, strengthens the walls and doubles base creature growth.',
+                           'Добавляет две стрелковые башни, укрепляет стены и удваивает прирост существ.',
+                           {'gold': 5000, 'wood': 10, 'ore': 10}),
+    }
+
+def guild_chain(name, ru_name, levels=5):
+    """Mage guild levels; labels stay within the 22 characters a hall label holds."""
+    out = {}
+    for lvl in range(1, levels + 1):
+        cost = {'gold': 2000, 'wood': 5, 'ore': 5} if lvl == 1 else \
+            {'gold': 1000, 'wood': 5, 'ore': 5, 'mercury': 2 + 2 * lvl, 'sulfur': 2 + 2 * lvl,
+             'crystal': 2 + 2 * lvl, 'gems': 2 + 2 * lvl}
+        out['mageGuild%d' % lvl] = building(
+            '%s %d' % (name, lvl), '%s %d' % (ru_name, lvl),
+            'Scrolls of level %d jutsu. A visiting hero learns the spells kept here.' % lvl,
+            'Свитки техник %d уровня. Герой может изучить хранящиеся здесь заклинания.' % lvl, cost)
+    return out
+
+def dwelling_pair(level, name, ru_name, cname, ru_cname, up_cname, ru_up_cname, cost, up_cost, requires):
+    """Dwelling of a tier and its upgrade ("Ул." prefix as in the original Russian)."""
+    base = building(name, ru_name, 'The %s allows you to recruit %s.' % (name, cname),
+                    '%s позволяет нанимать существ: %s.' % (ru_name, ru_cname), cost, requires=requires)
+    up = building('Upg. ' + name, 'Ул. ' + ru_name, 'The upgraded %s allows you to recruit %s.' % (name, up_cname),
+                  'Улучшенное здание «%s» позволяет нанимать существ: %s.' % (ru_name, ru_up_cname), up_cost,
+                  upgrades='dwellingLvl%d' % level)
+    return {'dwellingLvl%d' % level: base, 'dwellingUpLvl%d' % level: up}
+
+def faction_texts(t, faction, ru_name, ru_description, town_names_ru, building_ru, extra=None):
+    """Russian texts of a faction: name, description, town names, building names/descriptions."""
+    fk = 'faction.%s.%s.' % (MOD, faction)
+    t.add(fk + 'name', ru_name)
+    t.add(fk + 'description', ru_description)
+    for i, ru in enumerate(town_names_ru):
+        t.add(fk + 'randomName.%d' % i, ru)
+    for bid, (ru_n, ru_d) in building_ru.items():
+        bk = 'building.%s.%s.%s.' % (MOD, faction, bid)
+        t.add(bk + 'name', ru_n)
+        t.add(bk + 'description', ru_d)
+    for k, v in (extra or {}).items():
+        t.add('building.%s.%s.%s' % (MOD, faction, k), v)
+
+def register(files, ru_file):
+    """Add generated files to mod.json (content lists and the Russian translations)."""
+    mj = json.load(open(os.path.join(ROOT, 'mod.json'), encoding='utf-8'))
+    for kind, lst in files.items():
+        entries = mj.setdefault(kind, [])
+        for rel in lst:
+            e = rel.replace('Content/', '', 1)
+            if e not in entries:
+                entries.append(e)
+    tr = mj['russian'].setdefault('translations', [])
+    e = ru_file.replace('Content/', '', 1)
+    if e not in tr:
+        tr.append(e)
+    write_json('mod.json', mj)
+
+def town_screen(faction):
+    """Town screen made by tools/townscreen.py from the artist's art, or None."""
+    path = os.path.join(ROOT, 'Content/sprites/naruto', faction, 'town/structures.json')
+    return json.load(open(path)) if os.path.exists(path) else None

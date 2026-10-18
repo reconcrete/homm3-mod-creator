@@ -12,7 +12,7 @@ import townkit
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 CORE = '/Applications/VCMI.app/Contents/Resources/Data/config/factions/'
-OURS = ['konohagakure']        # add sunagakure and kirigakure when they exist
+OURS = ['konohagakure', 'sunagakure', 'kirigakure']
 ORIGINALS = ['castle', 'rampart', 'tower', 'inferno', 'necropolis', 'dungeon', 'stronghold', 'fortress', 'conflux']
 SIZE = 36
 OUT = os.path.expanduser('~/Library/Application Support/vcmi/Maps/naruto-showcase.vmap')
@@ -35,7 +35,9 @@ def town_buildings(faction):
     return ['%s:%s' % (scope, k) for k in keep]
 
 def template(faction):
-    anim = (load(CORE + 'castle.json')['castle'] if faction in OURS else load(CORE + faction + '.json')[faction])['town']['mapObject']['templates']['castle']['animation']
+    conf = json.load(open(os.path.join(ROOT, 'Content/config', faction, 'faction.json'), encoding='utf-8')) if faction in OURS \
+        else load(CORE + faction + '.json')
+    anim = conf[faction]['town']['mapObject']['templates']['castle']['animation']
     t = townkit.h3_template(anim)
     return {'animation': t['animation'], 'editorAnimation': '', 'mask': t['mask'],
             'visitableFrom': ['---', '+-+', '+++']}
@@ -46,9 +48,9 @@ def town(n, faction, owner, x, y, built=True):
                         'buildings': {'allOf': town_buildings(faction) if built else ['core:fort']}},
             'template': template(faction)}
 
-# 10 towns in two rows of five (a town is 6x6 tiles; its gate is 2 left of its x, on its y)
+# 12 towns in three rows of four (a town is 6x6 tiles; its gate is 2 left of its x, on its y)
 objects, factions = [], OURS + ORIGINALS
-spots = [(6 + 7 * c, 8 + 10 * r) for r in range(2) for c in range(5)]
+spots = [(6 + 8 * c, 8 + 9 * r) for r in range(3) for c in range(4)]
 for n, (faction, (x, y)) in enumerate(zip(factions, spots)):
     objects.append(town(n, faction, 'red', x, y))
 gate = (spots[0][0] - 2, spots[0][1])
@@ -60,7 +62,7 @@ terrain = [['gr%d_' % random.randint(49, 72) for _ in range(SIZE)] for _ in rang
 header['mapLevels'] = {'surface': {'height': SIZE, 'index': 0, 'layer': 'core:surface', 'width': SIZE}}
 header['name'] = {'exactStrings': ['Naruto Heroes: all towns'], 'localStrings': None, 'message': [0],
                   'numbers': None, 'stringsTextID': None}
-header['description'] = {'exactStrings': ['Every town fully built, side by side: Konohagakure and the nine original towns. Red owns them all; open them from the town list on the right.'],
+header['description'] = {'exactStrings': ['Every town fully built, side by side: Konohagakure, Sunagakure, Kirigakure and the nine original towns. Red owns them all; open them from the town list on the right.'],
                          'localStrings': None, 'message': [0], 'numbers': None, 'stringsTextID': None}
 header['players'] = {
     'red': {'allowedFactions': {'anyOf': ['naruto-heroes:konohagakure']}, 'canPlay': 'PlayerOrAI',

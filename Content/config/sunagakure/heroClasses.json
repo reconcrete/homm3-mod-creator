@@ -1,0 +1,146 @@
+{
+	"puppeteer": {
+		"name": "Puppeteer",
+		"faction": "sunagakure",
+		"affinity": "might",
+		"commander": "archMage",
+		"defaultTavern": 5,
+		"tavern": {
+			"sunagakure": 6
+		},
+		"mapObject": {
+			"templates": {
+				"default": {
+					"animation": "AH04_.def",
+					"editorAnimation": "AH04_E.def"
+				}
+			}
+		},
+		"animation": {
+			"battle": {
+				"male": "CH05.DEF",
+				"female": "CH04.DEF"
+			}
+		},
+		"primarySkills": {
+			"attack": 1,
+			"defence": 3,
+			"spellpower": 1,
+			"knowledge": 1
+		},
+		"lowLevelChance": {
+			"attack": 30,
+			"defence": 45,
+			"spellpower": 12,
+			"knowledge": 13
+		},
+		"highLevelChance": {
+			"attack": 25,
+			"defence": 35,
+			"spellpower": 20,
+			"knowledge": 20
+		},
+		"secondarySkills": {
+			"pathfinding": 5,
+			"archery": 5,
+			"logistics": 5,
+			"scouting": 4,
+			"diplomacy": 3,
+			"navigation": 1,
+			"leadership": 2,
+			"wisdom": 3,
+			"mysticism": 2,
+			"luck": 3,
+			"ballistics": 6,
+			"eagleEye": 2,
+			"necromancy": 0,
+			"estates": 3,
+			"fireMagic": 1,
+			"airMagic": 4,
+			"waterMagic": 1,
+			"earthMagic": 3,
+			"scholar": 2,
+			"tactics": 7,
+			"artillery": 7,
+			"learning": 3,
+			"offence": 5,
+			"armorer": 9,
+			"intelligence": 2,
+			"sorcery": 1,
+			"resistance": 5,
+			"firstAid": 4
+		}
+	},
+	"windSage": {
+		"name": "Wind Sage",
+		"faction": "sunagakure",
+		"affinity": "magic",
+		"commander": "archMage",
+		"defaultTavern": 5,
+		"tavern": {
+			"sunagakure": 6
+		},
+		"mapObject": {
+			"templates": {
+				"default": {
+					"animation": "AH05_.def",
+					"editorAnimation": "AH05_E.def"
+				}
+			}
+		},
+		"animation": {
+			"battle": {
+				"male": "CH05.DEF",
+				"female": "CH04.DEF"
+			}
+		},
+		"primarySkills": {
+			"attack": 0,
+			"defence": 1,
+			"spellpower": 2,
+			"knowledge": 3
+		},
+		"lowLevelChance": {
+			"attack": 15,
+			"defence": 15,
+			"spellpower": 35,
+			"knowledge": 35
+		},
+		"highLevelChance": {
+			"attack": 20,
+			"defence": 20,
+			"spellpower": 30,
+			"knowledge": 30
+		},
+		"secondarySkills": {
+			"pathfinding": 3,
+			"archery": 1,
+			"logistics": 3,
+			"scouting": 3,
+			"diplomacy": 3,
+			"navigation": 1,
+			"leadership": 1,
+			"wisdom": 8,
+			"mysticism": 4,
+			"luck": 3,
+			"ballistics": 1,
+			"eagleEye": 4,
+			"necromancy": 0,
+			"estates": 3,
+			"fireMagic": 3,
+			"airMagic": 9,
+			"waterMagic": 3,
+			"earthMagic": 5,
+			"scholar": 4,
+			"tactics": 2,
+			"artillery": 1,
+			"learning": 3,
+			"offence": 2,
+			"armorer": 2,
+			"intelligence": 5,
+			"sorcery": 6,
+			"resistance": 2,
+			"firstAid": 3
+		}
+	}
+}

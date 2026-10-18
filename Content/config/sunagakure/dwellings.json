@@ -1,0 +1,171 @@
+{
+	"core:creatureGeneratorCommon": {
+		"types": {
+			"desertBarracks": {
+				"name": "Desert Barracks",
+				"creatures": [
+					[
+						"sunaGenin"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPPIKE"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGpike0",
+						"mask": [
+							"VVV",
+							"VBV",
+							"VBA"
+						]
+					}
+				}
+			},
+			"puppetWorkshop": {
+				"name": "Puppet Workshop",
+				"creatures": [
+					[
+						"woodenPuppet"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPGRIF"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGgarg0",
+						"mask": [
+							"VVV",
+							"VVV",
+							"VVV",
+							"VBA"
+						]
+					}
+				}
+			},
+			"windTrainingCliffs": {
+				"name": "Wind Training Cliffs",
+				"creatures": [
+					[
+						"windKunoichi"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPORC"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGorcg0",
+						"mask": [
+							"VVV",
+							"VVV",
+							"VVV",
+							"VBA"
+						]
+					}
+				}
+			},
+			"scorpionDunes": {
+				"name": "Scorpion Dunes",
+				"creatures": [
+					[
+						"desertScorpion"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPMANT"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGmant0",
+						"mask": [
+							"VV",
+							"BA"
+						]
+					}
+				}
+			},
+			"redSecretPuppetHall": {
+				"name": "Red Secret Puppet Hall",
+				"creatures": [
+					[
+						"humanPuppet"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPMAGI"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGmage0",
+						"mask": [
+							"VVV",
+							"VVV",
+							"VVV",
+							"VVV",
+							"VBA"
+						]
+					}
+				}
+			},
+			"kamaitachiCanyon": {
+				"name": "Kamaitachi Canyon",
+				"creatures": [
+					[
+						"kamaitachi"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPBIRD"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGrocs0",
+						"mask": [
+							"VVV",
+							"VVV",
+							"VVV",
+							"VBA"
+						]
+					}
+				}
+			},
+			"sealedSandAltar": {
+				"name": "Sealed Sand Altar",
+				"creatures": [
+					[
+						"sandColossus"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPTITA"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGtitn0",
+						"mask": [
+							"VVV",
+							"VBV",
+							"VBA"
+						]
+					}
+				}
+			}
+		}
+	}
+}

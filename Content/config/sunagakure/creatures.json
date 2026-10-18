@@ -1,0 +1,972 @@
+{
+	"sunaGenin": {
+		"name": {
+			"singular": "Suna Genin",
+			"plural": "Suna Genin"
+		},
+		"faction": "sunagakure",
+		"level": 1,
+		"cost": {
+			"gold": 55
+		},
+		"hitPoints": 9,
+		"speed": 5,
+		"attack": 4,
+		"defense": 5,
+		"damage": {
+			"min": 1,
+			"max": 3
+		},
+		"growth": 14,
+		"horde": 0,
+		"fightValue": 90,
+		"aiValue": 85,
+		"advMapAmount": {
+			"min": 20,
+			"max": 50
+		},
+		"abilities": {
+			"sandShield": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeRanged",
+				"val": 25
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/sunaGenin/battle",
+			"map": "AvWPike.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:1",
+			"mapAttackFromRight": "AvWattak.def:0:0",
+			"iconLarge": "naruto/creatures/sunaGenin/portraitLarge.png",
+			"iconSmall": "naruto/creatures/sunaGenin/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.15,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "PIKEATTK.wav",
+			"defend": "PIKEDFND.wav",
+			"killed": "PIKEKILL.wav",
+			"move": "PIKEMOVE.wav",
+			"wince": "PIKEWNCE.wav"
+		},
+		"upgrades": [
+			"sunaChunin"
+		]
+	},
+	"sunaChunin": {
+		"name": {
+			"singular": "Suna Chunin",
+			"plural": "Suna Chunin"
+		},
+		"faction": "sunagakure",
+		"level": 1,
+		"cost": {
+			"gold": 80
+		},
+		"hitPoints": 10,
+		"speed": 6,
+		"attack": 5,
+		"defense": 7,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"growth": 14,
+		"horde": 0,
+		"fightValue": 115,
+		"aiValue": 120,
+		"advMapAmount": {
+			"min": 20,
+			"max": 50
+		},
+		"abilities": {
+			"sandShield": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeRanged",
+				"val": 40
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/sunaChunin/battle",
+			"map": "AVWpikx0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:3",
+			"mapAttackFromRight": "AvWattak.def:0:2",
+			"iconLarge": "naruto/creatures/sunaChunin/portraitLarge.png",
+			"iconSmall": "naruto/creatures/sunaChunin/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 0.9,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "HALBATTK.wav",
+			"defend": "HALBDFND.wav",
+			"killed": "HALBKILL.wav",
+			"move": "HALBMOVE.wav",
+			"wince": "HALBWNCE.wav"
+		}
+	},
+	"woodenPuppet": {
+		"name": {
+			"singular": "Wooden Puppet",
+			"plural": "Wooden Puppets"
+		},
+		"faction": "sunagakure",
+		"level": 2,
+		"cost": {
+			"gold": 110
+		},
+		"hitPoints": 18,
+		"speed": 5,
+		"attack": 6,
+		"defense": 6,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"growth": 9,
+		"horde": 0,
+		"fightValue": 150,
+		"aiValue": 150,
+		"advMapAmount": {
+			"min": 16,
+			"max": 30
+		},
+		"abilities": {
+			"construct": {
+				"type": "NON_LIVING"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/woodenPuppet/battle",
+			"map": "AVWgarg0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:61",
+			"mapAttackFromRight": "AvWattak.def:0:60",
+			"iconLarge": "naruto/creatures/woodenPuppet/portraitLarge.png",
+			"iconSmall": "naruto/creatures/woodenPuppet/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 0.7,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "SGRGATTK.wav",
+			"defend": "SGRGDFND.wav",
+			"killed": "SGRGKILL.wav",
+			"move": "SGRGMOVE.wav",
+			"wince": "SGRGWNCE.wav"
+		},
+		"upgrades": [
+			"battlePuppet"
+		]
+	},
+	"battlePuppet": {
+		"name": {
+			"singular": "Battle Puppet",
+			"plural": "Battle Puppets"
+		},
+		"faction": "sunagakure",
+		"level": 2,
+		"cost": {
+			"gold": 150
+		},
+		"hitPoints": 20,
+		"speed": 6,
+		"attack": 7,
+		"defense": 7,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"growth": 9,
+		"horde": 0,
+		"fightValue": 190,
+		"aiValue": 210,
+		"advMapAmount": {
+			"min": 16,
+			"max": 30
+		},
+		"abilities": {
+			"construct": {
+				"type": "NON_LIVING"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"blackAnt": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "spell.bind",
+				"val": 100
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/battlePuppet/battle",
+			"map": "AVWgarx0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:63",
+			"mapAttackFromRight": "AvWattak.def:0:62",
+			"iconLarge": "naruto/creatures/battlePuppet/portraitLarge.png",
+			"iconSmall": "naruto/creatures/battlePuppet/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 0.7,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "OGRGATTK.wav",
+			"defend": "OGRGDFND.wav",
+			"killed": "OGRGKILL.wav",
+			"move": "OGRGMOVE.wav",
+			"wince": "OGRGWNCE.wav"
+		}
+	},
+	"windKunoichi": {
+		"name": {
+			"singular": "Wind Kunoichi",
+			"plural": "Wind Kunoichi"
+		},
+		"faction": "sunagakure",
+		"level": 3,
+		"cost": {
+			"gold": 220
+		},
+		"hitPoints": 16,
+		"speed": 6,
+		"attack": 9,
+		"defense": 5,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"growth": 7,
+		"horde": 0,
+		"fightValue": 230,
+		"aiValue": 270,
+		"advMapAmount": {
+			"min": 12,
+			"max": 25
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/windKunoichi/battle",
+			"map": "AVWorc0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:177",
+			"mapAttackFromRight": "AvWattak.def:0:176",
+			"iconLarge": "naruto/creatures/windKunoichi/portraitLarge.png",
+			"iconSmall": "naruto/creatures/windKunoichi/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0,
+			"missile": {
+				"attackClimaxFrame": 3,
+				"frameAngles": [
+					90.0,
+					72.0,
+					45.0,
+					27.0,
+					0.0,
+					-27.0,
+					-45.0,
+					-72.0,
+					-90.0
+				],
+				"offset": {
+					"upperX": 42,
+					"upperY": -83,
+					"middleX": 43,
+					"middleY": -66,
+					"lowerX": 33,
+					"lowerY": -26
+				},
+				"projectile": "PORCHX.DEF"
+			}
+		},
+		"sound": {
+			"attack": "OORCATTK.wav",
+			"defend": "OORCDFND.wav",
+			"killed": "OORCKILL.wav",
+			"move": "OORCMOVE.wav",
+			"shoot": "OORCSHOT.wav",
+			"wince": "OORCWNCE.wav"
+		},
+		"upgrades": [
+			"fanMaster"
+		],
+		"shots": 12
+	},
+	"fanMaster": {
+		"name": {
+			"singular": "Fan Master",
+			"plural": "Fan Masters"
+		},
+		"faction": "sunagakure",
+		"level": 3,
+		"cost": {
+			"gold": 280
+		},
+		"hitPoints": 18,
+		"speed": 7,
+		"attack": 10,
+		"defense": 6,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"growth": 7,
+		"horde": 0,
+		"fightValue": 290,
+		"aiValue": 380,
+		"advMapAmount": {
+			"min": 12,
+			"max": 25
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"windScythe": {
+				"type": "SHOOTS_ALL_ADJACENT"
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/fanMaster/battle",
+			"map": "AVWorcx0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:179",
+			"mapAttackFromRight": "AvWattak.def:0:178",
+			"iconLarge": "naruto/creatures/fanMaster/portraitLarge.png",
+			"iconSmall": "naruto/creatures/fanMaster/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0,
+			"missile": {
+				"attackClimaxFrame": 3,
+				"frameAngles": [
+					90.0,
+					72.0,
+					45.0,
+					27.0,
+					0.0,
+					-27.0,
+					-45.0,
+					-72.0,
+					-90.0
+				],
+				"offset": {
+					"upperX": 34,
+					"upperY": -88,
+					"middleX": 37,
+					"middleY": -66,
+					"lowerX": 32,
+					"lowerY": -28
+				},
+				"projectile": "PORCHX.DEF"
+			}
+		},
+		"sound": {
+			"attack": "ORCCATTK.wav",
+			"defend": "ORCCDFND.wav",
+			"killed": "ORCCKILL.wav",
+			"move": "ORCCMOVE.wav",
+			"shoot": "ORCCSHOT.wav",
+			"wince": "ORCCWNCE.wav"
+		},
+		"shots": 16
+	},
+	"desertScorpion": {
+		"name": {
+			"singular": "Desert Scorpion",
+			"plural": "Desert Scorpions"
+		},
+		"faction": "sunagakure",
+		"level": 4,
+		"cost": {
+			"gold": 300
+		},
+		"hitPoints": 38,
+		"speed": 6,
+		"attack": 10,
+		"defense": 11,
+		"damage": {
+			"min": 4,
+			"max": 7
+		},
+		"growth": 4,
+		"horde": 0,
+		"fightValue": 400,
+		"aiValue": 430,
+		"advMapAmount": {
+			"min": 10,
+			"max": 20
+		},
+		"abilities": {
+			"poison": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "spell.poison",
+				"val": 20
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/desertScorpion/battle",
+			"map": "AVWmant0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:161",
+			"mapAttackFromRight": "AvWattak.def:0:160",
+			"iconLarge": "naruto/creatures/desertScorpion/portraitLarge.png",
+			"iconSmall": "naruto/creatures/desertScorpion/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 0.8,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "MANTATTK.wav",
+			"defend": "MANTDFND.wav",
+			"killed": "MANTKILL.wav",
+			"move": "MANTMOVE.wav",
+			"shoot": "MANTSHOT.wav",
+			"wince": "MANTWNCE.wav"
+		},
+		"upgrades": [
+			"poisonScorpion"
+		],
+		"doubleWide": true
+	},
+	"poisonScorpion": {
+		"name": {
+			"singular": "Poison Scorpion",
+			"plural": "Poison Scorpions"
+		},
+		"faction": "sunagakure",
+		"level": 4,
+		"cost": {
+			"gold": 380
+		},
+		"hitPoints": 42,
+		"speed": 7,
+		"attack": 11,
+		"defense": 12,
+		"damage": {
+			"min": 5,
+			"max": 8
+		},
+		"growth": 4,
+		"horde": 0,
+		"fightValue": 480,
+		"aiValue": 560,
+		"advMapAmount": {
+			"min": 10,
+			"max": 20
+		},
+		"abilities": {
+			"poison": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "spell.poison",
+				"val": 40
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/poisonScorpion/battle",
+			"map": "AVWmanx0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:163",
+			"mapAttackFromRight": "AvWattak.def:0:162",
+			"iconLarge": "naruto/creatures/poisonScorpion/portraitLarge.png",
+			"iconSmall": "naruto/creatures/poisonScorpion/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 0.8,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "SCRPATTK.wav",
+			"defend": "SCRPDFND.wav",
+			"killed": "SCRPKILL.wav",
+			"move": "SCRPMOVE.wav",
+			"shoot": "SCRPSHOT.wav",
+			"wince": "SCRPWNCE.wav"
+		},
+		"doubleWide": true
+	},
+	"humanPuppet": {
+		"name": {
+			"singular": "Human Puppet",
+			"plural": "Human Puppets"
+		},
+		"faction": "sunagakure",
+		"level": 5,
+		"cost": {
+			"gold": 550
+		},
+		"hitPoints": 50,
+		"speed": 5,
+		"attack": 13,
+		"defense": 15,
+		"damage": {
+			"min": 10,
+			"max": 15
+		},
+		"growth": 3,
+		"horde": 0,
+		"fightValue": 620,
+		"aiValue": 680,
+		"advMapAmount": {
+			"min": 8,
+			"max": 16
+		},
+		"abilities": {
+			"construct": {
+				"type": "NON_LIVING"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"spellArmor": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.any",
+				"val": 30
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/humanPuppet/battle",
+			"map": "AVWgolm0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:65",
+			"mapAttackFromRight": "AvWattak.def:0:64",
+			"iconLarge": "naruto/creatures/humanPuppet/portraitLarge.png",
+			"iconSmall": "naruto/creatures/humanPuppet/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.2,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "SGLMATTK.wav",
+			"defend": "SGLMDFND.wav",
+			"killed": "SGLMKILL.wav",
+			"move": "SGLMMOVE.wav",
+			"wince": "SGLMWNCE.wav"
+		},
+		"upgrades": [
+			"kazekagePuppet"
+		]
+	},
+	"kazekagePuppet": {
+		"name": {
+			"singular": "Kazekage Puppet",
+			"plural": "Kazekage Puppets"
+		},
+		"faction": "sunagakure",
+		"level": 5,
+		"cost": {
+			"gold": 650
+		},
+		"hitPoints": 55,
+		"speed": 6,
+		"attack": 15,
+		"defense": 16,
+		"damage": {
+			"min": 12,
+			"max": 16
+		},
+		"growth": 3,
+		"horde": 0,
+		"fightValue": 760,
+		"aiValue": 900,
+		"advMapAmount": {
+			"min": 8,
+			"max": 16
+		},
+		"abilities": {
+			"construct": {
+				"type": "NON_LIVING"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"spellArmor": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.any",
+				"val": 50
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/kazekagePuppet/battle",
+			"map": "AVWgolx0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:67",
+			"mapAttackFromRight": "AvWattak.def:0:66",
+			"iconLarge": "naruto/creatures/kazekagePuppet/portraitLarge.png",
+			"iconSmall": "naruto/creatures/kazekagePuppet/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0,
+			"missile": {
+				"attackClimaxFrame": 3,
+				"frameAngles": [
+					90.0,
+					72.0,
+					45.0,
+					27.0,
+					0.0,
+					-27.0,
+					-45.0,
+					-72.0,
+					-90.0
+				],
+				"offset": {
+					"upperX": 28,
+					"upperY": -107,
+					"middleX": 43,
+					"middleY": -99,
+					"lowerX": 18,
+					"lowerY": -92
+				},
+				"projectile": "PHALF.DEF"
+			}
+		},
+		"sound": {
+			"attack": "IGLMATTK.wav",
+			"defend": "IGLMDFND.wav",
+			"killed": "IGLMKILL.wav",
+			"move": "IGLMMOVE.wav",
+			"wince": "IGLMWNCE.wav"
+		},
+		"shots": 8
+	},
+	"kamaitachi": {
+		"name": {
+			"singular": "Kamaitachi",
+			"plural": "Kamaitachi"
+		},
+		"faction": "sunagakure",
+		"level": 6,
+		"cost": {
+			"gold": 1050
+		},
+		"hitPoints": 85,
+		"speed": 10,
+		"attack": 17,
+		"defense": 13,
+		"damage": {
+			"min": 15,
+			"max": 22
+		},
+		"growth": 2,
+		"horde": 0,
+		"fightValue": 1400,
+		"aiValue": 1600,
+		"advMapAmount": {
+			"min": 4,
+			"max": 10
+		},
+		"abilities": {
+			"windBlade": {
+				"type": "TWO_HEX_ATTACK_BREATH"
+			},
+			"flies": {
+				"type": "FLYING"
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/kamaitachi/battle",
+			"map": "AVWroc0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:185",
+			"mapAttackFromRight": "AvWattak.def:0:184",
+			"iconLarge": "naruto/creatures/kamaitachi/portraitLarge.png",
+			"iconSmall": "naruto/creatures/kamaitachi/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "ROCCATTK.wav",
+			"defend": "ROCCDFND.wav",
+			"killed": "ROCCKILL.wav",
+			"move": "ROCCMOVE.wav",
+			"wince": "ROCCWNCE.wav"
+		},
+		"upgrades": [
+			"greatKamaitachi"
+		],
+		"doubleWide": true
+	},
+	"greatKamaitachi": {
+		"name": {
+			"singular": "Great Kamaitachi",
+			"plural": "Great Kamaitachi"
+		},
+		"faction": "sunagakure",
+		"level": 6,
+		"cost": {
+			"gold": 1300
+		},
+		"hitPoints": 95,
+		"speed": 13,
+		"attack": 19,
+		"defense": 15,
+		"damage": {
+			"min": 18,
+			"max": 26
+		},
+		"growth": 2,
+		"horde": 0,
+		"fightValue": 1750,
+		"aiValue": 2100,
+		"advMapAmount": {
+			"min": 4,
+			"max": 10
+		},
+		"abilities": {
+			"windBlade": {
+				"type": "TWO_HEX_ATTACK_BREATH"
+			},
+			"flies": {
+				"type": "FLYING"
+			}
+		},
+		"graphics": {
+			"animation": "CTBIRD.DEF",
+			"map": "AVWrocx0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:187",
+			"mapAttackFromRight": "AvWattak.def:0:186",
+			"iconLarge": "TWCRPORT.DEF:0:95",
+			"iconSmall": "CPRSMALL.DEF:0:95",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "TBRDATTK.wav",
+			"defend": "TBRDDFND.wav",
+			"killed": "TBRDKILL.wav",
+			"move": "TBRDMOVE.wav",
+			"wince": "TBRDWNCE.wav"
+		},
+		"doubleWide": true
+	},
+	"sandColossus": {
+		"name": {
+			"singular": "Sand Colossus",
+			"plural": "Sand Colossi"
+		},
+		"faction": "sunagakure",
+		"level": 7,
+		"cost": {
+			"gold": 2400,
+			"crystal": 1
+		},
+		"hitPoints": 230,
+		"speed": 6,
+		"attack": 19,
+		"defense": 22,
+		"damage": {
+			"min": 30,
+			"max": 45
+		},
+		"growth": 1,
+		"horde": 0,
+		"fightValue": 3500,
+		"aiValue": 4300,
+		"advMapAmount": {
+			"min": 1,
+			"max": 4
+		},
+		"abilities": {
+			"construct": {
+				"type": "NON_LIVING"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"sandArmor": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 20
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/sandColossus/battle",
+			"map": "AVWtitn0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:81",
+			"mapAttackFromRight": "AvWattak.def:0:80",
+			"iconLarge": "naruto/creatures/sandColossus/portraitLarge.png",
+			"iconSmall": "naruto/creatures/sandColossus/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.38,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "LTITATTK.wav",
+			"defend": "LTITDFND.wav",
+			"killed": "LTITKILL.wav",
+			"move": "LTITMOVE.wav",
+			"wince": "LTITWNCE.wav"
+		},
+		"upgrades": [
+			"gaarasSandTsunami"
+		],
+		"doubleWide": true
+	},
+	"gaarasSandTsunami": {
+		"name": {
+			"singular": "Gaara's Sand Tsunami",
+			"plural": "Gaara's Sand Tsunamis"
+		},
+		"faction": "sunagakure",
+		"level": 7,
+		"cost": {
+			"gold": 4500,
+			"crystal": 2
+		},
+		"hitPoints": 330,
+		"speed": 8,
+		"attack": 24,
+		"defense": 28,
+		"damage": {
+			"min": 40,
+			"max": 55
+		},
+		"growth": 1,
+		"horde": 0,
+		"fightValue": 6200,
+		"aiValue": 8200,
+		"advMapAmount": {
+			"min": 1,
+			"max": 4
+		},
+		"abilities": {
+			"construct": {
+				"type": "NON_LIVING"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"wave": {
+				"type": "ATTACKS_ALL_ADJACENT"
+			},
+			"sandArmor": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 25
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/gaarasSandTsunami/battle",
+			"map": "AVWtitx0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:83",
+			"mapAttackFromRight": "AvWattak.def:0:82",
+			"iconLarge": "naruto/creatures/gaarasSandTsunami/portraitLarge.png",
+			"iconSmall": "naruto/creatures/gaarasSandTsunami/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.38,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "GTITATTK.wav",
+			"defend": "GTITDFND.wav",
+			"killed": "GTITKILL.wav",
+			"move": "GTITMOVE.wav",
+			"shoot": "GTITSHOT.wav",
+			"wince": "GTITWNCE.wav"
+		},
+		"doubleWide": true
+	}
+}

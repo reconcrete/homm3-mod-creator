@@ -1,0 +1,980 @@
+{
+	"mistGenin": {
+		"name": {
+			"singular": "Mist Genin",
+			"plural": "Mist Genin"
+		},
+		"faction": "kirigakure",
+		"level": 1,
+		"cost": {
+			"gold": 50
+		},
+		"hitPoints": 7,
+		"speed": 6,
+		"attack": 5,
+		"defense": 2,
+		"damage": {
+			"min": 1,
+			"max": 3
+		},
+		"growth": 15,
+		"horde": 0,
+		"fightValue": 80,
+		"aiValue": 75,
+		"advMapAmount": {
+			"min": 20,
+			"max": 50
+		},
+		"abilities": {},
+		"graphics": {
+			"animation": "naruto/creatures/mistGenin/battle",
+			"map": "AVWtrog0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:141",
+			"mapAttackFromRight": "AvWattak.def:0:140",
+			"iconLarge": "naruto/creatures/mistGenin/portraitLarge.png",
+			"iconSmall": "naruto/creatures/mistGenin/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 0.8,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "TROGATTK.wav",
+			"defend": "TROGDFND.wav",
+			"killed": "TROGKILL.wav",
+			"move": "TROGMOVE.wav",
+			"wince": "TROGWNCE.wav"
+		},
+		"upgrades": [
+			"bloodyMistGraduate"
+		]
+	},
+	"bloodyMistGraduate": {
+		"name": {
+			"singular": "Bloody Mist Graduate",
+			"plural": "Bloody Mist Graduates"
+		},
+		"faction": "kirigakure",
+		"level": 1,
+		"cost": {
+			"gold": 70
+		},
+		"hitPoints": 8,
+		"speed": 7,
+		"attack": 6,
+		"defense": 3,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"growth": 15,
+		"horde": 0,
+		"fightValue": 105,
+		"aiValue": 110,
+		"advMapAmount": {
+			"min": 20,
+			"max": 50
+		},
+		"abilities": {
+			"ruthless": {
+				"type": "DOUBLE_DAMAGE_CHANCE",
+				"val": 20
+			}
+		},
+		"graphics": {
+			"animation": "CITROG.DEF",
+			"map": "AvWInfr.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:143",
+			"mapAttackFromRight": "AvWattak.def:0:142",
+			"iconLarge": "TWCRPORT.DEF:0:73",
+			"iconSmall": "CPRSMALL.DEF:0:73",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 0.8,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "ITRGATTK.wav",
+			"defend": "ITRGDFND.wav",
+			"killed": "ITRGKILL.wav",
+			"move": "ITRGMOVE.wav",
+			"wince": "ITRGWNCE.wav"
+		}
+	},
+	"hunterNin": {
+		"name": {
+			"singular": "Hunter-nin",
+			"plural": "Hunter-nin"
+		},
+		"faction": "kirigakure",
+		"level": 2,
+		"cost": {
+			"gold": 110
+		},
+		"hitPoints": 9,
+		"speed": 7,
+		"attack": 6,
+		"defense": 3,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"growth": 9,
+		"horde": 0,
+		"fightValue": 130,
+		"aiValue": 150,
+		"advMapAmount": {
+			"min": 16,
+			"max": 30
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/hunterNin/battle",
+			"map": "AvWLizr.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:201",
+			"mapAttackFromRight": "AvWattak.def:0:200",
+			"iconLarge": "naruto/creatures/hunterNin/portraitLarge.png",
+			"iconSmall": "naruto/creatures/hunterNin/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 0.9,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0,
+			"missile": {
+				"attackClimaxFrame": 3,
+				"frameAngles": [
+					90.0,
+					72.0,
+					45.0,
+					27.0,
+					0.0,
+					-27.0,
+					-45.0,
+					-72.0,
+					-90.0
+				],
+				"offset": {
+					"upperX": 34,
+					"upperY": -76,
+					"middleX": 47,
+					"middleY": -65,
+					"lowerX": 26,
+					"lowerY": -55
+				},
+				"projectile": "PPLIZAX.DEF"
+			}
+		},
+		"sound": {
+			"attack": "PLIZATTK.wav",
+			"defend": "PLIZDFND.wav",
+			"killed": "PLIZKILL.wav",
+			"move": "PLIZMOVE.wav",
+			"shoot": "PLIZSHOT.wav",
+			"wince": "PLIZWNCE.wav"
+		},
+		"upgrades": [
+			"trackerHunterNin"
+		],
+		"shots": 10
+	},
+	"trackerHunterNin": {
+		"name": {
+			"singular": "Tracker Hunter-nin",
+			"plural": "Tracker Hunter-nin"
+		},
+		"faction": "kirigakure",
+		"level": 2,
+		"cost": {
+			"gold": 150
+		},
+		"hitPoints": 10,
+		"speed": 9,
+		"attack": 7,
+		"defense": 4,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"growth": 9,
+		"horde": 0,
+		"fightValue": 170,
+		"aiValue": 220,
+		"advMapAmount": {
+			"min": 16,
+			"max": 30
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY"
+			},
+			"senbon": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "spell.slow",
+				"val": 20,
+				"addInfo": [
+					1,
+					0
+				]
+			}
+		},
+		"graphics": {
+			"animation": "CALIZA.DEF",
+			"map": "AVWlizx0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:203",
+			"mapAttackFromRight": "AvWattak.def:0:202",
+			"iconLarge": "TWCRPORT.DEF:0:103",
+			"iconSmall": "CPRSMALL.DEF:0:103",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 0.9,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0,
+			"missile": {
+				"attackClimaxFrame": 9,
+				"frameAngles": [
+					90.0,
+					72.0,
+					45.0,
+					27.0,
+					0.0,
+					-27.0,
+					-45.0,
+					-72.0,
+					-90.0
+				],
+				"offset": {
+					"upperX": 39,
+					"upperY": -76,
+					"middleX": 49,
+					"middleY": -66,
+					"lowerX": 25,
+					"lowerY": -56
+				},
+				"projectile": "PPLIZAX.DEF"
+			}
+		},
+		"sound": {
+			"attack": "ALIZATTK.wav",
+			"defend": "ALIZDFND.wav",
+			"killed": "ALIZKILL.wav",
+			"move": "ALIZMOVE.wav",
+			"shoot": "ALIZSHOT.wav",
+			"wince": "ALIZWNCE.wav"
+		},
+		"shots": 14
+	},
+	"hozukiBrawler": {
+		"name": {
+			"singular": "Hozuki Brawler",
+			"plural": "Hozuki Brawlers"
+		},
+		"faction": "kirigakure",
+		"level": 3,
+		"cost": {
+			"gold": 190
+		},
+		"hitPoints": 22,
+		"speed": 6,
+		"attack": 8,
+		"defense": 6,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"growth": 7,
+		"horde": 0,
+		"fightValue": 280,
+		"aiValue": 300,
+		"advMapAmount": {
+			"min": 12,
+			"max": 25
+		},
+		"abilities": {
+			"hydrification": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 20
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/hozukiBrawler/battle",
+			"map": "AVWelmw0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:231",
+			"mapAttackFromRight": "AvWattak.def:0:230",
+			"iconLarge": "naruto/creatures/hozukiBrawler/portraitLarge.png",
+			"iconSmall": "naruto/creatures/hozukiBrawler/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 0.87,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "WELMATTK.wav",
+			"defend": "WELMDFND.wav",
+			"killed": "WELMKILL.wav",
+			"move": "WELMMOVE.wav",
+			"wince": "WELMWNCE.wav"
+		},
+		"upgrades": [
+			"hozukiHydrifier"
+		]
+	},
+	"hozukiHydrifier": {
+		"name": {
+			"singular": "Hozuki Hydrifier",
+			"plural": "Hozuki Hydrifiers"
+		},
+		"faction": "kirigakure",
+		"level": 3,
+		"cost": {
+			"gold": 240
+		},
+		"hitPoints": 24,
+		"speed": 8,
+		"attack": 9,
+		"defense": 7,
+		"damage": {
+			"min": 3,
+			"max": 6
+		},
+		"growth": 7,
+		"horde": 0,
+		"fightValue": 350,
+		"aiValue": 400,
+		"advMapAmount": {
+			"min": 12,
+			"max": 25
+		},
+		"abilities": {
+			"hydrification": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 35
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/hozukiHydrifier/battle",
+			"map": "AVWicee.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:247",
+			"mapAttackFromRight": "AvWattak.def:0:246",
+			"iconLarge": "naruto/creatures/hozukiHydrifier/portraitLarge.png",
+			"iconSmall": "naruto/creatures/hozukiHydrifier/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "ICELATTK.wav",
+			"defend": "ICELDFND.wav",
+			"killed": "ICELKILL.wav",
+			"move": "ICELMOVE.wav",
+			"shoot": "ICELSHOT.wav",
+			"wince": "ICELWNCE.wav"
+		}
+	},
+	"summonedShark": {
+		"name": {
+			"singular": "Summoned Shark",
+			"plural": "Summoned Sharks"
+		},
+		"faction": "kirigakure",
+		"level": 4,
+		"cost": {
+			"gold": 320
+		},
+		"hitPoints": 38,
+		"speed": 7,
+		"attack": 12,
+		"defense": 7,
+		"damage": {
+			"min": 6,
+			"max": 10
+		},
+		"growth": 4,
+		"horde": 0,
+		"fightValue": 420,
+		"aiValue": 460,
+		"advMapAmount": {
+			"min": 10,
+			"max": 20
+		},
+		"abilities": {
+			"frenzy": {
+				"type": "FEROCITY",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/summonedShark/battle",
+			"map": "AvWBasl.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:213",
+			"mapAttackFromRight": "AvWattak.def:0:212",
+			"iconLarge": "naruto/creatures/summonedShark/portraitLarge.png",
+			"iconSmall": "naruto/creatures/summonedShark/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "BASLATTK.wav",
+			"defend": "BASLDFND.wav",
+			"killed": "BASLKILL.wav",
+			"move": "BASLMOVE.wav",
+			"wince": "BASLWNCE.wav"
+		},
+		"upgrades": [
+			"greatShark"
+		],
+		"doubleWide": true
+	},
+	"greatShark": {
+		"name": {
+			"singular": "Great Shark",
+			"plural": "Great Sharks"
+		},
+		"faction": "kirigakure",
+		"level": 4,
+		"cost": {
+			"gold": 420
+		},
+		"hitPoints": 42,
+		"speed": 9,
+		"attack": 14,
+		"defense": 8,
+		"damage": {
+			"min": 7,
+			"max": 11
+		},
+		"growth": 4,
+		"horde": 0,
+		"fightValue": 520,
+		"aiValue": 620,
+		"advMapAmount": {
+			"min": 10,
+			"max": 20
+		},
+		"abilities": {
+			"frenzy": {
+				"type": "FEROCITY",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "CGBASI.DEF",
+			"map": "AvWGBas.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:215",
+			"mapAttackFromRight": "AvWattak.def:0:214",
+			"iconLarge": "TWCRPORT.DEF:0:109",
+			"iconSmall": "CPRSMALL.DEF:0:109",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "GBASATTK.wav",
+			"defend": "GBASDFND.wav",
+			"killed": "GBASKILL.wav",
+			"move": "GBASMOVE.wav",
+			"wince": "GBASWNCE.wav"
+		},
+		"doubleWide": true
+	},
+	"yukiClanAdept": {
+		"name": {
+			"singular": "Yuki Clan Adept",
+			"plural": "Yuki Clan Adepts"
+		},
+		"faction": "kirigakure",
+		"level": 5,
+		"cost": {
+			"gold": 480
+		},
+		"hitPoints": 30,
+		"speed": 6,
+		"attack": 12,
+		"defense": 8,
+		"damage": {
+			"min": 8,
+			"max": 12
+		},
+		"growth": 3,
+		"horde": 0,
+		"fightValue": 560,
+		"aiValue": 640,
+		"advMapAmount": {
+			"min": 8,
+			"max": 16
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"freeze": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "spell.stoneGaze",
+				"val": 15,
+				"addInfo": [
+					1,
+					0
+				]
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/yukiClanAdept/battle",
+			"map": "AvWMeds.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:153",
+			"mapAttackFromRight": "AvWattak.def:0:152",
+			"iconLarge": "naruto/creatures/yukiClanAdept/portraitLarge.png",
+			"iconSmall": "naruto/creatures/yukiClanAdept/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0,
+			"missile": {
+				"attackClimaxFrame": 3,
+				"frameAngles": [
+					90.0,
+					72.0,
+					45.0,
+					27.0,
+					0.0,
+					-27.0,
+					-45.0,
+					-72.0,
+					-90.0
+				],
+				"offset": {
+					"upperX": 76,
+					"upperY": -79,
+					"middleX": 72,
+					"middleY": -63,
+					"lowerX": 53,
+					"lowerY": -53
+				},
+				"projectile": "PMEDUSX.DEF"
+			}
+		},
+		"sound": {
+			"attack": "MEDUATTK.wav",
+			"defend": "MEDUDFND.wav",
+			"killed": "MEDUKILL.wav",
+			"move": "MEDUMOVE.wav",
+			"shoot": "MEDUSHOT.wav",
+			"wince": "MEDUWNCE.wav"
+		},
+		"upgrades": [
+			"iceMirrorMaster"
+		],
+		"shots": 8
+	},
+	"iceMirrorMaster": {
+		"name": {
+			"singular": "Ice Mirror Master",
+			"plural": "Ice Mirror Masters"
+		},
+		"faction": "kirigakure",
+		"level": 5,
+		"cost": {
+			"gold": 560
+		},
+		"hitPoints": 32,
+		"speed": 8,
+		"attack": 13,
+		"defense": 9,
+		"damage": {
+			"min": 9,
+			"max": 13
+		},
+		"growth": 3,
+		"horde": 0,
+		"fightValue": 640,
+		"aiValue": 800,
+		"advMapAmount": {
+			"min": 8,
+			"max": 16
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"noMeleePenalty": {
+				"type": "NO_MELEE_PENALTY"
+			},
+			"freeze": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "spell.stoneGaze",
+				"val": 25,
+				"addInfo": [
+					1,
+					0
+				]
+			}
+		},
+		"graphics": {
+			"animation": "CMEDUQ.DEF",
+			"map": "AVWmedx0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:155",
+			"mapAttackFromRight": "AvWattak.def:0:154",
+			"iconLarge": "TWCRPORT.DEF:0:79",
+			"iconSmall": "CPRSMALL.DEF:0:79",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 1.0,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0,
+			"missile": {
+				"attackClimaxFrame": 9,
+				"frameAngles": [
+					90.0,
+					72.0,
+					45.0,
+					27.0,
+					0.0,
+					-27.0,
+					-45.0,
+					-72.0,
+					-90.0
+				],
+				"offset": {
+					"upperX": 75,
+					"upperY": -65,
+					"middleX": 75,
+					"middleY": -50,
+					"lowerX": 70,
+					"lowerY": -45
+				},
+				"projectile": "PMEDUSX.DEF"
+			}
+		},
+		"sound": {
+			"attack": "MEDQATTK.wav",
+			"defend": "MEDQDFND.wav",
+			"killed": "MEDQKILL.wav",
+			"move": "MEDQMOVE.wav",
+			"shoot": "MEDQSHOT.wav",
+			"wince": "MEDQWNCE.wav"
+		},
+		"shots": 12
+	},
+	"mistSwordsman": {
+		"name": {
+			"singular": "Mist Swordsman",
+			"plural": "Mist Swordsmen"
+		},
+		"faction": "kirigakure",
+		"level": 6,
+		"cost": {
+			"gold": 1050
+		},
+		"hitPoints": 80,
+		"speed": 8,
+		"attack": 18,
+		"defense": 12,
+		"damage": {
+			"min": 16,
+			"max": 22
+		},
+		"growth": 2,
+		"horde": 0,
+		"fightValue": 1400,
+		"aiValue": 1600,
+		"advMapAmount": {
+			"min": 4,
+			"max": 10
+		},
+		"abilities": {
+			"silentKilling": {
+				"type": "FIRST_STRIKE",
+				"subtype": "damageTypeMelee"
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/mistSwordsman/battle",
+			"map": "AVWswrd0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:13",
+			"mapAttackFromRight": "AvWattak.def:0:12",
+			"iconLarge": "naruto/creatures/mistSwordsman/portraitLarge.png",
+			"iconSmall": "naruto/creatures/mistSwordsman/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 0.87,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "SWRDATTK.wav",
+			"defend": "SWRDDFND.wav",
+			"killed": "SWRDKILL.wav",
+			"move": "SWRDMOVE.wav",
+			"wince": "SWRDWNCE.wav"
+		},
+		"upgrades": [
+			"swordsmanOfTheSeven"
+		]
+	},
+	"swordsmanOfTheSeven": {
+		"name": {
+			"singular": "Swordsman of the Seven",
+			"plural": "Swordsmen of the Seven"
+		},
+		"faction": "kirigakure",
+		"level": 6,
+		"cost": {
+			"gold": 1300
+		},
+		"hitPoints": 90,
+		"speed": 10,
+		"attack": 20,
+		"defense": 13,
+		"damage": {
+			"min": 18,
+			"max": 26
+		},
+		"growth": 2,
+		"horde": 0,
+		"fightValue": 1800,
+		"aiValue": 2150,
+		"advMapAmount": {
+			"min": 4,
+			"max": 10
+		},
+		"abilities": {
+			"silentKilling": {
+				"type": "FIRST_STRIKE",
+				"subtype": "damageTypeMelee"
+			},
+			"deathBlow": {
+				"type": "DOUBLE_DAMAGE_CHANCE",
+				"val": 20
+			}
+		},
+		"graphics": {
+			"animation": "CCRUSD.DEF",
+			"map": "AVWswrx0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:15",
+			"mapAttackFromRight": "AvWattak.def:0:14",
+			"iconLarge": "TWCRPORT.DEF:0:9",
+			"iconSmall": "CPRSMALL.DEF:0:9",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 0.95,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "CRUSATTK.wav",
+			"defend": "CRUSDFND.wav",
+			"killed": "CRUSKILL.wav",
+			"move": "CRUSMOVE.wav",
+			"wince": "CRUSWNCE.wav"
+		}
+	},
+	"waterDragon": {
+		"name": {
+			"singular": "Water Dragon",
+			"plural": "Water Dragons"
+		},
+		"faction": "kirigakure",
+		"level": 7,
+		"cost": {
+			"gold": 2600,
+			"mercury": 1
+		},
+		"hitPoints": 200,
+		"speed": 10,
+		"attack": 20,
+		"defense": 18,
+		"damage": {
+			"min": 35,
+			"max": 50
+		},
+		"growth": 1,
+		"horde": 0,
+		"fightValue": 3600,
+		"aiValue": 4500,
+		"advMapAmount": {
+			"min": 1,
+			"max": 4
+		},
+		"abilities": {
+			"flies": {
+				"type": "FLYING"
+			},
+			"waterBreath": {
+				"type": "TWO_HEX_ATTACK_BREATH"
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/waterDragon/battle",
+			"map": "AVWdrag0.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:53",
+			"mapAttackFromRight": "AvWattak.def:0:52",
+			"iconLarge": "naruto/creatures/waterDragon/portraitLarge.png",
+			"iconSmall": "naruto/creatures/waterDragon/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 0.6,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "GRDRATTK.wav",
+			"defend": "GRDRDFND.wav",
+			"killed": "GRDRKILL.wav",
+			"move": "GRDRMOVE.wav",
+			"wince": "GRDRWNCE.wav"
+		},
+		"upgrades": [
+			"greatWaterDragon"
+		],
+		"doubleWide": true
+	},
+	"greatWaterDragon": {
+		"name": {
+			"singular": "Great Water Dragon",
+			"plural": "Great Water Dragons"
+		},
+		"faction": "kirigakure",
+		"level": 7,
+		"cost": {
+			"gold": 4500,
+			"mercury": 2
+		},
+		"hitPoints": 300,
+		"speed": 14,
+		"attack": 26,
+		"defense": 24,
+		"damage": {
+			"min": 45,
+			"max": 55
+		},
+		"growth": 1,
+		"horde": 0,
+		"fightValue": 6300,
+		"aiValue": 8400,
+		"advMapAmount": {
+			"min": 1,
+			"max": 4
+		},
+		"abilities": {
+			"flies": {
+				"type": "FLYING"
+			},
+			"waterBreath": {
+				"type": "TWO_HEX_ATTACK_BREATH"
+			},
+			"waterImmunity": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "spellSchool.water"
+			}
+		},
+		"graphics": {
+			"animation": "naruto/creatures/greatWaterDragon/battle",
+			"map": "AVWazure.def",
+			"mapMask": [
+				"VVV",
+				"VAV"
+			],
+			"mapAttackFromLeft": "AvWattak.def:0:265",
+			"mapAttackFromRight": "AvWattak.def:0:264",
+			"iconLarge": "naruto/creatures/greatWaterDragon/portraitLarge.png",
+			"iconSmall": "naruto/creatures/greatWaterDragon/portraitSmall.png",
+			"animationTime": {
+				"attack": 1.0,
+				"walk": 0.6,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1.0
+		},
+		"sound": {
+			"attack": "AZURATTK.wav",
+			"defend": "AZURDFND.wav",
+			"killed": "AZURKILL.wav",
+			"move": "AZURMOVE.wav",
+			"wince": "AZURWNCE.wav"
+		},
+		"doubleWide": true
+	}
+}

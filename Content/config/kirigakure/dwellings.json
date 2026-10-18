@@ -1,0 +1,166 @@
+{
+	"core:creatureGeneratorCommon": {
+		"types": {
+			"mistAcademy": {
+				"name": "Mist Academy",
+				"creatures": [
+					[
+						"mistGenin"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPCAVE"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGtrog0",
+						"mask": [
+							"VVV",
+							"VVV",
+							"VBA"
+						]
+					}
+				}
+			},
+			"hunterNinDivision": {
+				"name": "Hunter-nin Division",
+				"creatures": [
+					[
+						"hunterNin"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPARCH"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGlzrd0",
+						"mask": [
+							"VVV",
+							"VVV",
+							"VBA"
+						]
+					}
+				}
+			},
+			"hozukiWaterPools": {
+				"name": "Hozuki Water Pools",
+				"creatures": [
+					[
+						"hozukiBrawler"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPORC"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGgnll0",
+						"mask": [
+							"VVV",
+							"VBA"
+						]
+					}
+				}
+			},
+			"sharkReef": {
+				"name": "Shark Reef",
+				"creatures": [
+					[
+						"summonedShark"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPMONS"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGbasl0",
+						"mask": [
+							"VV",
+							"BA"
+						]
+					}
+				}
+			},
+			"yukiClanIceHall": {
+				"name": "Yuki Clan Ice Hall",
+				"creatures": [
+					[
+						"yukiClanAdept"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPMEDU"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGmdsa0",
+						"mask": [
+							"VVV",
+							"VVV",
+							"VBA"
+						]
+					}
+				}
+			},
+			"hallOfTheSevenSwordsmen": {
+				"name": "Hall of the Seven Swordsmen",
+				"creatures": [
+					[
+						"mistSwordsman"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPSWOR"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGswor0",
+						"mask": [
+							"VVV",
+							"VVV",
+							"VBA"
+						]
+					}
+				}
+			},
+			"waterDragonLake": {
+				"name": "Water Dragon Lake",
+				"creatures": [
+					[
+						"waterDragon"
+					]
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPDRAG"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "AVGgdrg0",
+						"mask": [
+							"VVV",
+							"VVV",
+							"VVV",
+							"VBA"
+						]
+					}
+				}
+			}
+		}
+	}
+}

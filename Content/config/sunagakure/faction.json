@@ -1,0 +1,1373 @@
+{
+	"sunagakure": {
+		"name": "Sunagakure",
+		"description": "{Sunagakure}\n\nThe Village Hidden in the Sand, in the Land of Wind. Puppeteers and Wind Sages field puppets that fear nothing, poison scorpions, wind shooters and giants of living sand behind walls of sand.",
+		"alignment": "neutral",
+		"nativeTerrain": "sand",
+		"boat": "boatCastle",
+		"creatureBackground": {
+			"120px": "TPCASSTR",
+			"130px": "CRBKGSTR"
+		},
+		"puzzleMap": {
+			"prefix": "PUZSTR",
+			"pieces": [
+				{
+					"x": 7,
+					"y": 8,
+					"index": 6
+				},
+				{
+					"x": 7,
+					"y": 229,
+					"index": 14
+				},
+				{
+					"x": 7,
+					"y": 405,
+					"index": 15
+				},
+				{
+					"x": 7,
+					"y": 465,
+					"index": 10
+				},
+				{
+					"x": 12,
+					"y": 8,
+					"index": 9
+				},
+				{
+					"x": 32,
+					"y": 245,
+					"index": 21
+				},
+				{
+					"x": 32,
+					"y": 277,
+					"index": 33
+				},
+				{
+					"x": 36,
+					"y": 337,
+					"index": 19
+				},
+				{
+					"x": 39,
+					"y": 15,
+					"index": 36
+				},
+				{
+					"x": 47,
+					"y": 115,
+					"index": 23
+				},
+				{
+					"x": 49,
+					"y": 178,
+					"index": 25
+				},
+				{
+					"x": 70,
+					"y": 8,
+					"index": 1
+				},
+				{
+					"x": 101,
+					"y": 35,
+					"index": 41
+				},
+				{
+					"x": 111,
+					"y": 311,
+					"index": 44
+				},
+				{
+					"x": 123,
+					"y": 156,
+					"index": 45
+				},
+				{
+					"x": 138,
+					"y": 423,
+					"index": 32
+				},
+				{
+					"x": 140,
+					"y": 224,
+					"index": 43
+				},
+				{
+					"x": 144,
+					"y": 136,
+					"index": 11
+				},
+				{
+					"x": 149,
+					"y": 452,
+					"index": 18
+				},
+				{
+					"x": 158,
+					"y": 475,
+					"index": 5
+				},
+				{
+					"x": 191,
+					"y": 68,
+					"index": 7
+				},
+				{
+					"x": 202,
+					"y": 12,
+					"index": 39
+				},
+				{
+					"x": 218,
+					"y": 349,
+					"index": 34
+				},
+				{
+					"x": 219,
+					"y": 285,
+					"index": 42
+				},
+				{
+					"x": 222,
+					"y": 96,
+					"index": 28
+				},
+				{
+					"x": 262,
+					"y": 8,
+					"index": 8
+				},
+				{
+					"x": 279,
+					"y": 166,
+					"index": 48
+				},
+				{
+					"x": 279,
+					"y": 425,
+					"index": 22
+				},
+				{
+					"x": 303,
+					"y": 314,
+					"index": 27
+				},
+				{
+					"x": 320,
+					"y": 109,
+					"index": 16
+				},
+				{
+					"x": 326,
+					"y": 146,
+					"index": 47
+				},
+				{
+					"x": 333,
+					"y": 160,
+					"index": 46
+				},
+				{
+					"x": 362,
+					"y": 26,
+					"index": 4
+				},
+				{
+					"x": 365,
+					"y": 441,
+					"index": 17
+				},
+				{
+					"x": 380,
+					"y": 297,
+					"index": 38
+				},
+				{
+					"x": 392,
+					"y": 242,
+					"index": 29
+				},
+				{
+					"x": 427,
+					"y": 275,
+					"index": 40
+				},
+				{
+					"x": 445,
+					"y": 85,
+					"index": 2
+				},
+				{
+					"x": 446,
+					"y": 424,
+					"index": 30
+				},
+				{
+					"x": 459,
+					"y": 347,
+					"index": 37
+				},
+				{
+					"x": 463,
+					"y": 53,
+					"index": 24
+				},
+				{
+					"x": 484,
+					"y": 210,
+					"index": 20
+				},
+				{
+					"x": 488,
+					"y": 8,
+					"index": 26
+				},
+				{
+					"x": 489,
+					"y": 303,
+					"index": 35
+				},
+				{
+					"x": 529,
+					"y": 8,
+					"index": 31
+				},
+				{
+					"x": 529,
+					"y": 421,
+					"index": 3
+				},
+				{
+					"x": 558,
+					"y": 87,
+					"index": 13
+				},
+				{
+					"x": 563,
+					"y": 261,
+					"index": 12
+				}
+			]
+		},
+		"town": {
+			"mapObject": {
+				"templates": {
+					"castle": {
+						"animation": "AVCstrx0.def"
+					},
+					"citadel": {
+						"animation": "AVCstrx0.def"
+					},
+					"fort": {
+						"animation": "AVCstrx0.def"
+					},
+					"village": {
+						"animation": "AVCSTRO0.DEF"
+					},
+					"capitol": {
+						"animation": "AVCSTRZ0.DEF"
+					}
+				}
+			},
+			"icons": {
+				"village": {
+					"normal": {
+						"large": "naruto/sunagakure/town/icons/villageLarge.png",
+						"small": "naruto/sunagakure/town/icons/villageSmall.png"
+					},
+					"built": {
+						"large": "naruto/sunagakure/town/icons/villageLargeBuilt.png",
+						"small": "naruto/sunagakure/town/icons/villageSmallBuilt.png"
+					}
+				},
+				"fort": {
+					"normal": {
+						"large": "naruto/sunagakure/town/icons/fortLarge.png",
+						"small": "naruto/sunagakure/town/icons/fortSmall.png"
+					},
+					"built": {
+						"large": "naruto/sunagakure/town/icons/fortLargeBuilt.png",
+						"small": "naruto/sunagakure/town/icons/fortSmallBuilt.png"
+					}
+				}
+			},
+			"musicTheme": [
+				"music/Stronghold"
+			],
+			"defaultTavern": 5,
+			"tavernVideo": "TAVERN.BIK",
+			"guildBackground": [
+				"TPMAGE.bmp"
+			],
+			"townBackground": "naruto/sunagakure/town/background.png",
+			"guildWindow": [
+				"TPMAGETW.bmp"
+			],
+			"guildWindowPosition": {
+				"x": 332,
+				"y": 76
+			},
+			"guildSpellPositions": [
+				[
+					{
+						"x": 222,
+						"y": 445
+					},
+					{
+						"x": 312,
+						"y": 445
+					},
+					{
+						"x": 402,
+						"y": 445
+					},
+					{
+						"x": 520,
+						"y": 445
+					},
+					{
+						"x": 610,
+						"y": 445
+					},
+					{
+						"x": 700,
+						"y": 445
+					}
+				],
+				[
+					{
+						"x": 48,
+						"y": 53
+					},
+					{
+						"x": 48,
+						"y": 147
+					},
+					{
+						"x": 48,
+						"y": 241
+					},
+					{
+						"x": 48,
+						"y": 335
+					},
+					{
+						"x": 48,
+						"y": 429
+					}
+				],
+				[
+					{
+						"x": 570,
+						"y": 82
+					},
+					{
+						"x": 672,
+						"y": 82
+					},
+					{
+						"x": 570,
+						"y": 157
+					},
+					{
+						"x": 672,
+						"y": 157
+					}
+				],
+				[
+					{
+						"x": 183,
+						"y": 42
+					},
+					{
+						"x": 183,
+						"y": 148
+					},
+					{
+						"x": 183,
+						"y": 253
+					}
+				],
+				[
+					{
+						"x": 491,
+						"y": 325
+					},
+					{
+						"x": 591,
+						"y": 325
+					}
+				]
+			],
+			"buildingsIcons": "naruto/sunagakure/hallIcons",
+			"hallBackground": "TPTHBKCS.BMP",
+			"hallSlots": [
+				[
+					[
+						"villageHall",
+						"townHall",
+						"cityHall",
+						"capitol"
+					],
+					[
+						"fort",
+						"citadel",
+						"castle"
+					],
+					[
+						"tavern"
+					],
+					[
+						"blacksmith"
+					]
+				],
+				[
+					[
+						"marketplace"
+					],
+					[
+						"mageGuild1",
+						"mageGuild2",
+						"mageGuild3",
+						"mageGuild4",
+						"mageGuild5"
+					],
+					[
+						"special1"
+					]
+				],
+				[
+					[
+						"special2"
+					],
+					[
+						"resourceSilo"
+					]
+				],
+				[
+					[
+						"dwellingLvl1",
+						"dwellingUpLvl1"
+					],
+					[
+						"dwellingLvl2",
+						"dwellingUpLvl2"
+					],
+					[
+						"dwellingLvl3",
+						"dwellingUpLvl3"
+					],
+					[
+						"dwellingLvl4",
+						"dwellingUpLvl4"
+					]
+				],
+				[
+					[
+						"dwellingLvl5",
+						"dwellingUpLvl5"
+					],
+					[
+						"dwellingLvl6",
+						"dwellingUpLvl6"
+					],
+					[
+						"dwellingLvl7",
+						"dwellingUpLvl7"
+					]
+				]
+			],
+			"creatures": [
+				[
+					"sunaGenin",
+					"sunaChunin"
+				],
+				[
+					"woodenPuppet",
+					"battlePuppet"
+				],
+				[
+					"windKunoichi",
+					"fanMaster"
+				],
+				[
+					"desertScorpion",
+					"poisonScorpion"
+				],
+				[
+					"humanPuppet",
+					"kazekagePuppet"
+				],
+				[
+					"kamaitachi",
+					"greatKamaitachi"
+				],
+				[
+					"sandColossus",
+					"gaarasSandTsunami"
+				]
+			],
+			"horde": [],
+			"mageGuild": 5,
+			"guildSpells": {
+				"magicArrow": 30,
+				"shield": 12,
+				"protectFire": 4,
+				"protectWater": 3,
+				"dispel": 12,
+				"cure": 6,
+				"bless": 5,
+				"stoneSkin": 12,
+				"haste": 14,
+				"slow": 8,
+				"bloodlust": 2,
+				"summonBoat": 2,
+				"viewEarth": 3,
+				"viewAir": 3,
+				"iceBolt": 10,
+				"lightningBolt": 25,
+				"fireWall": 3,
+				"quicksand": 10,
+				"scuttleBoat": 2,
+				"visions": 3,
+				"disguise": 4,
+				"protectAir": 3,
+				"precision": 10,
+				"weakness": 4,
+				"disruptingRay": 12,
+				"fortune": 8,
+				"blind": 4,
+				"removeObstacle": 4,
+				"fireball": 5,
+				"frostRing": 6,
+				"landMine": 4,
+				"forceField": 10,
+				"earthquake": 10,
+				"destroyUndead": 4,
+				"airShield": 14,
+				"protectEarth": 5,
+				"antiMagic": 12,
+				"mirth": 4,
+				"misfortune": 4,
+				"hypnotize": 6,
+				"forgetfulness": 6,
+				"teleport": 8,
+				"chainLightning": 14,
+				"inferno": 3,
+				"meteorShower": 10,
+				"fireShield": 3,
+				"resurrection": 6,
+				"prayer": 5,
+				"sorrow": 5,
+				"slayer": 5,
+				"frenzy": 4,
+				"counterstrike": 10,
+				"berserk": 4,
+				"clone": 6,
+				"waterWalk": 8,
+				"townPortal": 10,
+				"fly": 14,
+				"dimensionDoor": 12,
+				"implosion": 14,
+				"magicMirror": 12,
+				"fireElemental": 4,
+				"earthElemental": 14,
+				"waterElemental": 6,
+				"airElemental": 16
+			},
+			"primaryResource": "crystal",
+			"moatAbility": "strongholdMoat",
+			"names": [
+				"Sunagakure",
+				"Hidden Sand",
+				"Wind Country Gate",
+				"Desert Oasis",
+				"Great Dunes",
+				"Red Canyon",
+				"Sand Fortress",
+				"Kazekage Pass",
+				"Dry Wells",
+				"Puppet Valley"
+			],
+			"structures": {
+				"villageHall": {
+					"animation": "naruto/sunagakure/town/villageHall",
+					"x": 327,
+					"y": 183,
+					"z": 0,
+					"area": "naruto/sunagakure/town/villageHall-area.png",
+					"border": "naruto/sunagakure/town/villageHall-border.png"
+				},
+				"townHall": {
+					"animation": "naruto/sunagakure/town/townHall",
+					"x": 323,
+					"y": 169,
+					"z": 0,
+					"area": "naruto/sunagakure/town/townHall-area.png",
+					"border": "naruto/sunagakure/town/townHall-border.png"
+				},
+				"cityHall": {
+					"animation": "naruto/sunagakure/town/cityHall",
+					"x": 336,
+					"y": 176,
+					"z": 0,
+					"area": "naruto/sunagakure/town/cityHall-area.png",
+					"border": "naruto/sunagakure/town/cityHall-border.png"
+				},
+				"capitol": {
+					"animation": "naruto/sunagakure/town/capitol",
+					"x": 318,
+					"y": 165,
+					"z": 0,
+					"area": "naruto/sunagakure/town/capitol-area.png",
+					"border": "naruto/sunagakure/town/capitol-border.png"
+				},
+				"fort": {
+					"animation": "naruto/sunagakure/town/fort",
+					"x": 139,
+					"y": 103,
+					"z": -92,
+					"area": "naruto/sunagakure/town/fort-area.png",
+					"border": "naruto/sunagakure/town/fort-border.png"
+				},
+				"citadel": {
+					"animation": "naruto/sunagakure/town/citadel",
+					"x": 134,
+					"y": 86,
+					"z": -92,
+					"area": "naruto/sunagakure/town/citadel-area.png",
+					"border": "naruto/sunagakure/town/citadel-border.png"
+				},
+				"castle": {
+					"animation": "naruto/sunagakure/town/castle",
+					"x": 126,
+					"y": 70,
+					"z": -92,
+					"area": "naruto/sunagakure/town/castle-area.png",
+					"border": "naruto/sunagakure/town/castle-border.png"
+				},
+				"mageGuild1": {
+					"animation": "naruto/sunagakure/town/mageGuild1",
+					"x": 612,
+					"y": 138,
+					"z": -70,
+					"area": "naruto/sunagakure/town/mageGuild1-area.png",
+					"border": "naruto/sunagakure/town/mageGuild1-border.png"
+				},
+				"mageGuild2": {
+					"animation": "naruto/sunagakure/town/mageGuild2",
+					"x": 609,
+					"y": 143,
+					"z": -70,
+					"area": "naruto/sunagakure/town/mageGuild2-area.png",
+					"border": "naruto/sunagakure/town/mageGuild2-border.png"
+				},
+				"mageGuild3": {
+					"animation": "naruto/sunagakure/town/mageGuild3",
+					"x": 605,
+					"y": 132,
+					"z": -70,
+					"area": "naruto/sunagakure/town/mageGuild3-area.png",
+					"border": "naruto/sunagakure/town/mageGuild3-border.png"
+				},
+				"mageGuild4": {
+					"animation": "naruto/sunagakure/town/mageGuild4",
+					"x": 601,
+					"y": 118,
+					"z": -70,
+					"area": "naruto/sunagakure/town/mageGuild4-area.png",
+					"border": "naruto/sunagakure/town/mageGuild4-border.png"
+				},
+				"mageGuild5": {
+					"animation": "naruto/sunagakure/town/mageGuild5",
+					"x": 598,
+					"y": 107,
+					"z": -70,
+					"area": "naruto/sunagakure/town/mageGuild5-area.png",
+					"border": "naruto/sunagakure/town/mageGuild5-border.png"
+				},
+				"tavern": {
+					"animation": "naruto/sunagakure/town/tavern",
+					"x": 29,
+					"y": 272,
+					"z": 70,
+					"area": "naruto/sunagakure/town/tavern-area.png",
+					"border": "naruto/sunagakure/town/tavern-border.png"
+				},
+				"blacksmith": {
+					"animation": "naruto/sunagakure/town/blacksmith",
+					"x": 510,
+					"y": 273,
+					"z": 64,
+					"area": "naruto/sunagakure/town/blacksmith-area.png",
+					"border": "naruto/sunagakure/town/blacksmith-border.png"
+				},
+				"marketplace": {
+					"animation": "naruto/sunagakure/town/marketplace",
+					"x": 231,
+					"y": 268,
+					"z": 62,
+					"area": "naruto/sunagakure/town/marketplace-area.png",
+					"border": "naruto/sunagakure/town/marketplace-border.png"
+				},
+				"resourceSilo": {
+					"animation": "naruto/sunagakure/town/resourceSilo",
+					"x": 329,
+					"y": 292,
+					"z": 73,
+					"area": "naruto/sunagakure/town/resourceSilo-area.png",
+					"border": "naruto/sunagakure/town/resourceSilo-border.png"
+				},
+				"special1": {
+					"animation": "naruto/sunagakure/town/special1",
+					"x": 690,
+					"y": 224,
+					"z": 0,
+					"area": "naruto/sunagakure/town/special1-area.png",
+					"border": "naruto/sunagakure/town/special1-border.png"
+				},
+				"special2": {
+					"animation": "naruto/sunagakure/town/special2",
+					"x": 598,
+					"y": 274,
+					"z": 62,
+					"area": "naruto/sunagakure/town/special2-area.png",
+					"border": "naruto/sunagakure/town/special2-border.png"
+				},
+				"grail": {
+					"animation": "naruto/sunagakure/town/grail",
+					"x": 710,
+					"y": 122,
+					"z": -88,
+					"area": "naruto/sunagakure/town/grail-area.png",
+					"border": "naruto/sunagakure/town/grail-border.png"
+				},
+				"dwellingLvl1": {
+					"animation": "naruto/sunagakure/town/dwellingLvl1",
+					"x": 690,
+					"y": 276,
+					"z": 73,
+					"area": "naruto/sunagakure/town/dwellingLvl1-area.png",
+					"border": "naruto/sunagakure/town/dwellingLvl1-border.png"
+				},
+				"dwellingUpLvl1": {
+					"animation": "naruto/sunagakure/town/dwellingUpLvl1",
+					"x": 688,
+					"y": 274,
+					"z": 73,
+					"area": "naruto/sunagakure/town/dwellingUpLvl1-area.png",
+					"border": "naruto/sunagakure/town/dwellingUpLvl1-border.png"
+				},
+				"dwellingLvl2": {
+					"animation": "naruto/sunagakure/town/dwellingLvl2",
+					"x": 138,
+					"y": 244,
+					"z": 40,
+					"area": "naruto/sunagakure/town/dwellingLvl2-area.png",
+					"border": "naruto/sunagakure/town/dwellingLvl2-border.png"
+				},
+				"dwellingUpLvl2": {
+					"animation": "naruto/sunagakure/town/dwellingUpLvl2",
+					"x": 136,
+					"y": 228,
+					"z": 40,
+					"area": "naruto/sunagakure/town/dwellingUpLvl2-area.png",
+					"border": "naruto/sunagakure/town/dwellingUpLvl2-border.png"
+				},
+				"dwellingLvl3": {
+					"animation": "naruto/sunagakure/town/dwellingLvl3",
+					"x": 6,
+					"y": 188,
+					"z": 0,
+					"area": "naruto/sunagakure/town/dwellingLvl3-area.png",
+					"border": "naruto/sunagakure/town/dwellingLvl3-border.png"
+				},
+				"dwellingUpLvl3": {
+					"animation": "naruto/sunagakure/town/dwellingUpLvl3",
+					"x": 4,
+					"y": 182,
+					"z": 0,
+					"area": "naruto/sunagakure/town/dwellingUpLvl3-area.png",
+					"border": "naruto/sunagakure/town/dwellingUpLvl3-border.png"
+				},
+				"dwellingLvl4": {
+					"animation": "naruto/sunagakure/town/dwellingLvl4",
+					"x": 411,
+					"y": 283,
+					"z": 72,
+					"area": "naruto/sunagakure/town/dwellingLvl4-area.png",
+					"border": "naruto/sunagakure/town/dwellingLvl4-border.png"
+				},
+				"dwellingUpLvl4": {
+					"animation": "naruto/sunagakure/town/dwellingUpLvl4",
+					"x": 409,
+					"y": 272,
+					"z": 72,
+					"area": "naruto/sunagakure/town/dwellingUpLvl4-area.png",
+					"border": "naruto/sunagakure/town/dwellingUpLvl4-border.png"
+				},
+				"dwellingLvl5": {
+					"animation": "naruto/sunagakure/town/dwellingLvl5",
+					"x": 498,
+					"y": 157,
+					"z": -28,
+					"area": "naruto/sunagakure/town/dwellingLvl5-area.png",
+					"border": "naruto/sunagakure/town/dwellingLvl5-border.png"
+				},
+				"dwellingUpLvl5": {
+					"animation": "naruto/sunagakure/town/dwellingUpLvl5",
+					"x": 495,
+					"y": 151,
+					"z": -28,
+					"area": "naruto/sunagakure/town/dwellingUpLvl5-area.png",
+					"border": "naruto/sunagakure/town/dwellingUpLvl5-border.png"
+				},
+				"dwellingLvl6": {
+					"animation": "naruto/sunagakure/town/dwellingLvl6",
+					"x": 98,
+					"y": 151,
+					"z": -28,
+					"area": "naruto/sunagakure/town/dwellingLvl6-area.png",
+					"border": "naruto/sunagakure/town/dwellingLvl6-border.png"
+				},
+				"dwellingUpLvl6": {
+					"animation": "naruto/sunagakure/town/dwellingUpLvl6",
+					"x": 95,
+					"y": 162,
+					"z": -28,
+					"area": "naruto/sunagakure/town/dwellingUpLvl6-area.png",
+					"border": "naruto/sunagakure/town/dwellingUpLvl6-border.png"
+				},
+				"dwellingLvl7": {
+					"animation": "naruto/sunagakure/town/dwellingLvl7",
+					"x": 16,
+					"y": 125,
+					"z": -74,
+					"area": "naruto/sunagakure/town/dwellingLvl7-area.png",
+					"border": "naruto/sunagakure/town/dwellingLvl7-border.png"
+				},
+				"dwellingUpLvl7": {
+					"animation": "naruto/sunagakure/town/dwellingUpLvl7",
+					"x": 14,
+					"y": 119,
+					"z": -74,
+					"area": "naruto/sunagakure/town/dwellingUpLvl7-area.png",
+					"border": "naruto/sunagakure/town/dwellingUpLvl7-border.png"
+				}
+			},
+			"buildings": {
+				"villageHall": {
+					"name": "Kazekage Office",
+					"description": "The Kazekage Office allows you to purchase town structures and earns your village 500 gold per day."
+				},
+				"townHall": {
+					"name": "Kazekage Chambers",
+					"description": "The Kazekage Chambers allows you to purchase town structures and earns your village 1000 gold per day.",
+					"cost": {
+						"gold": 2500
+					}
+				},
+				"cityHall": {
+					"name": "Kazekage Tower",
+					"description": "The Kazekage Tower allows you to purchase town structures and earns your village 2000 gold per day.",
+					"cost": {
+						"gold": 5000
+					}
+				},
+				"capitol": {
+					"name": "Kazekage Residence",
+					"description": "The Kazekage Residence earns your village 4000 gold per day.",
+					"cost": {
+						"gold": 10000
+					}
+				},
+				"fort": {
+					"name": "Sand Wall",
+					"description": "The Sand Wall surrounds the town with defensive walls.",
+					"cost": {
+						"gold": 5000,
+						"wood": 20,
+						"ore": 20
+					}
+				},
+				"citadel": {
+					"name": "Fortified Sand Wall",
+					"description": "Adds a keep and a moat to the defenses and increases base creature growth by 50%.",
+					"cost": {
+						"gold": 2500,
+						"ore": 5
+					}
+				},
+				"castle": {
+					"name": "Absolute Sand Defense",
+					"description": "Adds two arrow towers, strengthens the walls and doubles base creature growth.",
+					"cost": {
+						"gold": 5000,
+						"wood": 10,
+						"ore": 10
+					}
+				},
+				"mageGuild1": {
+					"name": "Wind Scroll Tower 1",
+					"description": "Scrolls of level 1 jutsu. A visiting hero learns the spells kept here.",
+					"cost": {
+						"gold": 2000,
+						"wood": 5,
+						"ore": 5
+					}
+				},
+				"mageGuild2": {
+					"name": "Wind Scroll Tower 2",
+					"description": "Scrolls of level 2 jutsu. A visiting hero learns the spells kept here.",
+					"cost": {
+						"gold": 1000,
+						"wood": 5,
+						"ore": 5,
+						"mercury": 6,
+						"sulfur": 6,
+						"crystal": 6,
+						"gems": 6
+					}
+				},
+				"mageGuild3": {
+					"name": "Wind Scroll Tower 3",
+					"description": "Scrolls of level 3 jutsu. A visiting hero learns the spells kept here.",
+					"cost": {
+						"gold": 1000,
+						"wood": 5,
+						"ore": 5,
+						"mercury": 8,
+						"sulfur": 8,
+						"crystal": 8,
+						"gems": 8
+					}
+				},
+				"mageGuild4": {
+					"name": "Wind Scroll Tower 4",
+					"description": "Scrolls of level 4 jutsu. A visiting hero learns the spells kept here.",
+					"cost": {
+						"gold": 1000,
+						"wood": 5,
+						"ore": 5,
+						"mercury": 10,
+						"sulfur": 10,
+						"crystal": 10,
+						"gems": 10
+					}
+				},
+				"mageGuild5": {
+					"name": "Wind Scroll Tower 5",
+					"description": "Scrolls of level 5 jutsu. A visiting hero learns the spells kept here.",
+					"cost": {
+						"gold": 1000,
+						"wood": 5,
+						"ore": 5,
+						"mercury": 12,
+						"sulfur": 12,
+						"crystal": 12,
+						"gems": 12
+					}
+				},
+				"tavern": {
+					"name": "Desert Oasis Inn",
+					"description": "Travellers rest at the oasis: hire heroes, hear rumors and visit the Thieves' Guild. Defenders fight with +1 morale.",
+					"cost": {
+						"gold": 500,
+						"wood": 5
+					}
+				},
+				"blacksmith": {
+					"name": "Iron Sand Forge",
+					"description": "The Iron Sand Forge sells Ammo Carts to your armies.",
+					"cost": {
+						"gold": 1000,
+						"wood": 5
+					},
+					"warMachine": "ammoCart"
+				},
+				"marketplace": {
+					"name": "Caravan Bazaar",
+					"description": "Trade resources here; the more markets you own, the better the rates.",
+					"cost": {
+						"gold": 500,
+						"wood": 5
+					}
+				},
+				"resourceSilo": {
+					"name": "Desert Storehouse",
+					"description": "The Desert Storehouse adds 1 crystal to your stock every day.",
+					"cost": {
+						"gold": 5000,
+						"ore": 5
+					},
+					"produce": {
+						"crystal": 1
+					}
+				},
+				"special1": {
+					"name": "Sand Barrier",
+					"description": "In a siege the walls take one more hit and defenders take 20% less damage from shooters.",
+					"cost": {
+						"gold": 2000,
+						"ore": 10
+					},
+					"requires": [
+						"fort"
+					],
+					"fortifications": {
+						"wallsHealth": 1,
+						"citadelHealth": 1,
+						"upperTowerHealth": 1,
+						"lowerTowerHealth": 1
+					},
+					"bonuses": [
+						{
+							"type": "GENERAL_DAMAGE_REDUCTION",
+							"subtype": "damageTypeRanged",
+							"val": 20
+						}
+					]
+				},
+				"special2": {
+					"name": "Chiyo's Poison Lab",
+					"description": "Antidotes make Suna creatures immune to poison; venom research gives scorpions +2 Attack.",
+					"cost": {
+						"gold": 1500,
+						"mercury": 5
+					},
+					"requires": [
+						"dwellingLvl4"
+					],
+					"bonuses": [
+						{
+							"type": "SPELL_IMMUNITY",
+							"subtype": "spell.poison",
+							"propagator": "PLAYER",
+							"limiters": [
+								{
+									"type": "FACTION_LIMITER",
+									"faction": "sunagakure"
+								}
+							]
+						},
+						{
+							"type": "PRIMARY_SKILL",
+							"subtype": "primarySkill.attack",
+							"val": 2,
+							"propagator": "PLAYER",
+							"limiters": [
+								{
+									"type": "CREATURE_TYPE_LIMITER",
+									"creature": "desertScorpion",
+									"includeUpgrades": true
+								}
+							]
+						}
+					]
+				},
+				"grail": {
+					"name": "Shukaku's Tea Kettle",
+					"description": "The relic Shukaku was once sealed in: +5000 gold per day, +50% creature growth and +2 Defense for all your heroes.",
+					"bonuses": [
+						{
+							"type": "PRIMARY_SKILL",
+							"subtype": "primarySkill.defence",
+							"val": 2,
+							"propagator": "PLAYER"
+						}
+					]
+				},
+				"dwellingLvl1": {
+					"name": "Desert Barracks",
+					"description": "The Desert Barracks allows you to recruit Suna Genin.",
+					"cost": {
+						"gold": 500,
+						"ore": 10
+					},
+					"requires": [
+						"fort"
+					]
+				},
+				"dwellingUpLvl1": {
+					"name": "Upg. Desert Barracks",
+					"description": "The upgraded Desert Barracks allows you to recruit Suna Chunin.",
+					"cost": {
+						"gold": 1000,
+						"ore": 5
+					},
+					"upgrades": "dwellingLvl1"
+				},
+				"dwellingLvl2": {
+					"name": "Puppet Workshop",
+					"description": "The Puppet Workshop allows you to recruit Wooden Puppets.",
+					"cost": {
+						"gold": 1000,
+						"wood": 5,
+						"ore": 5
+					},
+					"requires": [
+						"dwellingLvl1"
+					]
+				},
+				"dwellingUpLvl2": {
+					"name": "Upg. Puppet Workshop",
+					"description": "The upgraded Puppet Workshop allows you to recruit Battle Puppets.",
+					"cost": {
+						"gold": 1000,
+						"wood": 5,
+						"ore": 5
+					},
+					"upgrades": "dwellingLvl2"
+				},
+				"dwellingLvl3": {
+					"name": "Wind Training Cliffs",
+					"description": "The Wind Training Cliffs allows you to recruit Wind Kunoichi.",
+					"cost": {
+						"gold": 1000,
+						"ore": 5
+					},
+					"requires": [
+						"dwellingLvl1"
+					]
+				},
+				"dwellingUpLvl3": {
+					"name": "Upg. Wind Training Cliffs",
+					"description": "The upgraded Wind Training Cliffs allows you to recruit Fan Masters.",
+					"cost": {
+						"gold": 1000,
+						"ore": 5
+					},
+					"upgrades": "dwellingLvl3"
+				},
+				"dwellingLvl4": {
+					"name": "Scorpion Dunes",
+					"description": "The Scorpion Dunes allows you to recruit Desert Scorpions.",
+					"cost": {
+						"gold": 2000,
+						"wood": 5,
+						"ore": 5
+					},
+					"requires": [
+						"allOf",
+						[
+							"dwellingLvl1"
+						],
+						[
+							"blacksmith"
+						]
+					]
+				},
+				"dwellingUpLvl4": {
+					"name": "Upg. Scorpion Dunes",
+					"description": "The upgraded Scorpion Dunes allows you to recruit Poison Scorpions.",
+					"cost": {
+						"gold": 2000,
+						"ore": 5,
+						"crystal": 5
+					},
+					"upgrades": "dwellingLvl4"
+				},
+				"dwellingLvl5": {
+					"name": "Red Secret Puppet Hall",
+					"description": "The Red Secret Puppet Hall allows you to recruit Human Puppets.",
+					"cost": {
+						"gold": 3000,
+						"wood": 5,
+						"ore": 5,
+						"mercury": 2,
+						"sulfur": 2,
+						"crystal": 2,
+						"gems": 2
+					},
+					"requires": [
+						"allOf",
+						[
+							"dwellingLvl2"
+						],
+						[
+							"mageGuild1"
+						]
+					]
+				},
+				"dwellingUpLvl5": {
+					"name": "Upg. Red Secret Puppet Hall",
+					"description": "The upgraded Red Secret Puppet Hall allows you to recruit Kazekage Puppets.",
+					"cost": {
+						"gold": 1000,
+						"mercury": 2,
+						"sulfur": 2,
+						"crystal": 2,
+						"gems": 2
+					},
+					"upgrades": "dwellingLvl5"
+				},
+				"dwellingLvl6": {
+					"name": "Kamaitachi Canyon",
+					"description": "The Kamaitachi Canyon allows you to recruit Kamaitachi.",
+					"cost": {
+						"gold": 5000,
+						"wood": 10,
+						"ore": 10
+					},
+					"requires": [
+						"allOf",
+						[
+							"dwellingLvl3"
+						],
+						[
+							"dwellingLvl5"
+						]
+					]
+				},
+				"dwellingUpLvl6": {
+					"name": "Upg. Kamaitachi Canyon",
+					"description": "The upgraded Kamaitachi Canyon allows you to recruit Great Kamaitachi.",
+					"cost": {
+						"gold": 3000,
+						"ore": 10
+					},
+					"upgrades": "dwellingLvl6"
+				},
+				"dwellingLvl7": {
+					"name": "Sealed Sand Altar",
+					"description": "The Sealed Sand Altar allows you to recruit Sand Colossi.",
+					"cost": {
+						"gold": 20000,
+						"mercury": 10,
+						"sulfur": 10,
+						"crystal": 10,
+						"gems": 10
+					},
+					"requires": [
+						"allOf",
+						[
+							"dwellingLvl6"
+						],
+						[
+							"mageGuild2"
+						]
+					]
+				},
+				"dwellingUpLvl7": {
+					"name": "Upg. Sealed Sand Altar",
+					"description": "The upgraded Sealed Sand Altar allows you to recruit Gaara's Sand Tsunamis.",
+					"cost": {
+						"gold": 20000,
+						"mercury": 10,
+						"sulfur": 10,
+						"crystal": 10,
+						"gems": 10
+					},
+					"upgrades": "dwellingLvl7"
+				}
+			},
+			"siege": {
+				"shooter": "windKunoichi",
+				"imagePrefix": "SGST",
+				"gate": {
+					"arch": {
+						"x": 478,
+						"y": 235
+					},
+					"gate": {
+						"x": 407,
+						"y": 266
+					}
+				},
+				"moat": {
+					"bank": {
+						"x": 410,
+						"y": 91
+					},
+					"moat": {
+						"x": 410,
+						"y": 90
+					}
+				},
+				"static": {
+					"background": {
+						"x": 617,
+						"y": 62
+					},
+					"bottom": {
+						"x": 511,
+						"y": 380
+					},
+					"top": {
+						"x": 499,
+						"y": 107
+					}
+				},
+				"towers": {
+					"bottom": {
+						"battlement": {
+							"x": 586,
+							"y": 508
+						},
+						"creature": {
+							"x": 361,
+							"y": 290
+						},
+						"tower": {
+							"x": 586,
+							"y": 508
+						}
+					},
+					"keep": {
+						"battlement": {
+							"x": 731,
+							"y": 168
+						},
+						"creature": {
+							"x": 531,
+							"y": -45
+						},
+						"tower": {
+							"x": 731,
+							"y": 168
+						}
+					},
+					"top": {
+						"battlement": {
+							"x": 568,
+							"y": 30
+						},
+						"creature": {
+							"x": 342,
+							"y": -187
+						},
+						"tower": {
+							"x": 568,
+							"y": 30
+						}
+					}
+				},
+				"walls": {
+					"bottom": {
+						"x": 553,
+						"y": 440
+					},
+					"bottomMid": {
+						"x": 483,
+						"y": 304
+					},
+					"upper": {
+						"x": 534,
+						"y": 69
+					},
+					"upperMid": {
+						"x": 476,
+						"y": 189
+					}
+				},
+				"towerIconLarge": "naruto/creatures/windKunoichi/portraitLarge.png",
+				"towerIconSmall": "naruto/creatures/windKunoichi/portraitSmall.png"
+			}
+		}
+	}
+}

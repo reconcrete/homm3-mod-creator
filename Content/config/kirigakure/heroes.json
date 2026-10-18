@@ -1,0 +1,761 @@
+{
+	"zabuzaMomochi": {
+		"class": "swordsman",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/zabuzaMomochi/portraitLarge.png",
+			"small": "naruto/heroes/zabuzaMomochi/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:152",
+			"specialtySmall": "UN32.DEF:0:152"
+		},
+		"army": [
+			{
+				"creature": "mistGenin",
+				"min": 12,
+				"max": 24
+			},
+			{
+				"creature": "hunterNin",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hozukiBrawler",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "offence",
+				"level": "basic"
+			},
+			{
+				"skill": "tactics",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"creature": "mistSwordsman"
+		},
+		"texts": {
+			"name": "Zabuza Momochi",
+			"biography": "The Demon of the Hidden Mist, master of the Silent Killing, who strikes from fog no one can see through.",
+			"specialty": {
+				"name": "Mist Swordsmen",
+				"tooltip": "Creature bonus: Mist Swordsmen",
+				"description": "Increases the speed of any Mist Swordsmen or Swordsmen of the Seven by 1 and their Attack and Defense by 5% for every level of the hero divided by the creature tier."
+			}
+		}
+	},
+	"kisameHoshigaki": {
+		"class": "swordsman",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/kisameHoshigaki/portraitLarge.png",
+			"small": "naruto/heroes/kisameHoshigaki/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:112",
+			"specialtySmall": "UN32.DEF:0:112"
+		},
+		"army": [
+			{
+				"creature": "mistGenin",
+				"min": 12,
+				"max": 24
+			},
+			{
+				"creature": "hunterNin",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hozukiBrawler",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "offence",
+				"level": "basic"
+			},
+			{
+				"skill": "armorer",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"creature": "summonedShark"
+		},
+		"texts": {
+			"name": "Kisame Hoshigaki",
+			"biography": "The Monster of the Hidden Mist, wielder of Samehada, who fights with sharks at his side.",
+			"specialty": {
+				"name": "Sharks",
+				"tooltip": "Creature bonus: Sharks",
+				"description": "Increases the speed of any Summoned Sharks or Great Sharks by 1 and their Attack and Defense by 5% for every level of the hero divided by the creature tier."
+			}
+		}
+	},
+	"chojuro": {
+		"class": "swordsman",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/chojuro/portraitLarge.png",
+			"small": "naruto/heroes/chojuro/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:109",
+			"specialtySmall": "UN32.DEF:0:109"
+		},
+		"army": [
+			{
+				"creature": "mistGenin",
+				"min": 12,
+				"max": 24
+			},
+			{
+				"creature": "hunterNin",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hozukiBrawler",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "offence",
+				"level": "basic"
+			},
+			{
+				"skill": "leadership",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"secondary": "offence"
+		},
+		"texts": {
+			"name": "Chojuro",
+			"biography": "A shy young swordsman whose twin-hilted Hiramekarei turns his chakra into a blade.",
+			"specialty": {
+				"name": "Offense",
+				"tooltip": "Secondary skill bonus: Offense",
+				"description": "Increases the effect of the Offense skill by 5% for every level."
+			}
+		}
+	},
+	"mangetsuHozuki": {
+		"class": "swordsman",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/mangetsuHozuki/portraitLarge.png",
+			"small": "naruto/heroes/mangetsuHozuki/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:131",
+			"specialtySmall": "UN32.DEF:0:131"
+		},
+		"army": [
+			{
+				"creature": "mistGenin",
+				"min": 12,
+				"max": 24
+			},
+			{
+				"creature": "hozukiBrawler",
+				"min": 2,
+				"max": 3
+			},
+			{
+				"creature": "hozukiBrawler",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "offence",
+				"level": "basic"
+			},
+			{
+				"skill": "tactics",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"creature": "hozukiBrawler"
+		},
+		"texts": {
+			"name": "Mangetsu Hozuki",
+			"biography": "The prodigy of the Hozuki clan, who mastered all seven swords and turns his body to water.",
+			"specialty": {
+				"name": "Hozuki",
+				"tooltip": "Creature bonus: Hozuki",
+				"description": "Increases the speed of any Hozuki Brawlers or Hydrifiers by 1 and their Attack and Defense by 5% for every level of the hero divided by the creature tier."
+			}
+		}
+	},
+	"suigetsuHozuki": {
+		"class": "swordsman",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/suigetsuHozuki/portraitLarge.png",
+			"small": "naruto/heroes/suigetsuHozuki/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:135",
+			"specialtySmall": "UN32.DEF:0:135"
+		},
+		"army": [
+			{
+				"creature": "mistGenin",
+				"min": 12,
+				"max": 24
+			},
+			{
+				"creature": "hozukiBrawler",
+				"min": 2,
+				"max": 3
+			},
+			{
+				"creature": "hozukiBrawler",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "logistics",
+				"level": "basic"
+			},
+			{
+				"skill": "offence",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"base": {
+				"limiters": [
+					{
+						"type": "CREATURE_TYPE_LIMITER",
+						"creature": "hozukiBrawler",
+						"includeUpgrades": true
+					}
+				]
+			},
+			"bonuses": {
+				"speed": {
+					"type": "STACKS_SPEED",
+					"val": 1
+				},
+				"water": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeAll",
+					"val": 10
+				}
+			}
+		},
+		"texts": {
+			"name": "Suigetsu Hozuki",
+			"biography": "Mangetsu's younger brother, who slips out of any blow by melting into water.",
+			"specialty": {
+				"name": "Water Body",
+				"tooltip": "Hozuki bonus",
+				"description": "Hozuki Brawlers and Hydrifiers get +1 speed and take 10% less damage from attacks."
+			}
+		}
+	},
+	"ameyuriRingo": {
+		"class": "swordsman",
+		"female": true,
+		"images": {
+			"large": "naruto/heroes/ameyuriRingo/portraitLarge.png",
+			"small": "naruto/heroes/ameyuriRingo/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:45",
+			"specialtySmall": "UN32.DEF:0:45"
+		},
+		"army": [
+			{
+				"creature": "mistGenin",
+				"min": 12,
+				"max": 24
+			},
+			{
+				"creature": "hunterNin",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hozukiBrawler",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "airMagic",
+				"level": "basic"
+			},
+			{
+				"skill": "offence",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"school": {
+					"type": "SPELL_DAMAGE",
+					"subtype": "spellSchool.air",
+					"val": 2,
+					"updater": "TIMES_HERO_LEVEL"
+				}
+			}
+		},
+		"texts": {
+			"name": "Ameyuri Ringo",
+			"biography": "One of the Seven Swordsmen, whose twin blades Kiba call down lightning.",
+			"specialty": {
+				"name": "Lightning Blades",
+				"tooltip": "Air magic bonus",
+				"description": "Air spells cast by the hero are 2% more effective for every level."
+			}
+		},
+		"spellbook": [
+			"lightningBolt"
+		]
+	},
+	"kushimaruKuriarare": {
+		"class": "swordsman",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/kushimaruKuriarare/portraitLarge.png",
+			"small": "naruto/heroes/kushimaruKuriarare/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:114",
+			"specialtySmall": "UN32.DEF:0:114"
+		},
+		"army": [
+			{
+				"creature": "mistGenin",
+				"min": 12,
+				"max": 24
+			},
+			{
+				"creature": "hunterNin",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hunterNin",
+				"min": 4,
+				"max": 7
+			}
+		],
+		"skills": [
+			{
+				"skill": "archery",
+				"level": "basic"
+			},
+			{
+				"skill": "offence",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"creature": "hunterNin"
+		},
+		"texts": {
+			"name": "Kushimaru Kuriarare",
+			"biography": "A masked swordsman of the Seven whose needle sword Nuibari stitches his foes together.",
+			"specialty": {
+				"name": "Hunter-nin",
+				"tooltip": "Creature bonus: Hunter-nin",
+				"description": "Increases the speed of any Hunter-nin or Tracker Hunter-nin by 1 and their Attack and Defense by 5% for every level of the hero divided by the creature tier."
+			}
+		}
+	},
+	"jinpachiMunashi": {
+		"class": "swordsman",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/jinpachiMunashi/portraitLarge.png",
+			"small": "naruto/heroes/jinpachiMunashi/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:118",
+			"specialtySmall": "UN32.DEF:0:118"
+		},
+		"army": [
+			{
+				"creature": "mistGenin",
+				"min": 12,
+				"max": 24
+			},
+			{
+				"creature": "ballista",
+				"min": 1,
+				"max": 1
+			},
+			{
+				"creature": "hozukiBrawler",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "artillery",
+				"level": "basic"
+			},
+			{
+				"skill": "offence",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"creature": "ballista",
+			"creatureLevel": 5
+		},
+		"texts": {
+			"name": "Jinpachi Munashi",
+			"biography": "A swordsman of the Seven whose explosive blade Shibuki blows apart whatever it strikes.",
+			"specialty": {
+				"name": "Ballista",
+				"tooltip": "Ballista bonus",
+				"description": "The Ballista gains +1 speed and +5% Attack and Defense for every 5 levels of the hero."
+			}
+		}
+	},
+	"haku": {
+		"class": "mistSage",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/haku/portraitLarge.png",
+			"small": "naruto/heroes/haku/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:30",
+			"specialtySmall": "UN32.DEF:0:30"
+		},
+		"army": [
+			{
+				"creature": "mistGenin",
+				"min": 12,
+				"max": 24
+			},
+			{
+				"creature": "hunterNin",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hozukiBrawler",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "waterMagic",
+				"level": "basic"
+			},
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"creature": "yukiClanAdept"
+		},
+		"texts": {
+			"name": "Haku",
+			"biography": "The last of the Yuki clan, whose Demonic Ice Mirrors trap the enemy in a hall of ice.",
+			"specialty": {
+				"name": "Ice Mirrors",
+				"tooltip": "Creature bonus: Ice Mirrors",
+				"description": "Increases the speed of any Yuki Clan Adepts or Ice Mirror Masters by 1 and their Attack and Defense by 5% for every level of the hero divided by the creature tier."
+			}
+		},
+		"spellbook": [
+			"iceBolt"
+		]
+	},
+	"meiTerumi": {
+		"class": "mistSage",
+		"female": true,
+		"images": {
+			"large": "naruto/heroes/meiTerumi/portraitLarge.png",
+			"small": "naruto/heroes/meiTerumi/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:57",
+			"specialtySmall": "UN32.DEF:0:57"
+		},
+		"army": [
+			{
+				"creature": "mistGenin",
+				"min": 12,
+				"max": 24
+			},
+			{
+				"creature": "hunterNin",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hozukiBrawler",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "fireMagic",
+				"level": "basic"
+			},
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"lava": {
+					"type": "SPECIFIC_SPELL_DAMAGE",
+					"subtype": "spell.inferno",
+					"val": 3,
+					"updater": "TIMES_HERO_LEVEL"
+				}
+			}
+		},
+		"texts": {
+			"name": "Mei Terumi",
+			"biography": "The Fifth Mizukage, who wields both Lava Release and Boil Release.",
+			"specialty": {
+				"name": "Lava Release",
+				"tooltip": "Spell bonus: Inferno",
+				"description": "Her Inferno deals 3% more damage for every level."
+			}
+		},
+		"spellbook": [
+			"inferno"
+		]
+	},
+	"ao": {
+		"class": "mistSage",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/ao/portraitLarge.png",
+			"small": "naruto/heroes/ao/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:110",
+			"specialtySmall": "UN32.DEF:0:110"
+		},
+		"army": [
+			{
+				"creature": "mistGenin",
+				"min": 12,
+				"max": 24
+			},
+			{
+				"creature": "hunterNin",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hozukiBrawler",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "scouting",
+				"level": "basic"
+			},
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"secondary": "scouting"
+		},
+		"texts": {
+			"name": "Ao",
+			"biography": "The Mizukage's bodyguard, who carries a stolen Byakugan under his eyepatch.",
+			"specialty": {
+				"name": "Byakugan",
+				"tooltip": "Secondary skill bonus: Scouting",
+				"description": "Increases the effect of the Scouting skill by 5% for every level."
+			}
+		},
+		"spellbook": [
+			"dispel"
+		]
+	},
+	"yagura": {
+		"class": "mistSage",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/yagura/portraitLarge.png",
+			"small": "naruto/heroes/yagura/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:151",
+			"specialtySmall": "UN32.DEF:0:151"
+		},
+		"army": [
+			{
+				"creature": "mistGenin",
+				"min": 12,
+				"max": 24
+			},
+			{
+				"creature": "hunterNin",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hozukiBrawler",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "waterMagic",
+				"level": "basic"
+			},
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"creature": "waterDragon"
+		},
+		"texts": {
+			"name": "Yagura",
+			"biography": "The Fourth Mizukage, a child-faced ruler who commanded water dragons in the Bloody Mist years.",
+			"specialty": {
+				"name": "Water Dragons",
+				"tooltip": "Creature bonus: Water Dragons",
+				"description": "Increases the speed of any Water Dragons or Great Water Dragons by 1 and their Attack and Defense by 5% for every level of the hero divided by the creature tier."
+			}
+		},
+		"spellbook": [
+			"cure"
+		]
+	},
+	"utakata": {
+		"class": "mistSage",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/utakata/portraitLarge.png",
+			"small": "naruto/heroes/utakata/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:122",
+			"specialtySmall": "UN32.DEF:0:122"
+		},
+		"army": [
+			{
+				"creature": "mistGenin",
+				"min": 12,
+				"max": 24
+			},
+			{
+				"creature": "hunterNin",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hozukiBrawler",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "waterMagic",
+				"level": "basic"
+			},
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"school": {
+					"type": "SPELL_DAMAGE",
+					"subtype": "spellSchool.water",
+					"val": 2,
+					"updater": "TIMES_HERO_LEVEL"
+				}
+			}
+		},
+		"texts": {
+			"name": "Utakata",
+			"biography": "A wandering ninja who blows bubbles through a pipe; some of them burst like acid, some carry him away.",
+			"specialty": {
+				"name": "Bubbles",
+				"tooltip": "Water magic bonus",
+				"description": "Water spells cast by the hero are 2% more effective for every level."
+			}
+		},
+		"spellbook": [
+			"protectFire"
+		]
+	},
+	"gengetsuHozuki": {
+		"class": "mistSage",
+		"female": false,
+		"images": {
+			"large": "naruto/heroes/gengetsuHozuki/portraitLarge.png",
+			"small": "naruto/heroes/gengetsuHozuki/portraitSmall.png",
+			"specialtyLarge": "UN44.DEF:0:40",
+			"specialtySmall": "UN32.DEF:0:40"
+		},
+		"army": [
+			{
+				"creature": "mistGenin",
+				"min": 12,
+				"max": 24
+			},
+			{
+				"creature": "hunterNin",
+				"min": 4,
+				"max": 7
+			},
+			{
+				"creature": "hozukiBrawler",
+				"min": 2,
+				"max": 3
+			}
+		],
+		"skills": [
+			{
+				"skill": "wisdom",
+				"level": "basic"
+			},
+			{
+				"skill": "intelligence",
+				"level": "basic"
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"mirage": {
+					"type": "OPENING_BATTLE_SPELL",
+					"subtype": "spell.forgetfulness",
+					"addInfo": 3,
+					"updater": {
+						"type": "GROWS_WITH_LEVEL",
+						"valPer20": 4,
+						"stepSize": 1
+					}
+				}
+			}
+		},
+		"texts": {
+			"name": "Gengetsu Hozuki",
+			"biography": "The Second Mizukage, the \"Mirage\", whose clam-born illusions leave archers shooting at nothing.",
+			"specialty": {
+				"name": "Mirages",
+				"tooltip": "Opening Forgetfulness",
+				"description": "Each battle opens with expert Forgetfulness on all enemy shooters. It lasts 1 round, 2 from level 6, 3 from level 11 and 4 from level 16."
+			}
+		},
+		"spellbook": [
+			"forgetfulness"
+		]
+	}
+}

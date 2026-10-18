@@ -2,12 +2,15 @@
 	"name": "Naruto Heroes",
 	"description": "Three hidden villages from Naruto as playable towns: Konohagakure, Sunagakure and Kirigakure, with their shinobi, heroes, tailed-beast bosses and artifacts.",
 	"author": "Anton Morozov",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"modType": "Town",
 	"compatibility": {
 		"min": "1.7.0"
 	},
 	"changelog": {
+		"0.4.0": [
+			"Sunagakure and Kirigakure towns: 28 creatures, 4 hero classes, 26 heroes, town screens from the artist"
+		],
 		"0.3.0": [
 			"Hero and creature portraits from the generated art",
 			"Static battle sprites for the Konohagakure creatures",
@@ -25,23 +28,35 @@
 		"description": "Три скрытые деревни из «Наруто» как играбельные города: Коноха, Суна и Кири — с их шиноби, героями, хвостатыми зверями-боссами и артефактами.",
 		"translations": [
 			"config/translations/russian-konohagakure.json",
-			"config/translations/russian-neutral.json"
+			"config/translations/russian-neutral.json",
+			"config/translations/russian-sunagakure.json",
+			"config/translations/russian-kirigakure.json"
 		]
 	},
 	"factions": [
-		"config/konohagakure/faction.json"
+		"config/konohagakure/faction.json",
+		"config/sunagakure/faction.json",
+		"config/kirigakure/faction.json"
 	],
 	"creatures": [
 		"config/konohagakure/creatures.json",
-		"config/neutral/creatures.json"
+		"config/neutral/creatures.json",
+		"config/sunagakure/creatures.json",
+		"config/kirigakure/creatures.json"
 	],
 	"heroClasses": [
-		"config/konohagakure/heroClasses.json"
+		"config/konohagakure/heroClasses.json",
+		"config/sunagakure/heroClasses.json",
+		"config/kirigakure/heroClasses.json"
 	],
 	"heroes": [
-		"config/konohagakure/heroes.json"
+		"config/konohagakure/heroes.json",
+		"config/sunagakure/heroes.json",
+		"config/kirigakure/heroes.json"
 	],
 	"objects": [
-		"config/konohagakure/dwellings.json"
+		"config/konohagakure/dwellings.json",
+		"config/sunagakure/dwellings.json",
+		"config/kirigakure/dwellings.json"
 	]
 }
