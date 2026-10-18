@@ -66,6 +66,14 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   switches a faction to them (filters: village / fort / castle-or-capitol);
   `dwelling_object` uses the picture whose slug is the kebab-case object id.
   `tools/make-maps.sh` rebuilds every test map.
+- Play map "Naruto vs Sasuke: Valley of the End" (36x36, two players, hot seat):
+  `python3 tools/make-naruto-vs-sasuke.py` -> `Maps/naruto-vs-sasuke.vmap`. Hand-built maps take
+  object entries, grass obstacles, road pieces and plain grass views from
+  `tools/testmaps/map-library.json` (`tools/harvest-map-library.py` rebuilds it from VCMI's
+  random maps). A map loads for real with `vcmiclient -i --disable-video --onlyAI --testmap X`
+  only if `lastMap` in settings.json names it (the argument alone is ignored); look for
+  "Map loaded!" / "Gamestate initialized!" in the client log; the client crashes right after,
+  as usual for test mode. Only while Anton isn't playing.
 - Test maps: `tools/make-testmap.py` (see its docstring). `naruto-test-konohagakure` is
   the plain Konoha map; `naruto-test-kurama` adds Kurama at (48, 61), four tiles west and
   two south of the red town gate, and a strong town garrison. The script checks that every

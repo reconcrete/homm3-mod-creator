@@ -1,0 +1,11846 @@
+{
+	"objects": {
+		"altarOfSacrifice/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AvXAltar",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "altarOfSacrifice"
+		},
+		"arena/arena": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "arena",
+			"template": {
+				"animation": "AVSarna0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"BBB",
+					"BAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "arena"
+		},
+		"artifact/birdOfPerception": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "birdOfPerception",
+			"template": {
+				"animation": "AVA0063",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "artifact"
+		},
+		"artifact/cardsOfProphecy": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "cardsOfProphecy",
+			"template": {
+				"animation": "AVA0047",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "artifact"
+		},
+		"artifact/centaurAxe": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "centaurAxe",
+			"template": {
+				"animation": "AVA0007",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "artifact"
+		},
+		"artifact/crestOfValor": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "crestOfValor",
+			"template": {
+				"animation": "AVA0050",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "artifact"
+		},
+		"artifact/glyphOfGallantry": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "glyphOfGallantry",
+			"template": {
+				"animation": "AVA0051",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "artifact"
+		},
+		"artifact/pendantOfDeath": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "pendantOfDeath",
+			"template": {
+				"animation": "AVA0104",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "artifact"
+		},
+		"artifact/pendantOfDispassion": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "pendantOfDispassion",
+			"template": {
+				"animation": "AVA0100",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "artifact"
+		},
+		"artifact/pendantOfHoliness": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "pendantOfHoliness",
+			"template": {
+				"animation": "AVA0102",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "artifact"
+		},
+		"artifact/pendantOfLife": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "pendantOfLife",
+			"template": {
+				"animation": "AVA0103",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "artifact"
+		},
+		"artifact/pendantOfTotalRecall": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "pendantOfTotalRecall",
+			"template": {
+				"animation": "AVA0107",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "artifact"
+		},
+		"artifact/speculum": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "speculum",
+			"template": {
+				"animation": "AVA0052",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "artifact"
+		},
+		"artifact/spiritOfOppression": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "spiritOfOppression",
+			"template": {
+				"animation": "AVA0084",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "artifact"
+		},
+		"artifact/spyglass": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "spyglass",
+			"template": {
+				"animation": "AVA0053",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "artifact"
+		},
+		"blackMarket/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVXmktb0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "blackMarket"
+		},
+		"boat/boatCastle": {
+			"subtype": "boatCastle",
+			"template": {
+				"animation": "AVXboat1",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VAV"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "boat"
+		},
+		"boat/boatFortress": {
+			"subtype": "boatFortress",
+			"template": {
+				"animation": "AVXboat2",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VAV"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "boat"
+		},
+		"boat/boatNecropolis": {
+			"subtype": "boatNecropolis",
+			"template": {
+				"animation": "AVXboat0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VAV"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "boat"
+		},
+		"buoy/buoy": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "buoy",
+			"template": {
+				"animation": "AVSbuoy0",
+				"editorAnimation": "",
+				"mask": [
+					"A"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "buoy"
+		},
+		"cactus/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVLca010",
+				"editorAnimation": "",
+				"mask": [
+					"B"
+				]
+			},
+			"type": "cactus"
+		},
+		"campfire/campfire": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "campfire",
+			"template": {
+				"animation": "adcfra",
+				"editorAnimation": "",
+				"mask": [
+					"A"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "campfire"
+		},
+		"canyon/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVLglly0",
+				"editorAnimation": "",
+				"mask": [
+					"BBVV",
+					"BBBB",
+					"VVBB"
+				],
+				"zIndex": 100
+			},
+			"type": "canyon"
+		},
+		"cartographer/cartographerLand": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "cartographerLand",
+			"template": {
+				"animation": "AVXmaps0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VV",
+					"AB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "cartographer"
+		},
+		"cartographer/cartographerSubterranean": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "cartographerSubterranean",
+			"template": {
+				"animation": "AVXmapu0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "cartographer"
+		},
+		"cartographer/cartographerWater": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "cartographerWater",
+			"template": {
+				"animation": "AVXmapw0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "cartographer"
+		},
+		"corpse/corpse": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "corpse",
+			"template": {
+				"animation": "AVXskds0",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "corpse"
+		},
+		"creatureBank/cyclopsStockpile": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "cyclopsStockpile",
+			"template": {
+				"animation": "AVXbnk10",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureBank"
+		},
+		"creatureBank/dragonFlyHive": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "dragonFlyHive",
+			"template": {
+				"animation": "AVXbnk70",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VVVV",
+					"VVAV"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureBank"
+		},
+		"creatureBank/dwarvenTreasury": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "dwarvenTreasury",
+			"template": {
+				"animation": "AVXbnk20",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"BAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureBank"
+		},
+		"creatureBank/griffinConservatory": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "griffinConservatory",
+			"template": {
+				"animation": "AVXbnk30",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureBank"
+		},
+		"creatureBank/impCache": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "impCache",
+			"template": {
+				"animation": "AVXbnk40",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureBank"
+		},
+		"creatureBank/medusaStore": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "medusaStore",
+			"template": {
+				"animation": "AVXbnk50",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"AB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureBank"
+		},
+		"creatureBank/nagaBank": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "nagaBank",
+			"template": {
+				"animation": "AVXbnk60",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureBank"
+		},
+		"creatureGeneratorCommon/altarOfAir": {
+			"subtype": "altarOfAir",
+			"template": {
+				"animation": "AVG2ela",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/altarOfEarth": {
+			"subtype": "altarOfEarth",
+			"template": {
+				"animation": "AVG2ele",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/altarOfFire": {
+			"subtype": "altarOfFire",
+			"template": {
+				"animation": "AVG2elf",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/altarOfThought": {
+			"subtype": "altarOfThought",
+			"template": {
+				"animation": "AVGelp",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/altarOfWater": {
+			"subtype": "altarOfWater",
+			"template": {
+				"animation": "AVG2elw",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/altarOfWishes": {
+			"subtype": "altarOfWishes",
+			"template": {
+				"animation": "AVGgeni0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/archersTower": {
+			"subtype": "archersTower",
+			"template": {
+				"animation": "AVGcros0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/basiliskPit": {
+			"subtype": "basiliskPit",
+			"template": {
+				"animation": "AVGbasl0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"BA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/centaurStables": {
+			"subtype": "centaurStables",
+			"template": {
+				"animation": "AVGcent0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/cliffNest": {
+			"subtype": "cliffNest",
+			"template": {
+				"animation": "AVGrocs0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/cloudTemple": {
+			"subtype": "cloudTemple",
+			"template": {
+				"animation": "AVGtitn0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VBV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/dragonCliffs": {
+			"subtype": "dragonCliffs",
+			"template": {
+				"animation": "AVGgdrg0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/dragonVault": {
+			"subtype": "dragonVault",
+			"template": {
+				"animation": "AVGbone0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VVV",
+					"VAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/enchantedSpring": {
+			"subtype": "enchantedSpring",
+			"template": {
+				"animation": "AVGpega0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/forsakenPalace": {
+			"subtype": "forsakenPalace",
+			"template": {
+				"animation": "AVGdevl0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/goblinBarracks": {
+			"subtype": "goblinBarracks",
+			"template": {
+				"animation": "AVGgobl0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/goldenPavilion": {
+			"subtype": "goldenPavilion",
+			"template": {
+				"animation": "AVGnaga0",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VVVV",
+					"VVBB",
+					"VVBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/gorgonLair": {
+			"subtype": "gorgonLair",
+			"template": {
+				"animation": "AVGgorg0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/guardhouse": {
+			"subtype": "guardhouse",
+			"template": {
+				"animation": "AVGpike0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VBV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/hovel": {
+			"subtype": "hovel",
+			"template": {
+				"animation": "AVGpeas",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/impCrucible": {
+			"subtype": "impCrucible",
+			"template": {
+				"animation": "AVGimp0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/mageTower": {
+			"subtype": "mageTower",
+			"template": {
+				"animation": "AVGmage0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/magicForest": {
+			"subtype": "magicForest",
+			"template": {
+				"animation": "AVGfdrg",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/manticoreLair": {
+			"subtype": "manticoreLair",
+			"template": {
+				"animation": "AVGmant0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"BA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/pillarOfEyes": {
+			"subtype": "pillarOfEyes",
+			"template": {
+				"animation": "AVGbhld0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/portalOfGlory": {
+			"subtype": "portalOfGlory",
+			"template": {
+				"animation": "AVGangl0",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VBAV"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/warren": {
+			"subtype": "warren",
+			"template": {
+				"animation": "AVGtrog0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"creatureGeneratorCommon/workshop": {
+			"subtype": "workshop",
+			"template": {
+				"animation": "AVGgrem0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "creatureGeneratorCommon"
+		},
+		"crypt/crypt": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "crypt",
+			"template": {
+				"animation": "AVXgyne0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"BAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "crypt"
+		},
+		"denOfThieves/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "avxdent",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"BA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "denOfThieves"
+		},
+		"derelictShip/derelictShip": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "derelictShip",
+			"template": {
+				"animation": "AVAdlic0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "derelictShip"
+		},
+		"desertHills/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "avlxds05",
+				"editorAnimation": "",
+				"mask": [
+					"BV",
+					"BB"
+				]
+			},
+			"type": "desertHills"
+		},
+		"dragonUtopia/dragonUtopia": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "dragonUtopia",
+			"template": {
+				"animation": "AVSutop0",
+				"editorAnimation": "",
+				"mask": [
+					"VVVVVVV",
+					"VVVVVVV",
+					"VVVBBBB",
+					"VBBBBBV",
+					"VVVBBAV"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "dragonUtopia"
+		},
+		"faerieRing/faerieRing": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "faerieRing",
+			"template": {
+				"animation": "AVSring0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "faerieRing"
+		},
+		"flotsam/flotsam": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "flotsam",
+			"template": {
+				"animation": "AVAflot0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "flotsam"
+		},
+		"fountainOfFortune/fountainOfFortune": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "fountainOfFortune",
+			"template": {
+				"animation": "AVSfntn0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "fountainOfFortune"
+		},
+		"fountainOfYouth/fountainOfYouth": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "fountainOfYouth",
+			"template": {
+				"animation": "AVXfyth0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VBB",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "fountainOfYouth"
+		},
+		"freelancersGuild/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "avxfgld",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VVVV",
+					"VBAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "freelancersGuild"
+		},
+		"frozenLake/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVLflk20",
+				"editorAnimation": "",
+				"mask": [
+					"BBB"
+				],
+				"zIndex": 100
+			},
+			"type": "frozenLake"
+		},
+		"gardenOfRevelation/gardenOfRevelation": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "gardenOfRevelation",
+			"template": {
+				"animation": "AVSgrdn0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "gardenOfRevelation"
+		},
+		"hillFort/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVXhild0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "hillFort"
+		},
+		"idolOfFortune/idolOfFortune": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "idolOfFortune",
+			"template": {
+				"animation": "AVSidol0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "idolOfFortune"
+		},
+		"lavaFlow/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVLlv2u0",
+				"editorAnimation": "",
+				"mask": [
+					"B",
+					"B"
+				],
+				"zIndex": 100
+			},
+			"type": "lavaFlow"
+		},
+		"lavaLake/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVLlav10",
+				"editorAnimation": "",
+				"mask": [
+					"BB",
+					"BB"
+				],
+				"zIndex": 100
+			},
+			"type": "lavaLake"
+		},
+		"leanTo/leanTo": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "leanTo",
+			"template": {
+				"animation": "AVMlean0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"BA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "leanTo"
+		},
+		"learningStone/learningStone": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "learningStone",
+			"template": {
+				"animation": "AVSgzbo0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "learningStone"
+		},
+		"libraryOfEnlightenment/libraryOfEnlightenment": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "libraryOfEnlightenment",
+			"template": {
+				"animation": "AVSlibr0",
+				"editorAnimation": "",
+				"mask": [
+					"VVVBB",
+					"VBBAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "libraryOfEnlightenment"
+		},
+		"magicWell/magicWell": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "magicWell",
+			"template": {
+				"animation": "AVXwelg0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "magicWell"
+		},
+		"marlettoTower/marlettoTower": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "marlettoTower",
+			"template": {
+				"animation": "AvSMarl",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "marlettoTower"
+		},
+		"mercenaryCamp/mercenaryCamp": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "mercenaryCamp",
+			"template": {
+				"animation": "AVSmerc0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"BAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "mercenaryCamp"
+		},
+		"mermaids/mermaids": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "mermaids",
+			"template": {
+				"animation": "AVXmerm0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"BAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "mermaids"
+		},
+		"mine/alchemistLab": {
+			"subtype": "alchemistLab",
+			"template": {
+				"animation": "AVMalch0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"BAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "mine"
+		},
+		"mine/crystalCavern": {
+			"subtype": "crystalCavern",
+			"template": {
+				"animation": "AVMcrys0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"BAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "mine"
+		},
+		"mine/gemPond": {
+			"subtype": "gemPond",
+			"template": {
+				"animation": "AVMgems0",
+				"editorAnimation": "",
+				"mask": [
+					"BBB",
+					"BAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				],
+				"zIndex": 100
+			},
+			"type": "mine"
+		},
+		"mine/goldMine": {
+			"subtype": "goldMine",
+			"template": {
+				"animation": "AVMgold0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"BAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "mine"
+		},
+		"mine/orePit": {
+			"subtype": "orePit",
+			"template": {
+				"animation": "AVMore0",
+				"editorAnimation": "",
+				"mask": [
+					"BBB",
+					"BAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				],
+				"zIndex": 100
+			},
+			"type": "mine"
+		},
+		"mine/sawmill": {
+			"subtype": "sawmill",
+			"template": {
+				"animation": "AVMsawg0",
+				"editorAnimation": "",
+				"mask": [
+					"VVVVV",
+					"VVVBB",
+					"VBBAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "mine"
+		},
+		"mine/sulfurDune": {
+			"subtype": "sulfurDune",
+			"template": {
+				"animation": "AVMsulf0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"BAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "mine"
+		},
+		"monolithTwoWay/monolith1": {
+			"subtype": "monolith1",
+			"template": {
+				"animation": "AVXmn2g0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monolithTwoWay"
+		},
+		"monolithTwoWay/monolith2": {
+			"subtype": "monolith2",
+			"template": {
+				"animation": "AVXmn2o0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monolithTwoWay"
+		},
+		"monolithTwoWay/monolith3": {
+			"subtype": "monolith3",
+			"template": {
+				"animation": "AVXmn2p0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monolithTwoWay"
+		},
+		"monolithTwoWay/monolith4": {
+			"subtype": "monolith4",
+			"template": {
+				"animation": "AVXmn4b0",
+				"editorAnimation": "",
+				"mask": [
+					"V",
+					"A"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monolithTwoWay"
+		},
+		"monolithTwoWay/monolith5": {
+			"subtype": "monolith5",
+			"template": {
+				"animation": "AVXmn5b0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monolithTwoWay"
+		},
+		"monolithTwoWay/monolith6": {
+			"subtype": "monolith6",
+			"template": {
+				"animation": "AVXmn6b0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monolithTwoWay"
+		},
+		"monolithTwoWay/monolith7": {
+			"subtype": "monolith7",
+			"template": {
+				"animation": "AVXmn7b0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monolithTwoWay"
+		},
+		"monster/airElemental": {
+			"options": {
+				"amount": 22,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "airElemental",
+			"template": {
+				"animation": "AVWelma0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/ancientBehemoth": {
+			"options": {
+				"amount": 12,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "ancientBehemoth",
+			"template": {
+				"animation": "AVWbhmx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/angel": {
+			"options": {
+				"amount": 7,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "angel",
+			"template": {
+				"animation": "AvWAngl",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/archMage": {
+			"options": {
+				"amount": 22,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "archMage",
+			"template": {
+				"animation": "AVWmagx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/archer": {
+			"options": {
+				"amount": 53,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "archer",
+			"template": {
+				"animation": "AvWLCrs",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/basilisk": {
+			"options": {
+				"amount": 15,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "basilisk",
+			"template": {
+				"animation": "AvWBasl",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/battleDwarf": {
+			"options": {
+				"amount": 77,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "battleDwarf",
+			"template": {
+				"animation": "AVWdwrx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/behemoth": {
+			"options": {
+				"amount": 12,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "behemoth",
+			"template": {
+				"animation": "AVWbhmt0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/beholder": {
+			"options": {
+				"amount": 82,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "beholder",
+			"template": {
+				"animation": "AVWbehl0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/blackKnight": {
+			"options": {
+				"amount": 10,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "blackKnight",
+			"template": {
+				"animation": "AVWbkni0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/boar": {
+			"options": {
+				"amount": 26,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "boar",
+			"template": {
+				"animation": "AVWboar",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/boneDragon": {
+			"options": {
+				"amount": 11,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "boneDragon",
+			"template": {
+				"animation": "AVWbone0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/cavalier": {
+			"options": {
+				"amount": 11,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "cavalier",
+			"template": {
+				"animation": "AVWcvlr0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/centaur": {
+			"options": {
+				"amount": 40,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "centaur",
+			"template": {
+				"animation": "AVWcent0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/centaurCaptain": {
+			"options": {
+				"amount": 32,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "centaurCaptain",
+			"template": {
+				"animation": "AVWcenx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/cerberus": {
+			"options": {
+				"amount": 19,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "cerberus",
+			"template": {
+				"animation": "AVWhoux0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/champion": {
+			"options": {
+				"amount": 17,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "champion",
+			"template": {
+				"animation": "AVWcvlx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/crusader": {
+			"options": {
+				"amount": 75,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "crusader",
+			"template": {
+				"animation": "AVWswrx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/cyclop": {
+			"options": {
+				"amount": 17,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "cyclop",
+			"template": {
+				"animation": "AVWcycl0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/cyclopKing": {
+			"options": {
+				"amount": 8,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "cyclopKing",
+			"template": {
+				"animation": "AVWcycx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/demon": {
+			"options": {
+				"amount": 70,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "demon",
+			"template": {
+				"animation": "AVWdemn0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/dendroidGuard": {
+			"options": {
+				"amount": 10,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "dendroidGuard",
+			"template": {
+				"animation": "AVWtree0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/dendroidSoldier": {
+			"options": {
+				"amount": 26,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "dendroidSoldier",
+			"template": {
+				"animation": "AVWtrex0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/diamondGolem": {
+			"options": {
+				"amount": 15,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "diamondGolem",
+			"template": {
+				"animation": "AVWglmd0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/dreadKnight": {
+			"options": {
+				"amount": 11,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "dreadKnight",
+			"template": {
+				"animation": "AVWbknx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/dwarf": {
+			"options": {
+				"amount": 32,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "dwarf",
+			"template": {
+				"animation": "AVWdwrf0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/earthElemental": {
+			"options": {
+				"amount": 62,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "earthElemental",
+			"template": {
+				"animation": "AVWelme0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/efreet": {
+			"options": {
+				"amount": 10,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "efreet",
+			"template": {
+				"animation": "AVWefre0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/efreetSultan": {
+			"options": {
+				"amount": 23,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "efreetSultan",
+			"template": {
+				"animation": "AVWefrx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/enchanter": {
+			"options": {
+				"amount": 21,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "enchanter",
+			"template": {
+				"animation": "AVWench",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/energyElemental": {
+			"options": {
+				"amount": 26,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "energyElemental",
+			"template": {
+				"animation": "AVWnrg",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/evilEye": {
+			"options": {
+				"amount": 18,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "evilEye",
+			"template": {
+				"animation": "AVWbehx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/familiar": {
+			"options": {
+				"amount": 43,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "familiar",
+			"template": {
+				"animation": "AVWimpx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/fireDragonFly": {
+			"options": {
+				"amount": 65,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "fireDragonFly",
+			"template": {
+				"animation": "AvWDFir",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/genie": {
+			"options": {
+				"amount": 16,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "genie",
+			"template": {
+				"animation": "AVWgeni0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/ghostDragon": {
+			"options": {
+				"amount": 6,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "ghostDragon",
+			"template": {
+				"animation": "AVWbonx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/gnoll": {
+			"options": {
+				"amount": 65,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "gnoll",
+			"template": {
+				"animation": "AVWgnll0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/gnollMarauder": {
+			"options": {
+				"amount": 58,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "gnollMarauder",
+			"template": {
+				"animation": "AVWgnlx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/goblin": {
+			"options": {
+				"amount": 45,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "goblin",
+			"template": {
+				"animation": "AVWgobl0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/goblinWolfRider": {
+			"options": {
+				"amount": 18,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "goblinWolfRider",
+			"template": {
+				"animation": "AVWwolf0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/gog": {
+			"options": {
+				"amount": 22,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "gog",
+			"template": {
+				"animation": "AVWgog0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/goldGolem": {
+			"options": {
+				"amount": 51,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "goldGolem",
+			"template": {
+				"animation": "AVWglmg0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/gorgon": {
+			"options": {
+				"amount": 23,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "gorgon",
+			"template": {
+				"animation": "AvWGorg",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/grandElf": {
+			"options": {
+				"amount": 33,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "grandElf",
+			"template": {
+				"animation": "AVWelfx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/greaterBasilisk": {
+			"options": {
+				"amount": 25,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "greaterBasilisk",
+			"template": {
+				"animation": "AvWGBas",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/greenDragon": {
+			"options": {
+				"amount": 9,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "greenDragon",
+			"template": {
+				"animation": "AVWdrag0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/gremlin": {
+			"options": {
+				"amount": 42,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "gremlin",
+			"template": {
+				"animation": "AVWgrem0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/griffin": {
+			"options": {
+				"amount": 17,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "griffin",
+			"template": {
+				"animation": "AvWGrif",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/halberdier": {
+			"options": {
+				"amount": 36,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "halberdier",
+			"template": {
+				"animation": "AVWpikx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/halfling": {
+			"options": {
+				"amount": 71,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "halfling",
+			"template": {
+				"animation": "AVWhalf",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/harpy": {
+			"options": {
+				"amount": 23,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "harpy",
+			"template": {
+				"animation": "AVWharp0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/harpyHag": {
+			"options": {
+				"amount": 28,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "harpyHag",
+			"template": {
+				"animation": "AVWharx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/hellHound": {
+			"options": {
+				"amount": 40,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "hellHound",
+			"template": {
+				"animation": "AVWhoun0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/hobgoblin": {
+			"options": {
+				"amount": 55,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "hobgoblin",
+			"template": {
+				"animation": "AVWgobx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/hobgoblinWolfRider": {
+			"options": {
+				"amount": 25,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "hobgoblinWolfRider",
+			"template": {
+				"animation": "AVWwolx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/hornedDemon": {
+			"options": {
+				"amount": 26,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "hornedDemon",
+			"template": {
+				"animation": "AVWdemx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/hydra": {
+			"options": {
+				"amount": 6,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "hydra",
+			"template": {
+				"animation": "AvWHydr",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/iceElemental": {
+			"options": {
+				"amount": 64,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "iceElemental",
+			"template": {
+				"animation": "AVWicee",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/imp": {
+			"options": {
+				"amount": 98,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "imp",
+			"template": {
+				"animation": "AVWimp0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/infernalTroglodyte": {
+			"options": {
+				"amount": 45,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "infernalTroglodyte",
+			"template": {
+				"animation": "AvWInfr",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/ironGolem": {
+			"options": {
+				"amount": 14,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "ironGolem",
+			"template": {
+				"animation": "AVWgolm0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/lich": {
+			"options": {
+				"amount": 29,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "lich",
+			"template": {
+				"animation": "AVWlich0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/lizardWarrior": {
+			"options": {
+				"amount": 19,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "lizardWarrior",
+			"template": {
+				"animation": "AVWlizx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/lizardman": {
+			"options": {
+				"amount": 31,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "lizardman",
+			"template": {
+				"animation": "AvWLizr",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/mage": {
+			"options": {
+				"amount": 41,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "mage",
+			"template": {
+				"animation": "AVWmage0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/magicElemental": {
+			"options": {
+				"amount": 22,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "magicElemental",
+			"template": {
+				"animation": "AVWmagel",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/magog": {
+			"options": {
+				"amount": 23,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "magog",
+			"template": {
+				"animation": "AVWgogx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/manticore": {
+			"options": {
+				"amount": 12,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "manticore",
+			"template": {
+				"animation": "AVWmant0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/marksman": {
+			"options": {
+				"amount": 25,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "marksman",
+			"template": {
+				"animation": "AvWHCrs",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/masterGenie": {
+			"options": {
+				"amount": 24,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "masterGenie",
+			"template": {
+				"animation": "AVWgenx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/masterGremlin": {
+			"options": {
+				"amount": 33,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "masterGremlin",
+			"template": {
+				"animation": "AVWgrex0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/medusa": {
+			"options": {
+				"amount": 45,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "medusa",
+			"template": {
+				"animation": "AvWMeds",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/medusaQueen": {
+			"options": {
+				"amount": 27,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "medusaQueen",
+			"template": {
+				"animation": "AVWmedx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/mightyGorgon": {
+			"options": {
+				"amount": 18,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "mightyGorgon",
+			"template": {
+				"animation": "AVWgorx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/minotaur": {
+			"options": {
+				"amount": 12,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "minotaur",
+			"template": {
+				"animation": "AvWMino",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/minotaurKing": {
+			"options": {
+				"amount": 18,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "minotaurKing",
+			"template": {
+				"animation": "AVWminx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/monk": {
+			"options": {
+				"amount": 44,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "monk",
+			"template": {
+				"animation": "AvWMonk",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/mummy": {
+			"options": {
+				"amount": 79,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "mummy",
+			"template": {
+				"animation": "AVWmumy",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/naga": {
+			"options": {
+				"amount": 12,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "naga",
+			"template": {
+				"animation": "AVWnaga0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/nagaQueen": {
+			"options": {
+				"amount": 11,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "nagaQueen",
+			"template": {
+				"animation": "AVWnagx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/nomad": {
+			"options": {
+				"amount": 23,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "nomad",
+			"template": {
+				"animation": "AVWnomd",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/obsidianGargoyle": {
+			"options": {
+				"amount": 21,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "obsidianGargoyle",
+			"template": {
+				"animation": "AVWgarx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/ogre": {
+			"options": {
+				"amount": 12,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "ogre",
+			"template": {
+				"animation": "AVWogre0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/ogreMage": {
+			"options": {
+				"amount": 24,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "ogreMage",
+			"template": {
+				"animation": "AVWogrx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/orc": {
+			"options": {
+				"amount": 25,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "orc",
+			"template": {
+				"animation": "AVWorc0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/orcChieftain": {
+			"options": {
+				"amount": 14,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "orcChieftain",
+			"template": {
+				"animation": "AVWorcx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/pegasus": {
+			"options": {
+				"amount": 49,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "pegasus",
+			"template": {
+				"animation": "AVWpega0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/phoenix": {
+			"options": {
+				"amount": 12,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "phoenix",
+			"template": {
+				"animation": "AVWphx",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/pikeman": {
+			"options": {
+				"amount": 42,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "pikeman",
+			"template": {
+				"animation": "AvWPike",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/pitFiend": {
+			"options": {
+				"amount": 37,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "pitFiend",
+			"template": {
+				"animation": "AVWpitf0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/pitLord": {
+			"options": {
+				"amount": 13,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "pitLord",
+			"template": {
+				"animation": "AVWpitx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/pixie": {
+			"options": {
+				"amount": 50,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "pixie",
+			"template": {
+				"animation": "AVWpixie",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/powerLich": {
+			"options": {
+				"amount": 23,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "powerLich",
+			"template": {
+				"animation": "AVWlicx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/rogue": {
+			"options": {
+				"amount": 31,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "rogue",
+			"template": {
+				"animation": "AVWrog",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/royalGriffin": {
+			"options": {
+				"amount": 95,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "royalGriffin",
+			"template": {
+				"animation": "AVWgrix0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/scorpicore": {
+			"options": {
+				"amount": 12,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "scorpicore",
+			"template": {
+				"animation": "AVWmanx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/serpentFly": {
+			"options": {
+				"amount": 54,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "serpentFly",
+			"template": {
+				"animation": "AvWDFly",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/sharpshooter": {
+			"options": {
+				"amount": 32,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "sharpshooter",
+			"template": {
+				"animation": "AVWsharp",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/silverPegasus": {
+			"options": {
+				"amount": 19,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "silverPegasus",
+			"template": {
+				"animation": "AVWpegx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/skeleton": {
+			"options": {
+				"amount": 51,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "skeleton",
+			"template": {
+				"animation": "AVWskel0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/skeletonWarrior": {
+			"options": {
+				"amount": 24,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "skeletonWarrior",
+			"template": {
+				"animation": "AVWskex0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/sprite": {
+			"options": {
+				"amount": 39,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "sprite",
+			"template": {
+				"animation": "AVWsprit",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/stoneGargoyle": {
+			"options": {
+				"amount": 36,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "stoneGargoyle",
+			"template": {
+				"animation": "AVWgarg0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/stoneGolem": {
+			"options": {
+				"amount": 12,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "stoneGolem",
+			"template": {
+				"animation": "AVWgolx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/stormElemental": {
+			"options": {
+				"amount": 8,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "stormElemental",
+			"template": {
+				"animation": "AVWstorm",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/swordsman": {
+			"options": {
+				"amount": 31,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "swordsman",
+			"template": {
+				"animation": "AVWswrd0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/thunderbird": {
+			"options": {
+				"amount": 32,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "thunderbird",
+			"template": {
+				"animation": "AVWrocx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/troglodyte": {
+			"options": {
+				"amount": 33,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "troglodyte",
+			"template": {
+				"animation": "AVWtrog0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/troll": {
+			"options": {
+				"amount": 28,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "troll",
+			"template": {
+				"animation": "AVWtrll",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/unicorn": {
+			"options": {
+				"amount": 11,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "unicorn",
+			"template": {
+				"animation": "AVWunic0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/vampire": {
+			"options": {
+				"amount": 20,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "vampire",
+			"template": {
+				"animation": "AVWvamp0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/vampireLord": {
+			"options": {
+				"amount": 21,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "vampireLord",
+			"template": {
+				"animation": "AVWvamx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/walkingDead": {
+			"options": {
+				"amount": 30,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "walkingDead",
+			"template": {
+				"animation": "AVWzomb0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/warUnicorn": {
+			"options": {
+				"amount": 14,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "warUnicorn",
+			"template": {
+				"animation": "AVWunix0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/waterElemental": {
+			"options": {
+				"amount": 15,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "waterElemental",
+			"template": {
+				"animation": "AVWelmw0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/wight": {
+			"options": {
+				"amount": 19,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "wight",
+			"template": {
+				"animation": "AvWWigh",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/woodElf": {
+			"options": {
+				"amount": 21,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "woodElf",
+			"template": {
+				"animation": "AVWelfw0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/wraith": {
+			"options": {
+				"amount": 92,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "wraith",
+			"template": {
+				"animation": "AVWwigx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/wyvern": {
+			"options": {
+				"amount": 23,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "wyvern",
+			"template": {
+				"animation": "AvWWyvr",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/wyvernMonarch": {
+			"options": {
+				"amount": 9,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "wyvernMonarch",
+			"template": {
+				"animation": "AVWwyvx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/zealot": {
+			"options": {
+				"amount": 70,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "zealot",
+			"template": {
+				"animation": "AVWmonx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"monster/zombieLord": {
+			"options": {
+				"amount": 30,
+				"character": "hostile",
+				"rewardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "zombieLord",
+			"template": {
+				"animation": "AVWzomx0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "monster"
+		},
+		"mysticalGarden/mysticalGarden": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "mysticalGarden",
+			"template": {
+				"animation": "AVTmyst0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"BAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "mysticalGarden"
+		},
+		"obelisk/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AvXOblW",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "obelisk"
+		},
+		"pandoraBox/object": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				},
+				"rewardable": {
+					"info": [
+						{
+							"limiter": {
+								"allOf": [],
+								"anyOf": [],
+								"creatures": [],
+								"dayOfWeek": 0,
+								"daysPassed": 0,
+								"heroExperience": 0,
+								"heroLevel": -1,
+								"manaPercentage": 0,
+								"manaPoints": 0,
+								"movePercentage": 0,
+								"movePoints": 0,
+								"noneOf": [],
+								"primary": [
+									0,
+									0,
+									0,
+									0
+								],
+								"secondary": []
+							},
+							"message": {
+								"exactStrings": null,
+								"localStrings": null,
+								"message": null,
+								"numbers": null,
+								"stringsTextID": null
+							},
+							"reward": {
+								"creatures": [
+									{
+										"amount": 20,
+										"type": "core:airElemental"
+									}
+								],
+								"creaturesChange": [],
+								"heroExperience": 0,
+								"heroLevel": 0,
+								"manaDiff": 0,
+								"manaOverflowFactor": 0,
+								"manaPercentage": -1,
+								"moveOverflowFactor": 0,
+								"movePercentage": -1,
+								"movePoints": 0,
+								"primary": [
+									0,
+									0,
+									0,
+									0
+								],
+								"secondary": [],
+								"spellCast": {
+									"level": 0
+								}
+							},
+							"visitType": 1
+						}
+					],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "object",
+			"template": {
+				"animation": "ava0128",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "pandoraBox"
+		},
+		"pillarOfFire/pillarOfFire": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "pillarOfFire",
+			"template": {
+				"animation": "AVXpllr0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "pillarOfFire"
+		},
+		"prison/prison": {
+			"options": {
+				"experience": 15000,
+				"gender": -1,
+				"type": "core:aenain"
+			},
+			"subtype": "prison",
+			"template": {
+				"animation": "AVXprsn0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "prison"
+		},
+		"pyramid/pyramid": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "pyramid",
+			"template": {
+				"animation": "AVXprmd0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"BA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "pyramid"
+		},
+		"rallyFlag/rallyFlag": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "rallyFlag",
+			"template": {
+				"animation": "AVXrlly0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "rallyFlag"
+		},
+		"randomArtifactMajor/object": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "object",
+			"template": {
+				"animation": "AVArnd3",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "randomArtifactMajor"
+		},
+		"randomArtifactMinor/object": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "object",
+			"template": {
+				"animation": "AVArnd2",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "randomArtifactMinor"
+		},
+		"randomArtifactRelic/object": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "object",
+			"template": {
+				"animation": "AVArnd4",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "randomArtifactRelic"
+		},
+		"randomArtifactTreasure/object": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "object",
+			"template": {
+				"animation": "AVArnd1",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "randomArtifactTreasure"
+		},
+		"randomResource/randomResource": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "randomResource",
+			"template": {
+				"animation": "AVTrndm0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "randomResource"
+		},
+		"redwoodObservatory/redwoodObservatory": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "redwoodObservatory",
+			"template": {
+				"animation": "avxredw",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "redwoodObservatory"
+		},
+		"reef/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVLref50",
+				"editorAnimation": "",
+				"mask": [
+					"BB"
+				],
+				"zIndex": 100
+			},
+			"type": "reef"
+		},
+		"refugeeCamp/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVGrefg0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"BA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "refugeeCamp"
+		},
+		"resource/crystal": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "crystal",
+			"template": {
+				"animation": "AVTcrys0",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "resource"
+		},
+		"resource/gems": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "gems",
+			"template": {
+				"animation": "AVTgems0",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "resource"
+		},
+		"resource/gold": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "gold",
+			"template": {
+				"animation": "AVTgold0",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "resource"
+		},
+		"resource/mercury": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "mercury",
+			"template": {
+				"animation": "AVTmerc0",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "resource"
+		},
+		"resource/ore": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "ore",
+			"template": {
+				"animation": "AVTore0",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "resource"
+		},
+		"resource/sulfur": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "sulfur",
+			"template": {
+				"animation": "AVTsulf0",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "resource"
+		},
+		"resource/wood": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				}
+			},
+			"subtype": "wood",
+			"template": {
+				"animation": "AVTwood0",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "resource"
+		},
+		"riverDelta/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "muddelt3",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VVV"
+				],
+				"zIndex": 100
+			},
+			"type": "riverDelta"
+		},
+		"sanctuary/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVXsanc0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "sanctuary"
+		},
+		"sandDune/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVLdun20",
+				"editorAnimation": "",
+				"mask": [
+					"BB"
+				]
+			},
+			"type": "sandDune"
+		},
+		"sandPit/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVLspit0",
+				"editorAnimation": "",
+				"mask": [
+					"BBB"
+				],
+				"zIndex": 100
+			},
+			"type": "sandPit"
+		},
+		"scholar/scholar": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "scholar",
+			"template": {
+				"animation": "AVXschl0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "scholar"
+		},
+		"schoolOfMagic/schoolOfMagic": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "schoolOfMagic",
+			"template": {
+				"animation": "AVSschm0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "schoolOfMagic"
+		},
+		"schoolOfWar/schoolOfWar": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "schoolOfWar",
+			"template": {
+				"animation": "AVSwar20",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VBBV",
+					"BBBB",
+					"VBAV"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "schoolOfWar"
+		},
+		"seaChest/seaChest": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "seaChest",
+			"template": {
+				"animation": "AVXccht0",
+				"editorAnimation": "",
+				"mask": [
+					"A"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "seaChest"
+		},
+		"seerHut/0": {
+			"options": {
+				"quest": {
+					"completedText": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"firstVisitText": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"limiter": {
+						"allOf": [],
+						"anyOf": [],
+						"artifacts": [
+							"core:pendantOfHoliness"
+						],
+						"creatures": [],
+						"dayOfWeek": 0,
+						"daysPassed": 0,
+						"heroExperience": 0,
+						"heroLevel": -1,
+						"manaPercentage": 0,
+						"manaPoints": 0,
+						"movePercentage": 0,
+						"movePoints": 0,
+						"noneOf": [],
+						"primary": [
+							0,
+							0,
+							0,
+							0
+						],
+						"secondary": []
+					},
+					"nextVisitText": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					}
+				},
+				"rewardable": {
+					"info": [
+						{
+							"limiter": {
+								"allOf": [],
+								"anyOf": [],
+								"creatures": [],
+								"dayOfWeek": 0,
+								"daysPassed": 0,
+								"heroExperience": 0,
+								"heroLevel": -1,
+								"manaPercentage": 0,
+								"manaPoints": 0,
+								"movePercentage": 0,
+								"movePoints": 0,
+								"noneOf": [],
+								"primary": [
+									0,
+									0,
+									0,
+									0
+								],
+								"secondary": []
+							},
+							"message": {
+								"exactStrings": null,
+								"localStrings": null,
+								"message": null,
+								"numbers": null,
+								"stringsTextID": null
+							},
+							"reward": {
+								"creatures": [
+									{
+										"amount": 60,
+										"type": "core:archer"
+									}
+								],
+								"creaturesChange": [],
+								"heroExperience": 0,
+								"heroLevel": 0,
+								"manaDiff": 0,
+								"manaOverflowFactor": 0,
+								"manaPercentage": -1,
+								"moveOverflowFactor": 0,
+								"movePercentage": -1,
+								"movePoints": 0,
+								"primary": [
+									0,
+									0,
+									0,
+									0
+								],
+								"secondary": [],
+								"spellCast": {
+									"level": 0
+								}
+							},
+							"visitType": 1
+						}
+					],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "0",
+			"template": {
+				"animation": "AVXseer0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VAV"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "seerHut"
+		},
+		"seerHut/1": {
+			"options": {
+				"quest": {
+					"completedText": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"firstVisitText": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"limiter": {
+						"allOf": [],
+						"anyOf": [],
+						"artifacts": [
+							"core:pendantOfDispassion"
+						],
+						"creatures": [],
+						"dayOfWeek": 0,
+						"daysPassed": 0,
+						"heroExperience": 0,
+						"heroLevel": -1,
+						"manaPercentage": 0,
+						"manaPoints": 0,
+						"movePercentage": 0,
+						"movePoints": 0,
+						"noneOf": [],
+						"primary": [
+							0,
+							0,
+							0,
+							0
+						],
+						"secondary": []
+					},
+					"nextVisitText": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					}
+				},
+				"rewardable": {
+					"info": [
+						{
+							"limiter": {
+								"allOf": [],
+								"anyOf": [],
+								"creatures": [],
+								"dayOfWeek": 0,
+								"daysPassed": 0,
+								"heroExperience": 0,
+								"heroLevel": -1,
+								"manaPercentage": 0,
+								"manaPoints": 0,
+								"movePercentage": 0,
+								"movePoints": 0,
+								"noneOf": [],
+								"primary": [
+									0,
+									0,
+									0,
+									0
+								],
+								"secondary": []
+							},
+							"message": {
+								"exactStrings": null,
+								"localStrings": null,
+								"message": null,
+								"numbers": null,
+								"stringsTextID": null
+							},
+							"reward": {
+								"creatures": [],
+								"creaturesChange": [],
+								"heroExperience": 15000,
+								"heroLevel": 0,
+								"manaDiff": 0,
+								"manaOverflowFactor": 0,
+								"manaPercentage": -1,
+								"moveOverflowFactor": 0,
+								"movePercentage": -1,
+								"movePoints": 0,
+								"primary": [
+									0,
+									0,
+									0,
+									0
+								],
+								"secondary": [],
+								"spellCast": {
+									"level": 0
+								}
+							},
+							"visitType": 1
+						}
+					],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "1",
+			"template": {
+				"animation": "AVXseey0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VAV"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "seerHut"
+		},
+		"seerHut/2": {
+			"options": {
+				"quest": {
+					"completedText": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"firstVisitText": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"limiter": {
+						"allOf": [],
+						"anyOf": [],
+						"artifacts": [
+							"core:birdOfPerception"
+						],
+						"creatures": [],
+						"dayOfWeek": 0,
+						"daysPassed": 0,
+						"heroExperience": 0,
+						"heroLevel": -1,
+						"manaPercentage": 0,
+						"manaPoints": 0,
+						"movePercentage": 0,
+						"movePoints": 0,
+						"noneOf": [],
+						"primary": [
+							0,
+							0,
+							0,
+							0
+						],
+						"secondary": []
+					},
+					"nextVisitText": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					}
+				},
+				"rewardable": {
+					"info": [
+						{
+							"limiter": {
+								"allOf": [],
+								"anyOf": [],
+								"creatures": [],
+								"dayOfWeek": 0,
+								"daysPassed": 0,
+								"heroExperience": 0,
+								"heroLevel": -1,
+								"manaPercentage": 0,
+								"manaPoints": 0,
+								"movePercentage": 0,
+								"movePoints": 0,
+								"noneOf": [],
+								"primary": [
+									0,
+									0,
+									0,
+									0
+								],
+								"secondary": []
+							},
+							"message": {
+								"exactStrings": null,
+								"localStrings": null,
+								"message": null,
+								"numbers": null,
+								"stringsTextID": null
+							},
+							"reward": {
+								"creatures": [
+									{
+										"amount": 30,
+										"type": "core:dendroidGuard"
+									}
+								],
+								"creaturesChange": [],
+								"heroExperience": 0,
+								"heroLevel": 0,
+								"manaDiff": 0,
+								"manaOverflowFactor": 0,
+								"manaPercentage": -1,
+								"moveOverflowFactor": 0,
+								"movePercentage": -1,
+								"movePoints": 0,
+								"primary": [
+									0,
+									0,
+									0,
+									0
+								],
+								"secondary": [],
+								"spellCast": {
+									"level": 0
+								}
+							},
+							"visitType": 1
+						}
+					],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "2",
+			"template": {
+				"animation": "AVXseeb0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VAV"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "seerHut"
+		},
+		"shipwreck/shipwreck": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "shipwreck",
+			"template": {
+				"animation": "AVAwrek0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"AB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "shipwreck"
+		},
+		"shipwreckSurvivor/shipwreckSurvivor": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "shipwreckSurvivor",
+			"template": {
+				"animation": "AVAsurv0",
+				"editorAnimation": "",
+				"mask": [
+					"A"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "shipwreckSurvivor"
+		},
+		"shipyard/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVXshyd0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"BAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "shipyard"
+		},
+		"shrineOfMagicLevel1/shrineOfMagicLevel1": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "shrineOfMagicLevel1",
+			"template": {
+				"animation": "AVXl1sh0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "shrineOfMagicLevel1"
+		},
+		"shrineOfMagicLevel2/shrineOfMagicLevel2": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "shrineOfMagicLevel2",
+			"template": {
+				"animation": "AVXl2sh0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "shrineOfMagicLevel2"
+		},
+		"shrineOfMagicLevel3/shrineOfMagicLevel3": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "shrineOfMagicLevel3",
+			"template": {
+				"animation": "AVXl3sh0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "shrineOfMagicLevel3"
+		},
+		"sirens/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVXsirn0",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VBAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "sirens"
+		},
+		"spellScroll/object": {
+			"options": {
+				"guardMessage": {
+					"exactStrings": null,
+					"localStrings": null,
+					"message": null,
+					"numbers": null,
+					"stringsTextID": null
+				},
+				"spell": "core:magicArrow"
+			},
+			"subtype": "object",
+			"template": {
+				"animation": "AVA0001",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "spellScroll"
+		},
+		"stables/stables": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "stables",
+			"template": {
+				"animation": "AVXstbl0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "stables"
+		},
+		"starAxis/starAxis": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "starAxis",
+			"template": {
+				"animation": "AVSaxis0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "starAxis"
+		},
+		"subterraneanGate/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AvTCave",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VVBV",
+					"VBAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "subterraneanGate"
+		},
+		"subterraneanRocks/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "avlxsu06",
+				"editorAnimation": "",
+				"mask": [
+					"VB",
+					"BB"
+				]
+			},
+			"type": "subterraneanRocks"
+		},
+		"swampFoliage/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "avlxsw05",
+				"editorAnimation": "",
+				"mask": [
+					"BB",
+					"BB"
+				]
+			},
+			"type": "swampFoliage"
+		},
+		"swanPond/swanPond": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "swanPond",
+			"template": {
+				"animation": "AVSclvg0",
+				"editorAnimation": "",
+				"mask": [
+					"VAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "swanPond"
+		},
+		"tavern/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVXtvrn0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VVV",
+					"VAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "tavern"
+		},
+		"temple/temple": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "temple",
+			"template": {
+				"animation": "AVStmpl0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"AB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "temple"
+		},
+		"town/castle": {
+			"options": {
+				"buildings": {
+					"allOf": [
+						"core:fort"
+					]
+				},
+				"events": [],
+				"owner": "blue",
+				"possibleSpells": [
+					"core:summonBoat",
+					"core:scuttleBoat",
+					"core:visions",
+					"core:viewEarth",
+					"core:disguise",
+					"core:viewAir",
+					"core:fly",
+					"core:waterWalk",
+					"core:dimensionDoor",
+					"core:townPortal",
+					"core:quicksand",
+					"core:landMine",
+					"core:forceField",
+					"core:fireWall",
+					"core:earthquake",
+					"core:magicArrow",
+					"core:iceBolt",
+					"core:lightningBolt",
+					"core:implosion",
+					"core:chainLightning",
+					"core:frostRing",
+					"core:fireball",
+					"core:inferno",
+					"core:meteorShower",
+					"core:deathRipple",
+					"core:destroyUndead",
+					"core:armageddon",
+					"core:shield",
+					"core:airShield",
+					"core:fireShield",
+					"core:protectAir",
+					"core:protectFire",
+					"core:protectWater",
+					"core:protectEarth",
+					"core:antiMagic",
+					"core:dispel",
+					"core:magicMirror",
+					"core:cure",
+					"core:resurrection",
+					"core:animateDead",
+					"core:sacrifice",
+					"core:bless",
+					"core:curse",
+					"core:bloodlust",
+					"core:precision",
+					"core:weakness",
+					"core:stoneSkin",
+					"core:disruptingRay",
+					"core:prayer",
+					"core:mirth",
+					"core:sorrow",
+					"core:fortune",
+					"core:misfortune",
+					"core:haste",
+					"core:slow",
+					"core:slayer",
+					"core:frenzy",
+					"core:counterstrike",
+					"core:berserk",
+					"core:hypnotize",
+					"core:forgetfulness",
+					"core:blind",
+					"core:teleport",
+					"core:removeObstacle",
+					"core:clone",
+					"core:fireElemental",
+					"core:earthElemental",
+					"core:waterElemental",
+					"core:airElemental"
+				]
+			},
+			"subtype": "castle",
+			"template": {
+				"animation": "AVCcasx0",
+				"editorAnimation": "",
+				"mask": [
+					"VVVVVV",
+					"VVVVVV",
+					"VVVVVV",
+					"VVBBBV",
+					"VBBBBB",
+					"VBBABB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "town"
+		},
+		"town/conflux": {
+			"options": {
+				"buildings": {
+					"allOf": [
+						"core:fort"
+					]
+				},
+				"events": [],
+				"possibleSpells": [
+					"core:summonBoat",
+					"core:scuttleBoat",
+					"core:visions",
+					"core:viewEarth",
+					"core:disguise",
+					"core:viewAir",
+					"core:fly",
+					"core:waterWalk",
+					"core:dimensionDoor",
+					"core:townPortal",
+					"core:quicksand",
+					"core:landMine",
+					"core:forceField",
+					"core:fireWall",
+					"core:earthquake",
+					"core:magicArrow",
+					"core:iceBolt",
+					"core:lightningBolt",
+					"core:implosion",
+					"core:chainLightning",
+					"core:frostRing",
+					"core:fireball",
+					"core:inferno",
+					"core:meteorShower",
+					"core:deathRipple",
+					"core:destroyUndead",
+					"core:armageddon",
+					"core:shield",
+					"core:airShield",
+					"core:fireShield",
+					"core:protectAir",
+					"core:protectFire",
+					"core:protectWater",
+					"core:protectEarth",
+					"core:antiMagic",
+					"core:dispel",
+					"core:magicMirror",
+					"core:cure",
+					"core:resurrection",
+					"core:animateDead",
+					"core:sacrifice",
+					"core:bless",
+					"core:curse",
+					"core:bloodlust",
+					"core:precision",
+					"core:weakness",
+					"core:stoneSkin",
+					"core:disruptingRay",
+					"core:prayer",
+					"core:mirth",
+					"core:sorrow",
+					"core:fortune",
+					"core:misfortune",
+					"core:haste",
+					"core:slow",
+					"core:slayer",
+					"core:frenzy",
+					"core:counterstrike",
+					"core:berserk",
+					"core:hypnotize",
+					"core:forgetfulness",
+					"core:blind",
+					"core:teleport",
+					"core:removeObstacle",
+					"core:clone",
+					"core:fireElemental",
+					"core:earthElemental",
+					"core:waterElemental",
+					"core:airElemental"
+				]
+			},
+			"subtype": "conflux",
+			"template": {
+				"animation": "avchforx",
+				"editorAnimation": "",
+				"mask": [
+					"VVVVVV",
+					"VVVVVV",
+					"VVVVVV",
+					"VVBBBV",
+					"VBBBBB",
+					"VBBABB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "town"
+		},
+		"town/dungeon": {
+			"options": {
+				"buildings": {
+					"allOf": [
+						"core:fort"
+					]
+				},
+				"events": [],
+				"owner": "red",
+				"possibleSpells": [
+					"core:summonBoat",
+					"core:scuttleBoat",
+					"core:visions",
+					"core:viewEarth",
+					"core:disguise",
+					"core:viewAir",
+					"core:fly",
+					"core:waterWalk",
+					"core:dimensionDoor",
+					"core:townPortal",
+					"core:quicksand",
+					"core:landMine",
+					"core:forceField",
+					"core:fireWall",
+					"core:earthquake",
+					"core:magicArrow",
+					"core:iceBolt",
+					"core:lightningBolt",
+					"core:implosion",
+					"core:chainLightning",
+					"core:frostRing",
+					"core:fireball",
+					"core:inferno",
+					"core:meteorShower",
+					"core:deathRipple",
+					"core:destroyUndead",
+					"core:armageddon",
+					"core:shield",
+					"core:airShield",
+					"core:fireShield",
+					"core:protectAir",
+					"core:protectFire",
+					"core:protectWater",
+					"core:protectEarth",
+					"core:antiMagic",
+					"core:dispel",
+					"core:magicMirror",
+					"core:cure",
+					"core:resurrection",
+					"core:animateDead",
+					"core:sacrifice",
+					"core:bless",
+					"core:curse",
+					"core:bloodlust",
+					"core:precision",
+					"core:weakness",
+					"core:stoneSkin",
+					"core:disruptingRay",
+					"core:prayer",
+					"core:mirth",
+					"core:sorrow",
+					"core:fortune",
+					"core:misfortune",
+					"core:haste",
+					"core:slow",
+					"core:slayer",
+					"core:frenzy",
+					"core:counterstrike",
+					"core:berserk",
+					"core:hypnotize",
+					"core:forgetfulness",
+					"core:blind",
+					"core:teleport",
+					"core:removeObstacle",
+					"core:clone",
+					"core:fireElemental",
+					"core:earthElemental",
+					"core:waterElemental",
+					"core:airElemental"
+				]
+			},
+			"subtype": "dungeon",
+			"template": {
+				"animation": "AVCdunx0",
+				"editorAnimation": "",
+				"mask": [
+					"VVVVVV",
+					"VVVVVV",
+					"VVVVVV",
+					"VVBBBV",
+					"VBBBBB",
+					"VBBABB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "town"
+		},
+		"town/fortress": {
+			"options": {
+				"buildings": {
+					"allOf": [
+						"core:fort"
+					]
+				},
+				"events": [],
+				"possibleSpells": [
+					"core:summonBoat",
+					"core:scuttleBoat",
+					"core:visions",
+					"core:viewEarth",
+					"core:disguise",
+					"core:viewAir",
+					"core:fly",
+					"core:waterWalk",
+					"core:dimensionDoor",
+					"core:townPortal",
+					"core:quicksand",
+					"core:landMine",
+					"core:forceField",
+					"core:fireWall",
+					"core:earthquake",
+					"core:magicArrow",
+					"core:iceBolt",
+					"core:lightningBolt",
+					"core:implosion",
+					"core:chainLightning",
+					"core:frostRing",
+					"core:fireball",
+					"core:inferno",
+					"core:meteorShower",
+					"core:deathRipple",
+					"core:destroyUndead",
+					"core:armageddon",
+					"core:shield",
+					"core:airShield",
+					"core:fireShield",
+					"core:protectAir",
+					"core:protectFire",
+					"core:protectWater",
+					"core:protectEarth",
+					"core:antiMagic",
+					"core:dispel",
+					"core:magicMirror",
+					"core:cure",
+					"core:resurrection",
+					"core:animateDead",
+					"core:sacrifice",
+					"core:bless",
+					"core:curse",
+					"core:bloodlust",
+					"core:precision",
+					"core:weakness",
+					"core:stoneSkin",
+					"core:disruptingRay",
+					"core:prayer",
+					"core:mirth",
+					"core:sorrow",
+					"core:fortune",
+					"core:misfortune",
+					"core:haste",
+					"core:slow",
+					"core:slayer",
+					"core:frenzy",
+					"core:counterstrike",
+					"core:berserk",
+					"core:hypnotize",
+					"core:forgetfulness",
+					"core:blind",
+					"core:teleport",
+					"core:removeObstacle",
+					"core:clone",
+					"core:fireElemental",
+					"core:earthElemental",
+					"core:waterElemental",
+					"core:airElemental"
+				]
+			},
+			"subtype": "fortress",
+			"template": {
+				"animation": "AVCftrx0",
+				"editorAnimation": "",
+				"mask": [
+					"VVVVVV",
+					"VVVVVV",
+					"VVVVVV",
+					"VVBBBV",
+					"VBBBBB",
+					"VBBABB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "town"
+		},
+		"town/inferno": {
+			"options": {
+				"buildings": {
+					"allOf": [
+						"core:fort"
+					]
+				},
+				"events": [],
+				"owner": "blue",
+				"possibleSpells": [
+					"core:summonBoat",
+					"core:scuttleBoat",
+					"core:visions",
+					"core:viewEarth",
+					"core:disguise",
+					"core:viewAir",
+					"core:fly",
+					"core:waterWalk",
+					"core:dimensionDoor",
+					"core:townPortal",
+					"core:quicksand",
+					"core:landMine",
+					"core:forceField",
+					"core:fireWall",
+					"core:earthquake",
+					"core:magicArrow",
+					"core:iceBolt",
+					"core:lightningBolt",
+					"core:implosion",
+					"core:chainLightning",
+					"core:frostRing",
+					"core:fireball",
+					"core:inferno",
+					"core:meteorShower",
+					"core:deathRipple",
+					"core:destroyUndead",
+					"core:armageddon",
+					"core:shield",
+					"core:airShield",
+					"core:fireShield",
+					"core:protectAir",
+					"core:protectFire",
+					"core:protectWater",
+					"core:protectEarth",
+					"core:antiMagic",
+					"core:dispel",
+					"core:magicMirror",
+					"core:cure",
+					"core:resurrection",
+					"core:animateDead",
+					"core:sacrifice",
+					"core:bless",
+					"core:curse",
+					"core:bloodlust",
+					"core:precision",
+					"core:weakness",
+					"core:stoneSkin",
+					"core:disruptingRay",
+					"core:prayer",
+					"core:mirth",
+					"core:sorrow",
+					"core:fortune",
+					"core:misfortune",
+					"core:haste",
+					"core:slow",
+					"core:slayer",
+					"core:frenzy",
+					"core:counterstrike",
+					"core:berserk",
+					"core:hypnotize",
+					"core:forgetfulness",
+					"core:blind",
+					"core:teleport",
+					"core:removeObstacle",
+					"core:clone",
+					"core:fireElemental",
+					"core:earthElemental",
+					"core:waterElemental",
+					"core:airElemental"
+				]
+			},
+			"subtype": "inferno",
+			"template": {
+				"animation": "AVCinfx0",
+				"editorAnimation": "",
+				"mask": [
+					"VVVVVV",
+					"VVVVVV",
+					"VVVVVV",
+					"VVBBBV",
+					"VBBBBB",
+					"VBBABB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "town"
+		},
+		"town/necropolis": {
+			"options": {
+				"buildings": {
+					"allOf": [
+						"core:fort"
+					]
+				},
+				"events": [],
+				"possibleSpells": [
+					"core:summonBoat",
+					"core:scuttleBoat",
+					"core:visions",
+					"core:viewEarth",
+					"core:disguise",
+					"core:viewAir",
+					"core:fly",
+					"core:waterWalk",
+					"core:dimensionDoor",
+					"core:townPortal",
+					"core:quicksand",
+					"core:landMine",
+					"core:forceField",
+					"core:fireWall",
+					"core:earthquake",
+					"core:magicArrow",
+					"core:iceBolt",
+					"core:lightningBolt",
+					"core:implosion",
+					"core:chainLightning",
+					"core:frostRing",
+					"core:fireball",
+					"core:inferno",
+					"core:meteorShower",
+					"core:deathRipple",
+					"core:destroyUndead",
+					"core:armageddon",
+					"core:shield",
+					"core:airShield",
+					"core:fireShield",
+					"core:protectAir",
+					"core:protectFire",
+					"core:protectWater",
+					"core:protectEarth",
+					"core:antiMagic",
+					"core:dispel",
+					"core:magicMirror",
+					"core:cure",
+					"core:resurrection",
+					"core:animateDead",
+					"core:sacrifice",
+					"core:bless",
+					"core:curse",
+					"core:bloodlust",
+					"core:precision",
+					"core:weakness",
+					"core:stoneSkin",
+					"core:disruptingRay",
+					"core:prayer",
+					"core:mirth",
+					"core:sorrow",
+					"core:fortune",
+					"core:misfortune",
+					"core:haste",
+					"core:slow",
+					"core:slayer",
+					"core:frenzy",
+					"core:counterstrike",
+					"core:berserk",
+					"core:hypnotize",
+					"core:forgetfulness",
+					"core:blind",
+					"core:teleport",
+					"core:removeObstacle",
+					"core:clone",
+					"core:fireElemental",
+					"core:earthElemental",
+					"core:waterElemental",
+					"core:airElemental"
+				]
+			},
+			"subtype": "necropolis",
+			"template": {
+				"animation": "AVCnecx0",
+				"editorAnimation": "",
+				"mask": [
+					"VVVVVV",
+					"VVVVVV",
+					"VVVVVV",
+					"VVBBBV",
+					"VBBBBB",
+					"VBBABB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "town"
+		},
+		"town/rampart": {
+			"options": {
+				"buildings": {
+					"allOf": [
+						"core:fort"
+					]
+				},
+				"events": [],
+				"owner": "tan",
+				"possibleSpells": [
+					"core:summonBoat",
+					"core:scuttleBoat",
+					"core:visions",
+					"core:viewEarth",
+					"core:disguise",
+					"core:viewAir",
+					"core:fly",
+					"core:waterWalk",
+					"core:dimensionDoor",
+					"core:townPortal",
+					"core:quicksand",
+					"core:landMine",
+					"core:forceField",
+					"core:fireWall",
+					"core:earthquake",
+					"core:magicArrow",
+					"core:iceBolt",
+					"core:lightningBolt",
+					"core:implosion",
+					"core:chainLightning",
+					"core:frostRing",
+					"core:fireball",
+					"core:inferno",
+					"core:meteorShower",
+					"core:deathRipple",
+					"core:destroyUndead",
+					"core:armageddon",
+					"core:shield",
+					"core:airShield",
+					"core:fireShield",
+					"core:protectAir",
+					"core:protectFire",
+					"core:protectWater",
+					"core:protectEarth",
+					"core:antiMagic",
+					"core:dispel",
+					"core:magicMirror",
+					"core:cure",
+					"core:resurrection",
+					"core:animateDead",
+					"core:sacrifice",
+					"core:bless",
+					"core:curse",
+					"core:bloodlust",
+					"core:precision",
+					"core:weakness",
+					"core:stoneSkin",
+					"core:disruptingRay",
+					"core:prayer",
+					"core:mirth",
+					"core:sorrow",
+					"core:fortune",
+					"core:misfortune",
+					"core:haste",
+					"core:slow",
+					"core:slayer",
+					"core:frenzy",
+					"core:counterstrike",
+					"core:berserk",
+					"core:hypnotize",
+					"core:forgetfulness",
+					"core:blind",
+					"core:teleport",
+					"core:removeObstacle",
+					"core:clone",
+					"core:fireElemental",
+					"core:earthElemental",
+					"core:waterElemental",
+					"core:airElemental"
+				]
+			},
+			"subtype": "rampart",
+			"template": {
+				"animation": "AVCramx0",
+				"editorAnimation": "",
+				"mask": [
+					"VVVVVV",
+					"VVVVVV",
+					"VVVVVV",
+					"VVBBBV",
+					"VBBBBB",
+					"VBBABB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "town"
+		},
+		"town/stronghold": {
+			"options": {
+				"buildings": {
+					"allOf": [
+						"core:fort"
+					]
+				},
+				"events": [],
+				"owner": "tan",
+				"possibleSpells": [
+					"core:summonBoat",
+					"core:scuttleBoat",
+					"core:visions",
+					"core:viewEarth",
+					"core:disguise",
+					"core:viewAir",
+					"core:fly",
+					"core:waterWalk",
+					"core:dimensionDoor",
+					"core:townPortal",
+					"core:quicksand",
+					"core:landMine",
+					"core:forceField",
+					"core:fireWall",
+					"core:earthquake",
+					"core:magicArrow",
+					"core:iceBolt",
+					"core:lightningBolt",
+					"core:implosion",
+					"core:chainLightning",
+					"core:frostRing",
+					"core:fireball",
+					"core:inferno",
+					"core:meteorShower",
+					"core:deathRipple",
+					"core:destroyUndead",
+					"core:armageddon",
+					"core:shield",
+					"core:airShield",
+					"core:fireShield",
+					"core:protectAir",
+					"core:protectFire",
+					"core:protectWater",
+					"core:protectEarth",
+					"core:antiMagic",
+					"core:dispel",
+					"core:magicMirror",
+					"core:cure",
+					"core:resurrection",
+					"core:animateDead",
+					"core:sacrifice",
+					"core:bless",
+					"core:curse",
+					"core:bloodlust",
+					"core:precision",
+					"core:weakness",
+					"core:stoneSkin",
+					"core:disruptingRay",
+					"core:prayer",
+					"core:mirth",
+					"core:sorrow",
+					"core:fortune",
+					"core:misfortune",
+					"core:haste",
+					"core:slow",
+					"core:slayer",
+					"core:frenzy",
+					"core:counterstrike",
+					"core:berserk",
+					"core:hypnotize",
+					"core:forgetfulness",
+					"core:blind",
+					"core:teleport",
+					"core:removeObstacle",
+					"core:clone",
+					"core:fireElemental",
+					"core:earthElemental",
+					"core:waterElemental",
+					"core:airElemental"
+				]
+			},
+			"subtype": "stronghold",
+			"template": {
+				"animation": "AVCstrx0",
+				"editorAnimation": "",
+				"mask": [
+					"VVVVVV",
+					"VVVVVV",
+					"VVVVVV",
+					"VVBBBV",
+					"VBBBBB",
+					"VBBABB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "town"
+		},
+		"town/tower": {
+			"options": {
+				"buildings": {
+					"allOf": [
+						"core:fort"
+					]
+				},
+				"events": [],
+				"possibleSpells": [
+					"core:summonBoat",
+					"core:scuttleBoat",
+					"core:visions",
+					"core:viewEarth",
+					"core:disguise",
+					"core:viewAir",
+					"core:fly",
+					"core:waterWalk",
+					"core:dimensionDoor",
+					"core:townPortal",
+					"core:quicksand",
+					"core:landMine",
+					"core:forceField",
+					"core:fireWall",
+					"core:earthquake",
+					"core:magicArrow",
+					"core:iceBolt",
+					"core:lightningBolt",
+					"core:implosion",
+					"core:chainLightning",
+					"core:frostRing",
+					"core:fireball",
+					"core:inferno",
+					"core:meteorShower",
+					"core:deathRipple",
+					"core:destroyUndead",
+					"core:armageddon",
+					"core:shield",
+					"core:airShield",
+					"core:fireShield",
+					"core:protectAir",
+					"core:protectFire",
+					"core:protectWater",
+					"core:protectEarth",
+					"core:antiMagic",
+					"core:dispel",
+					"core:magicMirror",
+					"core:cure",
+					"core:resurrection",
+					"core:animateDead",
+					"core:sacrifice",
+					"core:bless",
+					"core:curse",
+					"core:bloodlust",
+					"core:precision",
+					"core:weakness",
+					"core:stoneSkin",
+					"core:disruptingRay",
+					"core:prayer",
+					"core:mirth",
+					"core:sorrow",
+					"core:fortune",
+					"core:misfortune",
+					"core:haste",
+					"core:slow",
+					"core:slayer",
+					"core:frenzy",
+					"core:counterstrike",
+					"core:berserk",
+					"core:hypnotize",
+					"core:forgetfulness",
+					"core:blind",
+					"core:teleport",
+					"core:removeObstacle",
+					"core:clone",
+					"core:fireElemental",
+					"core:earthElemental",
+					"core:waterElemental",
+					"core:airElemental"
+				]
+			},
+			"subtype": "tower",
+			"template": {
+				"animation": "AVCtowx0",
+				"editorAnimation": "",
+				"mask": [
+					"VVVVVV",
+					"VVVVVV",
+					"VVVVVV",
+					"VVBBBV",
+					"VBBBBB",
+					"VBBABB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "town"
+		},
+		"tradingPost/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVXpsSn",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "tradingPost"
+		},
+		"tradingPostDUPLICATE/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVXpost0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "tradingPostDUPLICATE"
+		},
+		"treasureChest/treasureChest": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "treasureChest",
+			"template": {
+				"animation": "AVTchst0",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"+++",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "treasureChest"
+		},
+		"university/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVSuniv0",
+				"editorAnimation": "",
+				"mask": [
+					"VBBBV",
+					"VBBBB",
+					"VBBAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "university"
+		},
+		"volcano/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVLvol50",
+				"editorAnimation": "",
+				"mask": [
+					"VVVVV",
+					"VVVVV",
+					"VVVVV",
+					"VBBBV",
+					"VBBBV"
+				]
+			},
+			"type": "volcano"
+		},
+		"wagon/wagon": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "wagon",
+			"template": {
+				"animation": "AVTwagn0",
+				"editorAnimation": "",
+				"mask": [
+					"VA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "wagon"
+		},
+		"warMachineFactory/object": {
+			"subtype": "object",
+			"template": {
+				"animation": "AVGsieg0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VAB"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "warMachineFactory"
+		},
+		"warriorTomb/warriorTomb": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "warriorTomb",
+			"template": {
+				"animation": "AVXtomb0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "warriorTomb"
+		},
+		"waterWheel/waterWheel": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "waterWheel",
+			"template": {
+				"animation": "AVMwwhl0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"BBB",
+					"BBA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "waterWheel"
+		},
+		"wateringHole/wateringHole": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "wateringHole",
+			"template": {
+				"animation": "AVXwtrh0",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"AAAA"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "wateringHole"
+		},
+		"windmill/windmill": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "windmill",
+			"template": {
+				"animation": "AVMwndd0",
+				"editorAnimation": "",
+				"mask": [
+					"VVVVV",
+					"VVVVV",
+					"VVVAV"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "windmill"
+		},
+		"witchHut/witchHut": {
+			"options": {
+				"rewardable": {
+					"info": [],
+					"infoWindowType": 0,
+					"onSelect": {
+						"exactStrings": null,
+						"localStrings": null,
+						"message": null,
+						"numbers": null,
+						"stringsTextID": null
+					},
+					"resetParameters": {
+						"period": 0
+					},
+					"selectMode": "selectFirst",
+					"visitMode": "unlimited"
+				}
+			},
+			"subtype": "witchHut",
+			"template": {
+				"animation": "AVSwtch0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VVV",
+					"VAV"
+				],
+				"visitableFrom": [
+					"---",
+					"+-+",
+					"+++"
+				]
+			},
+			"type": "witchHut"
+		}
+	},
+	"obstacles": [
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "avlautr0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VB"
+				]
+			},
+			"type": "oakTrees",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "avlautr1",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VB"
+				]
+			},
+			"type": "oakTrees",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLAUTR2",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VVBB",
+					"VBBV"
+				]
+			},
+			"type": "oakTrees",
+			"blocked": [
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLAUTR3",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VVBB",
+					"VBBV"
+				]
+			},
+			"type": "oakTrees",
+			"blocked": [
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLAUTR4",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VBBV",
+					"VVBB"
+				]
+			},
+			"type": "oakTrees",
+			"blocked": [
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLAUTR5",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VBBV",
+					"VVBB"
+				]
+			},
+			"type": "oakTrees",
+			"blocked": [
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLautr6",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VBBV",
+					"VBBB",
+					"VVBB"
+				]
+			},
+			"type": "oakTrees",
+			"blocked": [
+				[
+					-2,
+					-2
+				],
+				[
+					-1,
+					-2
+				],
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLautr7",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VVBB",
+					"VBBB",
+					"VBBV"
+				]
+			},
+			"type": "oakTrees",
+			"blocked": [
+				[
+					-1,
+					-2
+				],
+				[
+					0,
+					-2
+				],
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLct1g0",
+				"editorAnimation": "",
+				"mask": [
+					"BBBB",
+					"VBBB"
+				],
+				"zIndex": 100
+			},
+			"type": "crater",
+			"blocked": [
+				[
+					-3,
+					-1
+				],
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLct2g0",
+				"editorAnimation": "",
+				"mask": [
+					"BBB",
+					"BBB",
+					"BBB"
+				],
+				"zIndex": 100
+			},
+			"type": "crater",
+			"blocked": [
+				[
+					-2,
+					-2
+				],
+				[
+					-1,
+					-2
+				],
+				[
+					0,
+					-2
+				],
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLct3g0",
+				"editorAnimation": "",
+				"mask": [
+					"BB",
+					"BB"
+				],
+				"zIndex": 100
+			},
+			"type": "crater",
+			"blocked": [
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLct5g0",
+				"editorAnimation": "",
+				"mask": [
+					"BB"
+				],
+				"zIndex": 100
+			},
+			"type": "crater",
+			"blocked": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLctrg0",
+				"editorAnimation": "",
+				"mask": [
+					"BB"
+				],
+				"zIndex": 100
+			},
+			"type": "crater",
+			"blocked": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AvLdlog",
+				"editorAnimation": "",
+				"mask": [
+					"B"
+				]
+			},
+			"type": "log",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLf02g0",
+				"editorAnimation": "",
+				"mask": [
+					"VBBB"
+				]
+			},
+			"type": "flowers",
+			"blocked": [
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLf04g0",
+				"editorAnimation": "",
+				"mask": [
+					"VBBB"
+				]
+			},
+			"type": "flowers",
+			"blocked": [
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLf05g0",
+				"editorAnimation": "",
+				"mask": [
+					"VBBB"
+				]
+			},
+			"type": "flowers",
+			"blocked": [
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLf06g0",
+				"editorAnimation": "",
+				"mask": [
+					"VVV",
+					"VBB"
+				]
+			},
+			"type": "flowers",
+			"blocked": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLf07g0",
+				"editorAnimation": "",
+				"mask": [
+					"BB"
+				]
+			},
+			"type": "flowers",
+			"blocked": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLf09g0",
+				"editorAnimation": "",
+				"mask": [
+					"VB"
+				]
+			},
+			"type": "flowers",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLf10g0",
+				"editorAnimation": "",
+				"mask": [
+					"BB"
+				]
+			},
+			"type": "flowers",
+			"blocked": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLf11g0",
+				"editorAnimation": "",
+				"mask": [
+					"VB"
+				]
+			},
+			"type": "flowers",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLlk1g0",
+				"editorAnimation": "",
+				"mask": [
+					"BBBBB",
+					"BBBBB",
+					"VBBBV"
+				],
+				"zIndex": 100
+			},
+			"type": "lake",
+			"blocked": [
+				[
+					-4,
+					-2
+				],
+				[
+					-3,
+					-2
+				],
+				[
+					-2,
+					-2
+				],
+				[
+					-1,
+					-2
+				],
+				[
+					0,
+					-2
+				],
+				[
+					-4,
+					-1
+				],
+				[
+					-3,
+					-1
+				],
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-3,
+					0
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLlk2g0",
+				"editorAnimation": "",
+				"mask": [
+					"BBBB",
+					"BBBB"
+				],
+				"zIndex": 100
+			},
+			"type": "lake",
+			"blocked": [
+				[
+					-3,
+					-1
+				],
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-3,
+					0
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLlk3g0",
+				"editorAnimation": "",
+				"mask": [
+					"BBB"
+				],
+				"zIndex": 100
+			},
+			"type": "lake",
+			"blocked": [
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLmd1g0",
+				"editorAnimation": "",
+				"mask": [
+					"BB"
+				]
+			},
+			"type": "mound",
+			"blocked": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLmd2g0",
+				"editorAnimation": "",
+				"mask": [
+					"BB"
+				]
+			},
+			"type": "mound",
+			"blocked": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLmtgn0",
+				"editorAnimation": "",
+				"mask": [
+					"VVVVVV",
+					"VVBBBB",
+					"VBBBBB",
+					"VBBBVV"
+				]
+			},
+			"type": "mountain",
+			"blocked": [
+				[
+					-3,
+					-2
+				],
+				[
+					-2,
+					-2
+				],
+				[
+					-1,
+					-2
+				],
+				[
+					0,
+					-2
+				],
+				[
+					-4,
+					-1
+				],
+				[
+					-3,
+					-1
+				],
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-4,
+					0
+				],
+				[
+					-3,
+					0
+				],
+				[
+					-2,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLmtgn1",
+				"editorAnimation": "",
+				"mask": [
+					"VVVVVV",
+					"VBBBBV",
+					"VBBBBB",
+					"VVVBBB"
+				]
+			},
+			"type": "mountain",
+			"blocked": [
+				[
+					-4,
+					-2
+				],
+				[
+					-3,
+					-2
+				],
+				[
+					-2,
+					-2
+				],
+				[
+					-1,
+					-2
+				],
+				[
+					-4,
+					-1
+				],
+				[
+					-3,
+					-1
+				],
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLmtgn2",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VBBB",
+					"VBBV"
+				]
+			},
+			"type": "mountain",
+			"blocked": [
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLmtgn3",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VBBB",
+					"VVBB"
+				]
+			},
+			"type": "mountain",
+			"blocked": [
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLmtgn4",
+				"editorAnimation": "",
+				"mask": [
+					"VVBB",
+					"VBBV"
+				]
+			},
+			"type": "mountain",
+			"blocked": [
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLmtgn5",
+				"editorAnimation": "",
+				"mask": [
+					"VBBV",
+					"VVBB"
+				]
+			},
+			"type": "mountain",
+			"blocked": [
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLmtgr1",
+				"editorAnimation": "",
+				"mask": [
+					"VVVVVV",
+					"VVVVVV",
+					"VBBBBV",
+					"VBBBBB",
+					"VVVBBB"
+				]
+			},
+			"type": "mountain",
+			"blocked": [
+				[
+					-4,
+					-2
+				],
+				[
+					-3,
+					-2
+				],
+				[
+					-2,
+					-2
+				],
+				[
+					-1,
+					-2
+				],
+				[
+					-4,
+					-1
+				],
+				[
+					-3,
+					-1
+				],
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLmtgr2",
+				"editorAnimation": "",
+				"mask": [
+					"VVVVVV",
+					"VVBBBB",
+					"VBBBBB",
+					"VBBBVV"
+				]
+			},
+			"type": "mountain",
+			"blocked": [
+				[
+					-3,
+					-2
+				],
+				[
+					-2,
+					-2
+				],
+				[
+					-1,
+					-2
+				],
+				[
+					0,
+					-2
+				],
+				[
+					-4,
+					-1
+				],
+				[
+					-3,
+					-1
+				],
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-4,
+					0
+				],
+				[
+					-3,
+					0
+				],
+				[
+					-2,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLmtgr3",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VBBB",
+					"VVBB"
+				]
+			},
+			"type": "mountain",
+			"blocked": [
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLmtgr4",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VBBB",
+					"VBBV"
+				]
+			},
+			"type": "mountain",
+			"blocked": [
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLmtgr5",
+				"editorAnimation": "",
+				"mask": [
+					"BBV",
+					"VBB"
+				]
+			},
+			"type": "mountain",
+			"blocked": [
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLmtgr6",
+				"editorAnimation": "",
+				"mask": [
+					"VBB",
+					"BBV"
+				]
+			},
+			"type": "mountain",
+			"blocked": [
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLoc1g0",
+				"editorAnimation": "",
+				"mask": [
+					"BB"
+				],
+				"zIndex": 100
+			},
+			"type": "outcropping",
+			"blocked": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLoc2g0",
+				"editorAnimation": "",
+				"mask": [
+					"BB"
+				],
+				"zIndex": 100
+			},
+			"type": "outcropping",
+			"blocked": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLoc3g0",
+				"editorAnimation": "",
+				"mask": [
+					"BB"
+				],
+				"zIndex": 100
+			},
+			"type": "outcropping",
+			"blocked": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLPNTR0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VB"
+				]
+			},
+			"type": "pineTrees",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLPNTR1",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VB"
+				]
+			},
+			"type": "pineTrees",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLPNTR2",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VVBB",
+					"VBBV"
+				]
+			},
+			"type": "pineTrees",
+			"blocked": [
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLPNTR3",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VVBB",
+					"VBBV"
+				]
+			},
+			"type": "pineTrees",
+			"blocked": [
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLPNTR4",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VBBV",
+					"VVBB"
+				]
+			},
+			"type": "pineTrees",
+			"blocked": [
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLPNTR5",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VBBV",
+					"VVBB"
+				]
+			},
+			"type": "pineTrees",
+			"blocked": [
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLpntr6",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VBBV",
+					"VBBB",
+					"VVBB"
+				]
+			},
+			"type": "pineTrees",
+			"blocked": [
+				[
+					-2,
+					-2
+				],
+				[
+					-1,
+					-2
+				],
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLpntr7",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VVBB",
+					"VBBB",
+					"VBBV"
+				]
+			},
+			"type": "pineTrees",
+			"blocked": [
+				[
+					-1,
+					-2
+				],
+				[
+					0,
+					-2
+				],
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AvLRD04",
+				"editorAnimation": "",
+				"mask": [
+					"VB"
+				]
+			},
+			"type": "rock",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AvLRG01",
+				"editorAnimation": "",
+				"mask": [
+					"BB"
+				]
+			},
+			"type": "rock",
+			"blocked": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AvLRG02",
+				"editorAnimation": "",
+				"mask": [
+					"BB"
+				]
+			},
+			"type": "rock",
+			"blocked": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AvLRG03",
+				"editorAnimation": "",
+				"mask": [
+					"VB"
+				]
+			},
+			"type": "rock",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AvLRG04",
+				"editorAnimation": "",
+				"mask": [
+					"VB"
+				]
+			},
+			"type": "rock",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AvLRG05",
+				"editorAnimation": "",
+				"mask": [
+					"VB"
+				]
+			},
+			"type": "rock",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AvLRG06",
+				"editorAnimation": "",
+				"mask": [
+					"VB"
+				]
+			},
+			"type": "rock",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AvLRG07",
+				"editorAnimation": "",
+				"mask": [
+					"VB"
+				]
+			},
+			"type": "rock",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AvLRG08",
+				"editorAnimation": "",
+				"mask": [
+					"VB"
+				]
+			},
+			"type": "rock",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AvLRG09",
+				"editorAnimation": "",
+				"mask": [
+					"VB"
+				]
+			},
+			"type": "rock",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AvLRG10",
+				"editorAnimation": "",
+				"mask": [
+					"VB"
+				]
+			},
+			"type": "rock",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AvLRG11",
+				"editorAnimation": "",
+				"mask": [
+					"B"
+				]
+			},
+			"type": "rock",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLrk1s0",
+				"editorAnimation": "",
+				"mask": [
+					"B"
+				]
+			},
+			"type": "rock",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLsh1g0",
+				"editorAnimation": "",
+				"mask": [
+					"VBBB"
+				]
+			},
+			"type": "shrub",
+			"blocked": [
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLsh2g0",
+				"editorAnimation": "",
+				"mask": [
+					"BBB"
+				]
+			},
+			"type": "shrub",
+			"blocked": [
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLsh4g0",
+				"editorAnimation": "",
+				"mask": [
+					"VBB"
+				]
+			},
+			"type": "shrub",
+			"blocked": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLskul0",
+				"editorAnimation": "",
+				"mask": [
+					"B"
+				]
+			},
+			"type": "skull",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLSPTR0",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VB"
+				]
+			},
+			"type": "oakTrees",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLSPTR1",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VB"
+				]
+			},
+			"type": "oakTrees",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLSPTR2",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"VB"
+				]
+			},
+			"type": "oakTrees",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLSPTR3",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VVBB",
+					"VBBV"
+				]
+			},
+			"type": "oakTrees",
+			"blocked": [
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLSPTR4",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VVBB",
+					"VBBV"
+				]
+			},
+			"type": "oakTrees",
+			"blocked": [
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLSPTR6",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VBBV",
+					"VVBB"
+				]
+			},
+			"type": "oakTrees",
+			"blocked": [
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLsptr7",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VBBV",
+					"VBBB",
+					"VVBB"
+				]
+			},
+			"type": "oakTrees",
+			"blocked": [
+				[
+					-2,
+					-2
+				],
+				[
+					-1,
+					-2
+				],
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AVLsptr8",
+				"editorAnimation": "",
+				"mask": [
+					"VVVV",
+					"VVBB",
+					"VBBB",
+					"VBBV"
+				]
+			},
+			"type": "oakTrees",
+			"blocked": [
+				[
+					-1,
+					-2
+				],
+				[
+					0,
+					-2
+				],
+				[
+					-2,
+					-1
+				],
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AvLStm1",
+				"editorAnimation": "",
+				"mask": [
+					"B"
+				]
+			},
+			"type": "stump",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AvLStm2",
+				"editorAnimation": "",
+				"mask": [
+					"B"
+				]
+			},
+			"type": "stump",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "AvLStm3",
+				"editorAnimation": "",
+				"mask": [
+					"VB"
+				]
+			},
+			"type": "stump",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "avlxgr01",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"BB"
+				]
+			},
+			"type": "grassHills",
+			"blocked": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "avlxgr02",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"BB"
+				]
+			},
+			"type": "grassHills",
+			"blocked": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "avlxgr03",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"BB"
+				]
+			},
+			"type": "grassHills",
+			"blocked": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "avlxgr04",
+				"editorAnimation": "",
+				"mask": [
+					"BB",
+					"BB"
+				]
+			},
+			"type": "grassHills",
+			"blocked": [
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "avlxgr05",
+				"editorAnimation": "",
+				"mask": [
+					"VV",
+					"BB"
+				]
+			},
+			"type": "grassHills",
+			"blocked": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "avlxgr06",
+				"editorAnimation": "",
+				"mask": [
+					"BB",
+					"BB"
+				]
+			},
+			"type": "grassHills",
+			"blocked": [
+				[
+					-1,
+					-1
+				],
+				[
+					0,
+					-1
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "avlxgr07",
+				"editorAnimation": "",
+				"mask": [
+					"BBB"
+				]
+			},
+			"type": "grassHills",
+			"blocked": [
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "avlxgr08",
+				"editorAnimation": "",
+				"mask": [
+					"BBB"
+				]
+			},
+			"type": "grassHills",
+			"blocked": [
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "avlxgr09",
+				"editorAnimation": "",
+				"mask": [
+					"BBB"
+				]
+			},
+			"type": "grassHills",
+			"blocked": [
+				[
+					-2,
+					0
+				],
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "avlxgr10",
+				"editorAnimation": "",
+				"mask": [
+					"B"
+				]
+			},
+			"type": "grassHills",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "avlxgr11",
+				"editorAnimation": "",
+				"mask": [
+					"B"
+				]
+			},
+			"type": "grassHills",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"subtype": "object",
+			"template": {
+				"animation": "avlxgr12",
+				"editorAnimation": "",
+				"mask": [
+					"B"
+				]
+			},
+			"type": "grassHills",
+			"blocked": [
+				[
+					0,
+					0
+				]
+			]
+		}
+	],
+	"roads": {
+		"00000010": [
+			[
+				15,
+				"-"
+			]
+		],
+		"00000111": [
+			[
+				15,
+				"-"
+			]
+		],
+		"00001000": [
+			[
+				14,
+				"_"
+			]
+		],
+		"00001001": [
+			[
+				14,
+				"_"
+			]
+		],
+		"00001010": [
+			[
+				0,
+				"-"
+			],
+			[
+				1,
+				"-"
+			]
+		],
+		"00001011": [
+			[
+				1,
+				"-"
+			],
+			[
+				0,
+				"-"
+			]
+		],
+		"00001100": [
+			[
+				14,
+				"_"
+			]
+		],
+		"00010011": [
+			[
+				15,
+				"-"
+			]
+		],
+		"00011000": [
+			[
+				14,
+				"_"
+			]
+		],
+		"00011010": [
+			[
+				0,
+				"-"
+			],
+			[
+				1,
+				"-"
+			]
+		],
+		"00011011": [
+			[
+				2,
+				"-"
+			],
+			[
+				4,
+				"-"
+			],
+			[
+				3,
+				"-"
+			],
+			[
+				5,
+				"-"
+			]
+		],
+		"00011100": [
+			[
+				14,
+				"_"
+			]
+		],
+		"00100000": [
+			[
+				15,
+				"_"
+			]
+		],
+		"00100001": [
+			[
+				15,
+				"_"
+			]
+		],
+		"00100010": [
+			[
+				13,
+				"_"
+			],
+			[
+				12,
+				"_"
+			]
+		],
+		"00100011": [
+			[
+				12,
+				"_"
+			],
+			[
+				13,
+				"_"
+			]
+		],
+		"00100110": [
+			[
+				12,
+				"_"
+			],
+			[
+				13,
+				"_"
+			]
+		],
+		"00100111": [
+			[
+				12,
+				"_"
+			]
+		],
+		"00101000": [
+			[
+				0,
+				"_"
+			],
+			[
+				1,
+				"_"
+			]
+		],
+		"00101010": [
+			[
+				8,
+				"_"
+			],
+			[
+				9,
+				"_"
+			]
+		],
+		"00101011": [
+			[
+				9,
+				"_"
+			]
+		],
+		"00101100": [
+			[
+				1,
+				"_"
+			],
+			[
+				0,
+				"_"
+			]
+		],
+		"00110010": [
+			[
+				12,
+				"_"
+			],
+			[
+				13,
+				"_"
+			]
+		],
+		"00110011": [
+			[
+				13,
+				"_"
+			],
+			[
+				12,
+				"_"
+			]
+		],
+		"00110110": [
+			[
+				12,
+				"_"
+			],
+			[
+				13,
+				"_"
+			]
+		],
+		"00111011": [
+			[
+				8,
+				"_"
+			]
+		],
+		"01100001": [
+			[
+				15,
+				"_"
+			]
+		],
+		"01100010": [
+			[
+				13,
+				"_"
+			],
+			[
+				12,
+				"_"
+			]
+		],
+		"01100011": [
+			[
+				13,
+				"_"
+			],
+			[
+				12,
+				"_"
+			]
+		],
+		"01100110": [
+			[
+				12,
+				"_"
+			],
+			[
+				13,
+				"_"
+			]
+		],
+		"01101000": [
+			[
+				0,
+				"_"
+			],
+			[
+				1,
+				"_"
+			]
+		],
+		"01101010": [
+			[
+				8,
+				"_"
+			]
+		],
+		"01101100": [
+			[
+				3,
+				"_"
+			],
+			[
+				2,
+				"_"
+			],
+			[
+				4,
+				"_"
+			],
+			[
+				5,
+				"_"
+			]
+		],
+		"01101110": [
+			[
+				8,
+				"_"
+			]
+		],
+		"01110000": [
+			[
+				15,
+				"_"
+			]
+		],
+		"01110010": [
+			[
+				13,
+				"_"
+			],
+			[
+				12,
+				"_"
+			]
+		],
+		"01110011": [
+			[
+				13,
+				"_"
+			]
+		],
+		"10000010": [
+			[
+				0,
+				"+"
+			],
+			[
+				1,
+				"+"
+			]
+		],
+		"10000110": [
+			[
+				0,
+				"+"
+			],
+			[
+				1,
+				"+"
+			]
+		],
+		"10001000": [
+			[
+				10,
+				"_"
+			],
+			[
+				11,
+				"_"
+			]
+		],
+		"10001001": [
+			[
+				10,
+				"_"
+			],
+			[
+				11,
+				"_"
+			]
+		],
+		"10001010": [
+			[
+				6,
+				"-"
+			],
+			[
+				7,
+				"-"
+			]
+		],
+		"10001100": [
+			[
+				10,
+				"_"
+			],
+			[
+				11,
+				"_"
+			]
+		],
+		"10010000": [
+			[
+				14,
+				"|"
+			]
+		],
+		"10011000": [
+			[
+				11,
+				"_"
+			],
+			[
+				10,
+				"_"
+			]
+		],
+		"10011001": [
+			[
+				11,
+				"_"
+			],
+			[
+				10,
+				"_"
+			]
+		],
+		"10011010": [
+			[
+				6,
+				"-"
+			]
+		],
+		"10011100": [
+			[
+				11,
+				"_"
+			]
+		],
+		"10100000": [
+			[
+				0,
+				"|"
+			],
+			[
+				1,
+				"|"
+			]
+		],
+		"10100001": [
+			[
+				0,
+				"|"
+			],
+			[
+				1,
+				"|"
+			]
+		],
+		"10100010": [
+			[
+				8,
+				"|"
+			],
+			[
+				9,
+				"|"
+			]
+		],
+		"10101000": [
+			[
+				7,
+				"_"
+			],
+			[
+				6,
+				"_"
+			]
+		],
+		"10101001": [
+			[
+				7,
+				"_"
+			]
+		],
+		"10101101": [
+			[
+				6,
+				"_"
+			]
+		],
+		"10110000": [
+			[
+				0,
+				"|"
+			],
+			[
+				1,
+				"|"
+			]
+		],
+		"10110001": [
+			[
+				2,
+				"|"
+			],
+			[
+				4,
+				"|"
+			],
+			[
+				3,
+				"|"
+			],
+			[
+				5,
+				"|"
+			]
+		],
+		"10110010": [
+			[
+				9,
+				"|"
+			]
+		],
+		"11000000": [
+			[
+				14,
+				"|"
+			]
+		],
+		"11000001": [
+			[
+				14,
+				"|"
+			]
+		],
+		"11000010": [
+			[
+				1,
+				"+"
+			],
+			[
+				0,
+				"+"
+			]
+		],
+		"11000110": [
+			[
+				5,
+				"+"
+			],
+			[
+				3,
+				"+"
+			],
+			[
+				4,
+				"+"
+			],
+			[
+				2,
+				"+"
+			]
+		],
+		"11001000": [
+			[
+				10,
+				"_"
+			],
+			[
+				11,
+				"_"
+			]
+		],
+		"11001001": [
+			[
+				11,
+				"_"
+			],
+			[
+				10,
+				"_"
+			]
+		],
+		"11001010": [
+			[
+				6,
+				"-"
+			],
+			[
+				7,
+				"-"
+			]
+		],
+		"11001100": [
+			[
+				10,
+				"_"
+			],
+			[
+				11,
+				"_"
+			]
+		],
+		"11001101": [
+			[
+				11,
+				"_"
+			]
+		],
+		"11011000": [
+			[
+				11,
+				"_"
+			],
+			[
+				10,
+				"_"
+			]
+		],
+		"11011011": [
+			[
+				6,
+				"-"
+			]
+		],
+		"11110001": [
+			[
+				5,
+				"|"
+			]
+		]
+	},
+	"grass": [
+		49,
+		50,
+		51,
+		52,
+		53,
+		54,
+		55,
+		56,
+		57,
+		58,
+		59,
+		60,
+		61,
+		62,
+		63,
+		64,
+		65,
+		66,
+		67,
+		68,
+		69,
+		70,
+		71,
+		72
+	]
+}
