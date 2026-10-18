@@ -28,7 +28,7 @@
 		"abilities": {},
 		"graphics": {
 			"animation": "naruto/creatures/mistGenin/battle",
-			"map": "AVWtrog0.def",
+			"map": "naruto/creatures/mistGenin/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -89,7 +89,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/bloodyMistGraduate/battle",
-			"map": "AvWInfr.def",
+			"map": "naruto/creatures/bloodyMistGraduate/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -146,7 +146,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/hunterNin/battle",
-			"map": "AvWLizr.def",
+			"map": "naruto/creatures/hunterNin/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -164,25 +164,25 @@
 			"missile": {
 				"attackClimaxFrame": 3,
 				"frameAngles": [
-					90.0,
-					72.0,
-					45.0,
-					27.0,
-					0.0,
-					-27.0,
-					-45.0,
-					-72.0,
-					-90.0
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90
 				],
 				"offset": {
-					"upperX": 34,
-					"upperY": -76,
-					"middleX": 47,
-					"middleY": -65,
-					"lowerX": 26,
-					"lowerY": -55
+					"upperX": 13,
+					"upperY": -58,
+					"middleX": 16,
+					"middleY": -48,
+					"lowerX": 13,
+					"lowerY": -36
 				},
-				"projectile": "PPLIZAX.DEF"
+				"projectile": "naruto/projectiles/senbon"
 			}
 		},
 		"sound": {
@@ -243,7 +243,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/trackerHunterNin/battle",
-			"map": "AVWlizx0.def",
+			"map": "naruto/creatures/trackerHunterNin/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -261,25 +261,25 @@
 			"missile": {
 				"attackClimaxFrame": 3,
 				"frameAngles": [
-					90.0,
-					72.0,
-					45.0,
-					27.0,
-					0.0,
-					-27.0,
-					-45.0,
-					-72.0,
-					-90.0
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90
 				],
 				"offset": {
-					"upperX": 39,
-					"upperY": -76,
-					"middleX": 49,
-					"middleY": -66,
-					"lowerX": 25,
-					"lowerY": -56
+					"upperX": 10,
+					"upperY": -60,
+					"middleX": 12,
+					"middleY": -50,
+					"lowerX": 10,
+					"lowerY": -37
 				},
-				"projectile": "PPLIZAX.DEF"
+				"projectile": "naruto/projectiles/senbon"
 			}
 		},
 		"sound": {
@@ -327,7 +327,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/hozukiBrawler/battle",
-			"map": "AVWelmw0.def",
+			"map": "naruto/creatures/hozukiBrawler/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -389,7 +389,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/hozukiHydrifier/battle",
-			"map": "AVWicee.def",
+			"map": "naruto/creatures/hozukiHydrifier/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -448,7 +448,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/summonedShark/battle",
-			"map": "AvWBasl.def",
+			"map": "naruto/creatures/summonedShark/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -510,7 +510,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/greatShark/battle",
-			"map": "AvWGBas.def",
+			"map": "naruto/creatures/greatShark/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -577,7 +577,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/yukiClanAdept/battle",
-			"map": "AvWMeds.def",
+			"map": "naruto/creatures/yukiClanAdept/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -595,25 +595,25 @@
 			"missile": {
 				"attackClimaxFrame": 3,
 				"frameAngles": [
-					90.0,
-					72.0,
-					45.0,
-					27.0,
-					0.0,
-					-27.0,
-					-45.0,
-					-72.0,
-					-90.0
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90
 				],
 				"offset": {
-					"upperX": 76,
-					"upperY": -79,
-					"middleX": 72,
-					"middleY": -63,
-					"lowerX": 53,
-					"lowerY": -53
+					"upperX": 9,
+					"upperY": -60,
+					"middleX": 11,
+					"middleY": -50,
+					"lowerX": 9,
+					"lowerY": -37
 				},
-				"projectile": "PMEDUSX.DEF"
+				"projectile": "naruto/projectiles/water-bullet"
 			}
 		},
 		"sound": {
@@ -674,7 +674,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/iceMirrorMaster/battle",
-			"map": "AVWmedx0.def",
+			"map": "naruto/creatures/iceMirrorMaster/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -692,25 +692,25 @@
 			"missile": {
 				"attackClimaxFrame": 3,
 				"frameAngles": [
-					90.0,
-					72.0,
-					45.0,
-					27.0,
-					0.0,
-					-27.0,
-					-45.0,
-					-72.0,
-					-90.0
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90
 				],
 				"offset": {
-					"upperX": 75,
-					"upperY": -65,
-					"middleX": 75,
-					"middleY": -50,
-					"lowerX": 70,
-					"lowerY": -45
+					"upperX": 12,
+					"upperY": -61,
+					"middleX": 14,
+					"middleY": -51,
+					"lowerX": 12,
+					"lowerY": -38
 				},
-				"projectile": "PMEDUSX.DEF"
+				"projectile": "naruto/projectiles/ice-senbon"
 			}
 		},
 		"sound": {
@@ -757,7 +757,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/mistSwordsman/battle",
-			"map": "AVWswrd0.def",
+			"map": "naruto/creatures/mistSwordsman/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -822,7 +822,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/swordsmanOfTheSeven/battle",
-			"map": "AVWswrx0.def",
+			"map": "naruto/creatures/swordsmanOfTheSeven/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -883,7 +883,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/waterDragon/battle",
-			"map": "AVWdrag0.def",
+			"map": "naruto/creatures/waterDragon/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -952,7 +952,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/greatWaterDragon/battle",
-			"map": "AVWazure.def",
+			"map": "naruto/creatures/greatWaterDragon/map",
 			"mapMask": [
 				"VVV",
 				"VAV"

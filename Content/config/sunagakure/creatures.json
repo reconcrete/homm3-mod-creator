@@ -34,7 +34,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/sunaGenin/battle",
-			"map": "AvWPike.def",
+			"map": "naruto/creatures/sunaGenin/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -96,7 +96,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/sunaChunin/battle",
-			"map": "AVWpikx0.def",
+			"map": "naruto/creatures/sunaChunin/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -156,7 +156,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/woodenPuppet/battle",
-			"map": "AVWgarg0.def",
+			"map": "naruto/creatures/woodenPuppet/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -224,7 +224,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/battlePuppet/battle",
-			"map": "AVWgarx0.def",
+			"map": "naruto/creatures/battlePuppet/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -281,7 +281,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/windKunoichi/battle",
-			"map": "AVWorc0.def",
+			"map": "naruto/creatures/windKunoichi/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -299,25 +299,25 @@
 			"missile": {
 				"attackClimaxFrame": 3,
 				"frameAngles": [
-					90.0,
-					72.0,
-					45.0,
-					27.0,
-					0.0,
-					-27.0,
-					-45.0,
-					-72.0,
-					-90.0
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90
 				],
 				"offset": {
-					"upperX": 42,
-					"upperY": -83,
-					"middleX": 43,
-					"middleY": -66,
-					"lowerX": 33,
-					"lowerY": -26
+					"upperX": 9,
+					"upperY": -60,
+					"middleX": 11,
+					"middleY": -50,
+					"lowerX": 9,
+					"lowerY": -37
 				},
-				"projectile": "PORCHX.DEF"
+				"projectile": "naruto/projectiles/wind-scythe"
 			}
 		},
 		"sound": {
@@ -369,7 +369,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/fanMaster/battle",
-			"map": "AVWorcx0.def",
+			"map": "naruto/creatures/fanMaster/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -387,25 +387,25 @@
 			"missile": {
 				"attackClimaxFrame": 3,
 				"frameAngles": [
-					90.0,
-					72.0,
-					45.0,
-					27.0,
-					0.0,
-					-27.0,
-					-45.0,
-					-72.0,
-					-90.0
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90
 				],
 				"offset": {
-					"upperX": 34,
-					"upperY": -88,
-					"middleX": 37,
-					"middleY": -66,
-					"lowerX": 32,
-					"lowerY": -28
+					"upperX": 21,
+					"upperY": -61,
+					"middleX": 25,
+					"middleY": -51,
+					"lowerX": 21,
+					"lowerY": -38
 				},
-				"projectile": "PORCHX.DEF"
+				"projectile": "naruto/projectiles/wind-scythe"
 			}
 		},
 		"sound": {
@@ -453,7 +453,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/desertScorpion/battle",
-			"map": "AVWmant0.def",
+			"map": "naruto/creatures/desertScorpion/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -517,7 +517,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/poisonScorpion/battle",
-			"map": "AVWmanx0.def",
+			"map": "naruto/creatures/poisonScorpion/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -584,7 +584,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/humanPuppet/battle",
-			"map": "AVWgolm0.def",
+			"map": "naruto/creatures/humanPuppet/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -655,7 +655,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/kazekagePuppet/battle",
-			"map": "AVWgolx0.def",
+			"map": "naruto/creatures/kazekagePuppet/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -673,25 +673,25 @@
 			"missile": {
 				"attackClimaxFrame": 3,
 				"frameAngles": [
-					90.0,
-					72.0,
-					45.0,
-					27.0,
-					0.0,
-					-27.0,
-					-45.0,
-					-72.0,
-					-90.0
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90
 				],
 				"offset": {
-					"upperX": 28,
-					"upperY": -107,
-					"middleX": 43,
-					"middleY": -99,
-					"lowerX": 18,
-					"lowerY": -92
+					"upperX": 11,
+					"upperY": -64,
+					"middleX": 13,
+					"middleY": -53,
+					"lowerX": 11,
+					"lowerY": -39
 				},
-				"projectile": "PHALF.DEF"
+				"projectile": "naruto/projectiles/senbon"
 			}
 		},
 		"sound": {
@@ -739,7 +739,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/kamaitachi/battle",
-			"map": "AVWroc0.def",
+			"map": "naruto/creatures/kamaitachi/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -803,7 +803,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/greatKamaitachi/battle",
-			"map": "AVWrocx0.def",
+			"map": "naruto/creatures/greatKamaitachi/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -870,7 +870,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/sandColossus/battle",
-			"map": "AVWtitn0.def",
+			"map": "naruto/creatures/sandColossus/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -943,7 +943,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/gaarasSandTsunami/battle",
-			"map": "AVWtitx0.def",
+			"map": "naruto/creatures/gaarasSandTsunami/map",
 			"mapMask": [
 				"VVV",
 				"VAV"

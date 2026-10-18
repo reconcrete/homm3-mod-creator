@@ -16,7 +16,7 @@ def stats(cost, hp, speed, att, dfn, dmg, growth, fight, ai, amount):
 
 # ------------------------------------------------------------------ creatures
 
-FIREBALL = 'CPRGOGX.DEF'   # Magog's fireball projectile, for the Uchiha fire style
+FIREBALL = 'fireball'   # the Uchiha fire style
 blind = lambda chance: {'type': 'SPELL_AFTER_ATTACK', 'subtype': 'spell.blind', 'val': chance, 'addInfo': [1, 0]}
 gentle_fist = {'type': 'SPELL_AFTER_ATTACK', 'subtype': 'spell.dispelHelpful', 'val': 100}
 
@@ -27,7 +27,7 @@ creatures = dict([
              upgrades=['genin']),
     creature(t, F, 'genin', 1, ('Genin', 'Genin'), ('Генин', 'Генины'), 'halfling', 'Halfling',
              stats({'gold': 75}, 8, 6, 5, 4, (1, 3), 14, 100, 115, (20, 50)),
-             abilities={'shooter': {'type': 'SHOOTER'}}, shots=8),
+             abilities={'shooter': {'type': 'SHOOTER'}}, shots=8, projectile='shuriken'),
     creature(t, F, 'ninjaHound', 2, ('Ninja Hound', 'Ninja Hounds'), ('Пёс-ниндзя', 'Псы-ниндзя'),
              'hellHound', 'Hell Hound',
              stats({'gold': 100}, 10, 7, 6, 4, (2, 4), 9, 130, 140, (16, 30)),

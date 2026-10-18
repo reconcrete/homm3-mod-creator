@@ -103,6 +103,25 @@ def write_json(rel, data):
 
 # ---------------------------------------------------------------- creatures
 
+# our projectiles (tools/convert-art.py) with the original each falls back to before conversion
+PROJECTILES = {'shuriken': 'PHALF.DEF', 'kunai': 'PELFX.DEF', 'fireball': 'CPRGOGX.DEF', 'wind-scythe': 'PORCHX.DEF',
+               'senbon': 'PPLIZAX.DEF', 'ice-senbon': 'PMEDUSX.DEF', 'water-bullet': 'PMEDUSX.DEF'}
+PROJECTILE_ANGLES = [90, 72, 45, 27, 0, -27, -45, -72, -90]   # one frame each, as in convert-art.py
+
+def missile_offsets(own):
+    """Where shots leave our own battle sprite: VCMI starts a projectile at (197, 265) on the
+    450x400 canvas (the feet of a one-hex creature) plus these offsets, which the originals
+    set at their hands. Ours: near the front edge of the standing frame, at 72 / 60 / 45% of
+    the height for shots up / straight / down."""
+    from PIL import Image
+    anim = json.load(open(os.path.join(ROOT, 'Content/sprites', own, 'battle.json')))
+    still = next(s for s in anim['sequences'] if s['group'] == 2)['frames'][0]
+    x0, y0, x1, y1 = Image.open(os.path.join(ROOT, 'Content/sprites', anim['basepath'], still)).getchannel('A').getbbox()
+    front = lambda share: round(x0 + share * (x1 - x0)) - 197
+    up = lambda share: round(y1 - share * (y1 - y0)) - 265
+    return {'upperX': front(0.75), 'upperY': up(0.72), 'middleX': front(0.8), 'middleY': up(0.6),
+            'lowerX': front(0.75), 'lowerY': up(0.45)}
+
 def creature(t, faction, cid, level, name, ru_name, borrow, cranim_name, stats, upgrades=None,
              abilities=None, shots=None, projectile=None, ray=None, double_wide=None, extra=None,
              idle=10):
@@ -135,10 +154,14 @@ def creature(t, faction, cid, level, name, ru_name, borrow, cranim_name, stats, 
         m = {'attackClimaxFrame': anim['climax'], 'frameAngles': anim['angles'], 'offset': anim['offset']}
         if ray:
             m['ray'] = ray
+        elif projectile in PROJECTILES and os.path.exists(os.path.join(ROOT, 'Content/sprites/naruto/projectiles', projectile + '.json')):
+            m['projectile'] = 'naruto/projectiles/' + projectile    # the artist's, made by tools/convert-art.py
+            m['frameAngles'] = PROJECTILE_ANGLES
         else:
-            m['projectile'] = projectile or core['graphics']['missile']['projectile']
+            m['projectile'] = PROJECTILES.get(projectile, projectile) or core['graphics']['missile']['projectile']
         if static:
             m['attackClimaxFrame'] = 3     # counted from 1: frame index SHOOT_CLIMAX (2) of convert-art.py's 6-frame shoot groups
+            m['offset'] = missile_offsets(own)
         g['missile'] = m
     c = {
         'name': {'singular': name[0], 'plural': name[1]},

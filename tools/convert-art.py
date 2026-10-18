@@ -284,6 +284,25 @@ def battle_sprite(fig, slug, out_dir):
         json.dump({'basepath': rel, 'sequences': sequences}, f, indent='\t')
         f.write('\n')
 
+# adventure-map sprite from the still: one frame on the 64x64 canvas of the original map
+# creatures, feet on the bottom edge. The originals keep a similar height whatever the
+# creature (a Halfling is 41 px, a Pikeman 57, a Dragon 47-53) and big ones get wider, so the
+# height follows the battle height loosely and the width is capped.
+def map_sprite(fig, slug, out_dir):
+    height, wide = BATTLE[slug]
+    h = max(34, min(54, round(height * 0.55)))
+    k = min(h / fig.height, 60 / fig.width)
+    small = premultiplied_resize(fig, (max(1, round(fig.width * k)), max(1, round(fig.height * k))))
+    cx = 40 if wide else 46
+    canvas = Image.new('RGBA', MAP_CANVAS, (0, 0, 0, 0))
+    canvas.alpha_composite(small, (min(max(0, round(cx - small.width / 2)), MAP_CANVAS[0] - small.width), MAP_CANVAS[1] - 1 - small.height))
+    os.makedirs(os.path.join(out_dir, 'map'), exist_ok=True)
+    canvas.save(os.path.join(out_dir, 'map', '0.png'), optimize=True)
+    with open(os.path.join(out_dir, 'map.json'), 'w') as f:
+        json.dump({'basepath': 'naruto/creatures/%s/map/' % camel(slug),
+                   'sequences': [{'group': 0, 'frames': ['0.png'], 'generateShadow': 2}]}, f, indent='\t')
+        f.write('\n')
+
 def convert_creatures(force):
     towns = creature_sections()
     done = skipped = sprites = 0
@@ -295,7 +314,8 @@ def convert_creatures(force):
         out = os.path.join(SPRITES, 'creatures', camel(slug))
         large, small = os.path.join(out, 'portraitLarge.png'), os.path.join(out, 'portraitSmall.png')
         battle = os.path.join(out, 'battle.json')
-        need_battle = slug in BATTLE and slug not in RENDERED and stale(src, battle, force)
+        need_battle = slug in BATTLE and slug not in RENDERED and (stale(src, battle, force) or
+                                                                   stale(src, os.path.join(out, 'map.json'), force))
         if not stale(src, large, force) and not need_battle:
             skipped += 1
             continue
@@ -306,9 +326,10 @@ def convert_creatures(force):
         creature_portraits(fig, towns.get(slug), slug, large, small)
         if slug in BATTLE and slug not in RENDERED:
             battle_sprite(fig, slug, out)
+            map_sprite(fig, slug, out)
             sprites += 1
         done += 1
-    print('creatures: %d converted (%d with battle sprites), %d up to date' % (done, sprites, skipped))
+    print('creatures: %d converted (%d with battle and map sprites), %d up to date' % (done, sprites, skipped))
 
 # ---------------------------------------------------------------- creatures: rendered animation
 
@@ -333,7 +354,7 @@ RENDERED = {
         'map': ('idle', 0),      # frame used for the adventure-map sprite
     },
 }
-MAP_CANVAS, MAP_BOX = (64, 64), (44, 50)   # original map creatures: 64x64, body about 40x47, standing on the bottom edge, centered on x = 40
+MAP_CANVAS, MAP_BOX = (64, 64), (60, 54)   # original map creatures: 64x64, standing on the bottom edge, about 25-47 wide and 41-57 tall
 
 def premultiplied_resize(im, size):
     out = im.convert('RGBa').resize(size, Image.LANCZOS).convert('RGBA')
@@ -389,7 +410,7 @@ def rendered_creature(slug, spec, force):
     r = min(MAP_BOX[0] / im.width, MAP_BOX[1] / im.height)
     small = premultiplied_resize(im, (max(1, round(im.width * r)), max(1, round(im.height * r))))
     canvas = Image.new('RGBA', MAP_CANVAS, (0, 0, 0, 0))
-    canvas.alpha_composite(small, (40 - small.width // 2, 63 - small.height))
+    canvas.alpha_composite(small, (min(max(0, 40 - small.width // 2), MAP_CANVAS[0] - small.width), 63 - small.height))
     os.makedirs(os.path.join(out, 'map'), exist_ok=True)
     canvas.save(os.path.join(out, 'map', '0.png'), optimize=True)
     with open(os.path.join(out, 'map.json'), 'w') as f:
@@ -473,6 +494,44 @@ def convert_map_objects(force):
                 done += 1
     print('map objects: %d converted' % done)
 
+# projectile-<name>.png (pointing right) -> naruto/projectiles/<name>.json + <name>/NN.png: one
+# frame per angle in PROJECTILE_ANGLES (+90 = shooting straight up), like the original
+# projectile DEFs; VCMI picks the frame closest to the shot's angle and mirrors group 0 for
+# shots to the left. Lengths at 0 degrees follow the originals (arrow 30 px, Gog's fireball 36).
+PROJECTILE_ANGLES = [90, 72, 45, 27, 0, -27, -45, -72, -90]   # also in townkit.py
+PROJECTILES = {'shuriken': 16, 'kunai': 30, 'fireball': 36, 'wind-scythe': 40, 'senbon': 30,
+               'ice-senbon': 32, 'water-bullet': 36}
+
+def convert_projectiles(force):
+    done = 0
+    for name, length in PROJECTILES.items():
+        src = os.path.join(INBOX, 'projectile-%s.png' % name)
+        target = os.path.join(SPRITES, 'projectiles', name + '.json')
+        if not os.path.exists(src) or not stale(src, target, force):
+            continue
+        im = Image.open(src).convert('RGBA')
+        im = im.crop(im.split()[-1].point(lambda v: 255 if v > 24 else 0).getbbox())
+        small = premultiplied_resize(im, (length, max(1, round(im.height * length / im.width))))
+        d = os.path.join(SPRITES, 'projectiles', name)
+        if os.path.isdir(d):
+            shutil.rmtree(d)
+        os.makedirs(d)
+        frames = []
+        for i, angle in enumerate(PROJECTILE_ANGLES):
+            rot = small.convert('RGBa').rotate(angle, resample=Image.BICUBIC, expand=True).convert('RGBA')
+            box = rot.split()[-1].point(lambda v: 255 if v > 8 else 0).getbbox()
+            # keep the crop centered on the image center, which VCMI puts on the flight path
+            cx, cy = rot.width / 2, rot.height / 2
+            hw, hh = max(cx - box[0], box[2] - cx), max(cy - box[1], box[3] - cy)
+            rot = rot.crop((int(cx - hw), int(cy - hh), int(round(cx + hw)), int(round(cy + hh))))
+            rot.save(os.path.join(d, '%02d.png' % i), optimize=True)
+            frames.append('%02d.png' % i)
+        with open(target, 'w') as f:
+            json.dump({'basepath': 'naruto/projectiles/%s/' % name, 'sequences': [{'group': 0, 'frames': frames}]}, f, indent='\t')
+            f.write('\n')
+        done += 1
+    print('projectiles: %d converted' % done)
+
 # hero specialty icons: specialty-<slug>.png -> heroes/<heroId>/specialtyLarge.png (44x44) and
 # specialtySmall.png (32x32), opaque like UN44.DEF / UN32.DEF; the artist's bevelled frame is kept
 SPECIALTY = {'shadow-clone-jutsu': 'narutoUzumaki', 'copy-ninja': 'kakashiHatake', 'eight-gates': 'mightGuy',
@@ -527,4 +586,5 @@ if __name__ == '__main__':
     convert_map_objects(force)
     convert_artifacts(force)
     convert_specialties(force)
+    convert_projectiles(force)
     prune()

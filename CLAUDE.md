@@ -32,8 +32,14 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   centered on x=196 (one hex) or 218 (two hexes), like the original DEFs. Each action
   gets a few frames derived from the one still (hop, lunge, recoil, flinch, topple),
   because VCMI times actions by frame count. `townkit.creature()` uses it when it exists
-  and sets `attackClimaxFrame` to 3 (1-based). Add a town's creatures to `BATTLE` when
-  the town is built. Adventure-map sprites are still borrowed.
+  and sets `attackClimaxFrame` to 3 (1-based) and the missile offsets from the standing
+  frame (`missile_offsets`). Add new creatures to `BATTLE`. The same still also gives the
+  adventure-map sprite `creatures/<creatureId>/map.json` (64x64, feet on the bottom edge,
+  height 34-54 px from the battle height).
+- Projectiles: `PROJECTILES` in `convert-art.py` (length in px at 0 degrees) turns
+  `projectile-<name>.png` into `naruto/projectiles/<name>.json`, one frame per angle in
+  `PROJECTILE_ANGLES` (90 = up). A creature names it with `projectile='shuriken'` etc.;
+  `townkit.PROJECTILES` holds the original each falls back to.
 - The converter removes converted assets whose inbox image is gone (withdrawn for a
   redraw), so generators fall back to borrowed art.
 - Rendered animation (creatures listed in `RENDERED` in `convert-art.py`, first: Kurama,

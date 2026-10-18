@@ -40,10 +40,10 @@ creatures = dict([
              double_wide=False),
     creature(t, F, 'windKunoichi', 3, ('Wind Kunoichi', 'Wind Kunoichi'), ('Куноичи ветра', 'Куноичи ветра'),
              'orc', 'Orc', stats({'gold': 220}, 16, 6, 9, 5, (3, 5), 7, 230, 270, (12, 25)),
-             upgrades=['fanMaster'], shots=12, abilities={'shooter': {'type': 'SHOOTER'}}),
+             upgrades=['fanMaster'], shots=12, projectile='wind-scythe', abilities={'shooter': {'type': 'SHOOTER'}}),
     creature(t, F, 'fanMaster', 3, ('Fan Master', 'Fan Masters'), ('Мастер веера', 'Мастера веера'),
              'orcChieftain', 'Orc Chieftain', stats({'gold': 280}, 18, 7, 10, 6, (3, 5), 7, 290, 380, (12, 25)),
-             shots=16, abilities={'shooter': {'type': 'SHOOTER'}, 'windScythe': {'type': 'SHOOTS_ALL_ADJACENT'}}),
+             shots=16, projectile='wind-scythe', abilities={'shooter': {'type': 'SHOOTER'}, 'windScythe': {'type': 'SHOOTS_ALL_ADJACENT'}}),
     creature(t, F, 'desertScorpion', 4, ('Desert Scorpion', 'Desert Scorpions'), ('Пустынный скорпион', 'Пустынные скорпионы'),
              'manticore', 'Manticore', stats({'gold': 300}, 38, 6, 10, 11, (4, 7), 4, 400, 430, (10, 20)),
              upgrades=['poisonScorpion'], abilities=poison(20), double_wide=True),
@@ -55,7 +55,7 @@ creatures = dict([
              upgrades=['kazekagePuppet'], abilities=dict(construct, **spell_armor(30))),
     creature(t, F, 'kazekagePuppet', 5, ('Kazekage Puppet', 'Kazekage Puppets'), ('Марионетка Казекаге', 'Марионетки Казекаге'),
              'stoneGolem', 'Arch Mage', stats({'gold': 650}, 55, 6, 15, 16, (12, 16), 3, 760, 900, (8, 16)),
-             shots=8, projectile='PHALF.DEF',   # iron sand: the Halfling's pellets
+             shots=8, projectile='senbon',   # iron sand needles
              abilities=dict(construct, shooter={'type': 'SHOOTER'}, **spell_armor(50))),
     creature(t, F, 'kamaitachi', 6, ('Kamaitachi', 'Kamaitachi'), ('Камаитачи', 'Камаитачи'),
              'roc', 'Roc', stats({'gold': 1050}, 85, 10, 17, 13, (15, 22), 2, 1400, 1600, (4, 10)),

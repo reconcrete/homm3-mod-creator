@@ -28,7 +28,7 @@
 		"abilities": {},
 		"graphics": {
 			"animation": "naruto/creatures/academyStudent/battle",
-			"map": "AVWrog.def",
+			"map": "naruto/creatures/academyStudent/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -88,7 +88,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/genin/battle",
-			"map": "AVWhalf.def",
+			"map": "naruto/creatures/genin/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -106,25 +106,25 @@
 			"missile": {
 				"attackClimaxFrame": 3,
 				"frameAngles": [
-					90.0,
-					72.0,
-					45.0,
-					27.0,
-					0.0,
-					-27.0,
-					-45.0,
-					-72.0,
-					-90.0
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90
 				],
 				"offset": {
-					"upperX": 32,
-					"upperY": -77,
-					"middleX": 40,
-					"middleY": -61,
-					"lowerX": 18,
-					"lowerY": -55
+					"upperX": 10,
+					"upperY": -57,
+					"middleX": 11,
+					"middleY": -47,
+					"lowerX": 10,
+					"lowerY": -35
 				},
-				"projectile": "PHALF.DEF"
+				"projectile": "naruto/projectiles/shuriken"
 			}
 		},
 		"sound": {
@@ -166,7 +166,7 @@
 		"abilities": {},
 		"graphics": {
 			"animation": "naruto/creatures/ninjaHound/battle",
-			"map": "AVWhoun0.def",
+			"map": "naruto/creatures/ninjaHound/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -228,7 +228,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/ninkenPackLeader/battle",
-			"map": "AVWhoux0.def",
+			"map": "naruto/creatures/ninkenPackLeader/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -288,7 +288,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/hyugaGuard/battle",
-			"map": "AvWMonk.def",
+			"map": "naruto/creatures/hyugaGuard/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -355,7 +355,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/hyugaMainBranch/battle",
-			"map": "AVWmonx0.def",
+			"map": "naruto/creatures/hyugaMainBranch/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -424,7 +424,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/medicalNinja/battle",
-			"map": "AVWelfw0.def",
+			"map": "naruto/creatures/medicalNinja/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -496,7 +496,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/seniorMedic/battle",
-			"map": "AVWelfx0.def",
+			"map": "naruto/creatures/seniorMedic/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -563,7 +563,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/uchihaPolice/battle",
-			"map": "AVWmage0.def",
+			"map": "naruto/creatures/uchihaPolice/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -581,25 +581,25 @@
 			"missile": {
 				"attackClimaxFrame": 3,
 				"frameAngles": [
-					90.0,
-					72.0,
-					45.0,
-					27.0,
-					0.0,
-					-27.0,
-					-45.0,
-					-72.0,
-					-90.0
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90
 				],
 				"offset": {
-					"upperX": 25,
-					"upperY": -105,
-					"middleX": 38,
-					"middleY": -98,
-					"lowerX": 16,
-					"lowerY": -92
+					"upperX": 12,
+					"upperY": -58,
+					"middleX": 14,
+					"middleY": -48,
+					"lowerX": 12,
+					"lowerY": -36
 				},
-				"projectile": "CPRGOGX.DEF"
+				"projectile": "naruto/projectiles/fireball"
 			}
 		},
 		"sound": {
@@ -664,7 +664,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/sharinganMaster/battle",
-			"map": "AVWmagx0.def",
+			"map": "naruto/creatures/sharinganMaster/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -682,25 +682,25 @@
 			"missile": {
 				"attackClimaxFrame": 3,
 				"frameAngles": [
-					90.0,
-					72.0,
-					45.0,
-					27.0,
-					0.0,
-					-27.0,
-					-45.0,
-					-72.0,
-					-90.0
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90
 				],
 				"offset": {
-					"upperX": 28,
-					"upperY": -107,
-					"middleX": 43,
-					"middleY": -99,
-					"lowerX": 18,
-					"lowerY": -92
+					"upperX": 13,
+					"upperY": -61,
+					"middleX": 15,
+					"middleY": -51,
+					"lowerX": 13,
+					"lowerY": -38
 				},
-				"projectile": "CPRGOGX.DEF"
+				"projectile": "naruto/projectiles/fireball"
 			}
 		},
 		"sound": {
@@ -746,7 +746,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/anbuOperative/battle",
-			"map": "AVWvamp0.def",
+			"map": "naruto/creatures/anbuOperative/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -811,7 +811,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/anbuCaptain/battle",
-			"map": "AVWvamx0.def",
+			"map": "naruto/creatures/anbuCaptain/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -872,7 +872,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/toadWarrior/battle",
-			"map": "AVWbhmt0.def",
+			"map": "naruto/creatures/toadWarrior/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
@@ -937,7 +937,7 @@
 		},
 		"graphics": {
 			"animation": "naruto/creatures/gamabunta/battle",
-			"map": "AVWbhmx0.def",
+			"map": "naruto/creatures/gamabunta/map",
 			"mapMask": [
 				"VVV",
 				"VAV"
