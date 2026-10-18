@@ -180,7 +180,7 @@ faction = {F: {
     'creatureBackground': fortress['creatureBackground'],
     'puzzleMap': fortress['puzzleMap'],
     'town': {
-        'mapObject': fortress['town']['mapObject'],
+        'mapObject': town_map_object('kirigakure', fortress['town']['mapObject']),
         'icons': screen['icons'],
         'musicTheme': fortress['town']['musicTheme'],
         'defaultTavern': 5,

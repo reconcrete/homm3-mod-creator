@@ -15,11 +15,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGpike0",
+						"animation": "naruto/map/dwellings/ninja-academy",
 						"mask": [
 							"VVV",
-							"VBV",
+							"VBB",
 							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
@@ -38,10 +43,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGhell0",
+						"animation": "naruto/map/dwellings/inuzuka-kennels",
 						"mask": [
-							"VV",
-							"BA"
+							"VVV",
+							"VBB",
+							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
@@ -60,11 +71,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGmonk0",
+						"animation": "naruto/map/dwellings/hyuga-compound",
 						"mask": [
 							"VVV",
-							"VVV",
+							"VBB",
 							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
@@ -83,11 +99,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGelf0",
+						"animation": "naruto/map/dwellings/medical-corps",
 						"mask": [
 							"VVV",
-							"VVV",
-							"VAB"
+							"VBB",
+							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
@@ -106,13 +127,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGmage0",
+						"animation": "naruto/map/dwellings/uchiha-district",
 						"mask": [
 							"VVV",
-							"VVV",
-							"VVV",
-							"VVV",
+							"VBB",
 							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
@@ -131,10 +155,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGvamp0",
+						"animation": "naruto/map/dwellings/anbu-headquarters",
 						"mask": [
 							"VVV",
-							"VAB"
+							"VBB",
+							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
@@ -153,11 +183,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGbhmt0",
+						"animation": "naruto/map/dwellings/mount-myoboku-gate",
 						"mask": [
 							"VVV",
-							"VVV",
+							"VBB",
 							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}

@@ -15,11 +15,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGtrog0",
+						"animation": "naruto/map/dwellings/mist-academy",
 						"mask": [
 							"VVV",
-							"VVV",
+							"VBB",
 							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
@@ -38,11 +43,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGlzrd0",
+						"animation": "naruto/map/dwellings/hunter-nin-division",
 						"mask": [
 							"VVV",
-							"VVV",
+							"VBB",
 							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
@@ -61,10 +71,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGgnll0",
+						"animation": "naruto/map/dwellings/hozuki-water-pools",
 						"mask": [
 							"VVV",
+							"VBB",
 							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
@@ -83,10 +99,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGbasl0",
+						"animation": "naruto/map/dwellings/shark-reef",
 						"mask": [
-							"VV",
-							"BA"
+							"VVV",
+							"VBB",
+							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
@@ -105,11 +127,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGmdsa0",
+						"animation": "naruto/map/dwellings/yuki-clan-ice-hall",
 						"mask": [
 							"VVV",
-							"VVV",
+							"VBB",
 							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
@@ -128,11 +155,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGswor0",
+						"animation": "naruto/map/dwellings/hall-of-the-seven-swordsmen",
 						"mask": [
 							"VVV",
-							"VVV",
+							"VBB",
 							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
@@ -151,12 +183,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGgdrg0",
+						"animation": "naruto/map/dwellings/water-dragon-lake",
 						"mask": [
 							"VVV",
-							"VVV",
-							"VVV",
+							"VBB",
 							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}

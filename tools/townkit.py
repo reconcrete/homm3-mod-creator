@@ -298,6 +298,8 @@ def dwelling_object_like(t, oid, name, ru_name, creature_id, borrow):
 
 def dwelling_object(t, oid, name, ru_name, creature_id, borrow_def, ambient):
     """A creatureGeneratorCommon map object (external dwelling) for one creature."""
+    if has_map_sprite('dwellings', kebab(oid)):     # the artist's picture, named like the object
+        return own_dwelling_object(t, oid, name, ru_name, creature_id, kebab(oid), ambient)
     o = {'name': name, 'creatures': [[creature_id]], 'sounds': {'ambient': [ambient]},
          'templates': {'default': h3_template(borrow_def)}}
     t.add('mapObject.%s.creatureGeneratorCommon.%s.name' % (MOD, oid), ru_name)
@@ -406,6 +408,32 @@ def own_dwelling_object(t, oid, name, ru_name, creature_id, slug, ambient='LOOPC
                                    'mask': ['VVV', 'VBB', 'VBA'], 'visitableFrom': ['---', '+++', '+++']}}}
     t.add('mapObject.%s.creatureGeneratorCommon.%s.name' % (MOD, oid), ru_name)
     return oid, o
+
+TOWN_MASK = ['VVVVVV', 'VVVVVV', 'VVVVVV', 'VVBBBV', 'VBBBBB', 'VBBABB']   # VCMI's base town mask (moddables.json)
+
+def town_map_object(faction, borrowed):
+    """Adventure-map town with the artist's three pictures (tools/convert-art.py:
+    naruto/map/towns/<faction>-<level>): village until the fort, the fort picture up to the
+    citadel, the castle picture from the castle or the capitol on. Borrowed look otherwise."""
+    levels = ('village', 'fort', 'castle')
+    if not all(has_map_sprite('towns', '%s-%s' % (faction, l)) for l in levels):
+        return borrowed
+    return {'filters': {'village': ['noneOf', ['fort']],
+                        'fort': ['allOf', ['fort'], ['noneOf', ['castle'], ['capitol']]],
+                        'castle': ['anyOf', ['castle'], ['capitol']]},
+            'templates': {l: {'animation': 'naruto/map/towns/%s-%s' % (faction, l), 'mask': TOWN_MASK,
+                              'visitableFrom': ['---', '+++', '+++']} for l in levels}}
+
+def town_map_template(map_object):
+    """Map-file template for a town of this mapObject config (its biggest picture)."""
+    t = map_object['templates']['castle']
+    if t['animation'].startswith('naruto/'):
+        return {'animation': t['animation'], 'editorAnimation': '', 'mask': t['mask'], 'visitableFrom': ['---', '+-+', '+++']}
+    h = h3_template(t['animation'])
+    return {'animation': h['animation'], 'editorAnimation': '', 'mask': h['mask'], 'visitableFrom': ['---', '+-+', '+++']}
+
+def kebab(oid):
+    return re.sub('([A-Z])', lambda m: '-' + m.group(1).lower(), oid)
 
 def has_map_sprite(folder, slug):
     return os.path.exists(os.path.join(ROOT, 'Content/sprites/naruto/map', folder, slug + '.json'))

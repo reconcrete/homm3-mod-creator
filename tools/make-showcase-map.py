@@ -37,10 +37,7 @@ def town_buildings(faction):
 def template(faction):
     conf = json.load(open(os.path.join(ROOT, 'Content/config', faction, 'faction.json'), encoding='utf-8')) if faction in OURS \
         else load(CORE + faction + '.json')
-    anim = conf[faction]['town']['mapObject']['templates']['castle']['animation']
-    t = townkit.h3_template(anim)
-    return {'animation': t['animation'], 'editorAnimation': '', 'mask': t['mask'],
-            'visitableFrom': ['---', '+-+', '+++']}
+    return townkit.town_map_template(conf[faction]['town']['mapObject'])
 
 def town(n, faction, owner, x, y, built=True):
     return {'instanceName': 'town_%d' % n, 'type': 'town', 'subtype': faction, 'x': x, 'y': y, 'l': 0,

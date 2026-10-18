@@ -285,7 +285,7 @@ faction = {F: {
     'creatureBackground': castle['creatureBackground'],
     'puzzleMap': castle['puzzleMap'],
     'town': {
-        'mapObject': castle['town']['mapObject'],
+        'mapObject': town_map_object('konohagakure', castle['town']['mapObject']),
         'icons': town_icons,
         'musicTheme': castle['town']['musicTheme'],
         'defaultTavern': 5,

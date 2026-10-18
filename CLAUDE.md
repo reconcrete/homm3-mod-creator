@@ -59,6 +59,13 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   (`heroes/<heroId>/specialtyLarge.png` 44x44, `specialtySmall.png` 32x32); `townkit.hero()`
   uses them when they exist, the borrowed UN44/UN32 frame otherwise. `mod-icon.png` (256x256)
   sits at the repo root: VCMI 1.7.5's launcher has no per-mod icon.
+- Adventure-map towns and dwellings (M9): `convert-art.py` turns `map-town-<faction>-<village|
+  fort|castle>.png` into `naruto/map/towns/<faction>-<level>` (192x192, gate on the entrance
+  tile) and `map-dwelling-<slug>.png` into `naruto/map/dwellings/<slug>`, each with a
+  `0-overlay.png` (white pennants VCMI tints with the owner's color). `townkit.town_map_object`
+  switches a faction to them (filters: village / fort / castle-or-capitol);
+  `dwelling_object` uses the picture whose slug is the kebab-case object id.
+  `tools/make-maps.sh` rebuilds every test map.
 - Test maps: `tools/make-testmap.py` (see its docstring). `naruto-test-konohagakure` is
   the plain Konoha map; `naruto-test-kurama` adds Kurama at (48, 61), four tiles west and
   two south of the red town gate, and a strong town garrison. The script checks that every

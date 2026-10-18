@@ -1,0 +1,12 @@
+{
+	"basepath": "naruto/map/towns/konohagakure-fort/",
+	"sequences": [
+		{
+			"group": 0,
+			"frames": [
+				"0.png"
+			],
+			"generateShadow": 2
+		}
+	]
+}

@@ -256,21 +256,86 @@
 		},
 		"town": {
 			"mapObject": {
+				"filters": {
+					"village": [
+						"noneOf",
+						[
+							"fort"
+						]
+					],
+					"fort": [
+						"allOf",
+						[
+							"fort"
+						],
+						[
+							"noneOf",
+							[
+								"castle"
+							],
+							[
+								"capitol"
+							]
+						]
+					],
+					"castle": [
+						"anyOf",
+						[
+							"castle"
+						],
+						[
+							"capitol"
+						]
+					]
+				},
 				"templates": {
-					"castle": {
-						"animation": "AVCstrx0.def"
-					},
-					"citadel": {
-						"animation": "AVCstrx0.def"
+					"village": {
+						"animation": "naruto/map/towns/sunagakure-village",
+						"mask": [
+							"VVVVVV",
+							"VVVVVV",
+							"VVVVVV",
+							"VVBBBV",
+							"VBBBBB",
+							"VBBABB"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
 					},
 					"fort": {
-						"animation": "AVCstrx0.def"
+						"animation": "naruto/map/towns/sunagakure-fort",
+						"mask": [
+							"VVVVVV",
+							"VVVVVV",
+							"VVVVVV",
+							"VVBBBV",
+							"VBBBBB",
+							"VBBABB"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
 					},
-					"village": {
-						"animation": "AVCSTRO0.DEF"
-					},
-					"capitol": {
-						"animation": "AVCSTRZ0.DEF"
+					"castle": {
+						"animation": "naruto/map/towns/sunagakure-castle",
+						"mask": [
+							"VVVVVV",
+							"VVVVVV",
+							"VVVVVV",
+							"VVBBBV",
+							"VBBBBB",
+							"VBBABB"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
 					}
 				}
 			},

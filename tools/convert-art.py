@@ -428,7 +428,21 @@ def rendered_creature(slug, spec, force):
 # entered from below; fits VCMI's 2x2 rule for random dwellings). VCMI adds the shadow.
 DWELLING_CANVAS, DWELLING_BOX, DWELLING_CENTER = (96, 96), (94, 92), 58
 
-def map_object(src, folder, slug, canvas, box, center_x):
+def flag_poles(base, overlay, poles):
+    """Flagpoles drawn into the picture, their pennants into the overlay: VCMI tints the white
+    pixels of '<frame>-overlay.png' with the owner's color (how the HD mod flags its towns).
+    poles: (x, bottom y, height, +1 pennant to the right / -1 to the left)."""
+    px, ov = base.load(), overlay.load()
+    for x, bottom, height, side in poles:
+        for y in range(bottom - height, bottom + 1):
+            px[x, y] = (58, 42, 28, 255)
+            px[x + 1, y] = (112, 88, 60, 255)
+        top = bottom - height
+        for row, length in enumerate((7, 6, 5, 3)):         # a pennant fluttering away from the pole
+            for i in range(length):
+                ov[x + 1 + side * (1 + i) if side > 0 else x - 1 - i, top + 1 + row] = (255, 255, 255, 255)
+
+def map_object(src, folder, slug, canvas, box, center_x, poles=()):
     im = Image.open(src).convert('RGBA')
     im = im.crop(im.split()[-1].point(lambda v: 255 if v > 128 else 0).getbbox())
     k = min(box[0] / im.width, box[1] / im.height)
@@ -437,13 +451,25 @@ def map_object(src, folder, slug, canvas, box, center_x):
     rgb.putalpha(small.split()[-1].point(lambda v: 0 if v < 24 else v))
     out = Image.new('RGBA', canvas, (0, 0, 0, 0))
     out.alpha_composite(rgb, (min(max(0, round(center_x - rgb.width / 2)), canvas[0] - rgb.width), canvas[1] - 1 - rgb.height))
+    overlay = Image.new('RGBA', canvas, (0, 0, 0, 0))
+    flag_poles(out, overlay, poles)
     d = os.path.join(SPRITES, 'map', folder, slug)
     os.makedirs(d, exist_ok=True)
     out.save(os.path.join(d, '0.png'), optimize=True)
+    if poles:
+        overlay.save(os.path.join(d, '0-overlay.png'), optimize=True)
     with open(os.path.join(SPRITES, 'map', folder, slug + '.json'), 'w') as f:
         json.dump({'basepath': 'naruto/map/%s/%s/' % (folder, slug),
                    'sequences': [{'group': 0, 'frames': ['0.png'], 'generateShadow': 2}]}, f, indent='\t')
         f.write('\n')
+
+# map-town-<faction>-<village|fort|castle>.png -> naruto/map/towns/<faction>-<level>: 192x192 like
+# the original town sprites (6x6 tiles; the gate on the entrance tile, column 4 of the bottom
+# row, x 96-127), sized like the originals (about 158x150 for a castle), two flags at the gate.
+TOWN_CANVAS, TOWN_CENTER = (192, 192), 112
+TOWN_BOX = {'village': (132, 122), 'fort': (146, 136), 'castle': (158, 150)}
+TOWN_POLES = [(91, 190, 14, -1), (131, 190, 14, 1)]
+DWELLING_POLES = [(91, 94, 14, -1)]       # one flag on the right edge, next to the entrance tile
 
 # artifact-<slug>.png -> Content/sprites/naruto/artifacts/<artifactId>/: icon.png 44x44 (hero
 # screen, transparent), bonus.png 58x64 (campaign bonus picture) and map.json + map/0.png
@@ -490,7 +516,14 @@ def convert_map_objects(force):
             slug = f[len('map-dwelling-'):-4]
             target = os.path.join(SPRITES, 'map', 'dwellings', slug + '.json')
             if stale(os.path.join(INBOX, f), target, force):
-                map_object(os.path.join(INBOX, f), 'dwellings', slug, DWELLING_CANVAS, DWELLING_BOX, DWELLING_CENTER)
+                map_object(os.path.join(INBOX, f), 'dwellings', slug, DWELLING_CANVAS, DWELLING_BOX, DWELLING_CENTER, DWELLING_POLES)
+                done += 1
+        elif f.startswith('map-town-') and f.endswith('.png'):
+            slug = f[len('map-town-'):-4]
+            level = slug.rsplit('-', 1)[1]
+            target = os.path.join(SPRITES, 'map', 'towns', slug + '.json')
+            if level in TOWN_BOX and stale(os.path.join(INBOX, f), target, force):
+                map_object(os.path.join(INBOX, f), 'towns', slug, TOWN_CANVAS, TOWN_BOX[level], TOWN_CENTER, TOWN_POLES)
                 done += 1
     print('map objects: %d converted' % done)
 

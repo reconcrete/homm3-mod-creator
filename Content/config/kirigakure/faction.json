@@ -256,21 +256,86 @@
 		},
 		"town": {
 			"mapObject": {
+				"filters": {
+					"village": [
+						"noneOf",
+						[
+							"fort"
+						]
+					],
+					"fort": [
+						"allOf",
+						[
+							"fort"
+						],
+						[
+							"noneOf",
+							[
+								"castle"
+							],
+							[
+								"capitol"
+							]
+						]
+					],
+					"castle": [
+						"anyOf",
+						[
+							"castle"
+						],
+						[
+							"capitol"
+						]
+					]
+				},
 				"templates": {
-					"castle": {
-						"animation": "AVCftrx0.def"
-					},
-					"citadel": {
-						"animation": "AVCftrx0.def"
+					"village": {
+						"animation": "naruto/map/towns/kirigakure-village",
+						"mask": [
+							"VVVVVV",
+							"VVVVVV",
+							"VVVVVV",
+							"VVBBBV",
+							"VBBBBB",
+							"VBBABB"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
 					},
 					"fort": {
-						"animation": "AVCftrx0.def"
+						"animation": "naruto/map/towns/kirigakure-fort",
+						"mask": [
+							"VVVVVV",
+							"VVVVVV",
+							"VVVVVV",
+							"VVBBBV",
+							"VBBBBB",
+							"VBBABB"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
 					},
-					"village": {
-						"animation": "AVCFTRT0.DEF"
-					},
-					"capitol": {
-						"animation": "AVCFORZ0.DEF"
+					"castle": {
+						"animation": "naruto/map/towns/kirigakure-castle",
+						"mask": [
+							"VVVVVV",
+							"VVVVVV",
+							"VVVVVV",
+							"VVBBBV",
+							"VBBBBB",
+							"VBBABB"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
 					}
 				}
 			},

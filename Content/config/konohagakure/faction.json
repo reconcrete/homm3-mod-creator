@@ -256,21 +256,86 @@
 		},
 		"town": {
 			"mapObject": {
+				"filters": {
+					"village": [
+						"noneOf",
+						[
+							"fort"
+						]
+					],
+					"fort": [
+						"allOf",
+						[
+							"fort"
+						],
+						[
+							"noneOf",
+							[
+								"castle"
+							],
+							[
+								"capitol"
+							]
+						]
+					],
+					"castle": [
+						"anyOf",
+						[
+							"castle"
+						],
+						[
+							"capitol"
+						]
+					]
+				},
 				"templates": {
-					"castle": {
-						"animation": "AVCcasx0.def"
-					},
-					"citadel": {
-						"animation": "AVCcasx0.def"
+					"village": {
+						"animation": "naruto/map/towns/konohagakure-village",
+						"mask": [
+							"VVVVVV",
+							"VVVVVV",
+							"VVVVVV",
+							"VVBBBV",
+							"VBBBBB",
+							"VBBABB"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
 					},
 					"fort": {
-						"animation": "AVCcasx0.def"
+						"animation": "naruto/map/towns/konohagakure-fort",
+						"mask": [
+							"VVVVVV",
+							"VVVVVV",
+							"VVVVVV",
+							"VVBBBV",
+							"VBBBBB",
+							"VBBABB"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
 					},
-					"village": {
-						"animation": "AVCCAST0.DEF"
-					},
-					"capitol": {
-						"animation": "AVCCASZ0.DEF"
+					"castle": {
+						"animation": "naruto/map/towns/konohagakure-castle",
+						"mask": [
+							"VVVVVV",
+							"VVVVVV",
+							"VVVVVV",
+							"VVBBBV",
+							"VBBBBB",
+							"VBBABB"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
+						]
 					}
 				}
 			},

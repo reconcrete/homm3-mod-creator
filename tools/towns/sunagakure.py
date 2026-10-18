@@ -174,7 +174,7 @@ faction = {F: {
     'creatureBackground': stronghold['creatureBackground'],
     'puzzleMap': stronghold['puzzleMap'],
     'town': {
-        'mapObject': stronghold['town']['mapObject'],
+        'mapObject': town_map_object('sunagakure', stronghold['town']['mapObject']),
         'icons': screen['icons'],
         'musicTheme': stronghold['town']['musicTheme'],
         'defaultTavern': 5,

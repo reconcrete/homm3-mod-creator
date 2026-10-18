@@ -15,6 +15,7 @@ The base map is 72x72; the red town's gate is at (52, 59) and row 60 below it is
 import argparse, glob, json, os, sys, zipfile
 sys.path.insert(0, os.path.dirname(__file__))
 from vjson import strip
+import townkit
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -49,7 +50,7 @@ for o in objects:
     if o.get('type') == 'town' and o['options'].get('owner') == args.player:
         o['subtype'] = args.faction
         fconf = json.load(open(os.path.join(ROOT, 'Content/config', args.faction, 'faction.json'), encoding='utf-8'))
-        o['template']['animation'] = os.path.splitext(fconf[args.faction]['town']['mapObject']['templates']['castle']['animation'])[0]
+        o['template'] = dict(o['template'], **townkit.town_map_template(fconf[args.faction]['town']['mapObject']))
         if args.buildings:
             built = list(json.load(open(os.path.join(ROOT, 'Content/config', args.faction, 'faction.json'),
                                         encoding='utf-8'))[args.faction]['town']['buildings'])

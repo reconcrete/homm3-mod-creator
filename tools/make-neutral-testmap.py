@@ -26,8 +26,7 @@ lairs = ours('neutral/dwellings.json')['core:creatureGeneratorCommon']['types']
 artifacts = ours('artifacts/artifacts.json')
 
 def town_template(conf):
-    t = townkit.h3_template(conf['town']['mapObject']['templates']['castle']['animation'])
-    return {'animation': t['animation'], 'editorAnimation': '', 'mask': t['mask'], 'visitableFrom': ['---', '+-+', '+++']}
+    return townkit.town_map_template(conf['town']['mapObject'])
 
 objects = [
     {'instanceName': 'town_red', 'type': 'town', 'subtype': 'konohagakure', 'x': 6, 'y': 6, 'l': 0,

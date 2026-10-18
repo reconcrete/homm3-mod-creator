@@ -15,11 +15,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGpike0",
+						"animation": "naruto/map/dwellings/desert-barracks",
 						"mask": [
 							"VVV",
-							"VBV",
+							"VBB",
 							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
@@ -38,12 +43,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGgarg0",
+						"animation": "naruto/map/dwellings/puppet-workshop",
 						"mask": [
 							"VVV",
-							"VVV",
-							"VVV",
+							"VBB",
 							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
@@ -62,12 +71,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGorcg0",
+						"animation": "naruto/map/dwellings/wind-training-cliffs",
 						"mask": [
 							"VVV",
-							"VVV",
-							"VVV",
+							"VBB",
 							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
@@ -86,10 +99,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGmant0",
+						"animation": "naruto/map/dwellings/scorpion-dunes",
 						"mask": [
-							"VV",
-							"BA"
+							"VVV",
+							"VBB",
+							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
@@ -108,13 +127,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGmage0",
+						"animation": "naruto/map/dwellings/red-secret-puppet-hall",
 						"mask": [
 							"VVV",
-							"VVV",
-							"VVV",
-							"VVV",
+							"VBB",
 							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
@@ -133,12 +155,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGrocs0",
+						"animation": "naruto/map/dwellings/kamaitachi-canyon",
 						"mask": [
 							"VVV",
-							"VVV",
-							"VVV",
+							"VBB",
 							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
@@ -157,11 +183,16 @@
 				},
 				"templates": {
 					"default": {
-						"animation": "AVGtitn0",
+						"animation": "naruto/map/dwellings/sealed-sand-altar",
 						"mask": [
 							"VVV",
-							"VBV",
+							"VBB",
 							"VBA"
+						],
+						"visitableFrom": [
+							"---",
+							"+++",
+							"+++"
 						]
 					}
 				}
