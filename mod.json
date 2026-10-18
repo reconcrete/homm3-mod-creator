@@ -1,13 +1,19 @@
 {
 	"name": "Naruto Heroes",
-	"description": "Three hidden villages from Naruto as playable towns: Konohagakure, Sunagakure and Kirigakure, with their shinobi, heroes, tailed-beast bosses and artifacts.",
+	"description": "Three hidden villages from Naruto as playable towns: Konohagakure, Sunagakure and Kirigakure, each with 14 shinobi creatures and its own heroes, plus neutral ninja, four tailed-beast bosses and 43 artifacts, including three Kage sets.",
 	"author": "Anton Morozov",
-	"version": "0.4.0",
+	"version": "1.0.0",
 	"modType": "Town",
 	"compatibility": {
 		"min": "1.7.0"
 	},
 	"changelog": {
+		"1.0.0": [
+			"11 neutral creatures with their map lairs, and the tailed-beast bosses Shukaku, Isobu, Gyuki and Kurama",
+			"43 artifacts, including the Hokage, Kazekage and Mizukage sets that combine into Will of Fire, Sand Coffin and Bloody Mist",
+			"All art from the artist: battle and map sprites for every creature, projectiles, specialty icons, map towns and dwellings with owner flags",
+			"Balance checked against the original towns: creature stats, costs and growth, hero classes, building costs"
+		],
 		"0.4.0": [
 			"Sunagakure and Kirigakure towns: 28 creatures, 4 hero classes, 26 heroes, town screens from the artist"
 		],
@@ -25,7 +31,7 @@
 	},
 	"russian": {
 		"name": "Герои Наруто",
-		"description": "Три скрытые деревни из «Наруто» как играбельные города: Коноха, Суна и Кири — с их шиноби, героями, хвостатыми зверями-боссами и артефактами.",
+		"description": "Три скрытые деревни из «Наруто» как играбельные города: Коноха, Суна и Кири, в каждой 14 существ-шиноби и свои герои; а ещё нейтральные ниндзя, четыре хвостатых зверя-босса и 43 артефакта, в том числе три сета Каге.",
 		"translations": [
 			"config/translations/russian-konohagakure.json",
 			"config/translations/russian-neutral.json",

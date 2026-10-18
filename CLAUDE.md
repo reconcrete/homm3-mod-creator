@@ -136,6 +136,11 @@ player on one of our factions, written to the VCMI Maps folder).
 - Adventure-map dwellings are required for every town creature line (random dwellings
   on maps fail with "failed to find dwelling for <town> of level N" otherwise).
 - Balance yardstick: the original game's numbers (H3 CRTRAITS / HCTRAITS values).
+  `python3 tools/balance-report.py [--all]` sets every creature next to the originals of its
+  tier (stats, cost, AI value, a combat index per gold) and flags values outside their range.
+  Core VCMI config has no stats or building costs; they come from CRTRAITS.TXT / BUILDING.TXT
+  in H3bitmap.lod. The random map generator places a dwelling only in zones of its creature's
+  faction, so neutral lairs appear on hand-made maps only.
 
 ## Verify (every change)
 
