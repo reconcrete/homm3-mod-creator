@@ -802,7 +802,7 @@
 			}
 		},
 		"graphics": {
-			"animation": "CTBIRD.DEF",
+			"animation": "naruto/creatures/greatKamaitachi/battle",
 			"map": "AVWrocx0.def",
 			"mapMask": [
 				"VVV",
@@ -810,8 +810,8 @@
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:187",
 			"mapAttackFromRight": "AvWattak.def:0:186",
-			"iconLarge": "TWCRPORT.DEF:0:95",
-			"iconSmall": "CPRSMALL.DEF:0:95",
+			"iconLarge": "naruto/creatures/greatKamaitachi/portraitLarge.png",
+			"iconSmall": "naruto/creatures/greatKamaitachi/portraitSmall.png",
 			"animationTime": {
 				"attack": 1.0,
 				"walk": 1.0,

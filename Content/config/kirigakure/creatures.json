@@ -88,7 +88,7 @@
 			}
 		},
 		"graphics": {
-			"animation": "CITROG.DEF",
+			"animation": "naruto/creatures/bloodyMistGraduate/battle",
 			"map": "AvWInfr.def",
 			"mapMask": [
 				"VVV",
@@ -96,8 +96,8 @@
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:143",
 			"mapAttackFromRight": "AvWattak.def:0:142",
-			"iconLarge": "TWCRPORT.DEF:0:73",
-			"iconSmall": "CPRSMALL.DEF:0:73",
+			"iconLarge": "naruto/creatures/bloodyMistGraduate/portraitLarge.png",
+			"iconSmall": "naruto/creatures/bloodyMistGraduate/portraitSmall.png",
 			"animationTime": {
 				"attack": 1.0,
 				"walk": 0.8,
@@ -242,7 +242,7 @@
 			}
 		},
 		"graphics": {
-			"animation": "CALIZA.DEF",
+			"animation": "naruto/creatures/trackerHunterNin/battle",
 			"map": "AVWlizx0.def",
 			"mapMask": [
 				"VVV",
@@ -250,8 +250,8 @@
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:203",
 			"mapAttackFromRight": "AvWattak.def:0:202",
-			"iconLarge": "TWCRPORT.DEF:0:103",
-			"iconSmall": "CPRSMALL.DEF:0:103",
+			"iconLarge": "naruto/creatures/trackerHunterNin/portraitLarge.png",
+			"iconSmall": "naruto/creatures/trackerHunterNin/portraitSmall.png",
 			"animationTime": {
 				"attack": 1.0,
 				"walk": 0.9,
@@ -259,7 +259,7 @@
 			},
 			"timeBetweenFidgets": 1.0,
 			"missile": {
-				"attackClimaxFrame": 9,
+				"attackClimaxFrame": 3,
 				"frameAngles": [
 					90.0,
 					72.0,
@@ -509,7 +509,7 @@
 			}
 		},
 		"graphics": {
-			"animation": "CGBASI.DEF",
+			"animation": "naruto/creatures/greatShark/battle",
 			"map": "AvWGBas.def",
 			"mapMask": [
 				"VVV",
@@ -517,8 +517,8 @@
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:215",
 			"mapAttackFromRight": "AvWattak.def:0:214",
-			"iconLarge": "TWCRPORT.DEF:0:109",
-			"iconSmall": "CPRSMALL.DEF:0:109",
+			"iconLarge": "naruto/creatures/greatShark/portraitLarge.png",
+			"iconSmall": "naruto/creatures/greatShark/portraitSmall.png",
 			"animationTime": {
 				"attack": 1.0,
 				"walk": 1.0,
@@ -673,7 +673,7 @@
 			}
 		},
 		"graphics": {
-			"animation": "CMEDUQ.DEF",
+			"animation": "naruto/creatures/iceMirrorMaster/battle",
 			"map": "AVWmedx0.def",
 			"mapMask": [
 				"VVV",
@@ -681,8 +681,8 @@
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:155",
 			"mapAttackFromRight": "AvWattak.def:0:154",
-			"iconLarge": "TWCRPORT.DEF:0:79",
-			"iconSmall": "CPRSMALL.DEF:0:79",
+			"iconLarge": "naruto/creatures/iceMirrorMaster/portraitLarge.png",
+			"iconSmall": "naruto/creatures/iceMirrorMaster/portraitSmall.png",
 			"animationTime": {
 				"attack": 1.0,
 				"walk": 1.0,
@@ -690,7 +690,7 @@
 			},
 			"timeBetweenFidgets": 1.0,
 			"missile": {
-				"attackClimaxFrame": 9,
+				"attackClimaxFrame": 3,
 				"frameAngles": [
 					90.0,
 					72.0,
@@ -821,7 +821,7 @@
 			}
 		},
 		"graphics": {
-			"animation": "CCRUSD.DEF",
+			"animation": "naruto/creatures/swordsmanOfTheSeven/battle",
 			"map": "AVWswrx0.def",
 			"mapMask": [
 				"VVV",
@@ -829,8 +829,8 @@
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:15",
 			"mapAttackFromRight": "AvWattak.def:0:14",
-			"iconLarge": "TWCRPORT.DEF:0:9",
-			"iconSmall": "CPRSMALL.DEF:0:9",
+			"iconLarge": "naruto/creatures/swordsmanOfTheSeven/portraitLarge.png",
+			"iconSmall": "naruto/creatures/swordsmanOfTheSeven/portraitSmall.png",
 			"animationTime": {
 				"attack": 1.0,
 				"walk": 0.95,

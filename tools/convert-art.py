@@ -175,18 +175,21 @@ BATTLE = {
     'uchiha-police': (84, False), 'sharingan-master': (88, False),
     'anbu-operative': (86, False), 'anbu-captain': (90, False),
     'toad-warrior': (96, True), 'gamabunta': (110, True),
-    # Sunagakure (Great Kamaitachi: image still missing)
+    # Sunagakure
     'suna-genin': (82, False), 'suna-chunin': (84, False),
     'wooden-puppet': (82, False), 'battle-puppet': (86, False),
     'wind-kunoichi': (86, False), 'fan-master': (88, False),
     'desert-scorpion': (70, True), 'poison-scorpion': (78, True),
     'human-puppet': (90, False), 'kazekage-puppet': (92, False),
-    'kamaitachi': (96, True),
+    'kamaitachi': (96, True), 'great-kamaitachi': (100, True),
     'sand-colossus': (112, True), 'gaaras-sand-tsunami': (124, True),
-    # Kirigakure (upgrades of tiers 1, 2, 4, 5, 6: images still missing)
-    'mist-genin': (82, False), 'hunter-nin': (84, False),
+    # Kirigakure
+    'mist-genin': (82, False), 'bloody-mist-graduate': (84, False),
+    'hunter-nin': (84, False), 'tracker-hunter-nin': (86, False),
     'hozuki-brawler': (86, False), 'hozuki-hydrifier': (88, False),
-    'summoned-shark': (96, True), 'yuki-clan-adept': (86, False), 'mist-swordsman': (86, False),
+    'summoned-shark': (96, True), 'great-shark': (100, True),
+    'yuki-clan-adept': (86, False), 'ice-mirror-master': (88, False),
+    'mist-swordsman': (86, False), 'swordsman-of-the-seven': (90, False),
     'water-dragon': (116, True), 'great-water-dragon': (128, True),
 }
 CANVAS, BASELINE, CENTER_1, CENTER_2 = (450, 400), 267, 196, 218
