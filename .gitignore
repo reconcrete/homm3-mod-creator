@@ -1,9 +1,12 @@
 .DS_Store
+__pycache__/
+# art/ is the local workspace: the artist's images, extracted original-game references,
+# 3D models and render frames. Too big for git, and partly not ours to publish. The game
+# assets made from it live in Content/.
+art/*
+!art/inbox/
+!art/masters/
 art/inbox/*
 art/masters/*
-!art/masters/.gitkeep
 !art/inbox/.gitkeep
-__pycache__/
-art/logs/
-art/logs-*.txt
-art/rejected/
+!art/masters/.gitkeep
