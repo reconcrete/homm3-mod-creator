@@ -354,6 +354,159 @@ RENDERED = {
         'map': ('idle', 0),      # frame used for the adventure-map sprite
     },
 }
+# Tripo-rigged creatures (art session, 2026-10-20). Their frames come from tools/3d/:
+# render_export.py (humanoids, Tripo Studio mocap and AI clips) or animate_rig.py (scripted
+# hound and scorpion). They keep the artist's adventure-map sprite ('map': None).
+MELEE_GROUPS = {
+    0: ('walk', None), 1: ('idle', None), 2: ('idle', None),
+    3: ('hit', None), 4: ('defend', None), 5: ('death', None),
+    7: ('idle', [0]), 8: ('idle', [0]),
+    11: ('attack', None), 12: ('attack', None), 13: ('attack', None),
+}
+RENDERED.update({
+    'genin': {
+        'frames': 'art/3d/genin/work/frames', 'ground': (444, 601), 'scale': 0.1885, 'wide': False, 'map': None,
+        # frame 5 is the wind-up peak; the shuriken leaves on the step into frame 6, which must sit at index SHOOT_CLIMAX
+        'groups': {**MELEE_GROUPS, **{g: ('shoot', [4, 5, 6, 7]) for g in (14, 15, 16)}},
+    },
+    'anbu-operative': {
+        'frames': 'art/3d/anbu/work/frames', 'ground': (442, 600), 'scale': 0.2014, 'wide': False, 'map': None,
+        'groups': MELEE_GROUPS,
+    },
+    'mist-swordsman': {     # rendered with a wider camera (ortho 4.0) so the raised cleaver fits
+        'frames': 'art/3d/mist-swordsman/work/frames', 'ground': (460, 567), 'scale': 0.2337, 'wide': False,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'ninja-hound': {
+        # no lift (battle check 2026-10-21): the ground y is already the lowest paw, so lift 6 stood it 6 px above the
+        # row line, higher than the griffin and the humanoids beside it
+        'frames': 'art/3d/ninja-hound/work/frames', 'ground': (461, 622), 'scale': 0.1481, 'wide': True,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'desert-scorpion': {
+        # no lift (battle check 2026-10-21): the ground y is already the lowest leg tip; lift 6 made it float
+        'frames': 'art/3d/desert-scorpion/work/frames', 'ground': (456, 631), 'scale': 0.148, 'wide': True,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'hyuga-guard': {
+        'frames': 'art/3d/hyuga-guard/work/frames', 'ground': (442, 603), 'scale': 0.1935, 'wide': False,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'medical-ninja': {
+        'frames': 'art/3d/medical-ninja/work/frames', 'ground': (443, 599), 'scale': 0.1894, 'wide': False,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'hunter-nin': {
+        'frames': 'art/3d/hunter-nin/work/frames', 'ground': (450, 601), 'scale': 0.1949, 'wide': False, 'map': None,
+        # same throw clip as genin: the senbon leaves on the step into frame 6 (index SHOOT_CLIMAX)
+        'groups': {**MELEE_GROUPS, **{g: ('shoot', [4, 5, 6, 7]) for g in (14, 15, 16)}},
+    },
+    'hozuki-brawler': {
+        'frames': 'art/3d/hozuki-brawler/work/frames', 'ground': (444, 603), 'scale': 0.1977, 'wide': False,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'human-puppet': {
+        'frames': 'art/3d/human-puppet/work/frames', 'ground': (447, 601), 'scale': 0.2093, 'wide': False,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'kamaitachi': {     # upright weasel, wider camera (ortho 3.8); two-hex in creatures.json, no lift: stands on two feet
+        'frames': 'art/3d/kamaitachi/work/frames', 'ground': (494, 570), 'scale': 0.2481, 'wide': True,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'water-dragon': {   # coiled serpent. Battle check 2026-10-21: the coil's underside is the frame bottom, so no
+        # lift (with 6 it floated above its row); ground x between the coil's mass (405) and the bbox centre (452), and
+        # scale 0.23 instead of 0.2495, so the tail no longer reaches 27 px into the hex in front (now ~16 px)
+        'frames': 'art/3d/water-dragon/work/frames', 'ground': (440, 608), 'scale': 0.23, 'wide': True,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'mist-genin': {
+        'frames': 'art/3d/mist-genin/work/frames', 'ground': (444, 598), 'scale': 0.1911, 'wide': False,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'summoned-shark': {     # upright on two feet: two-hex in creatures.json but no lift
+        'frames': 'art/3d/summoned-shark/work/frames', 'ground': (472, 618), 'scale': 0.2096, 'wide': True,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'toad-warrior': {   # upright, no lift; ortho 3.8. Ground and height from the feet (y 577): the katana tip hangs lower
+        'frames': 'art/3d/toad-warrior/work/frames', 'ground': (463, 577), 'scale': 0.2437, 'wide': True,
+        'map': None, 'groups': MELEE_GROUPS,   # 'walk' is a hop
+    },
+    'suna-genin': {     # wide cloak flares to the left; ground x checked on the chest and legs (447-451)
+        'frames': 'art/3d/suna-genin/work/frames', 'ground': (447, 605), 'scale': 0.1894, 'wide': False,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'wooden-puppet': {
+        'frames': 'art/3d/wooden-puppet/work/frames', 'ground': (436, 594), 'scale': 0.192, 'wide': False,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'uchiha-police': {
+        'frames': 'art/3d/uchiha-police/work/frames', 'ground': (443, 599), 'scale': 0.1949, 'wide': False, 'map': None,
+        # hand seals, then both palms thrust forward: the fireball leaves on frame 5 (index SHOOT_CLIMAX)
+        'groups': {**MELEE_GROUPS, **{g: ('shoot', [3, 4, 5, 6, 7]) for g in (14, 15, 16)}},
+    },
+    'sand-colossus': {  # upright golem on two legs: two-hex in creatures.json but no lift; ortho 3.6
+        'frames': 'art/3d/sand-colossus/work/frames', 'ground': (447, 594), 'scale': 0.2835, 'wide': True,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'wind-kunoichi': {  # ponytail and sash flare; ground x from torso and legs (451-453), not the chest band
+        'frames': 'art/3d/wind-kunoichi/work/frames', 'ground': (451, 598), 'scale': 0.1972, 'wide': False, 'map': None,
+        # same jutsu cast as uchiha-police: the wind scythe leaves on frame 5 (index SHOOT_CLIMAX)
+        'groups': {**MELEE_GROUPS, **{g: ('shoot', [3, 4, 5, 6, 7]) for g in (14, 15, 16)}},
+    },
+    'yuki-clan-adept': {    # wide kimono sleeves pull the torso band back; ground x between torso (441) and legs (452)
+        'frames': 'art/3d/yuki-clan-adept/work/frames', 'ground': (446, 598), 'scale': 0.1977, 'wide': False, 'map': None,
+        # same jutsu cast as uchiha-police: the water bullet leaves on frame 5 (index SHOOT_CLIMAX)
+        'groups': {**MELEE_GROUPS, **{g: ('shoot', [3, 4, 5, 6, 7]) for g in (14, 15, 16)}},
+    },
+})
+# Batch 3 (art session, 2026-10-21): ground x is the idle figure's centroid (humanoids), the
+# bounding-box centre (four-legged) or the centroid (serpent); scale = BATTLE height / idle height.
+RENDERED.update({
+    'suna-chunin': {    # cloak and gourd: centroid 451, between the feet (468) and the box centre (441)
+        'frames': 'art/3d/suna-chunin/work/frames', 'ground': (451, 607), 'scale': 0.1922, 'wide': False,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'bloody-mist-graduate': {
+        'frames': 'art/3d/bloody-mist-graduate/work/frames', 'ground': (442, 603), 'scale': 0.1927, 'wide': False,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'tracker-hunter-nin': {
+        'frames': 'art/3d/tracker-hunter-nin/work/frames', 'ground': (444, 602), 'scale': 0.1963, 'wide': False, 'map': None,
+        # same throw clip and window as hunter-nin: the senbon leaves on the step into frame 6 (index SHOOT_CLIMAX)
+        'groups': {**MELEE_GROUPS, **{g: ('shoot', [4, 5, 6, 7]) for g in (14, 15, 16)}},
+    },
+    'ninken-pack-leader': {     # scripted quadruped like ninja-hound; no lift (the battle check found lift 6 floats animals)
+        'frames': 'art/3d/ninken-pack-leader/work/frames', 'ground': (453, 625), 'scale': 0.1605, 'wide': True,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'great-water-dragon': {     # scripted serpent, rendered with ortho 4.2 so the death roll stays in frame. Sized like
+        # the battle-checked water-dragon: 118 tall (its 107 + upgrade), no lift, ground x set so the head reaches
+        # about as far into the front hex (58 px right of the ground point)
+        'frames': 'art/3d/great-water-dragon/work/frames', 'ground': (483, 579), 'scale': 0.3224, 'wide': True,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'academy-student': {    # box_02 sampled from 0.8 s: the clip opens with a long crouching wind-up
+        'frames': 'art/3d/academy-student/work/frames', 'ground': (443, 600), 'scale': 0.1797, 'wide': False,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'hyuga-main-branch': {
+        'frames': 'art/3d/hyuga-main-branch/work/frames', 'ground': (446, 605), 'scale': 0.1977, 'wide': False,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'sharingan-master': {
+        'frames': 'art/3d/sharingan-master/work/frames', 'ground': (447, 599), 'scale': 0.2051, 'wide': False, 'map': None,
+        # same jutsu cast as uchiha-police: the fireball leaves on frame 5 (index SHOOT_CLIMAX)
+        'groups': {**MELEE_GROUPS, **{g: ('shoot', [3, 4, 5, 6, 7]) for g in (14, 15, 16)}},
+    },
+    'battle-puppet': {
+        'frames': 'art/3d/battle-puppet/work/frames', 'ground': (450, 598), 'scale': 0.1995, 'wide': False,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'poison-scorpion': {    # scripted scorpion like desert-scorpion (second Studio rig); no lift
+        'frames': 'art/3d/poison-scorpion/work/frames', 'ground': (458, 643), 'scale': 0.1592, 'wide': True,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+})
 MAP_CANVAS, MAP_BOX = (64, 64), (60, 54)   # original map creatures: 64x64, standing on the bottom edge, about 25-47 wide and 41-57 tall
 
 def premultiplied_resize(im, size):
@@ -403,6 +556,10 @@ def rendered_creature(slug, spec, force):
     with open(target, 'w') as f:
         json.dump({'basepath': 'naruto/creatures/%s/battle/' % camel(slug), 'sequences': sequences}, f, indent='\t')
         f.write('\n')
+    if spec['map'] is None:     # keeps the map sprite made from the artist's picture
+        print('rendered %s: %d battle frames in %d groups%s' %
+              (slug, len(made), len(sequences), ', %d CLIPPED by the 450x400 canvas' % clipped if clipped else ''))
+        return
     # adventure-map sprite: one frame, fitted into the box original map creatures occupy
     action, n = spec['map']
     im = Image.open(os.path.join(src_root, action, '%02d.png' % n)).convert('RGBA')

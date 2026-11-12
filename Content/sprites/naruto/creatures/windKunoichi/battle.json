@@ -4,10 +4,18 @@
 		{
 			"group": 0,
 			"frames": [
-				"s_0_0.png",
-				"s_0_-2.png",
-				"s_0_-3.png",
-				"s_0_-1.png"
+				"walk_00.png",
+				"walk_01.png",
+				"walk_02.png",
+				"walk_03.png",
+				"walk_04.png",
+				"walk_05.png",
+				"walk_06.png",
+				"walk_07.png",
+				"walk_08.png",
+				"walk_09.png",
+				"walk_10.png",
+				"walk_11.png"
 			],
 			"generateShadow": 1,
 			"generateOverlay": 1
@@ -15,7 +23,14 @@
 		{
 			"group": 1,
 			"frames": [
-				"s_0_0.png"
+				"idle_00.png",
+				"idle_01.png",
+				"idle_02.png",
+				"idle_03.png",
+				"idle_04.png",
+				"idle_05.png",
+				"idle_06.png",
+				"idle_07.png"
 			],
 			"generateShadow": 1,
 			"generateOverlay": 1
@@ -23,7 +38,14 @@
 		{
 			"group": 2,
 			"frames": [
-				"s_0_0.png"
+				"idle_00.png",
+				"idle_01.png",
+				"idle_02.png",
+				"idle_03.png",
+				"idle_04.png",
+				"idle_05.png",
+				"idle_06.png",
+				"idle_07.png"
 			],
 			"generateShadow": 1,
 			"generateOverlay": 1
@@ -31,10 +53,12 @@
 		{
 			"group": 3,
 			"frames": [
-				"s_-3_0.png",
-				"s_-6_0.png",
-				"s_-4_0.png",
-				"s_-1_0.png"
+				"hit_00.png",
+				"hit_01.png",
+				"hit_02.png",
+				"hit_03.png",
+				"hit_04.png",
+				"hit_05.png"
 			],
 			"generateShadow": 1,
 			"generateOverlay": 1
@@ -42,10 +66,14 @@
 		{
 			"group": 4,
 			"frames": [
-				"s_-1_0.png",
-				"s_-3_0.png",
-				"s_-3_0.png",
-				"s_-1_0.png"
+				"defend_00.png",
+				"defend_01.png",
+				"defend_02.png",
+				"defend_03.png",
+				"defend_04.png",
+				"defend_05.png",
+				"defend_06.png",
+				"defend_07.png"
 			],
 			"generateShadow": 1,
 			"generateOverlay": 1
@@ -53,12 +81,16 @@
 		{
 			"group": 5,
 			"frames": [
-				"d_0.png",
-				"d_1.png",
-				"d_2.png",
-				"d_3.png",
-				"d_4.png",
-				"d_5.png"
+				"death_00.png",
+				"death_01.png",
+				"death_02.png",
+				"death_03.png",
+				"death_04.png",
+				"death_05.png",
+				"death_06.png",
+				"death_07.png",
+				"death_08.png",
+				"death_09.png"
 			],
 			"generateShadow": 1,
 			"generateOverlay": 1
@@ -66,7 +98,7 @@
 		{
 			"group": 7,
 			"frames": [
-				"s_0_0.png"
+				"idle_00.png"
 			],
 			"generateShadow": 1,
 			"generateOverlay": 1
@@ -74,7 +106,7 @@
 		{
 			"group": 8,
 			"frames": [
-				"s_0_0.png"
+				"idle_00.png"
 			],
 			"generateShadow": 1,
 			"generateOverlay": 1
@@ -82,12 +114,14 @@
 		{
 			"group": 11,
 			"frames": [
-				"s_3_-2.png",
-				"s_9_-5.png",
-				"s_15_-8.png",
-				"s_15_-8.png",
-				"s_8_-4.png",
-				"s_2_-1.png"
+				"attack_00.png",
+				"attack_01.png",
+				"attack_02.png",
+				"attack_03.png",
+				"attack_04.png",
+				"attack_05.png",
+				"attack_06.png",
+				"attack_07.png"
 			],
 			"generateShadow": 1,
 			"generateOverlay": 1
@@ -95,12 +129,14 @@
 		{
 			"group": 12,
 			"frames": [
-				"s_3_0.png",
-				"s_9_0.png",
-				"s_15_0.png",
-				"s_15_0.png",
-				"s_8_0.png",
-				"s_2_0.png"
+				"attack_00.png",
+				"attack_01.png",
+				"attack_02.png",
+				"attack_03.png",
+				"attack_04.png",
+				"attack_05.png",
+				"attack_06.png",
+				"attack_07.png"
 			],
 			"generateShadow": 1,
 			"generateOverlay": 1
@@ -108,12 +144,14 @@
 		{
 			"group": 13,
 			"frames": [
-				"s_3_1.png",
-				"s_9_4.png",
-				"s_15_7.png",
-				"s_15_7.png",
-				"s_8_4.png",
-				"s_2_1.png"
+				"attack_00.png",
+				"attack_01.png",
+				"attack_02.png",
+				"attack_03.png",
+				"attack_04.png",
+				"attack_05.png",
+				"attack_06.png",
+				"attack_07.png"
 			],
 			"generateShadow": 1,
 			"generateOverlay": 1
@@ -121,12 +159,11 @@
 		{
 			"group": 14,
 			"frames": [
-				"s_0_0.png",
-				"s_-2_0.png",
-				"s_-4_0.png",
-				"s_-3_0.png",
-				"s_-1_0.png",
-				"s_0_0.png"
+				"shoot_03.png",
+				"shoot_04.png",
+				"shoot_05.png",
+				"shoot_06.png",
+				"shoot_07.png"
 			],
 			"generateShadow": 1,
 			"generateOverlay": 1
@@ -134,12 +171,11 @@
 		{
 			"group": 15,
 			"frames": [
-				"s_0_0.png",
-				"s_-2_0.png",
-				"s_-4_0.png",
-				"s_-3_0.png",
-				"s_-1_0.png",
-				"s_0_0.png"
+				"shoot_03.png",
+				"shoot_04.png",
+				"shoot_05.png",
+				"shoot_06.png",
+				"shoot_07.png"
 			],
 			"generateShadow": 1,
 			"generateOverlay": 1
@@ -147,51 +183,11 @@
 		{
 			"group": 16,
 			"frames": [
-				"s_0_0.png",
-				"s_-2_0.png",
-				"s_-4_0.png",
-				"s_-3_0.png",
-				"s_-1_0.png",
-				"s_0_0.png"
-			],
-			"generateShadow": 1,
-			"generateOverlay": 1
-		},
-		{
-			"group": 17,
-			"frames": [
-				"s_0_0.png",
-				"s_0_-1.png",
-				"s_0_-2.png",
-				"s_0_-2.png",
-				"s_0_-1.png",
-				"s_0_0.png"
-			],
-			"generateShadow": 1,
-			"generateOverlay": 1
-		},
-		{
-			"group": 18,
-			"frames": [
-				"s_0_0.png",
-				"s_0_-1.png",
-				"s_0_-2.png",
-				"s_0_-2.png",
-				"s_0_-1.png",
-				"s_0_0.png"
-			],
-			"generateShadow": 1,
-			"generateOverlay": 1
-		},
-		{
-			"group": 19,
-			"frames": [
-				"s_0_0.png",
-				"s_0_-1.png",
-				"s_0_-2.png",
-				"s_0_-2.png",
-				"s_0_-1.png",
-				"s_0_0.png"
+				"shoot_03.png",
+				"shoot_04.png",
+				"shoot_05.png",
+				"shoot_06.png",
+				"shoot_07.png"
 			],
 			"generateShadow": 1,
 			"generateOverlay": 1
