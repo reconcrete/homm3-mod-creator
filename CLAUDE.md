@@ -8,6 +8,9 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
 
 ## Layout
 
+- Python tools need Pillow, numpy, scipy and requests (`requirements.txt`), installed in the
+  git-ignored `.venv/` (`python3.13 -m venv .venv && .venv/bin/pip install -r
+  requirements.txt`). Run them as `.venv/bin/python tools/...`; the system `python3` has none.
 - `mod.json` — mod metadata, lists every content file.
 - `Content/` — the mod's virtual filesystem root (VCMI mounts `Content/` of a mod).
   - `config/<area>/` — one folder per area (`konohagakure`, `sunagakure`, `kirigakure`,

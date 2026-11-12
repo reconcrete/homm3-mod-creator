@@ -10,3 +10,4 @@ art/inbox/*
 art/masters/*
 !art/inbox/.gitkeep
 !art/masters/.gitkeep
+.venv/
