@@ -59,7 +59,12 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   a Tripo export's motions onto the new rig; bones recognised by structure in `humanoid.py`) ->
   `tools/3d/render_export.py` with the source creature's clip windows -> compare with the source
   creature's frames -> a `RENDERED` entry. Every visual check is Claude's own look at the sheets;
-  nothing goes on unchecked. Files in `art/pipeline/<slug>/`.
+  nothing goes on unchecked. Small contact-sheet tiles hide defects at the extremities: always
+  also look at full-size close-ups of the feet, hands and face in the extreme frames (hit, walk,
+  kick, death) next to the source creature's same frames (Anton caught flat, tipped "slipper" feet
+  on Fan Master that the tiles had hidden). retarget.py takes feet and toes from the source's
+  standing pose (idle frame 0), not its rest pose, and strips opposite-leg weights below the
+  knees. Files in `art/pipeline/<slug>/`.
 - Neutral creatures and bosses: `tools/towns/neutral.py` -> `Content/config/neutral/` (11
   neutrals, 4 tailed beasts at level 10 excluded from random monsters, 11 lairs with the
   artist's map pictures via `own_dwelling_object`). Test map: `tools/make-neutral-testmap.py`

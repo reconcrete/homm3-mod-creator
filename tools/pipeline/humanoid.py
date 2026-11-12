@@ -92,7 +92,7 @@ def map_mixamo(arm, prefix='mixamorig:'):
     return M
 
 def pairs(src_map, dst_map):
-    """(source bone name, target bone name) for every part both skeletons have; spines are
+    """(source bone name, target bone name, part) for every part both skeletons have; spines are
     matched by position along the chain."""
     out = []
     for k, v in src_map.items():
@@ -100,7 +100,40 @@ def pairs(src_map, dst_map):
             d = dst_map['spine']
             for i, sb in enumerate(v):
                 j = round(i * (len(d) - 1) / max(1, len(v) - 1))
-                out.append((sb.name, d[j].name))
+                out.append((sb.name, d[j].name, 'spine'))
         elif k != 'chest' and k in dst_map:
-            out.append((v.name, dst_map[k].name))
+            out.append((v.name, dst_map[k].name, k))
     return out
+
+def leg_bones(arm, M, side):
+    """Every bone of one leg: thigh and all its descendants."""
+    t = M[f'thigh_{side}']
+    return {t.name} | {b.name for b in t.children_recursive}
+
+def separate_legs(arm, mesh, M):
+    """Below the knees, take each vertex's weights off the other leg's bones (auto-riggers bleed
+    them between feet that stand close together, so one foot drags the other) and renormalise."""
+    W = arm.matrix_world
+    knee_z = max((W @ M[f'shin_{s}'].head_local).z for s in 'ab')
+    mid_x = (W @ M['hips'].head_local).x
+    bones = {s: leg_bones(arm, M, s) for s in 'ab'}
+    side_x = {s: (W @ M[f'foot_{s}'].head_local).x for s in 'ab'}
+    names = {g.index: g.name for g in mesh.vertex_groups}
+    changed = 0
+    for v in mesh.data.vertices:
+        p = mesh.matrix_world @ v.co
+        if p.z > knee_z:
+            continue
+        own = min('ab', key=lambda s: abs(p.x - side_x[s]))
+        other = 'b' if own == 'a' else 'a'
+        drop = [g for g in v.groups if names.get(g.group) in bones[other] and g.weight > 0]
+        if not drop:
+            continue
+        keep = sum(g.weight for g in v.groups) - sum(g.weight for g in drop)
+        for g in drop:
+            mesh.vertex_groups[g.group].remove([v.index])
+        if keep > 1e-6:
+            for g in v.groups:
+                g.weight /= keep
+        changed += 1
+    return changed

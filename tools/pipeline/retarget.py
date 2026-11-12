@@ -59,15 +59,34 @@ for m in dst_meshes:   # faster: the meshes don't need deforming while we bake
 S_map, D_map = humanoid.map_mixamo(src), humanoid.map_bones(dst)
 if (toes_y(src, S_map) < 0) != (toes_y(dst, D_map) < 0):
     sys.exit(f'source and target face different ways (toes y {toes_y(src, S_map):.3f} / {toes_y(dst, D_map):.3f}): fix target_front')
+for m in dst_meshes:
+    print('SEPARATED LEGS', humanoid.separate_legs(dst, m, D_map), 'vertices below the knees')
+# Feet and toes are measured from the source's standing pose (first frame of its idle clip), not
+# from its rest pose: the source animation never stands in its rest pose at the ankles (Tripo binds
+# the feet at another angle than Mixamo's standing pose), so rotation away from rest tipped the
+# feet onto their toes. Standing in idle has flat feet, like our rigs' rest pose.
+FEET = {'foot_a', 'foot_b', 'toe_a', 'toe_b'}
 PAIRS = humanoid.pairs(S_map, D_map)
-for s, d in PAIRS:
-    print('PAIR', s, '->', d)
+for s, d, part in PAIRS:
+    print('PAIR', s, '->', d, '(from standing)' if part in FEET else '')
 order = {b.name: i for i, b in enumerate(sorted(dst.data.bones, key=lambda b: len(b.parent_recursive)))}
 PAIRS.sort(key=lambda p: order[p[1]])
 
 Ws, Wd = src.matrix_world, dst.matrix_world
-rest_s = {s: (Ws @ src.data.bones[s].matrix_local) for s, _ in PAIRS}
-rest_d = {d: (Wd @ dst.data.bones[d].matrix_local) for _, d in PAIRS}
+rest_s = {s: (Ws @ src.data.bones[s].matrix_local) for s, _, _ in PAIRS}
+rest_d = {d: (Wd @ dst.data.bones[d].matrix_local) for _, d, _ in PAIRS}
+idle = next((a for a in actions if a.name.lower().startswith('idle')), None)
+if idle is None:
+    sys.exit('the source has no idle clip to take the standing pose from')
+def set_src_action(act):
+    ad = src.animation_data or src.animation_data_create()
+    ad.action = act
+    if act is not None and hasattr(ad, 'action_slot') and act.slots:
+        ad.action_slot = act.slots[0]
+set_src_action(idle)
+bpy.context.scene.frame_set(int(idle.frame_range[0]))
+bpy.context.view_layer.update()
+stand_s = {s: (Ws @ src.pose.bones[s].matrix) for s, _, part in PAIRS if part in FEET}
 hips_s, hips_d = S_map['hips'].name, D_map['hips'].name
 def floor(arm, M):
     feet = [M[k] for k in ('foot_a', 'foot_b', 'toe_a', 'toe_b') if k in M]
@@ -96,10 +115,14 @@ for act in actions:
         for pb in dst.pose.bones:
             pb.matrix_basis = Matrix()
         bpy.context.view_layer.update()
-        for s, d in PAIRS:
+        for s, d, part in PAIRS:
             ms = Ws @ src.pose.bones[s].matrix
-            delta = ms.to_quaternion() @ rest_s[s].to_quaternion().inverted()
-            rot = (delta @ rest_d[d].to_quaternion()).to_matrix().to_4x4()
+            if part in FEET:
+                delta = ms.to_quaternion() @ stand_s[s].to_quaternion().inverted()
+                rot = (delta @ rest_d[d].to_quaternion()).to_matrix().to_4x4()
+            else:
+                delta = ms.to_quaternion() @ rest_s[s].to_quaternion().inverted()
+                rot = (delta @ rest_d[d].to_quaternion()).to_matrix().to_4x4()
             pb = dst.pose.bones[d]
             if d == hips_d:
                 pos = rest_d[d].translation + (ms.translation - rest_s[s].translation) * scale
@@ -107,7 +130,7 @@ for act in actions:
                 pos = (Wd @ pb.matrix).translation
             pb.matrix = Wd.inverted() @ (Matrix.Translation(pos) @ rot)
             bpy.context.view_layer.update()
-        for s, d in PAIRS:
+        for s, d, part in PAIRS:
             pb = dst.pose.bones[d]
             pb.keyframe_insert('rotation_quaternion', frame=f)
             if d == hips_d:
