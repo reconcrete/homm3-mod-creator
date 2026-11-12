@@ -1,10 +1,11 @@
 """Turntable check sheet of a GLB model: 6 angles, textured on top, untextured clay below.
 
-    blender -b -P tools/pipeline/turntable.py -- MODEL.glb SHEET.png [VIEWS_SHEET.png]
+    blender -b -P tools/pipeline/turntable.py -- MODEL.glb SHEET.png [turn=DEG]
 
 Clay shows the shape alone (holes, blobs, fused limbs, extra parts); textured shows whether
 the texture sits right. The angles: front, front-right, right, back, left, front-left (the
-model's front faces -Y in Blender after a glTF import). Prints the mesh stats too.
+model's front faces -Y in Blender after a glTF import; Pixal3D models face +Y, so model.py passes
+turn=180). Prints the mesh stats too.
 """
 import math, os, sys
 
@@ -13,6 +14,7 @@ from mathutils import Vector
 
 argv = sys.argv[sys.argv.index('--') + 1:]
 src, out = argv[0], argv[1]
+TURN = next((float(x[5:]) for x in argv[2:] if x.startswith('turn=')), 0.0)
 TILE = 400
 ANGLES = [0, 45, 90, 180, 270, 315]
 
@@ -57,7 +59,7 @@ clay.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value = (0.
 originals = {o.name: [s.material for s in o.material_slots] for o in meshes}
 
 def shoot(angle, path):
-    a = math.radians(angle)
+    a = math.radians(angle + TURN)
     d = max(size) * 3
     # front faces -Y: the camera starts at -Y and orbits counter-clockwise seen from above
     cam.location = center + Vector((d * math.sin(a), -d * math.cos(a), 0))

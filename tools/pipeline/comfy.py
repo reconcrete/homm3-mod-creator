@@ -113,8 +113,9 @@ def download(history, out_dir):
 
 # ---------------------------------------------------------------- UI <-> API format
 
-UI_ONLY = {'Note', 'MarkdownNote', 'PreviewImage', 'MaskPreview', 'Preview3D', 'Preview3DAdvanced', 'PreviewAny'}
-PASS_THROUGH = {'Reroute', 'SaveImageAdvanced'}   # consumers get the node's first input instead
+UI_ONLY = {'Note', 'MarkdownNote', 'Preview3D', 'Preview3DAdvanced', 'PreviewAny'}
+# consumers get the node's first input instead (the previews pass their image on in recent ComfyUI)
+PASS_THROUGH = {'Reroute', 'SaveImageAdvanced', 'PreviewImage', 'MaskPreview'}
 WIDGET_TYPES = {'INT', 'FLOAT', 'STRING', 'BOOLEAN', 'COMBO', 'COLOR', 'BOUNDING_BOX', 'COMFY_DYNAMICCOMBO_V3'}
 
 def spec_inputs(class_type):

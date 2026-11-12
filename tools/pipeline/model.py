@@ -28,7 +28,7 @@ def main():
     shutil.copy(glbs[0], out / 'model.glb')
     print('model ->', out / 'model.glb')
     r = subprocess.run([BLENDER, '-b', '-P', str(ROOT / 'tools/pipeline/turntable.py'), '--',
-                        str(out / 'model.glb'), str(out / 'turntable.png')], capture_output=True, text=True)
+                        str(out / 'model.glb'), str(out / 'turntable.png'), 'turn=180'], capture_output=True, text=True)
     print('\n'.join(l for l in r.stdout.splitlines() if l.startswith(('MESH', 'SHEET'))) or r.stdout[-2000:] + r.stderr[-2000:])
 
 if __name__ == '__main__':
