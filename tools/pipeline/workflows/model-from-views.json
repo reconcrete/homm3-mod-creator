@@ -674,7 +674,7 @@
     "ver": "0.33.0"
    },
    "widgets_values": [
-    2048,
+    4096,
     "fixed"
    ],
    "widgets_values_named": {
@@ -1545,7 +1545,7 @@
     "ver": "0.33.0"
    },
    "widgets_values": [
-    1024
+    1536
    ],
    "widgets_values_named": {
     "target_resolution": 1536
@@ -3508,7 +3508,7 @@
    "outputs": [],
    "properties": {},
    "widgets_values": [
-    "## homm3/model-from-views\n\nPixal3D multi-view: four square views of one character, same scale, on black or with alpha. **left** = the character facing the right edge of the picture, **right** = facing the left edge. Set to the 12 GB settings (upsample 1024, texture 2048).\n\nRun by `tools/pipeline/` in the homm3-mod-creator repo, which finds inputs by node title: keep the titles `front`, `left`, `back`, `right`, `save model`."
+    "## homm3/model-from-views\n\nPixal3D multi-view: four square views of one character, same scale, on black or with alpha. **left** = the character facing the right edge of the picture, **right** = facing the left edge. Template quality (upsample 1536, texture 4096) fits 12 GB for one character.\n\nRun by `tools/pipeline/` in the homm3-mod-creator repo, which finds inputs by node title: keep the titles `front`, `left`, `back`, `right`, `save model`."
    ]
   }
  ],

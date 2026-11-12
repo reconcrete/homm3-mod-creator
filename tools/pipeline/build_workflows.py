@@ -6,8 +6,8 @@ unit-views         Qwen Image 2.1 Turbo, one reference image -> one image.
                    titles: 'reference' (LoadImage), 'prompt' (TextEncodeQwenImage21),
                    'seed' (RandomNoise), 'size' (EmptyLatentImage), 'save' (SaveImage)
 model-from-views   Pixal3D multi-view (ComfyUI's "Pixal3D: Multi Views to 3D" template) with four
-                   separate views instead of a cropped turnaround sheet, at the 12 GB settings
-                   of the box's own 3d_*_12gb workflows. titles: 'front', 'left', 'back',
+                   separate views instead of a cropped turnaround sheet, at the template's
+                   quality settings (they fit 12 GB for one character). titles: 'front', 'left', 'back',
                    'right' (LoadImage), 'save model' (Save3DAdvanced; SaveGLB in API runs).
                    'left' is the character facing the right edge of the picture, 'right' facing
                    the left edge, as in the template's sample sheet.
@@ -75,11 +75,9 @@ def model_from_views():
         c['outputs'] = [{**c['outputs'][0], 'name': 'IMAGE', 'type': 'IMAGE', 'slot_index': 0},
                         {'name': 'MASK', 'type': 'MASK', 'slot_index': 1, 'links': []}]
     ui['nodes'] = [n for n in ui['nodes'] if n['id'] != sheet['id'] and n['type'] != 'MarkdownNote']
-    for n in ui['nodes']:   # the 12 GB settings of the box's own 3d_*_12gb workflows
-        if n['type'] == 'Trellis2UpsampleStage':
-            n['widgets_values'][0] = 1024
-        if n['type'] == 'PrimitiveInt':
-            n['widgets_values'][0] = 2048
+    for n in ui['nodes']:
+        # The template's quality (upsample 1536, texture 4096) fits the RTX 5070's 12 GB for one
+        # character (68 s). The lower 12 GB settings (1024 / 2048) smeared Fan Master's face.
         if n['type'] == 'Save3DAdvanced':
             n['title'] = 'save model'
             n['widgets_values'][0] = 'homm3/model'
@@ -88,7 +86,7 @@ def model_from_views():
                         'properties': {}, 'widgets_values': [
         '## homm3/model-from-views\n\nPixal3D multi-view: four square views of one character, same scale, '
         'on black or with alpha. **left** = the character facing the right edge of the picture, **right** = '
-        'facing the left edge. Set to the 12 GB settings (upsample 1024, texture 2048).\n\nRun by '
+        'facing the left edge. Template quality (upsample 1536, texture 4096) fits 12 GB for one character.\n\nRun by '
         '`tools/pipeline/` in the homm3-mod-creator repo, which finds inputs by node title: keep the titles '
         '`front`, `left`, `back`, `right`, `save model`.']})
     return ui
