@@ -75,6 +75,18 @@ def model_from_views():
         c['outputs'] = [{**c['outputs'][0], 'name': 'IMAGE', 'type': 'IMAGE', 'slot_index': 0},
                         {'name': 'MASK', 'type': 'MASK', 'slot_index': 1, 'links': []}]
     ui['nodes'] = [n for n in ui['nodes'] if n['id'] != sheet['id'] and n['type'] != 'MarkdownNote']
+    # Pixal3D's baked metallic map is ~1.0 everywhere (cloth, skin and hair as metal), which renders
+    # nearly black under the battle lighting; leave it out so the model is non-metallic like Tripo's.
+    apply = next(n for n in ui['nodes'] if n['type'] == 'ApplyTextureToMesh')
+    metal = next(i for i in apply['inputs'] if i['name'] == 'metallic')
+    if metal.get('link') is not None:
+        lid = metal['link']
+        ui['links'] = [l for l in ui['links'] if l[0] != lid]
+        for n in ui['nodes']:
+            for o in n.get('outputs', []):
+                if o.get('links') and lid in o['links']:
+                    o['links'].remove(lid)
+        metal['link'] = None
     for n in ui['nodes']:
         # The template's quality (upsample 1536, texture 4096) fits the RTX 5070's 12 GB for one
         # character (68 s). The lower 12 GB settings (1024 / 2048) smeared Fan Master's face.

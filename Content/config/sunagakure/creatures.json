@@ -398,12 +398,12 @@
 					-90
 				],
 				"offset": {
-					"upperX": 21,
+					"upperX": 5,
 					"upperY": -61,
-					"middleX": 25,
-					"middleY": -51,
-					"lowerX": 21,
-					"lowerY": -38
+					"middleX": 7,
+					"middleY": -50,
+					"lowerX": 5,
+					"lowerY": -37
 				},
 				"projectile": "naruto/projectiles/wind-scythe"
 			}

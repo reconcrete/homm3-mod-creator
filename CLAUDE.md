@@ -49,6 +49,17 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   frames from the art session in `art/3d/<name>/work/frames/<action>/NN.png`): one scale
   and one offset for all frames, ground point onto the hex line, written to the same
   `battle.json` layout plus a one-frame adventure-map sprite (`map.json`).
+- Self-hosted 3D pipeline (`tools/pipeline/`, Anton's GPU server: ComfyUI + SkinTokens, address
+  in the git-ignored `tools/pipeline/local.json`). Workflows live in ComfyUI's `homm3/` folder
+  (`comfy.py push|pull|list`; scripts find inputs by node title). Per creature `<slug>`:
+  `views.py <slug> <A-pose front> [--extra "design facts"]` (Qwen left/back/right) -> check the
+  views by eye -> `model.py <slug>` (Pixal3D multi-view, GLB + turntable sheet) -> check ->
+  `decimate.py` (Blender, 30k faces) -> `rig.py <slug>` (SkinTokens) -> `rigcheck.py` (skeleton,
+  weight heatmaps, test poses) -> check -> `retarget.py SOURCE.glb rigged.glb animated.glb` (moves
+  a Tripo export's motions onto the new rig; bones recognised by structure in `humanoid.py`) ->
+  `tools/3d/render_export.py` with the source creature's clip windows -> compare with the source
+  creature's frames -> a `RENDERED` entry. Every visual check is Claude's own look at the sheets;
+  nothing goes on unchecked. Files in `art/pipeline/<slug>/`.
 - Neutral creatures and bosses: `tools/towns/neutral.py` -> `Content/config/neutral/` (11
   neutrals, 4 tailed beasts at level 10 excluded from random monsters, 11 lairs with the
   artist's map pictures via `own_dwelling_object`). Test map: `tools/make-neutral-testmap.py`

@@ -91,9 +91,7 @@
     {
      "name": "images",
      "type": "IMAGE",
-     "links": [
-      1271
-     ]
+     "links": []
     }
    ],
    "title": "Metallic",
@@ -531,7 +529,7 @@
      "name": "metallic",
      "shape": 7,
      "type": "IMAGE",
-     "link": 1271
+     "link": null
     },
     {
      "name": "roughness",
@@ -3991,14 +3989,6 @@
    0,
    210,
    1,
-   "IMAGE"
-  ],
-  [
-   1271,
-   207,
-   0,
-   210,
-   2,
    "IMAGE"
   ],
   [

@@ -529,6 +529,15 @@ RENDERED.update({
         'map': None, 'groups': MELEE_GROUPS,
     },
 })
+# Self-hosted pipeline (tools/pipeline/, 2026-11-12): Qwen views -> Pixal3D model -> SkinTokens rig ->
+# motions moved over from a Tripo export (retarget.py) -> tools/3d/render_export.py. Frames in
+# art/pipeline/<slug>/anim/frames, same layout and checks as the Tripo batches.
+RENDERED.update({
+    'fan-master': {     # Wind Kunoichi's motions (its upgrade): the wind scythe leaves on frame 5 like hers
+        'frames': 'art/pipeline/fan-master/anim/frames', 'ground': (448, 594), 'scale': 0.2061, 'wide': False, 'map': None,
+        'groups': {**MELEE_GROUPS, **{g: ('shoot', [3, 4, 5, 6, 7]) for g in (14, 15, 16)}},
+    },
+})
 MAP_CANVAS, MAP_BOX = (64, 64), (60, 54)   # original map creatures: 64x64, standing on the bottom edge, about 25-47 wide and 41-57 tall
 
 def premultiplied_resize(im, size):
