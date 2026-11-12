@@ -507,6 +507,28 @@ RENDERED.update({
         'map': None, 'groups': MELEE_GROUPS,
     },
 })
+# Batch 4 (art session, 2026-10-25, Tripo Studio; integrated 2026-11-12), same method as batch 3.
+# Every frame checked on contact sheets before going in: feet on one line in all actions, nothing
+# touches the frame edge, no broken limbs or weapons.
+RENDERED.update({
+    'senior-medic': {
+        'frames': 'art/3d/senior-medic/work/frames', 'ground': (446, 597), 'scale': 0.1953, 'wide': False,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'anbu-captain': {   # framed smaller than the operative (idle 373 px tall, feet at 560); the sword hangs to the
+        # right, but the head, torso and feet all sit near the centroid (465)
+        'frames': 'art/3d/anbu-captain/work/frames', 'ground': (465, 560), 'scale': 0.2413, 'wide': False,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'swordsman-of-the-seven': {     # the cleaver stays in frame at the top of the overhead swing (attack 04)
+        'frames': 'art/3d/swordsman-of-the-seven/work/frames', 'ground': (458, 584), 'scale': 0.2362, 'wide': False,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+    'great-shark': {    # upright on two feet like summoned-shark: two-hex in creatures.json but no lift
+        'frames': 'art/3d/great-shark/work/frames', 'ground': (448, 609), 'scale': 0.2252, 'wide': True,
+        'map': None, 'groups': MELEE_GROUPS,
+    },
+})
 MAP_CANVAS, MAP_BOX = (64, 64), (60, 54)   # original map creatures: 64x64, standing on the bottom edge, about 25-47 wide and 41-57 tall
 
 def premultiplied_resize(im, size):

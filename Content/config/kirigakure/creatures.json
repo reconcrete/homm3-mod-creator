@@ -175,12 +175,12 @@
 					-90
 				],
 				"offset": {
-					"upperX": 13,
+					"upperX": 7,
 					"upperY": -58,
-					"middleX": 16,
+					"middleX": 9,
 					"middleY": -48,
-					"lowerX": 13,
-					"lowerY": -36
+					"lowerX": 7,
+					"lowerY": -35
 				},
 				"projectile": "naruto/projectiles/senbon"
 			}
@@ -272,12 +272,12 @@
 					-90
 				],
 				"offset": {
-					"upperX": 10,
+					"upperX": 5,
 					"upperY": -60,
-					"middleX": 12,
-					"middleY": -50,
-					"lowerX": 10,
-					"lowerY": -37
+					"middleX": 7,
+					"middleY": -49,
+					"lowerX": 5,
+					"lowerY": -36
 				},
 				"projectile": "naruto/projectiles/senbon"
 			}
@@ -606,12 +606,12 @@
 					-90
 				],
 				"offset": {
-					"upperX": 9,
+					"upperX": 4,
 					"upperY": -60,
-					"middleX": 11,
-					"middleY": -50,
-					"lowerX": 9,
-					"lowerY": -37
+					"middleX": 6,
+					"middleY": -49,
+					"lowerX": 4,
+					"lowerY": -36
 				},
 				"projectile": "naruto/projectiles/water-bullet"
 			}

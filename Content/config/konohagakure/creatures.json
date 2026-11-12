@@ -117,12 +117,12 @@
 					-90
 				],
 				"offset": {
-					"upperX": 10,
+					"upperX": 5,
 					"upperY": -57,
-					"middleX": 11,
+					"middleX": 6,
 					"middleY": -47,
-					"lowerX": 10,
-					"lowerY": -35
+					"lowerX": 5,
+					"lowerY": -34
 				},
 				"projectile": "naruto/projectiles/shuriken"
 			}
@@ -592,12 +592,12 @@
 					-90
 				],
 				"offset": {
-					"upperX": 12,
+					"upperX": 6,
 					"upperY": -58,
-					"middleX": 14,
+					"middleX": 7,
 					"middleY": -48,
-					"lowerX": 12,
-					"lowerY": -36
+					"lowerX": 6,
+					"lowerY": -35
 				},
 				"projectile": "naruto/projectiles/fireball"
 			}
@@ -693,12 +693,12 @@
 					-90
 				],
 				"offset": {
-					"upperX": 13,
+					"upperX": 7,
 					"upperY": -61,
-					"middleX": 15,
-					"middleY": -51,
-					"lowerX": 13,
-					"lowerY": -38
+					"middleX": 9,
+					"middleY": -50,
+					"lowerX": 7,
+					"lowerY": -37
 				},
 				"projectile": "naruto/projectiles/fireball"
 			}
