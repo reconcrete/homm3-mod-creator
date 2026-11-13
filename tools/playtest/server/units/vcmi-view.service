@@ -1,9 +1,12 @@
 [Unit]
-Description=VCMI play tests: watch the virtual screen in a browser (noVNC, view only) — http://rtx-server.char-nominal.ts.net:8030/vnc.html
+Description=VCMI play tests: watch the virtual screen in a browser (noVNC, view only), address in ~/Projects/vcmi/home/view.env
 Requires=vcmi-display.service
 After=vcmi-display.service
 
 [Service]
+# view.env (on the test machine only): VIEW_BIND=<tailnet ip>:8030
+Environment=VIEW_BIND=127.0.0.1:8030
+EnvironmentFile=-%h/Projects/vcmi/home/view.env
 ExecStartPre=/bin/sleep 2
-ExecStart=/bin/sh -c 'x11vnc -display :50 -localhost -rfbport 5950 -viewonly -shared -forever -nopw -quiet & exec websockify --web /usr/share/novnc 100.97.80.117:8030 localhost:5950'
+ExecStart=/bin/sh -c 'x11vnc -display :50 -localhost -rfbport 5950 -viewonly -shared -forever -nopw -quiet & exec websockify --web /usr/share/novnc "$VIEW_BIND" localhost:5950'
 Restart=no
