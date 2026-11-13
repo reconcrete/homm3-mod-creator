@@ -6,22 +6,33 @@ Jiraiya and Chiyo, and breaks into the Akatsuki hideout to defeat Shukaku within
 Sasori (tan, Suna town) and Kisame (blue, Kiri town) are allied AIs.
 
   +------------------------+--+-----------------------+
-  | A Leaf Outpost (red)   |  | B Forest of Death      |   A-B, A-C, B-D, C-D: passages through
-  |   Iruka, Zetsu spies,  |AB|   Kakashi's prison,    |   the walls, each guarded by a monster
-  |   cat pocket           |  |   Jiraiya, Manda       |   standing in it.
+  | A Leaf Outpost (red)   |  | B Forest of Death      |   A-B, A-C, C1-C2, B-D, C2-D: passages
+  |   Iruka, Zetsu spies,  |AB|   Kakashi's cell,      |   through the walls, each guarded by a
+  |   cat pocket           |  |   Jiraiya, Manda       |   monster standing in it.
   +----------AC------------+  +---------BD------------+   D-E: a quest guard that opens only for
-  | C Puppet Valley (tan)  |CD| D Shark Bay (blue)     |   Naruto at level 8 (the Akatsuki barrier).
-  |   Sasori, Chiyo,       |  |   Kisame, the necklace +---------DE---------+
-  |   Hiruko's carriers    |  | E Akatsuki hideout: Deidara, then Shukaku |
+  | C1 valley  |  C2       |CD| D Shark Bay (blue)     |   Naruto at level 8 (the Akatsuki barrier).
+  |  entrance  |  Chiyo    |  |   Kisame, the necklace +---------DE---------+
+  +---inner----+  Sasori,  |  | E Akatsuki hideout: Deidara, then Shukaku |
+  | C2 Puppet Valley (tan) |  |                                           |
   +------------------------+--+-------------------------------------------+
+
+The AIs can't take the story away from red: every quest object and the story events stand behind
+red-only gates or ask red-only quests (allOf sub-limiter "colors": ["red"]), and the quests ask for
+artifacts that the targets carry, so red can win an item back from an AI hero who took it first.
+Sasori starts at the far end of Puppet Valley, two guards away from the Leaf Outpost.
 
 Story texts are English and Russian (VCMI 1.7 maps carry english.json / russian.json, picked by
 the game language). Built with tools/handmap.py; the script checks that every object can be
 reached, that each area opens only through its guard or quest gate, that no object sits on a
-blocked tile and that every tile under a monster's sprite can be clicked."""
+blocked tile and that every tile under a monster's sprite can be clicked.
+
+Can't be set from a map: VCMI 1.7.5's JSON map format has no game-setting overrides (only H3M/HotA
+maps and random-map templates call CMap::overrideGameSettings), so monthly wandering monsters stay
+on unless "settings": {"creatures": {"allowRandomSpecialWeeks": false}} goes into mod.json, which
+would switch special weeks off in every game with the mod."""
 import argparse, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from handmap import HandMap, Texts, BASE_HEADER, MAPS, MOD, EMPTY_TEXT, lib, h3, road_line, mask_cells
+from handmap import HandMap, Texts, BASE_HEADER, MAPS, MOD, EMPTY_TEXT, HEROES, lib, h3, road_line, mask_cells
 
 N = 36
 NAME = 'naruto-shadow-of-akatsuki'
@@ -45,31 +56,37 @@ for x in range(0, 17):                               # A / C
     wall |= {(x, 16), (x, 17)}
 for x in range(19, N):                               # B / D, D / E, and the inner wall of E
     wall |= {(x, 13), (x, 14), (x, 26), (x, 27), (x, 31)}
-# the prison pocket in B's north-east corner and the cat pocket in A's south-east corner
-wall |= {(30, y) for y in range(0, 6)} | {(x, 5) for x in range(30, N)}
+# C: the valley entrance (C1, x 0-9, y 18-23) is walled off from the rest of the valley (C2)
+wall |= {(x, 24) for x in range(0, 11)} | {(10, y) for y in range(18, 25)}
+# Kakashi's cell in B's north-east corner: a guarded gap at x 30, then a Leaf seal (red-only quest
+# guard) at (31, 3), then a one-tile corridor (32, 3) where the ambush waits, then the prison
+wall |= {(30, y) for y in range(0, 6)} | {(x, 5) for x in range(30, N)} | {(31, y) for y in range(0, 5)}
+wall |= {(32, 0), (32, 1), (32, 2), (32, 4)}
+# the cats' den in A's south-east corner
 wall |= {(12, y) for y in range(11, 16)} | {(x, 11) for x in range(12, 17)}
 
 # A passage is a gap in a wall with its guard on the gap tile nearest the side a hero comes from
 # first, so the guard zone covers the whole gap and the monster's sprite (which spreads up and left
-# of its tile) lies on open ground on that side. Pockets use 2-tile gaps the same way. Events are
-# invisible and fire only when a hero steps on them, so the story ones sit where every hero passes.
+# of its tile) lies on open ground on that side. The gaps between areas are two tiles wide, so no
+# single tile is the only way through. Pockets use 2-tile gaps the same way.
 PASSAGES = {   # name: (gap tiles, guard tile)
-    'AB': ([(17, 6), (17, 7), (18, 7)], (17, 7)),          # (18, 7): the only way on, a story event
-    'AC': ([(7, 16), (8, 16), (8, 17)], (8, 16)),          # (8, 17): likewise
+    'AB': ([(17, 6), (18, 6), (17, 7), (18, 7)], (17, 7)),
+    'AC': ([(7, 16), (8, 16), (7, 17), (8, 17)], (8, 16)),
+    'inner': ([(7, 24), (8, 24)], (8, 24)),               # C1 / C2: Sasori's checkpoint
     'BD': ([(26, 13), (27, 13), (26, 14), (27, 14)], (27, 13)),
     'CD': ([(17, 22), (18, 22), (17, 23), (18, 23)], (17, 23)),
     'cave': ([(22, 31), (23, 31)], (23, 31)),            # E: the way down to Shukaku
-    'prison': ([(30, 2), (30, 3)], (30, 3)),             # B: Kakashi's cell
+    'prison': ([(30, 2), (30, 3)], (30, 3)),             # B: the guards outside Kakashi's cell
     'cats': ([(14, 11), (15, 11)], (15, 11)),            # A: the cats' den
 }
-GATE = (30, 26)                                          # the Akatsuki barrier (quest guard), gap (30, 26-27)
+GATES = {'barrier': (30, 26), 'seal': (31, 3)}           # quest guards in one-tile gaps
 for gap, _ in PASSAGES.values():
     wall -= set(gap)
-wall -= {(30, 26), (30, 27)}
+wall -= {(30, 26), (30, 27), (31, 3), (32, 3)}
 
 for line in ([(5, 6), (5, 9), (12, 9), (12, 7), (26, 7), (26, 21), (30, 21), (30, 29), (23, 29), (23, 33), (28, 33)],
-             [(5, 9), (5, 12), (8, 12), (8, 27), (5, 27)],            # A -> C and Sasori's gate
-             [(8, 23), (26, 23), (26, 21)],                          # C -> D
+             [(5, 9), (5, 12), (8, 12), (8, 33), (5, 33)],            # A -> C1 -> C2 and Sasori's gate
+             [(8, 26), (16, 26), (16, 23), (26, 23), (26, 21)],      # C2 -> D
              [(26, 5), (26, 3), (29, 3)]):                           # B: the path to Kakashi's cell
     m.set_road(road_line(line))
 
@@ -80,6 +97,8 @@ REWARD = dict(j(lib('seerHut/0')[1]['rewardable']['info'][0]['reward']), creatur
 
 def limiter(**kw):
     return dict(j(LIMITER), **kw)
+
+RED_ONLY = [limiter(colors=['red'])]   # as an allOf sub-limiter: the quest keeps its own name and texts
 
 def reward(exp=0, artifacts=(), creatures=(), primary=(0, 0, 0, 0), resources=None):
     r = dict(j(REWARD), heroExperience=exp, primary=list(primary),
@@ -98,19 +117,18 @@ def rewardable(key, message, rew):
     info['reward'] = rew
     return opt
 
-def quest(key, first, nxt, done, mission, kill=None):
+def quest(key, first, nxt, done, mission):
     q = j(lib('seerHut/0')[1]['quest'])
     q['firstVisitText'] = T.say(key + '.first', *first)
     q['nextVisitText'] = T.say(key + '.next', *nxt)
     q['completedText'] = T.say(key + '.completed', *done)
     q['limiter'] = limiter(**mission)
-    if kill:
-        q['killTarget'] = kill['instanceName']
     return q
 
-def seer(key, at, rew, *texts, mission=None, kill=None, sub=0):
+def seer(key, at, rew, *texts, artifact, sub=0):
+    """A seer hut that wants an artifact, for red only."""
     tpl, opt = lib('seerHut/%d' % sub)
-    opt['quest'] = quest(key, *texts, mission=mission or {}, kill=kill)
+    opt['quest'] = quest(key, *texts, mission={'artifacts': [mod(artifact)], 'allOf': j(RED_ONLY)})
     opt['rewardable']['info'][0]['reward'] = rew
     return m.add('seerHut', str(sub), tpl, at, opt, near=1)
 
@@ -118,6 +136,7 @@ def gate(key, at, *texts, mission):
     """A quest guard: blocks its tile until the quest is done, then disappears."""
     o = m.add('questGuard', 'object', h3('avxbor80'), at, {'quest': quest(key, *texts, mission=mission)}, near=0, entrance=False)
     m.gates.add(at)
+    m.open.add(at)        # paths to what lies behind it go through it
     return o
 
 def event(key, at, message, rew=None, army=(), before=None):
@@ -146,38 +165,45 @@ def pandora(key, at, message, rew):
 # ------------------------------------------------------------------ towns and heroes
 
 HOME = ['villageHall', 'tavern', 'fort', 'dwellingLvl1', 'dwellingLvl2']
-leaf = m.town('konohagakure', (5, 5), 'red', HOME, name=T.id('town.leafOutpost.name', 'Leaf Outpost', 'Застава Листа'))
-puppets = m.town('sunagakure', (5, 26), 'tan', ['villageHall', 'tavern', 'fort', 'mageGuild1', 'dwellingLvl1', 'dwellingLvl2', 'dwellingLvl3'],
-                 [('sunaGenin', 20), ('woodenPuppet', 8), ('windKunoichi', 4)],
+leaf = m.town('konohagakure', (5, 5), 'red', HOME, [('academyStudent', 20), ('genin', 8)],
+              name=T.id('town.leafOutpost.name', 'Leaf Outpost', 'Застава Листа'))
+puppets = m.town('sunagakure', (5, 32), 'tan', ['villageHall', 'tavern', 'fort', 'mageGuild1', 'dwellingLvl1', 'dwellingLvl2'],
+                 [('sunaGenin', 16), ('woodenPuppet', 6)],
                  name=T.id('town.puppetValley.name', 'Puppet Valley', 'Долина марионеток'))
 bay = m.town('kirigakure', (30, 20), 'blue', ['villageHall', 'townHall', 'tavern', 'fort', 'mageGuild1',
                                               'dwellingLvl1', 'dwellingLvl2', 'dwellingLvl3', 'dwellingLvl4'],
              [('mistGenin', 24), ('hunterNin', 10), ('hozukiBrawler', 6), ('summonedShark', 3)],
              name=T.id('town.sharkBay.name', 'Shark Bay', 'Акулья бухта'))
-m.reserve([(5, 6), (5, 27), (30, 21)])
-naruto = m.hero('narutoUzumaki', 'red', (5, 7), [('academyStudent', 24), ('genin', 10), ('ninjaHound', 6)])
-m.hero('sasori', 'tan', (5, 28), [('sunaGenin', 20), ('woodenPuppet', 8), ('windKunoichi', 4), ('humanPuppet', 1)], experience=2000)
+m.reserve([(5, 6), (5, 33), (30, 21)])
+naruto = m.hero('narutoUzumaki', 'red', (5, 7), [('academyStudent', 30), ('genin', 12), ('ninjaHound', 8)])
+m.hero('sasori', 'tan', (5, 34), [('sunaGenin', 12), ('woodenPuppet', 6), ('windKunoichi', 3)], experience=1000)
 m.hero('kisameHoshigaki', 'blue', (31, 22), [('mistGenin', 20), ('hunterNin', 10), ('hozukiBrawler', 5), ('summonedShark', 3)], experience=4000)
 
 # ------------------------------------------------------------------ passage guards
 
 guard('rogueNinja', 15, PASSAGES['AB'][1])
-guard('soundNinja', 12, PASSAGES['AC'][1])
+guard('soundNinja', 14, PASSAGES['AC'][1])
+guard('stoneNinja', 10, PASSAGES['inner'][1], 'monster.checkpoint.message',
+      ('Stone ninja hired by Sasori hold the road between the valley entrance and his town.',
+       'Ниндзя Камня, нанятые Сасори, перекрыли дорогу между входом в долину и его городом.'))
 guard('mistSwordsman', 4, PASSAGES['BD'][1])
-guard('greatShark', 5, PASSAGES['CD'][1])
+guard('greatShark', 6, PASSAGES['CD'][1])
 
 # ------------------------------------------------------------------ A: the Leaf Outpost (easy)
 
-zetsu = guard('whiteZetsu', 30, (5, 14), 'monster.zetsu.message',
-              ('The White Zetsu spies try to melt into the trees.', 'Шпионы Белые Зецу пытаются раствориться среди деревьев.'))
-seer('seer.iruka', (9, 11), reward(1000, ['leafForeheadProtector']),
-     ('Iruka: "Naruto! White Zetsu spies are watching the outpost from the woods to the south. Get rid of them, '
-      'and I\'ll give you something you\'ve earned."',
-      'Ирука: «Наруто! Из леса к югу за заставой следят шпионы Белые Зецу. Избавься от них, и я дам тебе то, что ты заслужил.»'),
-     ('Iruka: "The Zetsu spies are still in the woods south of the outpost."', 'Ирука: «Шпионы Зецу всё ещё в лесу к югу от заставы.»'),
-     ('Iruka: "Well done! Take my forehead protector. You\'re a real shinobi now."',
-      'Ирука: «Молодец! Возьми мой протектор. Теперь ты настоящий шиноби.»'),
-     kill=zetsu)
+guard('whiteZetsu', 30, (5, 14), 'monster.zetsu.message',
+      ('The White Zetsu spies try to melt into the trees, clutching their loot.',
+       'Шпионы Белые Зецу пытаются раствориться среди деревьев, прижимая к себе добычу.'), carries='ichirakuRamenCoupon')
+seer('seer.iruka', (9, 11), reward(1500, ['leafForeheadProtector']),
+     ('Iruka: "Naruto! White Zetsu spies are watching the outpost from the woods to the south, and they stole my '
+      'Ichiraku Ramen Coupon. Get it back, and I\'ll give you something you\'ve earned."',
+      'Ирука: «Наруто! Из леса к югу за заставой следят шпионы Белые Зецу, и они украли мой купон на рамен Ичираку. '
+      'Верни его, и я дам тебе то, что ты заслужил.»'),
+     ('Iruka: "The Zetsu spies still have my coupon. They hide in the woods south of the outpost."',
+      'Ирука: «Мой купон всё ещё у шпионов Зецу. Они прячутся в лесу к югу от заставы.»'),
+     ('Iruka: "You got it back! Ramen is on me next time. And take my forehead protector: you\'re a real shinobi now."',
+      'Ирука: «Ты его вернул! В следующий раз рамен за мой счёт. И возьми мой протектор: теперь ты настоящий шиноби.»'),
+     artifact='ichirakuRamenCoupon')
 guard('ninjaCat', 12, PASSAGES['cats'][1])
 m.open.add(PASSAGES['cats'][1])
 m.artifact('kunai', (14, 14), near=0)
@@ -194,39 +220,50 @@ m.thing('campfire/campfire', (8, 8))
 m.thing('treasureChest/treasureChest', (1, 8))
 for res, at in (('wood', (3, 9)), ('ore', (15, 5)), ('gold', (7, 14)), ('wood', (11, 13)), ('ore', (1, 3))):
     m.thing('resource/' + res, at)
-m.artifact('ichirakuRamenCoupon', (9, 1))
+m.artifact('gamaChanWallet', (9, 1))
 
 # ------------------------------------------------------------------ B: the Forest of Death (middle)
 
-event('event.forest', (18, 7),
-      ('The Forest of Death. Somewhere in these woods, in the north-east, the Sound ninja keep Kakashi. '
-       'Jiraiya is said to be around, too.',
-       'Лес Смерти. Где-то здесь, на северо-востоке, ниндзя Звука держат Какаши. Говорят, поблизости бродит и Джирайя.'))
-event('event.ambush', (26, 5),
-      ('The ambush is beaten. The Sound ninja\'s packs hold gold and a map of the forest paths.',
-       'Засада отбита. В сумках ниндзя Звука нашлось золото и карта лесных троп.'),
-      reward(1500, resources={'gold': 1000}), army=[('soundNinja', 5), ('soundNinja', 5), ('rainNinja', 5)],
-      before=('Sound ninja drop from the trees: an ambush!', 'С деревьев спрыгивают ниндзя Звука: засада!'))
 guard('curseMarkWarrior', 6, PASSAGES['prison'][1], 'monster.captors.message',
       ('Orochimaru\'s Curse Mark warriors guard the cell where Kakashi is chained.',
        'Воины проклятой печати Орочимару охраняют темницу, где прикован Какаши.'))
 m.open.add(PASSAGES['prison'][1])
+gate('gate.seal', GATES['seal'],
+     ('A Leaf sealing tag locks Kakashi\'s cell from outside: he sealed himself in to keep the Sound ninja from '
+      'taking him away. Only Leaf chakra can release it.',
+      'Печать Листа запирает темницу Какаши снаружи: он запечатал себя сам, чтобы ниндзя Звука не увели его. '
+      'Снять её может только чакра Листа.'),
+     ('The Leaf seal holds. Only a Leaf ninja can release it.', 'Печать Листа держится. Снять её может только ниндзя Листа.'),
+     ('The seal knows your chakra and fades. Inside, something moves in the dark...',
+      'Печать узнаёт вашу чакру и гаснет. Внутри, в темноте, что-то шевелится...'),
+     mission={'colors': ['red']})
+event('event.ambush', (32, 3),
+      ('The ambush is beaten. The Sound ninja\'s packs hold gold and a map of the forest paths. Kakashi is just ahead.',
+       'Засада отбита. В сумках ниндзя Звука нашлось золото и карта лесных троп. Какаши совсем рядом.'),
+      reward(2000, resources={'gold': 1000}), army=[('soundNinja', 5), ('soundNinja', 5), ('rainNinja', 5)],
+      before=('Sound ninja were waiting inside the cell: an ambush!', 'Внутри темницы поджидали ниндзя Звука: засада!'))
 tpl, opt = lib('prison/prison')
 opt.update({'experience': 5000, 'type': mod('kakashiHatake'), 'army': [{'amount': 10, 'type': mod('genin')}, {'amount': 8, 'type': mod('ninjaHound')}]})
-m.add('prison', 'prison', tpl, (34, 3), opt, near=0)
-m.thing('treasureChest/treasureChest', (35, 0), near=0)
-manda = guard('manda', 1, (32, 10), 'monster.manda.message',
-              ('Manda rises, hissing. Orochimaru\'s great snake does not like visitors.',
-               'Манда поднимается с шипением. Большой змей Орочимару не любит гостей.'))
-seer('seer.jiraiya', (22, 2), reward(2000, ['hokageCloak'], [('toadWarrior', 2)]),
+m.add('prison', 'prison', tpl, (35, 3), opt, near=0)
+m.thing('treasureChest/treasureChest', (33, 0), near=0)
+guard('manda', 1, (32, 10), 'monster.manda.message',
+      ('Manda rises, hissing, coiled around Orochimaru\'s snake contract. The great snake does not like visitors.',
+       'Манда поднимается с шипением, обвившись вокруг контракта змей Орочимару. Большой змей не любит гостей.'),
+      carries='summoningContractSnakes')
+seer('seer.jiraiya', (22, 2), reward(2500, ['hokageCloak'], [('toadWarrior', 2)]),
      ('Jiraiya: "Off to fight the Akatsuki, are you? Then show me what you\'ve got. Orochimaru\'s great snake Manda '
-      'nests in the south-east of this forest. Beat it, and you get the Fourth Hokage\'s cloak and two of my toads."',
+      'nests in the south-east of this forest and guards his snake contract. Bring me that contract, and you get the '
+      'Fourth Hokage\'s cloak and two of my toads."',
       'Джирайя: «Собрался драться с Акацуки? Тогда покажи, на что способен. На юго-востоке этого леса гнездится Манда, '
-      'большой змей Орочимару. Победи его — и получишь плащ Четвёртого Хокаге и двух моих жаб.»'),
-     ('Jiraiya: "Manda is still alive, in the south-east of the forest."', 'Джирайя: «Манда всё ещё жив, он на юго-востоке леса.»'),
-     ('Jiraiya: "Ha! Not bad at all. This was Minato\'s cloak. Wear it well, and take my toads with you."',
-      'Джирайя: «Ха! Совсем неплохо. Это был плащ Минато. Носи его с честью и возьми с собой моих жаб.»'),
-     kill=manda, sub=1)
+      'большой змей Орочимару, и стережёт его контракт змей. Принеси мне этот контракт — и получишь плащ Четвёртого '
+      'Хокаге и двух моих жаб.»'),
+     ('Jiraiya: "No contract yet? Manda keeps it in the south-east of the forest."',
+      'Джирайя: «Контракта всё нет? Манда держит его на юго-востоке леса.»'),
+     ('Jiraiya: "Ha! Not bad at all. That contract won\'t serve Orochimaru again. This was Minato\'s cloak. Wear it '
+      'well, and take my toads with you."',
+      'Джирайя: «Ха! Совсем неплохо. Этот контракт больше не послужит Орочимару. А это плащ Минато. Носи его с честью '
+      'и возьми с собой моих жаб.»'),
+     artifact='summoningContractSnakes', sub=1)
 guard('soundNinja', 10, (21, 11), 'monster.hat.message',
       ('These Sound ninja raided a Leaf supply camp. One of them wears a Hokage Hat.',
        'Эти ниндзя Звука разграбили лагерь снабжения Листа. На одном из них Шляпа Хокаге.'), carries='hokageHat')
@@ -241,35 +278,34 @@ for res, at in (('gold', (28, 11)), ('crystal', (20, 4)), ('wood', (31, 7)), ('g
 
 # ------------------------------------------------------------------ C: Puppet Valley, Sasori (middle)
 
-event('event.valley', (8, 17),
-      ('Puppet Valley. Sasori\'s puppets watch from every rock. Old Chiyo, the elder of Sunagakure, hides in a hut '
-       'in the south-west of the valley.',
-       'Долина марионеток. С каждой скалы следят марионетки Сасори. Старая Чиё, старейшина Сунагакуре, прячется в '
-       'хижине на юго-западе долины.'))
+# C1, the valley entrance
+m.dwelling('catHideout', (2, 20))
+m.thing('mine/sulfurDune', (2, 22))
+m.thing('resource/sulfur', (6, 20))
+m.thing('treasureChest/treasureChest', (5, 22))
+# C2, the rest of the valley
 guard('humanPuppet', 5, (13, 32), 'monster.hiruko.message',
       ('Sasori\'s human puppets drag Hiruko, his old shell, behind them.',
        'Человеческие марионетки Сасори тащат за собой Хируко, его старую оболочку.'), carries='hiruko')
-seer('seer.chiyo', (2, 33), reward(2500, primary=(2, 2, 0, 0)),
+seer('seer.chiyo', (13, 20), reward(3000, primary=(2, 2, 0, 0)),
      ('Chiyo: "Sasori is my grandson, and he has become a monster. His human puppets carry Hiruko, his old shell, in '
       'the south-east of the valley. Bring it to me, and I will teach you how to fight his puppets."',
       'Чиё: «Сасори — мой внук, и он стал чудовищем. Его человеческие марионетки таскают Хируко, его старую оболочку, на '
       'юго-востоке долины. Принеси её мне, и я научу тебя сражаться с его марионетками.»'),
-     ('Chiyo: "Hiruko is still with Sasori\'s puppets in the south-east of the valley."',
-      'Чиё: «Хируко всё ещё у марионеток Сасори на юго-востоке долины.»'),
+     ('Chiyo: "Hiruko is still with Sasori\'s puppets in the south-east of the valley. If Sasori took it, take it from him."',
+      'Чиё: «Хируко всё ещё у марионеток Сасори на юго-востоке долины. Если его забрал Сасори — отбери у него.»'),
      ('Chiyo: "So this is what is left of his first puppet... Listen well: this is how Sasori fights."',
       'Чиё: «Вот всё, что осталось от его первой марионетки... Слушай внимательно: вот как сражается Сасори.»'),
-     mission={'artifacts': [mod('hiruko')]}, sub=2)
-guard('windKunoichi', 8, (14, 20), carries='temarisGiantFan')
-m.dwelling('uchihaDistrict', (12, 26))
-m.dwelling('catHideout', (2, 20))
+     artifact='hiruko', sub=2)
+guard('windKunoichi', 8, (15, 29), carries='temarisGiantFan')
+m.dwelling('uchihaDistrict', (12, 28))
 m.dwelling('rogueNinjaHideout', (10, 34))
-m.thing('mine/sulfurDune', (5, 31))
-m.thing('mine/gemPond', (14, 33))
+m.thing('mine/gemPond', (14, 34))
 m.thing('treasureChest/treasureChest', (16, 19))
-m.thing('campfire/campfire', (11, 29))
+m.thing('campfire/campfire', (11, 31))
 m.artifact('soldierPills', (1, 35))
 m.artifact('sandForeheadProtector', (11, 19))
-for res, at in (('sulfur', (3, 23)), ('gems', (14, 25)), ('gold', (7, 34)), ('wood', (16, 28)), ('mercury', (1, 29))):
+for res, at in (('gems', (14, 24)), ('gold', (7, 35)), ('wood', (16, 31)), ('mercury', (1, 29)), ('ore', (3, 26))):
     m.thing('resource/' + res, at)
 
 # ------------------------------------------------------------------ D: Shark Bay, Kisame (hard)
@@ -277,14 +313,15 @@ for res, at in (('sulfur', (3, 23)), ('gems', (14, 25)), ('gold', (7, 34)), ('wo
 guard('swordsmanOfTheSeven', 3, (34, 17), 'monster.necklace.message',
       ('Kisame\'s Swordsmen of the Seven guard the First Hokage\'s Necklace, taken from a Leaf ninja.',
        'Мечники Семи из отряда Кисаме охраняют Ожерелье Первого Хокаге, отнятое у ниндзя Листа.'), carries='firstHokagesNecklace')
-gate('gate.barrier', GATE,
+gate('gate.barrier', GATES['barrier'],
      ('An Akatsuki barrier seals the way to the hideout. It gives way only to the Nine-Tails\' chakra: Naruto himself '
       'must touch it, and he must be at least level 8.',
       'Барьер Акацуки закрывает путь к убежищу. Он уступит только чакре Девятихвостого: коснуться его должен сам Наруто, '
       'и не ниже 8-го уровня.'),
      ('The barrier holds. Only Naruto, at level 8 or higher, can break it.',
       'Барьер держится. Сломать его может только Наруто не ниже 8-го уровня.'),
-     ('Naruto\'s chakra flares up, and the barrier cracks open!', 'Чакра Наруто вспыхивает, и барьер раскалывается!'),
+     ('Naruto\'s chakra flares up, and the barrier cracks open! Beyond it lies the Akatsuki hideout.',
+      'Чакра Наруто вспыхивает, и барьер раскалывается! За ним — убежище Акацуки.'),
      mission={'heroLevel': 8, 'heroes': [mod('narutoUzumaki')]})     # Naruto is red's alone; no AI can pass
 m.dwelling('medicalCorps', (21, 17))
 m.dwelling('enmasCave', (22, 21))
@@ -342,19 +379,23 @@ unreachable = m.unreachable([start])
 assert not unreachable, 'cannot be reached: %s' % unreachable
 # every area opens only through its own guards or gate: with those standing and every other guard
 # beaten, a hero from the Leaf Outpost can't get in (B, C and D each have two ways in)
-AREAS = {'B': (26, 4), 'C': (8, 21), 'D': (26, 18), 'E': (30, 29), "Kakashi's cell": (34, 4), "cats' den": (13, 14),
-         "Shukaku's cave": (25, 33)}       # road or reserved tiles inside each area (never under an obstacle)
+AREAS = {'B': (26, 4), 'C1': (8, 20), 'C2': (8, 28), 'D': (26, 18), 'E': (30, 29), "Kakashi's cell": (32, 3),
+         "the prison": (34, 4), "cats' den": (13, 14), "Shukaku's cave": (25, 33)}   # road or reserved tiles (never under an obstacle)
 everywhere = m.reach(start, True)
 assert all(t in everywhere for t in AREAS.values()), 'an area sample tile is blocked: %s' % [a for a, t in AREAS.items() if t not in everywhere]
 home = m.reach(start, False)
 leaks =[a for a, t in AREAS.items() if t in home]
 assert not leaks, 'the Leaf Outpost is open to %s without a fight' % leaks
-for area, guards in (('B', ['AB', 'BD']), ('C', ['AC', 'CD']), ('D', ['BD', 'CD']), ("Kakashi's cell", ['prison']),
-                     ("cats' den", ['cats']), ("Shukaku's cave", ['cave'])):
+for area, guards in (('B', ['AB', 'BD']), ('C1', ['AC', 'inner']), ('C2', ['inner', 'CD']), ('D', ['BD', 'CD']),
+                     ("Kakashi's cell", ['prison']), ("cats' den", ['cats']), ("Shukaku's cave", ['cave'])):
     seen = m.reach(start, False, ignore=m.monsters - {PASSAGES[g][1] for g in guards}, gates_open=True)
     assert AREAS[area] not in seen, '%s is open without beating the %s guard' % (area, ' or '.join(guards))
 seen = m.reach(start, False, ignore=m.monsters, gates_open=False)
-assert AREAS['E'] not in seen, 'the hideout is open without the barrier'
+closed = [a for a in ('E', "Kakashi's cell", 'the prison') if AREAS[a] in seen]
+assert not closed, '%s open without their quest guard' % closed
+# Sasori's way to the outpost: two guards (the checkpoint and the valley entrance) stand in it
+sasori_free = m.reach(m.at['hero_2'], False, ignore=m.monsters - {PASSAGES['inner'][1], PASSAGES['AC'][1]})
+assert start not in sasori_free, 'Sasori reaches the Leaf Outpost past fewer than two guards'
 bad = m.unclickable(start)
 if bad:
     print(picture())
@@ -366,8 +407,12 @@ say = T.say
 header = j(BASE_HEADER)
 for k in ('allowedAbilities', 'allowedArtifacts', 'allowedSpells'):   # the base map lists only original content
     del header[k]
-# the story characters stay out of the taverns
-header['allowedHeroes'] = {'noneOf': [mod(h) for h in ('jiraiya', 'tsunade', 'chiyo', 'orochimaru', 'minatoNamikaze')]}
+# taverns offer our heroes only (the base map's original ones stay out), minus the story characters,
+# the Akatsuki members and the heroes placed on the map
+STORY = ('narutoUzumaki', 'kakashiHatake', 'jiraiya', 'tsunade', 'minatoNamikaze', 'orochimaru', 'itachiUchiha',
+         'chiyo', 'sasori', 'kisameHoshigaki', 'gaara')
+assert all(h in HEROES for h in STORY)
+header['allowedHeroes'] = {'anyOf': [mod(h) for h in HEROES if h not in STORY]}
 header['name'] = say('header.name', 'Naruto: Shadow of the Akatsuki', 'Наруто: Тень Акацуки')
 header['description'] = say('header.description',
     'The Akatsuki have stolen Shukaku, the One-Tail, from Sunagakure. Sasori holds Puppet Valley in the south, Kisame '
@@ -404,15 +449,23 @@ header['events'] = [
     timed('tsunade', 1, ('A letter from Tsunade: "Naruto, the Akatsuki have stolen Shukaku, the One-Tail. Sasori holds '
         'Puppet Valley to the south, Kisame holds Shark Bay to the east, and their hideout lies behind Shark Bay, sealed by '
         'a barrier. Only your chakra can break it, and only once you are strong enough: level 8. The ritual will be over '
-        'in eight weeks. Kakashi went ahead to scout and has gone silent. Build up the outpost, and hurry."',
+        'in eight weeks. Kakashi went ahead to scout and has gone silent. Beware Sasori: his valley lies just south of '
+        'the outpost, behind the Sound ninja on the southern road. Keep a garrison in the outpost, and don\'t take Naruto '
+        'south before his army is ready."',
         'Письмо от Цунаде: «Наруто, Акацуки похитили Шукаку, Однохвостого. Сасори держит Долину марионеток на юге, '
         'Кисаме — Акулью бухту на востоке, а за бухтой их убежище, закрытое барьером. Сломать его может только твоя '
         'чакра, и только когда ты станешь достаточно сильным: 8-й уровень. Через восемь недель ритуал завершится. Какаши '
-        'ушёл на разведку и молчит. Укрепи заставу и поторопись.»')),
+        'ушёл на разведку и молчит. Берегись Сасори: его долина сразу к югу от заставы, за ниндзя Звука на южной дороге. '
+        'Оставь в заставе гарнизон и не веди Наруто на юг, пока его армия не готова.»')),
     timed('pakkun', 3, ('Pakkun, Kakashi\'s ninja dog, limps into the outpost: "Kakashi was ambushed by Orochimaru\'s '
-        'Sound ninja. They keep him in the Forest of Death, east of here, in its north-east corner."',
+        'Sound ninja. They keep him in the Forest of Death, east of here, in its north-east corner. Jiraiya is somewhere '
+        'in that forest too."',
         'На заставу, прихрамывая, приходит Паккун, пёс-ниндзя Какаши: «Какаши попал в засаду ниндзя Звука Орочимару. '
-        'Его держат в Лесу Смерти, к востоку отсюда, в его северо-восточном углу.»')),
+        'Его держат в Лесу Смерти, к востоку отсюда, в его северо-восточном углу. Где-то в том лесу и Джирайя.»')),
+    timed('chiyo', 5, ('A message from old Chiyo, the elder of Sunagakure: she hides from her grandson Sasori in a hut in '
+        'the north-east of Puppet Valley and knows his weaknesses. Look for her once you are past the valley entrance.',
+        'Весточка от старой Чиё, старейшины Сунагакуре: она прячется от своего внука Сасори в хижине на северо-востоке '
+        'Долины марионеток и знает его слабые места. Найдите её, когда пройдёте вход в долину.')),
     timed('supplies', 8, ('Shizune sends supplies from Konoha: "Lady Tsunade says: spend them wisely."',
         'Шизуне присылает припасы из Конохи: «Госпожа Цунаде велела потратить их с умом.»'),
         resources={'gold': 2000, 'wood': 5, 'ore': 5}),
