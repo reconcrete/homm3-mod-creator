@@ -9,8 +9,9 @@ model-from-views   Pixal3D multi-view (ComfyUI's "Pixal3D: Multi Views to 3D" te
                    separate views instead of a cropped turnaround sheet, at the template's
                    quality settings (they fit 12 GB for one character). titles: 'front', 'left', 'back',
                    'right' (LoadImage), 'save model' (Save3DAdvanced; SaveGLB in API runs).
-                   'left' is the character facing the right edge of the picture, 'right' facing
-                   the left edge, as in the template's sample sheet.
+                   'left' is the camera on the character's left: the character faces the left
+                   edge of the picture; 'right' faces the right edge. Swapped, the model comes
+                   out as a mirror image (one-sided details on the wrong side).
 """
 import copy, json, pathlib, sys
 
@@ -97,8 +98,8 @@ def model_from_views():
                         'size': [500, 220], 'flags': {}, 'order': 0, 'mode': 0, 'inputs': [], 'outputs': [],
                         'properties': {}, 'widgets_values': [
         '## homm3/model-from-views\n\nPixal3D multi-view: four square views of one character, same scale, '
-        'on black or with alpha. **left** = the character facing the right edge of the picture, **right** = '
-        'facing the left edge. Template quality (upsample 1536, texture 4096) fits 12 GB for one character.\n\nRun by '
+        'on black or with alpha. **left** = the camera on the character\'s left: the character faces the left edge of the '
+        'picture; **right** = facing the right edge (swapped, the model comes out mirrored). Template quality (upsample 1536, texture 4096) fits 12 GB for one character.\n\nRun by '
         '`tools/pipeline/` in the homm3-mod-creator repo, which finds inputs by node title: keep the titles '
         '`front`, `left`, `back`, `right`, `save model`.']})
     return ui

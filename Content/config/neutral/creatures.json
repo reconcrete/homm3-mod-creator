@@ -232,12 +232,12 @@
 					-90
 				],
 				"offset": {
-					"upperX": 15,
-					"upperY": -58,
-					"middleX": 17,
-					"middleY": -48,
-					"lowerX": 15,
-					"lowerY": -36
+					"upperX": 5,
+					"upperY": -57,
+					"middleX": 6,
+					"middleY": -47,
+					"lowerX": 5,
+					"lowerY": -35
 				},
 				"projectile": "naruto/projectiles/kunai"
 			}

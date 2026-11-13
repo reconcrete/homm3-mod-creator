@@ -12,7 +12,7 @@ Server: COMFY_URL in the environment, else "comfy_url" in tools/pipeline/local.j
     python3 tools/pipeline/comfy.py pull            # ComfyUI (maybe edited in the UI) -> repo
     python3 tools/pipeline/comfy.py list
 """
-import json, os, pathlib, sys, time, urllib.parse, uuid
+import hashlib, json, os, pathlib, sys, time, urllib.parse, uuid
 
 import requests
 
@@ -42,11 +42,14 @@ def object_info():
     return _object_info
 
 def upload(path, subfolder=FOLDER):
-    """Upload an image to ComfyUI's input folder; returns the name LoadImage takes."""
+    """Upload an image to ComfyUI's input folder; returns the name LoadImage takes. The name carries
+    a hash of the content: jobs running side by side all upload 'front.png' and must not overwrite
+    each other's inputs."""
     path = pathlib.Path(path)
-    with open(path, 'rb') as fh:
-        r = requests.post(URL + '/upload/image', files={'image': (path.name, fh, 'image/png')},
-                          data={'subfolder': subfolder, 'overwrite': 'true'}, timeout=120)
+    data = path.read_bytes()
+    name = f'{hashlib.sha1(data).hexdigest()[:12]}-{path.name}'
+    r = requests.post(URL + '/upload/image', files={'image': (name, data, 'image/png')},
+                      data={'subfolder': subfolder, 'overwrite': 'true'}, timeout=120)
     r.raise_for_status()
     d = r.json()
     return f"{d['subfolder']}/{d['name']}" if d.get('subfolder') else d['name']

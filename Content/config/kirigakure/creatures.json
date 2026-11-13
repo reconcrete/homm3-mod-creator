@@ -703,11 +703,11 @@
 					-90
 				],
 				"offset": {
-					"upperX": 12,
-					"upperY": -61,
-					"middleX": 14,
+					"upperX": 9,
+					"upperY": -62,
+					"middleX": 10,
 					"middleY": -51,
-					"lowerX": 12,
+					"lowerX": 9,
 					"lowerY": -38
 				},
 				"projectile": "naruto/projectiles/ice-senbon"

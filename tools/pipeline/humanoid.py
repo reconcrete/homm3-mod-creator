@@ -45,10 +45,36 @@ def map_bones(arm):
 
     bones = arm.data.bones
     root = next(b for b in bones if b.parent is None)
-    ups = [c for c in root.children if top(c) > head(root).z]
-    downs = [c for c in root.children if top(c) <= head(root).z]
-    if len(ups) != 1 or len(downs) != 2:
-        raise ValueError(f'not a humanoid layout: {len(ups)} up, {len(downs)} down from {root.name}')
+
+    def split(hub):
+        """The branch going up (spine) and the two legs among hub's children, or None."""
+        hip = head(hub)
+        ups = [c for c in hub.children if top(c) > hip.z]
+        downs = [c for c in hub.children if top(c) <= hip.z]
+        # Extra branches off the hips (a tail, a sash) are not legs: the legs are the two
+        # downward branches that reach lowest, one on each side.
+        sides = [c for c in downs if abs(extremity(c).x - hip.x) > 0.02]
+        if len(sides) >= 2:
+            low = sorted(sides, key=lambda c: extremity(c).z)
+            a = low[0]
+            b = next((c for c in low[1:] if (extremity(c).x - hip.x) * (extremity(a).x - hip.x) < 0), None)
+            downs = [a, b] if b else []
+        if len(ups) > 1:   # a tail curling up: the spine is the branch reaching highest
+            ups = [max(ups, key=top)]
+        return (ups, downs) if len(ups) == 1 and len(downs) == 2 else None
+
+    found = split(root)
+    if found is None:
+        # SkinTokens sometimes roots the skeleton one bone below the pelvis: the root holds only a
+        # pelvis bone (spine and legs) plus skirt or coat panels. The root stays the hips, so the
+        # panels follow the body; the pelvis bone is left at rest under it.
+        for c in root.children:
+            if (head(c) - head(root)).length < 0.08 and split(c):
+                found = split(c)
+                break
+    if found is None:
+        raise ValueError(f'not a humanoid layout under {root.name}')
+    ups, downs = found
     spine, b = [], ups[0]
     while True:
         spine.append(b)
@@ -57,6 +83,11 @@ def map_bones(arm):
             raise ValueError('no arms found off the spine')
         up = max(kids, key=top)
         side = [c for c in kids if c is not up and abs(extremity(c).x - head(b).x) > 0.1 * (extremity(c) - head(b)).length]
+        if len(side) > 2:   # wings or shoulder props beside the arms: arms are the lowest-reaching branch per side
+            l = [c for c in side if extremity(c).x < head(b).x]
+            r = [c for c in side if extremity(c).x >= head(b).x]
+            if l and r:
+                side = [min(l, key=lambda c: extremity(c).z), min(r, key=lambda c: extremity(c).z)]
         if len(side) == 2:
             neck_head = chain(up, lambda cs: max(cs, key=top))
             break

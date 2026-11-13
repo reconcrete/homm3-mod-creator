@@ -4,8 +4,8 @@
 
 Clay shows the shape alone (holes, blobs, fused limbs, extra parts); textured shows whether
 the texture sits right. The angles: front, front-right, right, back, left, front-left (the
-model's front faces -Y in Blender after a glTF import; Pixal3D models face +Y, so model.py passes
-turn=180). Prints the mesh stats too.
+model's front faces -Y in Blender after a glTF import, Pixal3D's too when the side views are
+the right way round; a model whose back shows first was built from swapped side views). Prints the mesh stats too.
 """
 import math, os, sys
 

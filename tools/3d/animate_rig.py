@@ -104,6 +104,56 @@ CREATURES = {
         "horns": [bones(9, 10, 11, 12), bones(13, 14, 15, 16), bones(44, 45)],
         "body": [f"tripo::Tail_{i}" for i in range(11)],
     },
+    # Self-hosted pipeline rigs (SkinTokens, bone_N names; models face -Y), chains read off the
+    # skeleton printout and checked on the rig sheets (2026-11-13).
+    # Ninja Cat: no tail bones (the tail is stiff); two chains for the left hind leg, both move.
+    "ninja-cat": {
+        "kind": "quadruped",
+        "root": "bone_0",
+        "spine": bones(6, 7, 8, 9),
+        "head": bones(20, 21, 22, 23),
+        "tail": [],
+        "front": [bones(10, 11, 12, 13, 14), bones(15, 16, 17, 18, 19)],
+        "hind": [bones(25, 26, 27, 28, 29), bones(31, 32, 33, 34, 35), bones(1, 2, 3, 4)],
+    },
+    # Manda: coiled snake; the body runs from the tail end (bone_0) forward, the neck rises from
+    # bone_5 to the head (bone_11); the coil's two sides hang off bone_1 and bone_0.
+    "manda": {
+        "kind": "serpent",
+        "ortho": 4.2,
+        "root": "bone_0",
+        "front": (0, -1, 0),
+        "necks": [bones(5, 6, 7, 8, 9, 10)],
+        "head": ["bone_11"],
+        "jaw": [],
+        "horns": [],
+        "body": bones(1, 2, 3, 4, 12, 13, 14, 15, 16, 17, 18, 19, 20),
+    },
+    # Isobu: four-legged turtle; one tail chain (its three tails are skinned to it).
+    "isobu": {
+        "kind": "quadruped",
+        "ortho": 4.4,
+        "root": "bone_0",
+        "spine": bones(1, 2),
+        "head": bones(3, 4),
+        "tail": bones(33, 34, 35, 36),
+        "front": [bones(11, 12, 13, 14), bones(18, 19, 20, 21)],
+        "hind": [bones(25, 26, 27, 28), bones(29, 30, 31, 32)],
+    },
+    # Gyuki: walks on its knuckles (the arms are its front legs) and two short legs; six tentacle
+    # chains off the hips wave all the time.
+    "gyuki": {
+        "kind": "quadruped",
+        "ortho": 4.6,
+        "root": "bone_0",
+        "spine": bones(1, 2, 3),
+        "head": ["bone_4"],
+        "tail": [],
+        "tails": [bones(54, 55, 56), bones(57, 58, 59), bones(60, 61, 62), bones(63, 64, 65),
+                  bones(66, 67, 69, 70, 71, 72, 73, 74, 75), bones(76, 77, 78, 79, 80, 81)],
+        "front": [bones(19, 20, 21), bones(32, 33, 34)],
+        "hind": [bones(46, 47, 48, 49), bones(50, 51, 52, 53)],
+    },
 }
 cfg = CREATURES[creature]
 
@@ -366,6 +416,11 @@ def pose_quadruped(clip, t):
 
     for d, name in enumerate(cfg["tail"]):
         rot(name, (Z, tail_wag * (0.6 + 0.2 * d)), (L, (tail_lift if d < 2 else 0.0) - 6 * limp))
+    for k, chain in enumerate(cfg.get("tails", [])):   # tentacles: each waves on its own phase
+        for d, name in enumerate(chain):
+            ph = w + 1.3 * k - 0.6 * d
+            rot(name, (Z, (7 + 0.4 * abs(tail_wag)) * math.sin(ph) * (1 - limp)),
+                (L, 5 * math.cos(ph) + (tail_lift if d < 2 else 0.0) * 0.5 - 8 * limp))
 
     for end, chains, reach in (("f", cfg["front"], front_reach), ("h", cfg["hind"], hind_reach)):
         for chain in chains:

@@ -3506,7 +3506,7 @@
    "outputs": [],
    "properties": {},
    "widgets_values": [
-    "## homm3/model-from-views\n\nPixal3D multi-view: four square views of one character, same scale, on black or with alpha. **left** = the character facing the right edge of the picture, **right** = facing the left edge. Template quality (upsample 1536, texture 4096) fits 12 GB for one character.\n\nRun by `tools/pipeline/` in the homm3-mod-creator repo, which finds inputs by node title: keep the titles `front`, `left`, `back`, `right`, `save model`."
+    "## homm3/model-from-views\n\nPixal3D multi-view: four square views of one character, same scale, on black or with alpha. **left** = the camera on the character's left: the character faces the left edge of the picture; **right** = facing the right edge (swapped, the model comes out mirrored). Template quality (upsample 1536, texture 4096) fits 12 GB for one character.\n\nRun by `tools/pipeline/` in the homm3-mod-creator repo, which finds inputs by node title: keep the titles `front`, `left`, `back`, `right`, `save model`."
    ]
   }
  ],

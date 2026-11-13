@@ -398,12 +398,12 @@
 					-90
 				],
 				"offset": {
-					"upperX": 5,
+					"upperX": 4,
 					"upperY": -61,
-					"middleX": 6,
-					"middleY": -51,
-					"lowerX": 5,
-					"lowerY": -38
+					"middleX": 5,
+					"middleY": -50,
+					"lowerX": 4,
+					"lowerY": -37
 				},
 				"projectile": "naruto/projectiles/wind-scythe"
 			}
@@ -684,11 +684,11 @@
 					-90
 				],
 				"offset": {
-					"upperX": 11,
+					"upperX": 7,
 					"upperY": -64,
-					"middleX": 13,
+					"middleX": 9,
 					"middleY": -53,
-					"lowerX": 11,
+					"lowerX": 7,
 					"lowerY": -39
 				},
 				"projectile": "naruto/projectiles/senbon"

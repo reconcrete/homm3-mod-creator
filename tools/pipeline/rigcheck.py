@@ -1,6 +1,6 @@
 """Visual check of a rigged humanoid: skeleton, skin-weight heatmaps and test poses.
 
-    blender -b -P tools/pipeline/rigcheck.py -- RIGGED.glb OUT_PREFIX [front=+y]
+    blender -b -P tools/pipeline/rigcheck.py -- RIGGED.glb OUT_PREFIX [front=-y]
 
 Writes OUT_PREFIX-skeleton.png (joints and bones over a see-through model, front and side),
 OUT_PREFIX-weights.png (one heatmap per main bone: blue 0 to red 1) and OUT_PREFIX-poses.png
@@ -19,9 +19,12 @@ import math, os, sys
 import bpy
 from mathutils import Matrix, Quaternion, Vector
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import humanoid  # noqa: E402
+
 argv = sys.argv[sys.argv.index('--') + 1:]
 src, prefix = argv[0], argv[1]
-front_arg = next((x[6:] for x in argv[2:] if x.startswith('front=')), '+y')
+front_arg = next((x[6:] for x in argv[2:] if x.startswith('front=')), '-y')
 FRONT = {'+y': Vector((0, 1, 0)), '-y': Vector((0, -1, 0))}[front_arg]
 TILE = int(next((x[5:] for x in argv[2:] if x.startswith('tile=')), 400))
 
@@ -40,63 +43,9 @@ W = arm.matrix_world
 def head(b):
     return W @ b.head_local
 
-def chain(b, pick):
-    out = [b]
-    while b.children:
-        b = pick(b.children)
-        out.append(b)
-    return out
-
-def extremity(b):   # the descendant furthest from b's head
-    best, d = b, 0
-    stack = [b]
-    while stack:
-        c = stack.pop()
-        dd = (head(c) - head(b)).length
-        if dd > d:
-            best, d = c, dd
-        stack += list(c.children)
-    return head(best)
-
-def top(b):   # the highest joint in b's branch
-    z, stack = head(b).z, [b]
-    while stack:
-        c = stack.pop()
-        z = max(z, head(c).z)
-        stack += list(c.children)
-    return z
-
-bones = arm.data.bones
-root = next(b for b in bones if b.parent is None)
-ups = [c for c in root.children if top(c) > head(root).z]
-downs = [c for c in root.children if top(c) <= head(root).z]
-assert len(ups) == 1 and len(downs) == 2, f'not a humanoid layout: {len(ups)} up, {len(downs)} down from {root.name}'
-spine = [root]
-b = ups[0]
-while True:
-    spine.append(b)
-    kids = list(b.children)
-    if not kids:
-        break
-    up = max(kids, key=top)
-    side = [c for c in kids if c is not up and abs(extremity(c).x - head(b).x) > 0.1 * (extremity(c) - head(b)).length]
-    if len(side) == 2:
-        chest, arms_start = b, side
-        neck_head = chain(up, lambda cs: max(cs, key=top))
-        spine += neck_head
-        break
-    b = up
-MAP = {'hips': root, 'chest': chest, 'head': spine[-1], 'neck': neck_head[0] if len(neck_head) > 1 else spine[-1]}
-MAP['spine'] = spine[len(spine) // 2 - 1] if len(spine) > 4 else chest
-for side_name, start in zip(('a', 'b'), sorted(arms_start, key=lambda c: extremity(c).x)):
-    ch = chain(start, lambda cs: max(cs, key=lambda c: (extremity(c) - head(c)).length))
-    # collarbone, upper arm, forearm, hand (a collarbone is short compared with the upper arm)
-    if len(ch) >= 4 and (head(ch[1]) - head(ch[0])).length < 0.6 * (head(ch[2]) - head(ch[1])).length:
-        MAP[f'collar_{side_name}'], ch = ch[0], ch[1:]
-    MAP[f'upperarm_{side_name}'], MAP[f'forearm_{side_name}'], MAP[f'hand_{side_name}'] = ch[0], ch[1], ch[2]
-for side_name, start in zip(('a', 'b'), sorted(downs, key=lambda c: extremity(c).x)):
-    ch = chain(start, lambda cs: min(cs, key=lambda c: extremity(c).z))
-    MAP[f'thigh_{side_name}'], MAP[f'shin_{side_name}'], MAP[f'foot_{side_name}'] = ch[0], ch[1], ch[2]
+M = humanoid.map_bones(arm)
+MAP = {k: v for k, v in M.items() if k != 'spine'}
+MAP['spine'] = M['spine'][len(M['spine']) // 2] if len(M['spine']) > 2 else M['chest']
 for k, v in MAP.items():
     print('MAP', k, v.name)
 
@@ -186,7 +135,7 @@ joint_mat = material('joint', (1.0, 0.85, 0.1, 1), emit=True)
 bone_mat = material('bone', (0.1, 0.8, 1.0, 1), emit=True)
 helpers = []
 r = SIZE * 0.008
-for b in bones:
+for b in arm.data.bones:
     bpy.ops.mesh.primitive_uv_sphere_add(radius=r * 1.6, location=head(b), segments=12, ring_count=8)
     s = bpy.context.object; s.data.materials.append(joint_mat); s.show_in_front = True; helpers.append(s)
     for c in b.children:

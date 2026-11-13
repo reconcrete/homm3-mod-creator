@@ -2,13 +2,13 @@
 humanoid rig (e.g. SkinTokens), and save the result as a GLB that tools/3d/render_export.py
 renders like any Tripo export.
 
-    blender -b -P tools/pipeline/retarget.py -- SOURCE.glb TARGET.glb OUT.glb [target_front=+y]
+    blender -b -P tools/pipeline/retarget.py -- SOURCE.glb TARGET.glb OUT.glb [target_front=-y]
 
 Each mapped bone gets the source bone's world-space rotation away from its rest pose, applied
 to its own rest pose; the hips also move like the source's, scaled by hip height. Both rigs
 should rest in a similar pose (our A-poses). Bones the source lacks (fingers, extras) stay at
-rest. The target is turned to face -Y first, like the Tripo exports, if target_front=+y
-(Pixal3D models). Clip names stay the source's.
+rest. Pixal3D models face -Y like the Tripo exports (with the views' sides right); a target facing
++Y is turned first (target_front=+y). Clip names stay the source's.
 """
 import math, os, sys
 
@@ -20,7 +20,7 @@ import humanoid  # noqa: E402
 
 argv = sys.argv[sys.argv.index('--') + 1:]
 src_path, dst_path, out_path = argv[:3]
-target_front = next((x[13:] for x in argv[3:] if x.startswith('target_front=')), '+y')
+target_front = next((x[13:] for x in argv[3:] if x.startswith('target_front=')), '-y')
 
 bpy.ops.wm.read_factory_settings(use_empty=True)
 
@@ -57,7 +57,9 @@ for m in dst_meshes:   # faster: the meshes don't need deforming while we bake
             mod.show_viewport = False
 
 S_map, D_map = humanoid.map_mixamo(src), humanoid.map_bones(dst)
-if (toes_y(src, S_map) < 0) != (toes_y(dst, D_map) < 0):
+print('HANDS', D_map['hand_a'].name, D_map['hand_b'].name)   # for render_export.py rigid= (held weapons)
+ys, yd = toes_y(src, S_map), toes_y(dst, D_map)
+if min(abs(ys), abs(yd)) > 0.05 and (ys < 0) != (yd < 0):   # near 0 says nothing (toes straight down)
     sys.exit(f'source and target face different ways (toes y {toes_y(src, S_map):.3f} / {toes_y(dst, D_map):.3f}): fix target_front')
 for m in dst_meshes:
     print('SEPARATED LEGS', humanoid.separate_legs(dst, m, D_map), 'vertices below the knees')

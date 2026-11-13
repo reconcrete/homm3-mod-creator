@@ -2,12 +2,16 @@
 	"name": "Naruto Heroes",
 	"description": "Three hidden villages from Naruto as playable towns: Konohagakure, Sunagakure and Kirigakure, each with 14 shinobi creatures and its own heroes, plus neutral ninja, four tailed-beast bosses and 43 artifacts, including three Kage sets.",
 	"author": "Anton Morozov",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"modType": "Town",
 	"compatibility": {
 		"min": "1.7.0"
 	},
 	"changelog": {
+		"1.1.0": [
+			"Animated battle figures for 56 of the 57 creatures (all but Shukaku): idle, walk, attack, hit, defend, death and, for shooters, a throw or cast",
+			"Shots start from the animated figures' hands"
+		],
 		"1.0.0": [
 			"11 neutral creatures with their map lairs, and the tailed-beast bosses Shukaku, Isobu, Gyuki and Kurama",
 			"43 artifacts, including the Hokage, Kazekage and Mizukage sets that combine into Will of Fire, Sand Coffin and Bloody Mist",

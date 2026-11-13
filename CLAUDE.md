@@ -65,6 +65,20 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   on Fan Master that the tiles had hidden). retarget.py takes feet and toes from the source's
   standing pose (idle frame 0), not its rest pose, and strips opposite-leg weights below the
   knees. Files in `art/pipeline/<slug>/`.
+  `tools/pipeline/make.py <slug> <step>` runs those steps per creature from the table in
+  `tools/pipeline/plan.py` (A-pose front from the artist's still, design facts, motion source and
+  clip windows, shoot frames) and writes a sheet per step, including full-size close-ups of the
+  extreme frames next to the source creature. View convention: `left` is the character's own left
+  side (it faces the picture's left edge); swapped, Pixal3D builds a mirror image. Qwen often
+  fails to rotate (returns the front again) or puts a one-sided detail (a held weapon, one wing)
+  on the near side in both side views: check every view for its side, then `viewcands` +
+  `pickview` (a back view may be mirrored, `:m`). ComfyUI uploads carry a content hash, so jobs
+  may run side by side; SkinTokens shares the card, so rig only while ComfyUI is idle.
+  SkinTokens limits (2026-11-13): a long blade hanging by the leg gets leg weights and tears in
+  every swing (give the creature a sheathed weapon in the A-pose instead); a big tail or back
+  spikes get no bones and are tied to the arms, so arm swings stretch them into sheets (Shukaku
+  keeps its static sprite for this). Non-humanoids (cat, snake, turtle, Gyuki) are posed by
+  `tools/3d/animate_rig.py` from bone chains listed per creature.
 - Neutral creatures and bosses: `tools/towns/neutral.py` -> `Content/config/neutral/` (11
   neutrals, 4 tailed beasts at level 10 excluded from random monsters, 11 lairs with the
   artist's map pictures via `own_dwelling_object`). Test map: `tools/make-neutral-testmap.py`
