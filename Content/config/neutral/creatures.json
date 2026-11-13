@@ -34,8 +34,8 @@
 			"animation": "naruto/creatures/whiteZetsu/battle",
 			"map": "naruto/creatures/whiteZetsu/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:279",
 			"mapAttackFromRight": "AvWattak.def:0:278",
@@ -91,8 +91,8 @@
 			"animation": "naruto/creatures/ninjaCat/battle",
 			"map": "naruto/creatures/ninjaCat/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:145",
 			"mapAttackFromRight": "AvWattak.def:0:144",
@@ -144,8 +144,8 @@
 			"animation": "naruto/creatures/rogueNinja/battle",
 			"map": "naruto/creatures/rogueNinja/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:287",
 			"mapAttackFromRight": "AvWattak.def:0:286",
@@ -205,8 +205,8 @@
 			"animation": "naruto/creatures/soundNinja/battle",
 			"map": "naruto/creatures/soundNinja/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:275",
 			"mapAttackFromRight": "AvWattak.def:0:274",
@@ -328,8 +328,8 @@
 			"animation": "naruto/creatures/rainNinja/battle",
 			"map": "naruto/creatures/rainNinja/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:285",
 			"mapAttackFromRight": "AvWattak.def:0:284",
@@ -386,8 +386,8 @@
 			"animation": "naruto/creatures/stoneNinja/battle",
 			"map": "naruto/creatures/stoneNinja/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:35",
 			"mapAttackFromRight": "AvWattak.def:0:34",
@@ -450,8 +450,8 @@
 			"animation": "naruto/creatures/cloudNinja/battle",
 			"map": "naruto/creatures/cloudNinja/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:255",
 			"mapAttackFromRight": "AvWattak.def:0:254",
@@ -511,8 +511,8 @@
 			"animation": "naruto/creatures/curseMarkWarrior/battle",
 			"map": "naruto/creatures/curseMarkWarrior/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:289",
 			"mapAttackFromRight": "AvWattak.def:0:288",
@@ -568,8 +568,8 @@
 			"animation": "naruto/creatures/monkeyKingEnma/battle",
 			"map": "naruto/creatures/monkeyKingEnma/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:181",
 			"mapAttackFromRight": "AvWattak.def:0:180",
@@ -628,8 +628,8 @@
 			"animation": "naruto/creatures/manda/battle",
 			"map": "naruto/creatures/manda/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:221",
 			"mapAttackFromRight": "AvWattak.def:0:220",
@@ -691,8 +691,8 @@
 			"animation": "naruto/creatures/akatsukiMember/battle",
 			"map": "naruto/creatures/akatsukiMember/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:273",
 			"mapAttackFromRight": "AvWattak.def:0:272",
@@ -758,8 +758,8 @@
 			"animation": "naruto/creatures/shukaku/battle",
 			"map": "naruto/creatures/shukaku/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:195",
 			"mapAttackFromRight": "AvWattak.def:0:194",
@@ -849,8 +849,8 @@
 			"animation": "naruto/creatures/isobu/battle",
 			"map": "naruto/creatures/isobu/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:271",
 			"mapAttackFromRight": "AvWattak.def:0:270",
@@ -913,8 +913,8 @@
 			"animation": "naruto/creatures/gyuki/battle",
 			"map": "naruto/creatures/gyuki/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:223",
 			"mapAttackFromRight": "AvWattak.def:0:222",
@@ -981,8 +981,8 @@
 			"animation": "naruto/creatures/kurama/battle",
 			"map": "naruto/creatures/kurama/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:265",
 			"mapAttackFromRight": "AvWattak.def:0:264",

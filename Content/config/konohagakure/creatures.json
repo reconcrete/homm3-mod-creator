@@ -30,8 +30,8 @@
 			"animation": "naruto/creatures/academyStudent/battle",
 			"map": "naruto/creatures/academyStudent/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:287",
 			"mapAttackFromRight": "AvWattak.def:0:286",
@@ -90,8 +90,8 @@
 			"animation": "naruto/creatures/genin/battle",
 			"map": "naruto/creatures/genin/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:277",
 			"mapAttackFromRight": "AvWattak.def:0:276",
@@ -168,8 +168,8 @@
 			"animation": "naruto/creatures/ninjaHound/battle",
 			"map": "naruto/creatures/ninjaHound/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:93",
 			"mapAttackFromRight": "AvWattak.def:0:92",
@@ -230,8 +230,8 @@
 			"animation": "naruto/creatures/ninkenPackLeader/battle",
 			"map": "naruto/creatures/ninkenPackLeader/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:95",
 			"mapAttackFromRight": "AvWattak.def:0:94",
@@ -290,8 +290,8 @@
 			"animation": "naruto/creatures/hyugaGuard/battle",
 			"map": "naruto/creatures/hyugaGuard/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:17",
 			"mapAttackFromRight": "AvWattak.def:0:16",
@@ -357,8 +357,8 @@
 			"animation": "naruto/creatures/hyugaMainBranch/battle",
 			"map": "naruto/creatures/hyugaMainBranch/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:19",
 			"mapAttackFromRight": "AvWattak.def:0:18",
@@ -426,8 +426,8 @@
 			"animation": "naruto/creatures/medicalNinja/battle",
 			"map": "naruto/creatures/medicalNinja/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:37",
 			"mapAttackFromRight": "AvWattak.def:0:36",
@@ -498,8 +498,8 @@
 			"animation": "naruto/creatures/seniorMedic/battle",
 			"map": "naruto/creatures/seniorMedic/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:39",
 			"mapAttackFromRight": "AvWattak.def:0:38",
@@ -565,8 +565,8 @@
 			"animation": "naruto/creatures/uchihaPolice/battle",
 			"map": "naruto/creatures/uchihaPolice/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:69",
 			"mapAttackFromRight": "AvWattak.def:0:68",
@@ -666,8 +666,8 @@
 			"animation": "naruto/creatures/sharinganMaster/battle",
 			"map": "naruto/creatures/sharinganMaster/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:71",
 			"mapAttackFromRight": "AvWattak.def:0:70",
@@ -748,8 +748,8 @@
 			"animation": "naruto/creatures/anbuOperative/battle",
 			"map": "naruto/creatures/anbuOperative/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:125",
 			"mapAttackFromRight": "AvWattak.def:0:124",
@@ -813,8 +813,8 @@
 			"animation": "naruto/creatures/anbuCaptain/battle",
 			"map": "naruto/creatures/anbuCaptain/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:127",
 			"mapAttackFromRight": "AvWattak.def:0:126",
@@ -874,8 +874,8 @@
 			"animation": "naruto/creatures/toadWarrior/battle",
 			"map": "naruto/creatures/toadWarrior/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:193",
 			"mapAttackFromRight": "AvWattak.def:0:192",
@@ -939,8 +939,8 @@
 			"animation": "naruto/creatures/gamabunta/battle",
 			"map": "naruto/creatures/gamabunta/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:195",
 			"mapAttackFromRight": "AvWattak.def:0:194",

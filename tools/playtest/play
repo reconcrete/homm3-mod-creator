@@ -1,0 +1,77 @@
+#!/bin/bash
+# play CMD [ARGS]  drive the play-test game on the Linux test machine (see tools/playtest/README.md)
+#   play shot [NAME]            screenshot -> $PLAYTEST_OUT (default art/playtest/), prints the local path
+#   play input ACTION ARGS      click X Y, rclick, rhold X Y MS, dclick, move, drag, key KEY..., type TEXT;
+#                               then waits PLAYTEST_WAIT seconds (0.8) and takes a shot
+#   play cheat CODE...          each code typed into the chat (Tab, text, Return), then a shot;
+#                               console commands need a slash: play cheat "/set showBlocked on"
+#   play hover "X Y"...         points the mouse at each spot and stacks the status-bar texts into one image
+#                               (the cheapest way to learn what stands on a tile)
+#   play burst N [SEC] [ACTION ARGS]  optional input, then N shots SEC (0.3) apart, as one contact sheet
+#                               (battle animations, spell effects, hero walks)
+#   play errors                 ERROR and WARN lines of the client log, counted, most frequent first
+#   play rec start [NAME] | rec stop   H.264 video (near-lossless, about 1 MB per second) + a contact sheet
+#   play game start [WxH] | stop | restart | status | log [N]
+#   play sync                   copy the mod (mod.json + Content), the Maps folder and the server scripts
+# Host from "playtest_ssh" in the git-ignored tools/pipeline/local.json.
+ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+H=$(python3 -c "import json;print(json.load(open('$ROOT/tools/pipeline/local.json'))['playtest_ssh'])")
+OUT="${PLAYTEST_OUT:-$ROOT/art/playtest}"; mkdir -p "$OUT"
+S="Projects/vcmi"
+PY="$ROOT/.venv/bin/python"
+ssh_() { ssh -o BatchMode=yes "$H" "$@" 2>&1 | grep -vi 'tailscale\|authenticat'; return 0; }
+fetch() { rsync -a "$H:$1" "$OUT/" && echo "$OUT/$(basename "$1")"; }
+shot_after() { sleep "${PLAYTEST_WAIT:-0.8}"; fetch "$(ssh_ "$S/bin/shot" | tail -1)"; }
+case $1 in
+  shot)  fetch "$(ssh_ "$S/bin/shot $2" | tail -1)" ;;
+  input) shift; ssh_ "$S/bin/input $(printf '%q ' "$@")"; shot_after ;;
+  cheat) shift; for c in "$@"; do ssh_ "$S/bin/input key Tab; sleep 0.2; $S/bin/input type $(printf '%q' "$c"); sleep 0.1; $S/bin/input key Return; sleep 0.4"; done
+         ssh_ "$S/bin/input move 1780 720"; shot_after ;;
+  hover) shift; tag=hv$$; cmd=""; i=0
+         for p in "$@"; do cmd="$cmd $S/bin/input move $p; sleep 0.35; $S/bin/shot $tag-$i >/dev/null;"; i=$((i+1)); done
+         ssh_ "$cmd"; rsync -a "$H:$S/shots/$tag-*.png" "$OUT/"; ssh_ "rm -f $S/shots/$tag-*.png"
+         "$PY" - "$OUT" "$tag" "$@" <<'E'
+import sys
+from PIL import Image, ImageDraw
+out, tag, pts = sys.argv[1], sys.argv[2], sys.argv[3:]
+sheet = Image.new('RGB', (760, 26 * len(pts)), (0, 0, 0)); d = ImageDraw.Draw(sheet)
+for i, p in enumerate(pts):
+    im = Image.open('%s/%s-%d.png' % (out, tag, i))
+    w, h = im.size
+    sheet.paste(im.crop((w // 2 - 380 + 100, h - 66, w // 2 + 280, h - 40)), (100, 26 * i))   # the status bar
+    d.text((5, 26 * i + 7), p, fill=(255, 255, 0))
+path = '%s/hover.png' % out
+sheet.save(path); print(path)
+E
+         rm -f "$OUT"/$tag-*.png ;;
+  burst) shift; n=$1; sec=${2:-0.3}; shift 2; tag=burst$(date +%H%M%S)
+         act=""; [ $# -gt 0 ] && act="$S/bin/input $(printf '%q ' "$@");"
+         ssh_ "$act for i in \$(seq -w 1 $n); do sleep $sec; $S/bin/shot $tag-\$i >/dev/null; done"
+         rsync -a "$H:$S/shots/$tag-*.png" "$OUT/"
+         "$PY" - "$OUT" "$tag" <<'E'
+import sys, glob
+from PIL import Image
+out, tag = sys.argv[1:]
+fs = sorted(glob.glob('%s/%s-*.png' % (out, tag)))
+ims = [Image.open(f).resize((480, 270)) for f in fs]
+sheet = Image.new('RGB', (480 * 4, 270 * ((len(ims) + 3) // 4)))
+for i, im in enumerate(ims):
+    sheet.paste(im, (480 * (i % 4), 270 * (i // 4)))
+path = '%s/%s-sheet.png' % (out, tag)
+sheet.save(path); print(path, '(full-size frames: %s-NN.png)' % tag)
+E
+         ;;
+  errors) ssh_ "grep -E ' (ERROR|WARN) ' $S/home/cache/vcmi/VCMI_Client_log.txt | sed -E 's/^\[[^]]*\] //' | sort | uniq -c | sort -rn | head -40" ;;
+  rec)   if [ "$2" = stop ]; then
+           v=$(ssh_ "$S/bin/rec stop" | tail -1); fetch "$v"
+           ssh_ "ffmpeg -loglevel error -y -i $v -vf fps=2,scale=480:-1,tile=4x4 -frames:v 1 ${v%.mp4}-sheet.png" >/dev/null
+           fetch "${v%.mp4}-sheet.png"
+         else ssh_ "$S/bin/rec $2 $3"; fi ;;
+  sync)  VD="$HOME/Library/Application Support/vcmi"
+         rsync -a --delete --include='/mod.json' --include='/Content/***' --exclude='*' "$ROOT/" "$H:$S/home/share/vcmi/Mods/naruto-heroes/"
+         rsync -a "$VD/Maps/" "$H:$S/home/share/vcmi/Maps/"
+         rsync -a "$ROOT/tools/playtest/server/"{env.sh,shot,input,rec,game} "$H:$S/bin/"
+         rsync -a "$ROOT/tools/playtest/server/units/" "$H:.config/systemd/user/"; ssh_ systemctl --user daemon-reload; echo synced ;;
+  game)  shift; ssh_ "$S/bin/game $*" ;;
+  *)     sed -n '2,17p' "$0"; exit 1 ;;
+esac

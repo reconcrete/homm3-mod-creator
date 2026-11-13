@@ -1,0 +1,9 @@
+[Unit]
+Description=VCMI play tests: watch the virtual screen in a browser (noVNC, view only) — http://rtx-server.char-nominal.ts.net:8030/vnc.html
+Requires=vcmi-display.service
+After=vcmi-display.service
+
+[Service]
+ExecStartPre=/bin/sleep 2
+ExecStart=/bin/sh -c 'x11vnc -display :50 -localhost -rfbport 5950 -viewonly -shared -forever -nopw -quiet & exec websockify --web /usr/share/novnc 100.97.80.117:8030 localhost:5950'
+Restart=no

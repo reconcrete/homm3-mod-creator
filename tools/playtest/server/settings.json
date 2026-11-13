@@ -1,0 +1,4 @@
+{
+	"general": { "playerName": "Claude", "music": 0, "sound": 0, "lastMap": "MAPS/naruto-shadow-of-akatsuki", "lastDifficulty": 1 },
+	"video": { "resolution": { "width": 1920, "height": 1080, "scaling": 150 }, "fullscreen": true, "realFullscreen": false, "showIntro": false, "cursor": "software" }
+}

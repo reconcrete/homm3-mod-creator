@@ -1,0 +1,13 @@
+#!/bin/bash
+# game start [WxH] | stop | restart | status | log [N]
+#   start: virtual screen (default 1920x1080), the browser viewer and the VCMI client, as systemd --user units
+. "$(dirname "$0")/env.sh"
+case $1 in
+  start)   [ -n "$2" ] && echo "SIZE=$2" > "$VCMI_ROOT/home/display.env"
+           systemctl --user start vcmi-display vcmi-view vcmi-client ;;
+  stop)    systemctl --user stop vcmi-client vcmi-view vcmi-display ;;
+  restart) systemctl --user restart vcmi-client ;;
+  status)  systemctl --user --no-pager status vcmi-display vcmi-view vcmi-client | grep -E '●|Active' ;;
+  log)     tail -n "${2:-40}" "$XDG_CACHE_HOME/vcmi/VCMI_Client_log.txt" ;;
+  *) sed -n '2,3p' "$0"; exit 1 ;;
+esac

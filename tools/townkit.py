@@ -134,7 +134,7 @@ def creature(t, faction, cid, level, name, ru_name, borrow, cranim_name, stats, 
     g = {
         'animation': core['graphics']['animation'],
         'map': map_def(borrow),
-        'mapMask': ['VVV', 'VAV'],
+        'mapMask': ['VV', 'VA'],       # the monster's own tile is the bottom-right one, like the originals (VVV/VAV, a hero's shape, drew every monster a tile right of it)
         'mapAttackFromLeft': core['graphics']['mapAttackFromLeft'],
         'mapAttackFromRight': core['graphics']['mapAttackFromRight'],
         'iconLarge': 'TWCRPORT.DEF:0:%d' % icon,

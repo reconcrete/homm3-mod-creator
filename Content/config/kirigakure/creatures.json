@@ -30,8 +30,8 @@
 			"animation": "naruto/creatures/mistGenin/battle",
 			"map": "naruto/creatures/mistGenin/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:141",
 			"mapAttackFromRight": "AvWattak.def:0:140",
@@ -91,8 +91,8 @@
 			"animation": "naruto/creatures/bloodyMistGraduate/battle",
 			"map": "naruto/creatures/bloodyMistGraduate/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:143",
 			"mapAttackFromRight": "AvWattak.def:0:142",
@@ -148,8 +148,8 @@
 			"animation": "naruto/creatures/hunterNin/battle",
 			"map": "naruto/creatures/hunterNin/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:201",
 			"mapAttackFromRight": "AvWattak.def:0:200",
@@ -245,8 +245,8 @@
 			"animation": "naruto/creatures/trackerHunterNin/battle",
 			"map": "naruto/creatures/trackerHunterNin/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:203",
 			"mapAttackFromRight": "AvWattak.def:0:202",
@@ -329,8 +329,8 @@
 			"animation": "naruto/creatures/hozukiBrawler/battle",
 			"map": "naruto/creatures/hozukiBrawler/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:231",
 			"mapAttackFromRight": "AvWattak.def:0:230",
@@ -391,8 +391,8 @@
 			"animation": "naruto/creatures/hozukiHydrifier/battle",
 			"map": "naruto/creatures/hozukiHydrifier/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:247",
 			"mapAttackFromRight": "AvWattak.def:0:246",
@@ -450,8 +450,8 @@
 			"animation": "naruto/creatures/summonedShark/battle",
 			"map": "naruto/creatures/summonedShark/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:213",
 			"mapAttackFromRight": "AvWattak.def:0:212",
@@ -512,8 +512,8 @@
 			"animation": "naruto/creatures/greatShark/battle",
 			"map": "naruto/creatures/greatShark/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:215",
 			"mapAttackFromRight": "AvWattak.def:0:214",
@@ -579,8 +579,8 @@
 			"animation": "naruto/creatures/yukiClanAdept/battle",
 			"map": "naruto/creatures/yukiClanAdept/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:153",
 			"mapAttackFromRight": "AvWattak.def:0:152",
@@ -676,8 +676,8 @@
 			"animation": "naruto/creatures/iceMirrorMaster/battle",
 			"map": "naruto/creatures/iceMirrorMaster/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:155",
 			"mapAttackFromRight": "AvWattak.def:0:154",
@@ -759,8 +759,8 @@
 			"animation": "naruto/creatures/mistSwordsman/battle",
 			"map": "naruto/creatures/mistSwordsman/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:13",
 			"mapAttackFromRight": "AvWattak.def:0:12",
@@ -824,8 +824,8 @@
 			"animation": "naruto/creatures/swordsmanOfTheSeven/battle",
 			"map": "naruto/creatures/swordsmanOfTheSeven/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:15",
 			"mapAttackFromRight": "AvWattak.def:0:14",
@@ -885,8 +885,8 @@
 			"animation": "naruto/creatures/waterDragon/battle",
 			"map": "naruto/creatures/waterDragon/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:53",
 			"mapAttackFromRight": "AvWattak.def:0:52",
@@ -954,8 +954,8 @@
 			"animation": "naruto/creatures/greatWaterDragon/battle",
 			"map": "naruto/creatures/greatWaterDragon/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:265",
 			"mapAttackFromRight": "AvWattak.def:0:264",

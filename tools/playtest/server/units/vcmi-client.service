@@ -1,0 +1,11 @@
+[Unit]
+Description=VCMI play tests: the game client on the virtual screen
+Requires=vcmi-display.service
+After=vcmi-display.service
+
+[Service]
+WorkingDirectory=%h/Projects/vcmi
+Environment=DISPLAY=:50 SDL_AUDIODRIVER=dummy XDG_DATA_HOME=%h/Projects/vcmi/home/share XDG_CONFIG_HOME=%h/Projects/vcmi/home/config XDG_CACHE_HOME=%h/Projects/vcmi/home/cache
+ExecStartPre=/bin/sleep 2
+ExecStart=%h/Projects/vcmi/install/bin/vcmiclient
+Restart=no

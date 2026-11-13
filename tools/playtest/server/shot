@@ -1,0 +1,6 @@
+#!/bin/bash
+# shot [NAME]  lossless PNG of the whole virtual screen -> shots/NAME.png (default: a timestamp); prints the path
+. "$(dirname "$0")/env.sh"
+out="$SHOTS/${1:-$(date +%H%M%S)}.png"
+mkdir -p "$(dirname "$out")"
+ffmpeg -loglevel error -y -f x11grab -draw_mouse 0 -video_size "$(xdpyinfo | awk '/dimensions/{print $2}')" -i "$DISPLAY" -frames:v 1 "$out" && echo "$out"

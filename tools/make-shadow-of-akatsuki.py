@@ -344,9 +344,9 @@ pandora('pandora.gamabunta', (34, 29),
          'Свиток призыва, оставленный Джирайей. На зов отвечает Гамабунта, глава жаб!'),
         reward(creatures=[('gamabunta', 1)]))
 m.thing('magicWell/magicWell', (20, 29))
-guard('akatsukiMember', 1, PASSAGES['cave'][1], 'monster.deidara.message',
-      ('Deidara: "You want the One-Tail? Then let me show you true art. Art is an explosion!"',
-       'Дейдара: «Тебе нужен Однохвостый? Тогда я покажу тебе настоящее искусство. Искусство — это взрыв!»'))
+guard('akatsukiMember', 4, PASSAGES['cave'][1], 'monster.deidara.message',     # 4: one was weaker than the passage guards
+      ('Deidara and his clay clones block the way: "You want the One-Tail? Then let me show you true art. Art is an explosion!"',
+       'Дейдара и его глиняные клоны преграждают путь: «Тебе нужен Однохвостый? Тогда я покажу тебе настоящее искусство. Искусство — это взрыв!»'))
 shukaku = guard('shukaku', 1, (28, 34), 'monster.shukaku.message',
                 ('Shukaku, the One-Tail, tears free of the Akatsuki seals!', 'Шукаку, Однохвостый, вырывается из печатей Акацуки!'))
 
@@ -413,7 +413,7 @@ STORY = ('narutoUzumaki', 'kakashiHatake', 'jiraiya', 'tsunade', 'minatoNamikaze
          'chiyo', 'sasori', 'kisameHoshigaki', 'gaara')
 assert all(h in HEROES for h in STORY)
 header['allowedHeroes'] = {'anyOf': [mod(h) for h in HEROES if h not in STORY]}
-header['name'] = say('header.name', 'Naruto: Shadow of the Akatsuki', 'Наруто: Тень Акацуки')
+header['name'] = say('header.name', "Naruto: Akatsuki's Shadow", 'Наруто: Тень Акацуки')   # the scenario header shows about 27 characters
 header['description'] = say('header.description',
     'The Akatsuki have stolen Shukaku, the One-Tail, from Sunagakure. Sasori holds Puppet Valley in the south, Kisame '
     'holds Shark Bay in the east, and in their hideout behind Shark Bay the extraction ritual has begun: in eight weeks '

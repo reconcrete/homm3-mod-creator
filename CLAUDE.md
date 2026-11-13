@@ -107,7 +107,7 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   switches a faction to them (filters: village / fort / castle-or-capitol);
   `dwelling_object` uses the picture whose slug is the kebab-case object id.
   `tools/make-maps.sh` rebuilds every test map.
-- Play map "Naruto vs Sasuke: Valley of the End" (36x36, two players, hot seat):
+- Play map "Naruto vs Sasuke" (Valley of the End; 36x36, two players, hot seat):
   `.venv/bin/python tools/make-naruto-vs-sasuke.py` -> `Maps/naruto-vs-sasuke.vmap`. Hand-built maps take
   object entries, grass obstacles, road pieces and plain grass views from
   `tools/testmaps/map-library.json` (`tools/harvest-map-library.py` rebuilds it from VCMI's
@@ -115,7 +115,7 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   only if `lastMap` in settings.json names it (the argument alone is ignored); look for
   "Map loaded!" / "Gamestate initialized!" in the client log; the client crashes right after,
   as usual for test mode. Only while Anton isn't playing.
-- Solo story map "Naruto: Shadow of the Akatsuki" (36x36, red human vs two AIs, quests, timed
+- Solo story map "Naruto: Akatsuki's Shadow" (file naruto-shadow-of-akatsuki; 36x36, red human vs two AIs, quests, timed
   story messages, Shukaku as the final boss): `.venv/bin/python tools/make-shadow-of-akatsuki.py [--ascii]`
   -> the VCMI Maps folder. Hand-built maps share `tools/handmap.py` (also used by
   make-naruto-vs-sasuke.py). Story pieces are red-only (quest-guard and seer-hut limiters with
@@ -125,6 +125,16 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   monsters before `dress()`. After building a map, render it (`tools/render-map.py MAP OUT
   [--crop x0,y0,x1,y1 --zoom 2 --marks]`) and look: walls read as walls, guards stand visibly in
   their gaps, nothing hides behind trees.
+- Play tests on the real client (`tools/playtest/`, README there): VCMI 1.7.5 runs on a virtual screen
+  on rtx-server (`~/Projects/vcmi`, see `~/CLAUDE.md` there), and `tools/playtest/play` clicks, types,
+  takes lossless screenshots, hovers, runs cheats and records, without touching Anton's screen.
+  `play sync` and then `play game restart` after every mod change. Watch live (view only):
+  `playtest_view` in tools/pipeline/local.json. Long play tests go to a subagent with a time box.
+  Map names show about 27 characters in the scenario header.
+- Monster map shape: `townkit.creature()` sets `mapMask` VV/VA, the monster's own tile at the
+  bottom right of its 64x64 picture. VCMI uses the creature's mask, not the map file's, and keeps
+  the visit tile: the old VVV/VAV, a hero's shape, drew every monster a tile right of its tile
+  (2026-11-14).
 - Test maps: `tools/make-testmap.py` (see its docstring). `naruto-test-konohagakure` is
   the plain Konoha map; `naruto-test-kurama` adds Kurama at (48, 61), four tiles west and
   two south of the red town gate, and a strong town garrison. The script checks that every

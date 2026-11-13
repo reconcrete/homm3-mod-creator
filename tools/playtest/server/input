@@ -1,0 +1,20 @@
+#!/bin/bash
+# input ACTION ARGS...   send mouse or keyboard input to the game on the virtual screen
+#   click X Y | rclick X Y (hold right button: VCMI's info popup) | dclick X Y | move X Y
+#   drag X1 Y1 X2 Y2 | key KEY... (xdotool names: Return Escape space Up F4 ctrl+s) | type TEXT
+#   hold MS (wait, e.g. after a click before the next shot) | rhold X Y MS (right button held MS, then shot)
+. "$(dirname "$0")/env.sh"
+a=$1; shift
+case $a in
+  click)  xdotool mousemove "$1" "$2" sleep 0.05 click 1 ;;
+  dclick) xdotool mousemove "$1" "$2" sleep 0.05 click --repeat 2 --delay 80 1 ;;
+  rclick) xdotool mousemove "$1" "$2" sleep 0.05 mousedown 3 sleep 0.6 mouseup 3 ;;
+  rhold)  xdotool mousemove "$1" "$2" sleep 0.05 mousedown 3 sleep "$(echo "${3:-600}/1000" | bc -l)"
+          "$(dirname "$0")/shot" "${4:-}"; xdotool mouseup 3 ;;
+  move)   xdotool mousemove "$1" "$2" ;;
+  drag)   xdotool mousemove "$1" "$2" mousedown 1 sleep 0.1 mousemove "$3" "$4" sleep 0.1 mouseup 1 ;;
+  key)    xdotool key --delay 60 "$@" ;;
+  type)   xdotool type --delay 40 "$*" ;;
+  hold)   sleep "$(echo "${1:-500}/1000" | bc -l)" ;;
+  *) sed -n '2,5p' "$0"; exit 1 ;;
+esac

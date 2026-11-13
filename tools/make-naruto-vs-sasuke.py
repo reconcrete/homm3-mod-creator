@@ -158,7 +158,7 @@ terrain = m.terrain()
 # ------------------------------------------------------------------ write
 
 header = json.loads(json.dumps(BASE_HEADER))
-header['name'] = text('Naruto vs Sasuke: Valley of the End / Наруто против Саске')
+header['name'] = text('Naruto vs Sasuke')   # the scenario header shows about 27 characters
 header['description'] = text(
     'Naruto and Sasuke start in two villages of the Leaf. Below them the neutral Sunagakure and Kirigakure wait to be '
     'taken, each with its Kage set and its tailed beast; between them lies the Valley of the End, where Kurama and Gyuki '

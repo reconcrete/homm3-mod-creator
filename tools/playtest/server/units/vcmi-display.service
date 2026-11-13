@@ -1,0 +1,8 @@
+[Unit]
+Description=VCMI play tests: virtual screen :50 (Xvfb + openbox), started on demand
+
+[Service]
+Environment=SIZE=1920x1080
+EnvironmentFile=-%h/Projects/vcmi/home/display.env
+ExecStart=/bin/sh -c 'Xvfb :50 -screen 0 ${SIZE}x24 -nolisten tcp & sleep 1; DISPLAY=:50 exec openbox'
+Restart=no

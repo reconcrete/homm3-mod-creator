@@ -36,8 +36,8 @@
 			"animation": "naruto/creatures/sunaGenin/battle",
 			"map": "naruto/creatures/sunaGenin/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:1",
 			"mapAttackFromRight": "AvWattak.def:0:0",
@@ -98,8 +98,8 @@
 			"animation": "naruto/creatures/sunaChunin/battle",
 			"map": "naruto/creatures/sunaChunin/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:3",
 			"mapAttackFromRight": "AvWattak.def:0:2",
@@ -158,8 +158,8 @@
 			"animation": "naruto/creatures/woodenPuppet/battle",
 			"map": "naruto/creatures/woodenPuppet/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:61",
 			"mapAttackFromRight": "AvWattak.def:0:60",
@@ -226,8 +226,8 @@
 			"animation": "naruto/creatures/battlePuppet/battle",
 			"map": "naruto/creatures/battlePuppet/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:63",
 			"mapAttackFromRight": "AvWattak.def:0:62",
@@ -283,8 +283,8 @@
 			"animation": "naruto/creatures/windKunoichi/battle",
 			"map": "naruto/creatures/windKunoichi/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:177",
 			"mapAttackFromRight": "AvWattak.def:0:176",
@@ -371,8 +371,8 @@
 			"animation": "naruto/creatures/fanMaster/battle",
 			"map": "naruto/creatures/fanMaster/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:179",
 			"mapAttackFromRight": "AvWattak.def:0:178",
@@ -455,8 +455,8 @@
 			"animation": "naruto/creatures/desertScorpion/battle",
 			"map": "naruto/creatures/desertScorpion/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:161",
 			"mapAttackFromRight": "AvWattak.def:0:160",
@@ -519,8 +519,8 @@
 			"animation": "naruto/creatures/poisonScorpion/battle",
 			"map": "naruto/creatures/poisonScorpion/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:163",
 			"mapAttackFromRight": "AvWattak.def:0:162",
@@ -586,8 +586,8 @@
 			"animation": "naruto/creatures/humanPuppet/battle",
 			"map": "naruto/creatures/humanPuppet/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:65",
 			"mapAttackFromRight": "AvWattak.def:0:64",
@@ -657,8 +657,8 @@
 			"animation": "naruto/creatures/kazekagePuppet/battle",
 			"map": "naruto/creatures/kazekagePuppet/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:67",
 			"mapAttackFromRight": "AvWattak.def:0:66",
@@ -741,8 +741,8 @@
 			"animation": "naruto/creatures/kamaitachi/battle",
 			"map": "naruto/creatures/kamaitachi/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:185",
 			"mapAttackFromRight": "AvWattak.def:0:184",
@@ -805,8 +805,8 @@
 			"animation": "naruto/creatures/greatKamaitachi/battle",
 			"map": "naruto/creatures/greatKamaitachi/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:187",
 			"mapAttackFromRight": "AvWattak.def:0:186",
@@ -872,8 +872,8 @@
 			"animation": "naruto/creatures/sandColossus/battle",
 			"map": "naruto/creatures/sandColossus/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:81",
 			"mapAttackFromRight": "AvWattak.def:0:80",
@@ -945,8 +945,8 @@
 			"animation": "naruto/creatures/gaarasSandTsunami/battle",
 			"map": "naruto/creatures/gaarasSandTsunami/map",
 			"mapMask": [
-				"VVV",
-				"VAV"
+				"VV",
+				"VA"
 			],
 			"mapAttackFromLeft": "AvWattak.def:0:83",
 			"mapAttackFromRight": "AvWattak.def:0:82",

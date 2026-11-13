@@ -1,0 +1,12 @@
+#!/bin/bash
+# rec start [NAME] | rec stop   video of the virtual screen -> shots/NAME.mp4 (H.264, CRF 14: visually lossless,
+# about 1 MB per second; FFV1 lossless made 70 MB per second, too big to copy). For a perfect still use shot.
+. "$(dirname "$0")/env.sh"
+pidf="$VCMI_ROOT/home/cache/rec.pid"
+case $1 in
+  start) out="$SHOTS/${2:-rec-$(date +%H%M%S)}.mp4"
+         nohup ffmpeg -loglevel error -y -f x11grab -draw_mouse 0 -framerate 30 -video_size "$(xdpyinfo | awk '/dimensions/{print $2}')" \
+           -i "$DISPLAY" -c:v libx264 -preset veryfast -crf 14 -pix_fmt yuv420p -movflags +faststart "$out" >/dev/null 2>&1 &
+         echo $! > "$pidf"; echo "$out" ;;
+  stop)  kill -INT "$(cat "$pidf")" 2>/dev/null; rm -f "$pidf"; sleep 1.5; ls -t "$SHOTS"/*.mp4 | head -1 ;;
+esac
