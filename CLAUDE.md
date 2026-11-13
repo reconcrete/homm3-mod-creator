@@ -107,6 +107,11 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   only if `lastMap` in settings.json names it (the argument alone is ignored); look for
   "Map loaded!" / "Gamestate initialized!" in the client log; the client crashes right after,
   as usual for test mode. Only while Anton isn't playing.
+- Solo story map "Naruto: Shadow of the Akatsuki" (36x36, red human vs two AIs, quests, timed
+  story messages, Shukaku as the final boss): `python3 tools/make-shadow-of-akatsuki.py [--ascii]`
+  -> the VCMI Maps folder. Hand-built maps share `tools/handmap.py` (also used by
+  make-naruto-vs-sasuke.py). Story pieces are red-only (quest-guard and seer-hut limiters with
+  `colors`), or the AI frees prisoners and completes quests first (found in AI-only test runs).
 - Test maps: `tools/make-testmap.py` (see its docstring). `naruto-test-konohagakure` is
   the plain Konoha map; `naruto-test-kurama` adds Kurama at (48, 61), four tiles west and
   two south of the red town gate, and a strong town garrison. The script checks that every
