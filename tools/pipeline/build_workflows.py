@@ -5,6 +5,10 @@ Scripts find a workflow's inputs by node title, so keep the titles when editing 
 unit-views         Qwen Image 2.1 Turbo, one reference image -> one image.
                    titles: 'reference' (LoadImage), 'prompt' (TextEncodeQwenImage21),
                    'seed' (RandomNoise), 'size' (EmptyLatentImage), 'save' (SaveImage)
+screen-from-reference  Qwen Image 2.1 Turbo, a layout reference + a style reference -> one image of
+                   any size: a game screen (menu, loading screen) redrawn for a mod's theme with the
+                   original's composition. titles: 'layout', 'style' (LoadImage; pass the layout again
+                   when there is no style picture), 'prompt', 'seed', 'size', 'save'.
 model-from-views   Pixal3D multi-view (ComfyUI's "Pixal3D: Multi Views to 3D" template) with four
                    separate views instead of a cropped turnaround sheet, at the template's
                    quality settings (they fit 12 GB for one character). titles: 'front', 'left', 'back',
@@ -42,6 +46,20 @@ def unit_views():
         'save': {'class_type': 'SaveImage', 'inputs': {'images': ['decode', 0], 'filename_prefix': 'homm3/view'}},
     }
     return comfy.api_to_ui(api, titles={'ref': 'reference', 'encode': 'prompt', 'noise': 'seed', 'latent': 'size', 'save': 'save'})
+
+def screen_from_reference():
+    api = json.loads(json.dumps(comfy.ui_to_api(unit_views())))
+    ids = {n.get('_meta', {}).get('title'): k for k, n in api.items()}
+    ref, enc, lat = ids['reference'], ids['prompt'], ids['size']
+    api['style'] = {'class_type': 'LoadImage', 'inputs': {'image': 'example.png'}}
+    api[enc]['inputs']['images.image_2'] = ['style', 0]
+    api[lat]['inputs'].update({'width': 1600, 'height': 1200})
+    for k, n in api.items():
+        if n['class_type'] == 'SaveImage':
+            n['inputs']['filename_prefix'] = 'homm3/screen'
+        n.pop('_meta', None)
+    return comfy.api_to_ui(api, titles={ref: 'layout', 'style': 'style', enc: 'prompt', ids['seed']: 'seed', lat: 'size',
+                                        ids['save']: 'save'})
 
 def model_from_views():
     ui = comfy.get('/templates/3d_pixal3d_multi_views.json').json()
@@ -106,7 +124,7 @@ def model_from_views():
 
 if __name__ == '__main__':
     OUT.mkdir(exist_ok=True)
-    for name, build in (('unit-views', unit_views), ('model-from-views', model_from_views)):
+    for name, build in (('unit-views', unit_views), ('screen-from-reference', screen_from_reference), ('model-from-views', model_from_views)):
         ui = build()
         comfy.ui_to_api(ui)   # must convert back cleanly
         (OUT / f'{name}.json').write_text(json.dumps(ui, indent=1) + '\n')
