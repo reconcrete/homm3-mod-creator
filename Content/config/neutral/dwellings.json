@@ -17,9 +17,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/rogue-ninja",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -45,9 +45,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/sound-ninja",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -73,9 +73,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/rain-ninja",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -101,9 +101,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/stone-ninja",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -129,9 +129,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/cloud-ninja",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -157,9 +157,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/curse-mark-warrior",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -185,9 +185,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/white-zetsu",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -213,9 +213,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/ninja-cat",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -241,9 +241,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/monkey-king-enma",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -269,9 +269,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/manda",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -297,9 +297,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/akatsuki-member",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",

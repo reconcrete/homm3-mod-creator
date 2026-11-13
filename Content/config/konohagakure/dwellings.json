@@ -17,9 +17,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/ninja-academy",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -45,9 +45,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/inuzuka-kennels",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -73,9 +73,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/hyuga-compound",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -101,9 +101,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/medical-corps",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -129,9 +129,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/uchiha-district",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -157,9 +157,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/anbu-headquarters",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -185,9 +185,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/mount-myoboku-gate",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",

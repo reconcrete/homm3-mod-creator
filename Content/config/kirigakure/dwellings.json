@@ -17,9 +17,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/mist-academy",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -45,9 +45,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/hunter-nin-division",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -73,9 +73,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/hozuki-water-pools",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -101,9 +101,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/shark-reef",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -129,9 +129,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/yuki-clan-ice-hall",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -157,9 +157,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/hall-of-the-seven-swordsmen",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -185,9 +185,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/water-dragon-lake",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",

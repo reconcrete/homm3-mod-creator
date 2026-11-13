@@ -5,7 +5,8 @@ from PIL import Image, ImageDraw
 sys.path.insert(0, os.path.dirname(__file__))
 from lod import read
 
-def decode(data):
+def decode(data, shadows=False):
+    """shadows: keep the shadow indices as translucent black (1 faint, 4 full) instead of dropping them."""
     typ, W, H, nblocks = struct.unpack_from('<IIII', data, 0)
     pal = data[16:16 + 768]
     pos = 16 + 768
@@ -14,10 +15,10 @@ def decode(data):
         gid, n, _u1, _u2 = struct.unpack_from('<IIII', data, pos); pos += 16
         names = [data[pos + 13 * i: pos + 13 * i + 13].split(b'\0')[0].decode('latin1') for i in range(n)]; pos += 13 * n
         offs = struct.unpack_from('<%dI' % n, data, pos); pos += 4 * n
-        groups[gid] = [(names[i], frame(data, offs[i], pal)) for i in range(n)]
+        groups[gid] = [(names[i], frame(data, offs[i], pal, shadows)) for i in range(n)]
     return groups
 
-def frame(data, off, pal):
+def frame(data, off, pal, shadows=False):
     size, fmt, fw, fh, w, h, lm, tm = struct.unpack_from('<IIIIIIii', data, off)
     base = off + 32
     idx = bytearray(fw * fh)  # palette indices on the full canvas, 0 = transparent
@@ -52,7 +53,8 @@ def frame(data, off, pal):
     rgba = img.convert('RGBA'); px = rgba.load(); src = img.load()
     for y in range(fh):
         for x in range(fw):
-            if src[x, y] in (0, 1, 4): px[x, y] = (0, 0, 0, 0)          # transparent + shadow
+            if shadows and src[x, y] in (1, 4): px[x, y] = (0, 0, 0, 64 if src[x, y] == 1 else 128)
+            elif src[x, y] in (0, 1, 4): px[x, y] = (0, 0, 0, 0)          # transparent + shadow
             elif src[x, y] in (5, 6, 7): px[x, y] = (0, 0, 0, 0)        # selection / flag colors
     return rgba
 

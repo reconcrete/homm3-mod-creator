@@ -40,6 +40,26 @@ BASE = zipfile.ZipFile(os.path.join(HERE, 'testmaps/base-72x72-4p.vmap'))
 BASE_HEADER = json.loads(strip(BASE.read('header.json').decode('utf-8')))
 SPELLS = next(o for o in json.loads(strip(BASE.read('objects.json').decode('utf-8'))) if o.get('type') == 'town')['options']['possibleSpells']
 ALL_AROUND = ['+++', '+-+', '+++']
+# Obstacles that read as a wall in the game: trees and mountains. Flowers, craters, stumps, low
+# rocks and lakes block a tile too but look like open ground, so a wall made of them looks
+# passable and a guard standing in its gap looks like it guards nothing (Anton's playtest,
+# 2026-11-13). They're only scattered as decoration.
+WALL_TYPES = ('mountain', 'oakTrees', 'pineTrees')
+_render = None
+
+def picture_box(anim):
+    """(width, height, opaque bbox) of an object's map picture, read by tools/render-map.py."""
+    global _render
+    if _render is None:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location('render_map', os.path.join(HERE, 'render-map.py'))
+        _render = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(_render)
+    sp = _render.sprite(anim)
+    if not sp:
+        return None
+    im = sp[0]
+    return im.width, im.height, im.split()[-1].point(lambda v: 255 if v > 64 else 0).getbbox()
 
 def mask_cells(tpl):
     """(dx, dy, char) of a template's mask relative to its anchor (bottom-right)."""
@@ -224,7 +244,13 @@ class HandMap:
         return self.add('artifact', aid, tpl, at, {}, near=near)
 
     def dwelling(self, oid, at, near=3):
-        return self.add('creatureGeneratorCommon', oid, DWELLINGS[oid]['templates']['default'], at, near=near)
+        """`at` is the bottom-right tile of the dwelling's 2x2 footprint (our dwellings are entered
+        on its bottom-left tile, under the drawn door; see tools/convert-art.py)."""
+        tpl = DWELLINGS[oid]['templates']['default']
+        cells = mask_cells(tpl)
+        vx, vy = visit_offset(tpl)
+        bx, by = max((dx, dy) for dx, dy, ch in cells if ch in 'BA' and dy == 0)
+        return self.add('creatureGeneratorCommon', oid, tpl, (at[0] - (bx - vx), at[1] - (by - vy)), near=near)
 
     def thing(self, key, at, near=3, **opt):
         tpl, options = lib(key)
@@ -276,13 +302,39 @@ class HandMap:
                 ok = [t for t in around if t not in zone and self.inside(*t) and t not in self.wall and not self.blocked[t[1]][t[0]]]
                 assert any(self.reserve_path(t, avoid=zone) for t in ok), 'monster at %s: no way to click %s' % (m, s)
 
-    def try_obstacle(self, o, x, y, allowed):
+    def covers_monster(self, anim, x, y):
+        """Would an obstacle anchored at x, y hide a monster? VCMI draws the lower row last, so an
+        obstacle on the monster's row or below it whose picture overlaps a fifth or more of the
+        monster's visible picture hides it (the cat behind a bush in Anton's playtest)."""
+        box = picture_box(anim)
+        if not box or not box[2]:
+            return False
+        w, h, (bx0, by0, bx1, by1) = box
+        left, top = (x + 1) * 32 - w, (y + 1) * 32 - h
+        ox0, oy0, ox1, oy1 = left + bx0, top + by0, left + bx1, top + by1
+        for o in self.objects:
+            if o['type'] != 'monster' or y < o['y']:
+                continue
+            mb = picture_box(o['template']['animation'])
+            if not mb or not mb[2]:
+                continue
+            mw, mh, (m0, m1, m2, m3) = mb
+            ml, mt = (o['x'] + 1) * 32 - mw, (o['y'] + 1) * 32 - mh
+            mx0, my0, mx1, my1 = ml + m0, mt + m1, ml + m2, mt + m3
+            iw, ih = min(ox1, mx1) - max(ox0, mx0), min(oy1, my1) - max(oy0, my0)
+            if iw > 0 and ih > 0 and iw * ih >= 0.2 * (mx1 - mx0) * (my1 - my0):
+                return True
+        return False
+
+    def try_obstacle(self, o, x, y, allowed, hide_ok=False):
         for dx, dy, ch in mask_cells(o['template']):
             tx, ty = x + dx, y + dy
             if ch != '0' and not self.inside(tx, ty):
                 return False
             if ch in 'BA' and (self.blocked[ty][tx] or self.reserved[ty][tx] or (tx, ty) not in allowed):
                 return False
+        if not hide_ok and self.covers_monster(o['template']['animation'], x, y):
+            return False
         for dx, dy, ch in mask_cells(o['template']):
             if ch in 'BA':
                 self.blocked[y + dy][x + dx] = True
@@ -292,24 +344,34 @@ class HandMap:
         return True
 
     def dress(self, density=0.12):
-        """Close the walls with obstacles (big pieces first, then one-tile pieces), then scatter
-        trees, rocks and flowers over a share of the free land."""
+        """Close the walls with trees and mountains (big pieces first, then one-tile trees), then
+        scatter trees, rocks and flowers over a share of the free land. No obstacle may hide a
+        monster (covers_monster), so place the monsters first."""
         rng = self.rng
         OBST = sorted(LIB['obstacles'], key=lambda o: -len(o['blocked']))
-        SMALL = [o for o in OBST if len(o['blocked']) == 1]
+        WALL = [o for o in OBST if o['type'] in WALL_TYPES]
+        SMALL = [o for o in WALL if len(o['blocked']) == 1]
         near_wall = {(x + dx, y + dy) for x, y in self.wall for dx in (-1, 0, 1) for dy in (-1, 0, 1)}
         for x, y in sorted(self.wall, key=lambda t: rng.random()):      # big pieces, spilling one tile off the wall
             if self.blocked[y][x]:
                 continue
-            for o in OBST[:len(OBST) - len(SMALL)] if rng.random() < 0.8 else []:
+            for o in WALL[:len(WALL) - len(SMALL)] if rng.random() < 0.8 else []:
                 bx, by = rng.choice(o['blocked'])
                 if self.try_obstacle(o, x - bx, y - by, near_wall):
                     break
-        for x, y in sorted(self.wall):                                   # close every gap left with one-tile pieces
+        # close every gap left with a one-tile tree; next to a monster, where a tree would hide it,
+        # with the lowest one-tile piece that doesn't (a rock or stump beside a guard is fine: the
+        # guard itself shows the way is shut)
+        LOW = sorted((o for o in OBST if len(o['blocked']) == 1), key=lambda o: (picture_box(o['template']['animation']) or (0, 99))[1])
+        for x, y in sorted(self.wall):
             if not self.blocked[y][x]:
-                for o in sorted(SMALL, key=lambda o: rng.random()):
+                for o in sorted(SMALL, key=lambda o: rng.random()) + LOW:
                     if self.try_obstacle(o, x, y, {(x, y)}):
                         break
+                else:      # right beside a monster every piece overlaps it a little: the lowest one
+                    for o in LOW:
+                        if self.try_obstacle(o, x, y, {(x, y)}, hide_ok=True):
+                            break
         open_wall = [t for t in self.wall if not self.blocked[t[1]][t[0]]]
         assert not open_wall, 'wall tiles left open: %s' % open_wall
         free = {(x, y) for x in range(self.n) for y in range(self.n) if not self.blocked[y][x] and not self.reserved[y][x]}

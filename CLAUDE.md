@@ -25,7 +25,8 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   `Content/sprites/naruto/`: hero portraits `heroes/<heroId>/portraitLarge.png` (58x64)
   and `portraitSmall.png` (48x32); creature portraits `creatures/<creatureId>/...` (58x64
   over the borrowed town's creature background, 32x32 transparent; crops centered on the
-  head, hand-set in `CROPS` where that fails). Rerun it after images are regenerated,
+  head, hand-set in `CROPS` where that fails: beasts whose head isn't on top, e.g. the cat,
+  Isobu, Gyuki; check a contact sheet of all portraits after adding creatures). Rerun it after images are regenerated,
   then rerun the town generators: `townkit.hero()` / `creature()` use Anton's portrait
   when it exists, the borrowed original otherwise. Full validation checks every image
   file exists.
@@ -94,13 +95,20 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   sits at the repo root: VCMI 1.7.5's launcher has no per-mod icon.
 - Adventure-map towns and dwellings (M9): `convert-art.py` turns `map-town-<faction>-<village|
   fort|castle>.png` into `naruto/map/towns/<faction>-<level>` (192x192, gate on the entrance
-  tile) and `map-dwelling-<slug>.png` into `naruto/map/dwellings/<slug>`, each with a
-  `0-overlay.png` (white pennants VCMI tints with the owner's color). `townkit.town_map_object`
+  tile) and `map-dwelling-<slug>.png` into `naruto/map/dwellings/<slug>` (128x96, mask
+  VVVV/VVBB/VVAB: the drawn door stands on the visit tile, `DOOR` in convert-art.py when it isn't in
+  the middle of the picture), each with a `0-overlay.png` (white pennants VCMI tints with the
+  owner's color). The painted ground plate is faded into the terrain (`feather_ground`) and the
+  shadow is baked in from the building only (`baked_shadow`; VCMI's generated one would also
+  shade the plate). Check every new or changed map picture with `tools/preview-map-objects.py
+  OUT` (on grass, sand and snow next to the originals; `-marks` sheets show blocked, visit and
+  walkable-under-picture tiles): Anton found plates clashing with grass and doors that weren't
+  where the hero enters (2026-11-13). `townkit.town_map_object`
   switches a faction to them (filters: village / fort / castle-or-capitol);
   `dwelling_object` uses the picture whose slug is the kebab-case object id.
   `tools/make-maps.sh` rebuilds every test map.
 - Play map "Naruto vs Sasuke: Valley of the End" (36x36, two players, hot seat):
-  `python3 tools/make-naruto-vs-sasuke.py` -> `Maps/naruto-vs-sasuke.vmap`. Hand-built maps take
+  `.venv/bin/python tools/make-naruto-vs-sasuke.py` -> `Maps/naruto-vs-sasuke.vmap`. Hand-built maps take
   object entries, grass obstacles, road pieces and plain grass views from
   `tools/testmaps/map-library.json` (`tools/harvest-map-library.py` rebuilds it from VCMI's
   random maps). A map loads for real with `vcmiclient -i --disable-video --onlyAI --testmap X`
@@ -108,10 +116,15 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   "Map loaded!" / "Gamestate initialized!" in the client log; the client crashes right after,
   as usual for test mode. Only while Anton isn't playing.
 - Solo story map "Naruto: Shadow of the Akatsuki" (36x36, red human vs two AIs, quests, timed
-  story messages, Shukaku as the final boss): `python3 tools/make-shadow-of-akatsuki.py [--ascii]`
+  story messages, Shukaku as the final boss): `.venv/bin/python tools/make-shadow-of-akatsuki.py [--ascii]`
   -> the VCMI Maps folder. Hand-built maps share `tools/handmap.py` (also used by
   make-naruto-vs-sasuke.py). Story pieces are red-only (quest-guard and seer-hut limiters with
   `colors`), or the AI frees prisoners and completes quests first (found in AI-only test runs).
+  handmap builds walls only from trees and mountains (flowers, craters, stumps look walkable, so
+  a guarded gap looked like open field) and places no obstacle over a monster's picture; place
+  monsters before `dress()`. After building a map, render it (`tools/render-map.py MAP OUT
+  [--crop x0,y0,x1,y1 --zoom 2 --marks]`) and look: walls read as walls, guards stand visibly in
+  their gaps, nothing hides behind trees.
 - Test maps: `tools/make-testmap.py` (see its docstring). `naruto-test-konohagakure` is
   the plain Konoha map; `naruto-test-kurama` adds Kurama at (48, 61), four tiles west and
   two south of the red town gate, and a strong town garrison. The script checks that every

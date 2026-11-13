@@ -13,5 +13,5 @@ python3 tools/make-testmap.py konohagakure --out naruto-test-kurama --name "Naru
 	--monster kurama:1:48:61 --garrison genin:80,hyugaMainBranch:25,anbuCaptain:12,gamabunta:4
 python3 tools/make-showcase-map.py
 python3 tools/make-neutral-testmap.py
-python3 tools/make-naruto-vs-sasuke.py
-python3 tools/make-shadow-of-akatsuki.py
+.venv/bin/python tools/make-naruto-vs-sasuke.py     # handmap draws obstacles: needs Pillow
+.venv/bin/python tools/make-shadow-of-akatsuki.py

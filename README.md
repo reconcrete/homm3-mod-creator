@@ -32,7 +32,9 @@ edited by hand.
 - `tools/convert-art.py`, `tools/townscreen.py`: turn generated images into game assets
   (portraits, battle and map sprites, projectiles, town screens, map objects).
 - `tools/3d/`: Blender scripts that rig, animate and render 3D models into battle animation.
-- `tools/make-*.py`: test maps and play maps.
+- `tools/make-*.py`: test maps and play maps (`tools/handmap.py` for hand-built ones).
+- `tools/render-map.py`, `tools/preview-map-objects.py`: draw a map, or our towns and dwellings
+  on real terrain next to the originals, the way the adventure map shows them, to check by eye.
 - `tools/check.sh`, `tools/client-check.sh`, `tools/check-assets.py`,
   `tools/check-translations.sh`: validation against a real VCMI install.
 - `tools/lod.py`, `tools/h3def.py`, `tools/h3pcx.py`: read the original game's archives.

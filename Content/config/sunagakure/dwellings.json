@@ -17,9 +17,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/desert-barracks",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -45,9 +45,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/puppet-workshop",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -73,9 +73,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/wind-training-cliffs",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -101,9 +101,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/scorpion-dunes",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -129,9 +129,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/red-secret-puppet-hall",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -157,9 +157,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/kamaitachi-canyon",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",
@@ -185,9 +185,9 @@
 					"default": {
 						"animation": "naruto/map/dwellings/sealed-sand-altar",
 						"mask": [
-							"VVV",
-							"VBB",
-							"VBA"
+							"VVVV",
+							"VVBB",
+							"VVAB"
 						],
 						"visitableFrom": [
 							"---",

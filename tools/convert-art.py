@@ -124,11 +124,17 @@ def background(town):
 # Hand-set portrait crops where the head is not the top of the figure (quadrupeds):
 # (center x, top, height) as fractions of the FIGURE (see figure()), large and small.
 CROPS = {
-    'ninja-hound': {'large': (0.71, -0.05, 0.81), 'small': (0.82, -0.03, 0.43)},
+    'ninja-hound': {'large': (0.72, -0.09, 0.85), 'small': (0.82, -0.04, 0.44)},
     'ninken-pack-leader': {'large': (0.73, -0.02, 0.72), 'small': (0.83, -0.01, 0.42)},
     'kurama': {'large': (0.78, 0.30, 0.62), 'small': (0.83, 0.32, 0.43)},   # head at the right, tails on top
     'desert-scorpion': {'large': (0.62, 0.32, 0.66), 'small': (0.70, 0.48, 0.44)},   # tail on top, head low right
     'poison-scorpion': {'large': (0.62, 0.32, 0.66), 'small': (0.70, 0.48, 0.44)},
+    # beasts whose head isn't on top (the default crop found a tail, spikes or tentacles; Anton, 2026-11-13)
+    'ninja-cat': {'large': (0.70, -0.02, 0.66), 'small': (0.78, 0.04, 0.42)},
+    'shukaku': {'large': (0.71, 0.10, 0.60), 'small': (0.76, 0.17, 0.32)},
+    'isobu': {'large': (0.83, 0.24, 0.62), 'small': (0.89, 0.34, 0.36)},
+    'gyuki': {'large': (0.78, 0.18, 0.62), 'small': (0.82, 0.30, 0.34)},
+    'gaaras-sand-tsunami': {'large': (0.62, -0.06, 0.62), 'small': (0.66, 0.03, 0.30)},
 }
 
 def head_crop(fig, height_share, aspect, spec=None):
@@ -690,10 +696,33 @@ def rendered_creature(slug, spec, force):
 # ---------------------------------------------------------------- adventure-map objects
 
 # map-dwelling-<slug>.png -> Content/sprites/naruto/map/dwellings/<slug>.json + <slug>/0.png:
-# a one-frame map object on a 96x96 canvas (3x3 tiles), the picture standing on the bottom
-# edge and centered over the two right columns, which the dwelling blocks (mask VVV/VBB/VBA,
-# entered from below; fits VCMI's 2x2 rule for random dwellings). VCMI adds the shadow.
-DWELLING_CANVAS, DWELLING_BOX, DWELLING_CENTER = (96, 96), (94, 92), 58
+# a one-frame map object on a 128x96 canvas (4x3 tiles, the left column for its shadow). The dwelling blocks the 2x2 tiles at the
+# bottom right and is entered on the middle tile of the bottom row (mask VVV/VBB/VAB; VCMI's rule for
+# random dwellings: blocked tiles within 2x2, the visit tile in their bottom row). The picture is
+# placed so that its drawn door stands on that tile (DOOR: the door's x as a share of the picture's
+# width, 0.5 when the door is in the middle), and kept narrow enough that little of it hangs over
+# the free tiles on the left. VCMI adds the shadow. Checked with tools/preview-map-objects.py.
+DWELLING_CANVAS, DWELLING_BOX, DWELLING_DOOR_X = (128, 96), (80, 90), 82     # 4x3 tiles: room for the shadow
+# (the mask, ['VVVV', 'VVBB', 'VVAB'], is set by townkit.own_dwelling_object)
+DOOR = {}
+
+def feather_ground(im, width, start=0.55):
+    """Fade the painted ground plate under a building into the terrain: in the lower part of the
+    picture (from `start` of its height down) the alpha falls off over `width` px towards the edge,
+    so the plate's rim doesn't cut a hard line into grass, snow or sand."""
+    import numpy as np
+    from scipy import ndimage
+    a = np.asarray(im.split()[-1], dtype=np.float32)
+    inside = a > 128
+    dist = ndimage.distance_transform_edt(np.pad(inside, 1))[1:-1, 1:-1]
+    h = a.shape[0]
+    rows = np.arange(h, dtype=np.float32)[:, None]
+    weight = np.clip((rows - start * h) / ((1 - start) * h * 0.5), 0, 1)       # 0 above, 1 in the lowest half
+    fade = np.clip(dist / width, 0, 1) ** 0.8
+    a2 = a * (1 - weight * (1 - fade))
+    out = im.copy()
+    out.putalpha(Image.fromarray(np.clip(a2, 0, 255).astype(np.uint8)))
+    return out
 
 def flag_poles(base, overlay, poles):
     """Flagpoles drawn into the picture, their pennants into the overlay: VCMI tints the white
@@ -709,15 +738,22 @@ def flag_poles(base, overlay, poles):
             for i in range(length):
                 ov[x + 1 + side * (1 + i) if side > 0 else x - 1 - i, top + 1 + row] = (255, 255, 255, 255)
 
-def map_object(src, folder, slug, canvas, box, center_x, poles=()):
+def map_object(src, folder, slug, canvas, box, center_x, poles=(), door=None, feather=0):
+    """door: (x of the door on the canvas, the door's x as a share of the picture's width) places the
+    picture by its door instead of centering it on center_x."""
     im = Image.open(src).convert('RGBA')
     im = im.crop(im.split()[-1].point(lambda v: 255 if v > 128 else 0).getbbox())
     k = min(box[0] / im.width, box[1] / im.height)
     small = im.convert('RGBa').resize((max(1, round(im.width * k)), max(1, round(im.height * k))), Image.LANCZOS).convert('RGBA')
     rgb = small.convert('RGB').filter(ImageFilter.UnsharpMask(radius=0.6, percent=50, threshold=2))
     rgb.putalpha(small.split()[-1].point(lambda v: 0 if v < 24 else v))
-    out = Image.new('RGBA', canvas, (0, 0, 0, 0))
-    out.alpha_composite(rgb, (min(max(0, round(center_x - rgb.width / 2)), canvas[0] - rgb.width), canvas[1] - 1 - rgb.height))
+    solid = rgb.split()[-1]
+    if feather:
+        rgb = feather_ground(rgb, feather)
+    left = round(door[0] - door[1] * rgb.width) if door else round(center_x - rgb.width / 2)
+    pos = (min(max(0, left), canvas[0] - rgb.width), canvas[1] - 1 - rgb.height)
+    out = baked_shadow(solid, pos, canvas)
+    out.alpha_composite(rgb, pos)
     overlay = Image.new('RGBA', canvas, (0, 0, 0, 0))
     flag_poles(out, overlay, poles)
     d = os.path.join(SPRITES, 'map', folder, slug)
@@ -727,8 +763,28 @@ def map_object(src, folder, slug, canvas, box, center_x, poles=()):
         overlay.save(os.path.join(d, '0-overlay.png'), optimize=True)
     with open(os.path.join(SPRITES, 'map', folder, slug + '.json'), 'w') as f:
         json.dump({'basepath': 'naruto/map/%s/%s/' % (folder, slug),
-                   'sequences': [{'group': 0, 'frames': ['0.png'], 'generateShadow': 2}]}, f, indent='\t')
+                   'sequences': [{'group': 0, 'frames': ['0.png']}]}, f, indent='\t')
         f.write('\n')
+
+def baked_shadow(alpha, pos, canvas, plate=0.8, strength=110, edge=14):
+    """The shadow VCMI would generate (the silhouette sheared left by half its height above the
+    ground, squashed to half height, blurred), but cast only by the building: the lowest
+    (1 - plate) of the picture is its ground plate, which would otherwise darken a wide patch left
+    of it. Faded out near the canvas's left edge, where it would be cut off."""
+    import numpy as np
+    a = np.asarray(alpha, dtype=np.uint8).copy()
+    a[int(plate * a.shape[0]):] = 0
+    a = np.where(a > 128, 255, 0).astype(np.uint8)
+    full = Image.new('L', canvas, 0)
+    full.paste(Image.fromarray(a), pos)
+    low = pos[1] + alpha.height - 1
+    sh = full.transform(canvas, Image.AFFINE, (1, -1.0, low, 0, 2, -low), resample=Image.BILINEAR)
+    sh = sh.point(lambda v: strength if v > 64 else 0).filter(ImageFilter.BoxBlur(1.5))
+    ramp = np.clip(np.arange(canvas[0], dtype=np.float32) / edge, 0, 1)[None, :]
+    sh = Image.fromarray((np.asarray(sh, dtype=np.float32) * ramp).astype(np.uint8))
+    out = Image.new('RGBA', canvas, (0, 0, 0, 0))
+    out.putalpha(sh)
+    return out
 
 # map-town-<faction>-<village|fort|castle>.png -> naruto/map/towns/<faction>-<level>: 192x192 like
 # the original town sprites (6x6 tiles; the gate on the entrance tile, column 4 of the bottom
@@ -736,7 +792,8 @@ def map_object(src, folder, slug, canvas, box, center_x, poles=()):
 TOWN_CANVAS, TOWN_CENTER = (192, 192), 112
 TOWN_BOX = {'village': (132, 122), 'fort': (146, 136), 'castle': (158, 150)}
 TOWN_POLES = [(91, 190, 14, -1), (131, 190, 14, 1)]
-DWELLING_POLES = [(91, 94, 14, -1)]       # one flag on the right edge, next to the entrance tile
+DWELLING_POLES = [(123, 94, 14, -1)]      # one flag on the right edge, next to the entrance tile
+TOWN_FEATHER, DWELLING_FEATHER = 9, 6
 
 # artifact-<slug>.png -> Content/sprites/naruto/artifacts/<artifactId>/: icon.png 44x44 (hero
 # screen, transparent), bonus.png 58x64 (campaign bonus picture) and map.json + map/0.png
@@ -783,14 +840,16 @@ def convert_map_objects(force):
             slug = f[len('map-dwelling-'):-4]
             target = os.path.join(SPRITES, 'map', 'dwellings', slug + '.json')
             if stale(os.path.join(INBOX, f), target, force):
-                map_object(os.path.join(INBOX, f), 'dwellings', slug, DWELLING_CANVAS, DWELLING_BOX, DWELLING_CENTER, DWELLING_POLES)
+                map_object(os.path.join(INBOX, f), 'dwellings', slug, DWELLING_CANVAS, DWELLING_BOX, None, DWELLING_POLES,
+                           door=(DWELLING_DOOR_X, DOOR.get(slug, 0.5)), feather=DWELLING_FEATHER)
                 done += 1
         elif f.startswith('map-town-') and f.endswith('.png'):
             slug = f[len('map-town-'):-4]
             level = slug.rsplit('-', 1)[1]
             target = os.path.join(SPRITES, 'map', 'towns', slug + '.json')
             if level in TOWN_BOX and stale(os.path.join(INBOX, f), target, force):
-                map_object(os.path.join(INBOX, f), 'towns', slug, TOWN_CANVAS, TOWN_BOX[level], TOWN_CENTER, TOWN_POLES)
+                map_object(os.path.join(INBOX, f), 'towns', slug, TOWN_CANVAS, TOWN_BOX[level], TOWN_CENTER, TOWN_POLES,
+                           feather=TOWN_FEATHER)
                 done += 1
     print('map objects: %d converted' % done)
 
