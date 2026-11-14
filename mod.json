@@ -56,7 +56,9 @@
 			"config/translations/russian-neutral.json",
 			"config/translations/russian-sunagakure.json",
 			"config/translations/russian-kirigakure.json",
-			"config/translations/russian-artifacts.json"
+			"config/translations/russian-artifacts.json",
+			"config/translations/maps/naruto-shadow-of-akatsuki-russian.json",
+			"config/translations/maps/naruto-uzumaki-spiral-russian.json"
 		]
 	},
 	"factions": [
@@ -88,5 +90,9 @@
 	],
 	"artifacts": [
 		"config/artifacts/artifacts.json"
+	],
+	"translations": [
+		"config/translations/maps/naruto-shadow-of-akatsuki-english.json",
+		"config/translations/maps/naruto-uzumaki-spiral-english.json"
 	]
 }

@@ -524,4 +524,5 @@ header['defeatIconIndex'] = 1           # H3 "lose a hero"
 if args.ascii:
     print(picture())
 m.write(OUT, header, m.terrain(), T.files())
+T.register_in_mod(OUT)
 print('  %d texts in english.json and russian.json' % len(T.strings['english']))

@@ -25,6 +25,7 @@ MAPS = os.path.expanduser('~/Library/Application Support/vcmi/Maps')
 MOD = 'naruto-heroes'
 
 LIB = json.load(open(os.path.join(HERE, 'testmaps/map-library.json')))
+SHORE = json.load(open(os.path.join(HERE, 'testmaps/shore-library.json')))   # tools/harvest-shores.py
 ours = lambda f: json.load(open(os.path.join(ROOT, 'Content/config', f), encoding='utf-8'))
 TOWNS = ('konohagakure', 'sunagakure', 'kirigakure')
 FACTIONS = {f: ours(f + '/faction.json')[f] for f in TOWNS}
@@ -113,6 +114,32 @@ class Texts:
     def files(self):
         return {lang + '.json': s for lang, s in self.strings.items()}
 
+    def register_in_mod(self, map_file):
+        """Also give the texts to the mod as translations, under the full key the map uses
+        (map.<file name>.<key>). VCMI 1.7.5 drops a map's own russian.json: after the map travels
+        from the game server to the client (lobby, game, saves) it rebuilds the map texts from the
+        base language only. Text lookup tries the global strings (mods) before the map's own, so
+        these win and follow the game language. Writes Content/config/translations/maps/<file
+        name>-<language>.json and lists them in mod.json (English as the mod's base translations)."""
+        name = os.path.splitext(os.path.basename(map_file))[0].lower().replace('.', '')
+        rel = {}
+        for lang, strings in self.strings.items():
+            path = os.path.join(ROOT, 'Content', 'config', 'translations', 'maps', '%s-%s.json' % (name, lang))
+            os.makedirs(os.path.dirname(path), exist_ok=True)
+            with open(path, 'w', encoding='utf-8') as f:
+                json.dump({'map.%s.%s' % (name, k): v for k, v in strings.items()}, f, indent='\t', ensure_ascii=False)
+                f.write('\n')
+            rel[lang] = 'config/translations/maps/%s-%s.json' % (name, lang)
+        mj_path = os.path.join(ROOT, 'mod.json')
+        mj = json.load(open(mj_path, encoding='utf-8'))
+        for lang, r in rel.items():
+            lst = mj.setdefault('translations', []) if lang == 'english' else mj.setdefault(lang, {}).setdefault('translations', [])
+            if r not in lst:
+                lst.append(r)
+        with open(mj_path, 'w', encoding='utf-8') as f:
+            json.dump(mj, f, indent='\t', ensure_ascii=False)
+            f.write('\n')
+
 def lib(key):
     e = LIB['objects'][key]
     return e['template'], json.loads(json.dumps(e.get('options'))) if 'options' in e else None
@@ -130,6 +157,7 @@ class HandMap:
         self.blocked = [[False] * n for _ in range(n)]
         self.reserved = [[False] * n for _ in range(n)]
         self.wall, self.road, self.open, self.gates = set(), set(), set(), set()
+        self.water = set()                     # sea tiles (set_water): blocked, no obstacles, coast drawn by terrain()
         self.objects, self.visits = [], []     # map objects; (visit tile, object, template)
         self.at = {}                           # instance name -> visit tile
         self.counter = collections.Counter()
@@ -147,6 +175,14 @@ class HandMap:
         self.road |= set(tiles)
         for x, y in tiles:
             self.reserved[y][x] = True
+            self.wall.discard((x, y))
+
+    def set_water(self, tiles):
+        """Sea: blocked for heroes, never dressed. Keep the coast smooth (no one-tile inlets or
+        peninsulas): terrain() draws it from the coast pieces VCMI's generator used."""
+        for x, y in tiles:
+            self.water.add((x, y))
+            self.blocked[y][x] = True
             self.wall.discard((x, y))
 
     # ------------------------------------------------------------------ objects
@@ -172,9 +208,11 @@ class HandMap:
                        key=lambda p: (abs(p[0] - ax0) + abs(p[1] - ay0), p))
         for ax, ay in spots:
             x, y = ax - ox, ay - oy
-            if self.fits(tpl, x, y, allow_reserved_visit=(kind in ('monster', 'hero', 'event', 'questGuard'))):
+            if self.fits(tpl, x, y, allow_reserved_visit=(kind in ('monster', 'hero', 'event', 'questGuard', 'borderGuard'))):
                 break
         else:
+            if os.environ.get('HANDMAP_DEBUG'):      # show where things stand
+                print(self.ascii({a: o['type'][0].upper() for a, o, _ in self.visits}))
             raise SystemExit('no room for %s %s near %s' % (kind, subtype, at))
         for dx, dy, ch in mask_cells(tpl):
             if ch in 'BA':
@@ -437,11 +475,30 @@ class HandMap:
             cross = lambda k: k[0] + k[2] + k[4] + k[6]
             match = [v for k, v in LIB['roads'].items() if cross(k) == cross(key)]
             return max(match, key=len)[0] if match else LIB['roads']['00100010'][0]
+        dirs8 = [(0, -1), (1, -1), (1, 0), (1, 1), (0, 1), (-1, 1), (-1, 0), (-1, -1)]
+        def coast(table, key):
+            # the generator's piece for this neighbourhood, or the nearest one it used
+            if key in table:
+                return table[key][0]
+            near = min(table, key=lambda k: (sum(a != b for a, b in zip(k, key)), k))
+            return table[near][0]
+        def wet(x, y):
+            return (x, y) in self.water or not self.inside(x, y) and self.water   # off the map counts as sea on a sea map
         rows = []
         for y in range(self.n):
             row = []
             for x in range(self.n):
-                cell = 'gr%d_' % rng.choice(LIB['grass'])
+                around = [wet(x + dx, y + dy) for dx, dy in dirs8]
+                if (x, y) in self.water:
+                    key = ''.join('0' if a else '1' for a in around)
+                    view, flip = rng.choice(SHORE['inner'][:8]) if key == '00000000' else coast(SHORE['water'], key)
+                    row.append('wt%d%s' % (view, flip))
+                    continue
+                if any(around):
+                    view, flip = coast(SHORE['grass'], ''.join('1' if a else '0' for a in around))
+                    cell = 'gr%d%s' % (view, flip)
+                else:
+                    cell = 'gr%d_' % rng.choice(LIB['grass'])
                 if (x, y) in self.road:
                     view, flip = road_piece(x, y)
                     cell += 'pc%d%s' % (view, flip)
