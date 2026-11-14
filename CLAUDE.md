@@ -131,6 +131,12 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   `play sync` and then `play game restart` after every mod change. Watch live (view only):
   `playtest_view` in tools/pipeline/local.json. Long play tests go to a subagent with a time box.
   Map names show about 27 characters in the scenario header.
+- Menu screens (main menu, loading screen, scenario-selection backgrounds):
+  `tools/pipeline/screens.py tools/menu-screens.json generate|install|buttons` (docstring there;
+  ComfyUI's `homm3/screen-from-reference`, the original blurred as layout so its knight and logo
+  don't survive). `buttons` turns the pink glow baked into the original buttons into shadow. The
+  sub-menu labels are shipped empty (`"labels": "hide"`): they sat on Naruto's face. Picked seeds:
+  gamselbk 6, loadbar 4, gamselb0 1, gamselb1 7.
 - Monster map shape: `townkit.creature()` sets `mapMask` VV/VA, the monster's own tile at the
   bottom right of its 64x64 picture. VCMI uses the creature's mask, not the map file's, and keeps
   the visit tile: the old VVV/VAV, a hero's shape, drew every monster a tile right of its tile

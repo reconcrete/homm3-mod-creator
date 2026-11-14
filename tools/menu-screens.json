@@ -1,10 +1,11 @@
 {
 	"style": "art/inbox/town-konohagakure-background.png",
 	"title": "NARUTO HEROES",
+	"labels": "hide",
 	"screens": {
 		"gamselbk": "Naruto Uzumaki in his orange and black jumpsuit and Leaf headband, leaping forward with a glowing blue Rasengan in his hand, the giant orange nine-tailed fox Kurama rising behind him, a full moon and the Hokage rock faces of Konoha in the night behind them; the right third is a dark blue night sky with faint clouds.",
 		"loadbar": "The heroes of the three ninja villages standing together on a rocky battlefield at dusk: Naruto in orange, Sasuke in dark blue with a katana, Sakura in red, Kakashi with grey hair and a mask, Gaara with his sand gourd, and a mist swordsman with a huge blade; behind them an army of ninja and the red clouds of the Akatsuki in the sky.",
 		"gamselb0": "Gaara of the Sand with red hair and a large gourd on his back, sand swirling around him, beside a grim puppet master in a black cloak with red clouds, desert canyon and an orange sunset behind them.",
-		"gamselb1": "Shukaku, the giant sand-colored one-tailed raccoon beast with dark blue markings, crouching on a rock with its huge tail curled, sand storm and dark stormy sky behind it."
+		"gamselb1": "Shukaku, the giant one-tailed tanuki (a raccoon dog, not a cat, no wings) made of sand: a round fat belly, short legs, a broad face with a wide grin, sand-colored with dark blue curling markings all over, one single huge thick tail curled up behind it; crouching on a rock, a sand storm and a dark stormy sky behind it."
 	}
 }
