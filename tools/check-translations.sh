@@ -17,7 +17,7 @@ sys.path.insert(0, 'tools'); from vjson import load
 exp = {}
 for f in glob.glob(sys.argv[1] + '/**/*.json', recursive=True): exp.update(load(f))
 ours = {}
-for f in glob.glob('Content/config/translations/russian-*.json'): ours.update(json.load(open(f)))
+for f in glob.glob('Content/config/translations/russian-*.json') + glob.glob('Content/config/translations/maps/*-russian.json'): ours.update(json.load(open(f)))
 missing = sorted(k for k in exp if k not in ours)
 unknown = sorted(k for k in ours if k not in exp)
 print('%d strings, %d translated' % (len(exp), len(exp) - len(missing)))

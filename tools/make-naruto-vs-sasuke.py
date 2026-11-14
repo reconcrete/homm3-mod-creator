@@ -12,10 +12,10 @@ Built with tools/handmap.py (object entries and terrain codes from VCMI's own ra
 script checks that every object can be reached and that the walls only open at the guarded passages."""
 import argparse, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from handmap import HandMap, BASE_HEADER, MAPS, road_line, text
+from handmap import HandMap, BASE_HEADER, ROOT, Texts, road_line
 
 N = 36
-OUT = os.path.join(MAPS, 'naruto-vs-sasuke.vmap')
+OUT = os.path.join(ROOT, 'Content', 'maps', 'naruto-vs-sasuke.vmap')   # shipped with the mod
 ap = argparse.ArgumentParser()
 ap.add_argument('--seed', type=int, default=7)
 args = ap.parse_args()
@@ -158,11 +158,12 @@ terrain = m.terrain()
 # ------------------------------------------------------------------ write
 
 header = json.loads(json.dumps(BASE_HEADER))
-header['name'] = text('Naruto vs Sasuke')   # the scenario header shows about 27 characters
-header['description'] = text(
+T = Texts()
+header['name'] = T.say('header.name', 'Naruto vs Sasuke', 'Наруто против Саске')   # the scenario header shows about 27 characters
+header['description'] = T.say('header.description',
     'Naruto and Sasuke start in two villages of the Leaf. Below them the neutral Sunagakure and Kirigakure wait to be '
     'taken, each with its Kage set and its tailed beast; between them lies the Valley of the End, where Kurama and Gyuki '
-    'guard the Rinnegan, Kusanagi and the First Hokage\'s Necklace. Defeat the other to win.\n\n'
+    'guard the Rinnegan, Kusanagi and the First Hokage\'s Necklace. Defeat the other to win.',
     'Наруто и Саске начинают в двух деревнях Листа. Под ними ждут нейтральные Суна и Кири, у каждой свой сет Каге и свой '
     'хвостатый зверь; между ними Долина Завершения, где Курама и Гьюки охраняют Риннеган, Кусанаги и Ожерелье Первого '
     'Хокаге. Победите соперника.')
@@ -173,6 +174,8 @@ header['players'] = {
              'mainTown': {'generateHero': False, 'l': 0, 'x': m.objects[1]['x'], 'y': m.objects[1]['y']}},
 }
 header['teams'] = [['red'], ['blue']]
-header['mapVersion'] = text('1.0')
-header['author'] = text('Naruto Heroes')
-m.write(OUT, header, terrain)
+header['mapVersion'] = T.say('header.mapVersion', '1.0', '1.0')
+header['author'] = T.say('header.author', 'Naruto Heroes', 'Naruto Heroes')
+os.makedirs(os.path.dirname(OUT), exist_ok=True)
+m.write(OUT, header, terrain, T.files())
+T.register_in_mod(OUT)

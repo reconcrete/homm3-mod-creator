@@ -21,11 +21,11 @@ Texts in English and Russian (the map's own files plus the mod's translations, s
 Texts.register_in_mod). Built with tools/handmap.py and its checks."""
 import argparse, json, math, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from handmap import HandMap, Texts, BASE_HEADER, MAPS, MOD, EMPTY_TEXT, HEROES, lib, h3, road_line, mask_cells
+from handmap import HandMap, Texts, BASE_HEADER, MAPS, ROOT, MOD, EMPTY_TEXT, HEROES, lib, h3, road_line, mask_cells
 
 N = 36
 NAME = 'naruto-uzumaki-spiral'
-OUT = os.path.join(MAPS, NAME + '.vmap')
+OUT = os.path.join(ROOT, 'Content', 'maps', NAME + '.vmap')   # shipped with the mod (Content/maps)
 ap = argparse.ArgumentParser()
 ap.add_argument('--seed', type=int, default=3)
 ap.add_argument('--ascii', action='store_true', help='print a text picture of the map')
@@ -98,6 +98,12 @@ for arm in ARMS:
             if math.hypot(x - qx, y - qy) <= LANDING and (x, y) not in PLAZA_TILES and \
                     not any((x + dx, y + dy) in other for dx in (-1, 0, 1) for dy in (-1, 0, 1)):
                 ARM[(x, y)] = (arm, TMAX + 0.3)
+# where the two arms come within a diagonal step of each other, both edge tiles become wall: a one-tile
+# wall that touches only at a corner lets heroes slip through (found when random trees stopped plugging it)
+touching = [p for p, (a, _) in ARM.items()
+            if any(ARM.get((p[0] + dx, p[1] + dy), (a,))[0] != a for dx in (-1, 0, 1) for dy in (-1, 0, 1))]
+for p in touching:
+    del ARM[p]
 m.set_water([(x, y) for y in range(N) for x in range(N) if polar(x, y)[0] > ISLAND and (x, y) not in ARM])
 m.wall |= {(x, y) for y in range(N) for x in range(N)
            if (x, y) not in m.water and (x, y) not in ARM and (x, y) not in PLAZA_TILES}
@@ -491,7 +497,18 @@ gate('gate.mist', gates2['blue'][0],
 
 # ------------------------------------------------------------------ the temple plaza and Isobu's shrine
 
-portal('monolithOneWayEntrance', 'monolith1', (21, 19), near=1)   # Kiri's raids: to the middle of either road
+# Kiri's raids: the one-way portal to the middle of either road stands in a niche east of the shrine; the
+# masked man's seal in its doorway holds until the day-10 event removes it (the AI raided from day 2 in the
+# first play test, before the warning)
+RAID_PORTAL, RAID_DOOR = (21, 19), (21, 18)
+m.wall |= {(22, 18), (22, 19), (22, 20), (21, 20)}
+raid_portal = portal('monolithOneWayEntrance', 'monolith1', RAID_PORTAL, near=0)
+raid_seal = gate('gate.raids', RAID_DOOR,
+     (('The masked man\'s stone circle. It is sealed and still gathering chakra; it will wake on day 10.',
+       'Каменный круг человека в маске. Он запечатан и ещё набирает чакру; он проснётся на 10-й день.'),
+      ('The stone circle is still sealed. It will wake on day 10.', 'Каменный круг всё ещё запечатан. Он проснётся на 10-й день.'),
+      ('The stone circle wakes.', 'Каменный круг просыпается.')),                  # never shown: the day-10 event removes it
+     mission={'heroes': [mod('narutoUzumaki')], 'colors': ['teal']})      # no one can: Naruto is never teal
 gate('gate.sand', SEAL1,
      (('The shrine of the Uzumaki: the masked man\'s seal covers its door. Two locks glow on it, one of sand and one of '
        'Uzumaki script. The sand lock answers only to the chakra of a jinchuriki of the sand: Gaara.',
@@ -507,14 +524,33 @@ gate('gate.spiral', SEAL2,
        'Узумаки: Наруто.'),
       ('The Uzumaki lock waits for Naruto.', 'Замок Узумаки ждёт Наруто.'),
       ('The script knows Naruto\'s chakra. The spiral on the door turns once and opens. Below, the Three-Tails roars.',
-       'Письмена узнают чакру Наруто. Спираль на двери делает оборот и раскрывается. Внизу ревёт Треххвостый.')),
+       'Письмена узнают чакру Наруто. Спираль на двери делает оборот и раскрывается. Внизу ревёт Трёххвостый.')),
      mission={'heroes': [mod('narutoUzumaki')]})
 isobu = guard('isobu', 1, (19, 21), 'monster.isobu.message',
               ('Isobu, the Three-Tails, rises in the masked man\'s chains, maddened by the seal, and attacks!',
-               'Исобу, Треххвостый, поднимается в цепях человека в маске, обезумевший от печати, и нападает!'), near=0)
+               'Исобу, Трёххвостый, поднимается в цепях человека в маске, обезумевший от печати, и нападает!'), near=0)
 m.artifact('willOfFire', (17, 21), near=0)
 
 # ------------------------------------------------------------------ obstacles and checks
+
+# before any decoration: walls and seals alone must keep the stretches apart (random trees once hid a leak)
+def walls_reach(start):
+    seen, todo = {start}, [start]
+    while todo:
+        x, y = todo.pop()
+        for dx in (-1, 0, 1):
+            for dy in (-1, 0, 1):
+                q = (x + dx, y + dy)
+                if q in seen or not m.inside(*q) or q in m.wall or q in m.water or q in m.gates:
+                    continue
+                seen.add(q)
+                todo.append(q)
+    return seen
+for arm, home in (('red', LANDINGS['red']['hero']), ('blue', LANDINGS['blue']['hero'])):
+    seen = walls_reach(home)
+    other = 'blue' if arm == 'red' else 'red'
+    leaks = [p for p, (a, t) in ARM.items() if p in seen and (a == other or t < G1 - 0.15)]
+    assert not leaks, '%s landing reaches past its first seal or into the %s road by walls alone: %s' % (arm, other, leaks[:5])
 
 try:
     m.keep_monsters_clickable()
@@ -583,7 +619,7 @@ header['description'] = say('header.description',
     'Win: defeat Isobu in the shrine at the centre. Lose: Naruto or Gaara falls, or day 43 comes.',
     'Кооператив для двух игроков (красный и синий — союзники). Руины Узусиогакуре, Деревни Водоворота клана Узумаки, '
     'лежат на острове, выстроенном двойной спиралью клана. Ягура, Четвёртый Мизукаге, марионетка человека в маске, '
-    'держит храм в её сердце и сковывает Исобу, Треххвостого, собственными печатями клана. Наруто высаживается на '
+    'держит храм в её сердце и сковывает Исобу, Трёххвостого, собственными печатями клана. Наруто высаживается на '
     'северо-западном берегу, Гаара — на юго-восточном. Каждую спиральную дорогу закрывают печати, ключи от которых '
     'лежат на другой дороге: действуйте вместе. Каменные круги соединяют две дороги.\n\n'
     'Победа: одолеть Исобу в святилище в центре. Поражение: погибнет Наруто или Гаара, или наступит 43-й день.')
@@ -616,7 +652,7 @@ header['events'] = [
         'weeks Isobu will be his weapon. Each of your roads is sealed, and the keys lie on the other road: help each other. '
         'The stone circles on your roads lead to each other\'s."',
         'Узусиогакуре. Наруто и Гаара высаживаются на противоположных берегах спирального острова. Приказ Цунаде: «Ягура '
-        'держит храм в центре, а человек в маске сковывает Треххвостого печатями Узумаки. Через шесть недель Исобу станет его '
+        'держит храм в центре, а человек в маске сковывает Трёххвостого печатями Узумаки. Через шесть недель Исобу станет его '
         'оружием. Каждую вашу дорогу закрывает печать, а ключи лежат на другой дороге: помогайте друг другу. Каменные круги '
         'на ваших дорогах ведут на дорогу друга.»')),
     timed('keys', 2, ('An old Uzumaki inscription on the shore: "The guardian of each road lets through whoever has visited '
@@ -628,10 +664,13 @@ header['events'] = [
         'Гаары сторожит фиолетовый, и фиолетовый шатёр стоит на дороге Наруто.')),
     timed('supplies', 8, ('Supply boats arrive from Konoha and Suna.', 'Прибывают лодки с припасами из Конохи и Суны.'),
         resources={'gold': 2000, 'wood': 5, 'ore': 5}),
-    timed('raids', 10, ('Scouts report: Kiri\'s hunter-nin step into the stone circle in the temple and come out on your '
-        'roads, past the first seals. Guard your mines, and your towns once the green and purple guardians are gone.',
-        'Разведчики докладывают: охотники Кири входят в каменный круг в храме и выходят на ваших дорогах, за первыми '
-        'печатями. Берегите шахты, а когда исчезнут зелёный и фиолетовый стражи, и города.')),
+    dict(timed('raids', 10, ('Scouts report: the masked man\'s stone circle in the temple has woken. From now on Kiri\'s '
+        'hunter-nin step into it and come out on your roads, past the first seals. Guard your mines, and your towns once the '
+        'green and purple guardians are gone.',
+        'Разведчики докладывают: каменный круг человека в маске в храме проснулся. Теперь охотники Кири входят в него и '
+        'выходят на ваших дорогах, за первыми печатями. Берегите шахты, а когда исчезнут зелёный и фиолетовый стражи, и '
+        'города.')),
+        deletedObjectsInstances=[m.objects.index(raid_seal)]),     # the seal on Kiri's portal goes (ids = list order)
     timed('materials', 22, ('Tsunade and the Kazekage\'s council send rare materials.',
         'Цунаде и совет Казекаге присылают редкие материалы.'), resources={'gold': 2500, 'mercury': 4, 'sulfur': 4,
                                                                             'crystal': 4, 'gems': 4}),
@@ -660,7 +699,7 @@ header['triggeredEvents'] = {
                    'Isobu is free of the masked man\'s chains.', 'Исобу свободен от цепей человека в маске.')},
         'message': say('header.victory.message', 'Isobu falls, and the masked man\'s chains break with him. The Three-Tails '
                        'sinks back into the sea, free. Yagura wakes from his long dream. Uzushiogakure is silent again: '
-                       'mission complete!', 'Исобу повержен, и цепи человека в маске рвутся вместе с ним. Треххвостый, '
+                       'mission complete!', 'Исобу повержен, и цепи человека в маске рвутся вместе с ним. Трёххвостый, '
                        'свободный, уходит обратно в море. Ягура пробуждается от долгого сна. Узусиогакуре снова молчит: '
                        'миссия выполнена!')},
     'narutoFalls': {
@@ -692,6 +731,7 @@ header['defeatIconIndex'] = 1
 
 if args.ascii:
     print(picture())
+os.makedirs(os.path.dirname(OUT), exist_ok=True)
 m.write(OUT, header, m.terrain(), T.files())
 T.register_in_mod(OUT)
 print('  %d texts in english.json and russian.json' % len(T.strings['english']))

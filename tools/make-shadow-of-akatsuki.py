@@ -32,11 +32,11 @@ on unless "settings": {"creatures": {"allowRandomSpecialWeeks": false}} goes int
 would switch special weeks off in every game with the mod."""
 import argparse, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from handmap import HandMap, Texts, BASE_HEADER, MAPS, MOD, EMPTY_TEXT, HEROES, lib, h3, road_line, mask_cells
+from handmap import HandMap, Texts, BASE_HEADER, MAPS, ROOT, MOD, EMPTY_TEXT, HEROES, lib, h3, road_line, mask_cells
 
 N = 36
 NAME = 'naruto-shadow-of-akatsuki'
-OUT = os.path.join(MAPS, NAME + '.vmap')
+OUT = os.path.join(ROOT, 'Content', 'maps', NAME + '.vmap')   # shipped with the mod (Content/maps)
 ap = argparse.ArgumentParser()
 ap.add_argument('--seed', type=int, default=11)
 ap.add_argument('--ascii', action='store_true', help='print a text picture of the map')
@@ -523,6 +523,7 @@ header['defeatIconIndex'] = 1           # H3 "lose a hero"
 
 if args.ascii:
     print(picture())
+os.makedirs(os.path.dirname(OUT), exist_ok=True)
 m.write(OUT, header, m.terrain(), T.files())
 T.register_in_mod(OUT)
 print('  %d texts in english.json and russian.json' % len(T.strings['english']))

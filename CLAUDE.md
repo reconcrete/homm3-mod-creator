@@ -108,7 +108,9 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   `dwelling_object` uses the picture whose slug is the kebab-case object id.
   `tools/make-maps.sh` rebuilds every test map.
 - Play map "Naruto vs Sasuke" (Valley of the End; 36x36, two players, hot seat):
-  `.venv/bin/python tools/make-naruto-vs-sasuke.py` -> `Maps/naruto-vs-sasuke.vmap`. Hand-built maps take
+  `.venv/bin/python tools/make-naruto-vs-sasuke.py` -> `Content/maps/naruto-vs-sasuke.vmap`. The three playable
+  maps ship inside the mod (`Content/maps/`, listed in the scenario list while the mod is on); test maps stay
+  in the VCMI Maps folder. Hand-built maps take
   object entries, grass obstacles, road pieces and plain grass views from
   `tools/testmaps/map-library.json` (`tools/harvest-map-library.py` rebuilds it from VCMI's
   random maps). A map loads for real with `vcmiclient -i --disable-video --onlyAI --testmap X`
@@ -117,7 +119,7 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   as usual for test mode. Only while Anton isn't playing.
 - Solo story map "Naruto: Akatsuki's Shadow" (file naruto-shadow-of-akatsuki; 36x36, red human vs two AIs, quests, timed
   story messages, Shukaku as the final boss): `.venv/bin/python tools/make-shadow-of-akatsuki.py [--ascii]`
-  -> the VCMI Maps folder. Hand-built maps share `tools/handmap.py` (also used by
+  -> `Content/maps/`. Hand-built maps share `tools/handmap.py` (also used by
   make-naruto-vs-sasuke.py). Story pieces are red-only (quest-guard and seer-hut limiters with
   `colors`), or the AI frees prisoners and completes quests first (found in AI-only test runs).
   handmap builds walls only from trees and mountains (flowers, craters, stumps look walkable, so
@@ -171,9 +173,31 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   2 / 4 / 3), or the frames painted into the background show as black boxes. Hall labels
   hold about 22 characters; keep Russian names within that ("Ул." for upgrades).
 - Network play needs the identical mod on both computers (VCMI compares mod checksums):
-  `tools/package-mod.sh [out]` writes `naruto-heroes.zip` (mod.json + Content, as loaded here)
-  and the Naruto vs Sasuke map to `~/Desktop/naruto-heroes-share`; the other computer imports
-  both with the launcher's "Import files". Re-send after every mod change.
+  `tools/package-mod.sh [out]` writes `naruto-heroes.zip` (mod.json + Content, as loaded here,
+  maps inside) to `~/Desktop/naruto-heroes-share`; the other computer imports it with the
+  launcher's "Import files". Re-send after every mod change.
+- Map texts and languages: VCMI 1.7.5 reads a map's english.json / russian.json but drops the
+  Russian once the map travels from the game server to the client (lobby, game, saves rebuild map
+  texts from the base language only). So `Texts.register_in_mod(map file)` in handmap.py also
+  writes them as mod translations under the full key `map.<file name>.<key>`
+  (`Content/config/translations/maps/`, registered in mod.json: English as the mod's base
+  `translations`, Russian under `russian`), which the text lookup finds first. Every map built
+  with handmap calls it; check a map in both languages on the test machine
+  (`general.language` in its settings.json).
+- Co-op map "Naruto: The Uzumaki Spiral" (file naruto-uzumaki-spiral; red Naruto + blue Gaara,
+  allied, vs teal AI Kiri): `.venv/bin/python tools/make-uzumaki-spiral.py [--ascii]` (design in
+  its docstring: a double-spiral island, each road's seals opened by keys / treasures on the
+  partner's road, two hero seals at Isobu's shrine). handmap can draw sea now (`set_water`; coast
+  pieces from VCMI's random maps, `tools/harvest-shores.py` -> `testmaps/shore-library.json`). A
+  guard's picture extends up-left of its tile, so on a stretch walked northwards the top of the
+  picture lies beyond it: the script requires at least one picture tile clickable from the
+  approach side and the guard attackable (VCMI starts the fight when the hero steps into its zone).
+- Publishing: the mod has its own repository, github.com/reconcrete/naruto-heroes (branches main
+  and vcmi-1.7): `tools/publish-mod.sh [checkout]` copies mod.json, Content/, publish/README.md,
+  publish/LICENSE and publish/screenshots/ there. VCMI's launcher list
+  (github.com/vcmi/vcmi-mods-repository, `vcmi-1.7.json`) only lists mods inside the vcmi-mods
+  organisation: a PR links our repo and a maintainer forks it. Their reviewers are strict about AI
+  art quality (bad pixels, borders, sizes). Tools: MIT (LICENSE); the mod: CC BY-NC 4.0.
 - Copy `~/Library/Logs/vcmi/VCMI_Client_log.txt` before running any check after Anton has
   played: the next client start overwrites it.
 - The installed mod is a symlink: `~/Library/Application Support/vcmi/Mods/naruto-heroes`

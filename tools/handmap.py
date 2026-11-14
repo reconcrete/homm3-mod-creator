@@ -326,7 +326,8 @@ class HandMap:
         for at, o, tpl in self.visits:
             if o['type'] in ('monster', 'hero'):
                 continue
-            entries = [e for e in entry_tiles(tpl, *at) if self.inside(*e) and not self.blocked[e[1]][e[0]] and e not in self.wall]
+            entries = [e for e in entry_tiles(tpl, *at) if self.inside(*e) and (not self.blocked[e[1]][e[0]] or e in self.open)
+                       and e not in self.wall]      # a gate (quest guard) may be the way in
             assert any(self.reserve_path(e) for e in entries), 'no way to %s %s at %s' % (o['type'], o['subtype'], at)
 
     def keep_monsters_clickable(self):
