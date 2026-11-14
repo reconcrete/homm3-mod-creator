@@ -137,6 +137,14 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   don't survive). `buttons` turns the pink glow baked into the original buttons into shadow. The
   sub-menu labels are shipped empty (`"labels": "hide"`): they sat on Naruto's face. Picked seeds:
   gamselbk 6, loadbar 4, gamselb0 1, gamselb1 7.
+- Hero map riders (per hero class; VCMI has no per-hero map sprite, so every hero of a class rides
+  the same picture): `tools/pipeline/riders.py` (docstring: concept from ComfyUI's
+  `homm3/rider-from-refs`, then `make.py rider-<class>` views/model with pose `rider`,
+  `tools/3d/render_rider.py`, `riders.py sprites`), then rerun the town generator
+  (`townkit.hero_map_object` picks `Content/sprites/naruto/map/heroes/<class>.json` up). The flag:
+  VCMI draws only the cloth (AF00-AF07); the pole is ours, drawn from the knight's pole tip down to
+  the rider. glTF imports use quaternion rotation (rotation_euler does nothing until rotation_mode
+  is XYZ) and Blender's default AgX greys colours out at map size (render with Standard).
 - Monster map shape: `townkit.creature()` sets `mapMask` VV/VA, the monster's own tile at the
   bottom right of its 64x64 picture. VCMI uses the creature's mask, not the map file's, and keeps
   the visit tile: the old VVV/VAV, a hero's shape, drew every monster a tile right of its tile

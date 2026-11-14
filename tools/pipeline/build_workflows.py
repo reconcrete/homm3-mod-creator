@@ -9,6 +9,10 @@ screen-from-reference  Qwen Image 2.1 Turbo, a layout reference + a style refere
                    any size: a game screen (menu, loading screen) redrawn for a mod's theme with the
                    original's composition. titles: 'layout', 'style' (LoadImage; pass the layout again
                    when there is no style picture), 'prompt', 'seed', 'size', 'save'.
+rider-from-refs    Qwen Image 2.1 Turbo, a rider reference + a mount reference -> one picture of the rider
+                   on the mount, plain background (the concept for a hero's adventure-map sprite: then
+                   views.py and model.py as for a creature, and tools/3d/render_rider.py). titles:
+                   'rider', 'mount' (LoadImage), 'prompt', 'seed', 'size', 'save'.
 model-from-views   Pixal3D multi-view (ComfyUI's "Pixal3D: Multi Views to 3D" template) with four
                    separate views instead of a cropped turnaround sheet, at the template's
                    quality settings (they fit 12 GB for one character). titles: 'front', 'left', 'back',
@@ -59,6 +63,20 @@ def screen_from_reference():
             n['inputs']['filename_prefix'] = 'homm3/screen'
         n.pop('_meta', None)
     return comfy.api_to_ui(api, titles={ref: 'layout', 'style': 'style', enc: 'prompt', ids['seed']: 'seed', lat: 'size',
+                                        ids['save']: 'save'})
+
+def rider_from_refs():
+    api = json.loads(json.dumps(comfy.ui_to_api(unit_views())))
+    ids = {n.get('_meta', {}).get('title'): k for k, n in api.items()}
+    ref, enc, lat = ids['reference'], ids['prompt'], ids['size']
+    api['mount'] = {'class_type': 'LoadImage', 'inputs': {'image': 'example.png'}}
+    api[enc]['inputs']['images.image_2'] = ['mount', 0]
+    api[lat]['inputs'].update({'width': 1024, 'height': 1024})
+    for k, n in api.items():
+        if n['class_type'] == 'SaveImage':
+            n['inputs']['filename_prefix'] = 'homm3/rider'
+        n.pop('_meta', None)
+    return comfy.api_to_ui(api, titles={ref: 'rider', 'mount': 'mount', enc: 'prompt', ids['seed']: 'seed', lat: 'size',
                                         ids['save']: 'save'})
 
 def model_from_views():
@@ -124,7 +142,7 @@ def model_from_views():
 
 if __name__ == '__main__':
     OUT.mkdir(exist_ok=True)
-    for name, build in (('unit-views', unit_views), ('screen-from-reference', screen_from_reference), ('model-from-views', model_from_views)):
+    for name, build in (('unit-views', unit_views), ('screen-from-reference', screen_from_reference), ('rider-from-refs', rider_from_refs), ('model-from-views', model_from_views)):
         ui = build()
         comfy.ui_to_api(ui)   # must convert back cleanly
         (OUT / f'{name}.json').write_text(json.dumps(ui, indent=1) + '\n')

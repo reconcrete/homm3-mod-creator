@@ -50,6 +50,17 @@ objects, factions = [], OURS + ORIGINALS
 spots = [(6 + 8 * c, 8 + 9 * r) for r in range(3) for c in range(4)]
 for n, (faction, (x, y)) in enumerate(zip(factions, spots)):
     objects.append(town(n, faction, 'red', x, y))
+# one hero of each of our classes in a row below the towns, to see the map riders side by side
+from handmap import CLASSES, visit_offset, ALL_AROUND
+RIDERS = [('shinobi', 'narutoUzumaki'), ('sage', 'jiraiya'), ('puppeteer', 'kankuro'), ('windSage', 'gaara'),
+          ('swordsman', 'zabuzaMomochi'), ('mistSage', 'meiTerumi')]
+for n, (cls, hid) in enumerate(RIDERS):
+    t = CLASSES[cls]['mapObject']['templates']['default']
+    tpl = {'animation': t['animation'].split('.')[0], 'editorAnimation': t.get('editorAnimation', '').split('.')[0],
+           'mask': ['VVV', 'VAV'], 'visitableFrom': ALL_AROUND}
+    ox, oy = visit_offset(tpl)
+    objects.append({'instanceName': 'hero_%d' % n, 'type': 'hero', 'subtype': cls, 'x': 3 + 4 * n - ox, 'y': 31 - oy, 'l': 0,
+                    'options': {'owner': 'red', 'type': 'naruto-heroes:' + hid}, 'template': tpl})
 gate = (spots[0][0] - 2, spots[0][1])
 objects.append(town(len(objects), 'stronghold', 'blue', SIZE - 2, SIZE - 2, built=False))
 
@@ -59,7 +70,7 @@ terrain = [['gr%d_' % random.randint(49, 72) for _ in range(SIZE)] for _ in rang
 header['mapLevels'] = {'surface': {'height': SIZE, 'index': 0, 'layer': 'core:surface', 'width': SIZE}}
 header['name'] = {'exactStrings': ['Naruto Heroes: all towns'], 'localStrings': None, 'message': [0],
                   'numbers': None, 'stringsTextID': None}
-header['description'] = {'exactStrings': ['Every town fully built, side by side: Konohagakure, Sunagakure, Kirigakure and the nine original towns. Red owns them all; open them from the town list on the right.'],
+header['description'] = {'exactStrings': ['Every town fully built, side by side: Konohagakure, Sunagakure, Kirigakure and the nine original towns. Red owns them all; open them from the town list on the right. Below them a hero of each Naruto class shows its map rider.'],
                          'localStrings': None, 'message': [0], 'numbers': None, 'stringsTextID': None}
 header['players'] = {
     'red': {'allowedFactions': {'anyOf': ['naruto-heroes:konohagakure']}, 'canPlay': 'PlayerOrAI',
@@ -74,5 +85,5 @@ with zipfile.ZipFile(OUT, 'w', zipfile.ZIP_DEFLATED) as z:
     z.writestr('objects.json', json.dumps(objects, indent='\t', ensure_ascii=False).encode('utf-8'))
     z.writestr('surface_terrain.json', json.dumps(terrain).encode('utf-8'))
 print(OUT)
-for o in objects:
+for o in [o for o in objects if o['type'] == 'town']:
     print('  %-12s %-5s at (%2d, %2d), %d buildings' % (o['subtype'], o['options']['owner'], o['x'], o['y'], len(o['options']['buildings']['allOf'])))

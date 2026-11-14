@@ -13,7 +13,7 @@
 		"mapObject": {
 			"templates": {
 				"default": {
-					"animation": "AH00_.def",
+					"animation": "naruto/map/heroes/shinobi",
 					"editorAnimation": "AH00_E.def"
 				}
 			}
@@ -87,7 +87,7 @@
 		"mapObject": {
 			"templates": {
 				"default": {
-					"animation": "AH01_.def",
+					"animation": "naruto/map/heroes/sage",
 					"editorAnimation": "AH01_E.def"
 				}
 			}

@@ -11,7 +11,7 @@
 		"mapObject": {
 			"templates": {
 				"default": {
-					"animation": "AH04_.def",
+					"animation": "naruto/map/heroes/puppeteer",
 					"editorAnimation": "AH04_E.def"
 				}
 			}
@@ -83,7 +83,7 @@
 		"mapObject": {
 			"templates": {
 				"default": {
-					"animation": "AH05_.def",
+					"animation": "naruto/map/heroes/windSage",
 					"editorAnimation": "AH05_E.def"
 				}
 			}

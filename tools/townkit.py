@@ -196,6 +196,14 @@ def creature(t, faction, cid, level, name, ru_name, borrow, cranim_name, stats, 
 
 # ---------------------------------------------------------------- hero classes and heroes
 
+def hero_map_object(cid, orig):
+    """The class's own rider (tools/pipeline/riders.py sprites) when it exists, the original's otherwise."""
+    if os.path.exists(os.path.join(ROOT, 'Content', 'sprites', 'naruto', 'map', 'heroes', cid + '.json')):
+        return {'templates': {'default': {'animation': 'naruto/map/heroes/' + cid,
+                                          'editorAnimation': orig['templates']['default']['editorAnimation']}}}
+    return orig
+
+
 def hero_class(t, faction, cid, name, ru_name, affinity, borrow_index, primary, low, high, skills,
                tavern, commander=None):
     """borrow_index: original class index whose look is reused (0 knight, 1 cleric, ...)."""
@@ -204,7 +212,7 @@ def hero_class(t, faction, cid, name, ru_name, affinity, borrow_index, primary, 
     c = {
         'name': name, 'faction': faction, 'affinity': affinity, 'commander': commander or orig['commander'],
         'defaultTavern': 5, 'tavern': tavern,
-        'mapObject': orig['mapObject'], 'animation': orig['animation'],
+        'mapObject': hero_map_object(cid, orig['mapObject']), 'animation': orig['animation'],
         'primarySkills': dict(zip(('attack', 'defence', 'spellpower', 'knowledge'), primary)),
         'lowLevelChance': dict(zip(('attack', 'defence', 'spellpower', 'knowledge'), low)),
         'highLevelChance': dict(zip(('attack', 'defence', 'spellpower', 'knowledge'), high)),

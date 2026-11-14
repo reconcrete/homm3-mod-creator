@@ -11,7 +11,7 @@
 		"mapObject": {
 			"templates": {
 				"default": {
-					"animation": "AH14_.def",
+					"animation": "naruto/map/heroes/swordsman",
 					"editorAnimation": "AH14_E.def"
 				}
 			}
@@ -83,7 +83,7 @@
 		"mapObject": {
 			"templates": {
 				"default": {
-					"animation": "AH15_.def",
+					"animation": "naruto/map/heroes/mistSage",
 					"editorAnimation": "AH15_E.def"
 				}
 			}

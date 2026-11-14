@@ -2,12 +2,15 @@
 	"name": "Naruto Heroes",
 	"description": "Three hidden villages from Naruto as playable towns: Konohagakure, Sunagakure and Kirigakure, each with 14 shinobi creatures and its own heroes, plus neutral ninja, four tailed-beast bosses and 43 artifacts, including three Kage sets.",
 	"author": "Anton Morozov",
-	"version": "1.1.3",
+	"version": "1.1.4",
 	"modType": "Town",
 	"compatibility": {
 		"min": "1.7.0"
 	},
 	"changelog": {
+		"1.1.4": [
+			"Heroes ride Naruto mounts on the adventure map instead of the knight on a horse: Naruto on a toad (shinobi), Jiraiya on a toad (sage), Kankuro on a scorpion (puppeteer), Gaara on a sand cloud (wind sage), Zabuza on a shark (swordsman), Mei Terumi on a sea turtle (mist sage); they breathe while standing and hop while walking, flag in the player's colour"
+		],
 		"1.1.3": [
 			"Naruto main menu, loading screen and scenario-selection backgrounds; the menu buttons lose the red glow of the old background"
 		],

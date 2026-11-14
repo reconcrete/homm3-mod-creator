@@ -47,6 +47,35 @@ SOURCES = {
 }
 
 PLAN = {
+    # hero map riders (tools/pipeline/riders.py makes the front; no rig, render_rider.py animates them)
+    'rider-sage': {
+        'pose': 'rider',
+        'extra': "A man (Jiraiya: long spiky white hair, a red short haori over a green kimono, a big scroll on his back) sits astride a saddle on the back of a big olive-green toad crouching on four legs, wearing a red vest with a black rope belt. In the side views we see the toad in full profile from its wide mouth to its rear legs, the man's legs hanging down its side.",
+    },
+    'rider-puppeteer': {
+        'pose': 'rider',
+        'extra': 'A puppet master (Kankuro: black hooded suit with cat-ear points, purple face paint, a bandaged bundle on his back) sits astride a saddle on a giant sand-colored scorpion with eight legs, big pincers in front, its segmented tail curled up over its back behind the rider. In the side views we see the scorpion in full profile from its pincers to its tail.',
+    },
+    'rider-windSage': {
+        'pose': 'rider',
+        'extra': 'A young man (Gaara: short red hair, a dark red long coat, a big sand gourd on his back) stands with crossed arms on top of a flat floating cloud of golden sand. The cloud is shapeless and wider than tall, with no head or face; in the side views it is a long flat cloud.',
+    },
+    'rider-swordsman': {
+        'pose': 'rider',
+        'extra': "A ninja (Zabuza: bandaged mouth, bare arms, grey striped trousers, a huge cleaver sword strapped across his back) sits astride a saddle on a great grey-blue shark gliding on its belly. In the side views we see the shark in full profile from its open jaws to its tail fin, the man's legs hanging down its side.",
+    },
+    'rider-mistSage': {
+        'pose': 'rider',
+        'extra': 'A woman (Mei Terumi: very long auburn hair, a blue dress, a Mist headband) sits astride a saddle on top of the high domed dark-green shell of a giant sea turtle with coral and barnacles, standing on four flipper legs. In the side views we see the turtle in full profile from its beaked head to its short tail.',
+    },
+    'rider-shinobi': {
+        'pose': 'animal',
+        'extra': "This is a toad with a boy riding on its back: the boy (Naruto, orange and black jumpsuit, spiky "
+                 "blond hair, Leaf headband) sits astride a small saddle on the toad's back with his hands on the "
+                 "saddle. The toad is crouching on four legs, wears a dark blue short vest with white trim and a red "
+                 "rope belt. In the side views we see the toad in full profile, its long body from the wide mouth to "
+                 "the rear legs, the boy's legs hanging down its side.",
+    },
     'fan-master': {
         'front': 'art/3d/fan-master/fan-master-apose.png', 'source': 'wind-kunoichi', 'shoot': SHOOT_CAST,
         'extra': 'She carries a large closed war fan diagonally on her back. Her back shows the red sash knot, no apron.',

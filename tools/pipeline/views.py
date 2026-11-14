@@ -1,6 +1,6 @@
 """Turnaround views of a creature for 3D: front (given), left, back, right (Qwen Image 2.1).
 
-    .venv/bin/python tools/pipeline/views.py <slug> <front image> [--seed N] [--only left,back] [--pose apose|animal|serpent] [--extra TEXT]
+    .venv/bin/python tools/pipeline/views.py <slug> <front image> [--seed N] [--only left,back] [--pose apose|animal|serpent|rider] [--extra TEXT]
 
 Writes art/pipeline/<slug>/views/{front,left,back,right}.png (left = the
 camera on the character's left, so it faces the left edge of the picture; right = facing the right
@@ -20,6 +20,7 @@ POSES = {
     'apose': 'the same neutral A-pose with the arms held out from the body',
     'animal': 'the same neutral standing pose on all its legs',
     'serpent': 'the same neutral coiled pose with the head raised',
+    'rider': 'the same pose: the rider sitting or standing on the mount exactly as in the reference',
 }
 KEEP = ('Keep everything else exactly the same: the same character, {pose}, the same outfit, colors, '
         'materials, hair, accessories and proportions. '
