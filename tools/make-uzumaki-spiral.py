@@ -15,7 +15,7 @@ Each road has two seals, and the key to each lies in the partner's arm (co-op):
   shrine  Isobu's shrine opens with two seals: the first only for Gaara, the second only for Naruto.
 Teal's heroes reach the middle of either arm through a one-way portal in the temple, so Kiri raids
 the B stretches (and the towns, once gate 1 is open). Win: defeat Isobu. Lose: Naruto or Gaara
-falls, or day 43 comes (Isobu is bound).
+falls, or day 36 comes (Isobu is bound).
 
 Texts in English and Russian (the map's own files plus the mod's translations, see
 Texts.register_in_mod). Built with tools/handmap.py and its checks."""
@@ -399,8 +399,8 @@ temple = m.town('kirigakure', (17, 15), 'teal', ['villageHall', 'townHall', 'tav
                 name=T.id('town.uzushioTemple.name', 'Uzushio Temple', 'Храм Узусио'))
 naruto = m.hero('narutoUzumaki', 'red', LANDINGS['red']['hero'], [('genin', 24), ('ninjaHound', 10), ('hyugaGuard', 5)])
 gaara = m.hero('gaara', 'blue', LANDINGS['blue']['hero'], [('sunaGenin', 26), ('woodenPuppet', 10), ('windKunoichi', 5)])
-yagura = m.hero('yagura', 'teal', (21, 15), [('mistGenin', 30), ('hunterNin', 16), ('hozukiBrawler', 10), ('summonedShark', 6),
-                                             ('yukiClanAdept', 4)], experience=5000)
+yagura = m.hero('yagura', 'teal', (21, 15), [('mistGenin', 18), ('hunterNin', 9), ('hozukiBrawler', 6), ('summonedShark', 3),
+                                             ('yukiClanAdept', 2)], experience=2500)
 
 # ------------------------------------------------------------------ the arms (blue mirrors red, so both are equal)
 
@@ -442,26 +442,26 @@ for arm, c in ARMCFG.items():
     thing('treasureChest/treasureChest', on_arm(arm, 6.35, 1.2))
     thing('resource/gold', on_arm(arm, 6.15, -1.2))
     keymaster(c['tent_color'], on_arm(arm, 5.95, 1.2))            # the partner's key
-    checkpoint(arm, 5.7, 'trackerHunterNin', 12)
+    checkpoint(arm, 5.7, 'trackerHunterNin', 18)
     portal('monolithTwoWay', 'monolith1', on_arm(arm, 5.4, 1.2))   # window A: the two outer roads
     thing('learningStone/learningStone', on_arm(arm, 5.2, -1.2))
     along(lambda at: dwelling(c['lair'], at), arm, 5.05, 1.0)
     thing('campfire/campfire', on_arm(arm, 4.95, -1.2))
     # B: the middle road (Kiri raids it through the temple's one-way monolith)
     portal('monolithOneWayExit', 'monolith1', on_arm(arm, 4.62, 1.2))
-    checkpoint(arm, 4.35, 'stoneNinja', 14)
+    checkpoint(arm, 4.35, 'stoneNinja', 21)
     thing('treasureChest/treasureChest', on_arm(arm, 4.12, -1.2))
     along(lambda at: dwelling('soundVillageOutpost', at), arm, 3.98, 1.0)
     portal('monolithTwoWay', 'monolith2', on_arm(arm, 3.78, 1.2))   # window B: the two middle roads
     thing('magicWell/magicWell', on_arm(arm, 3.64, -1.2))
-    checkpoint(arm, 3.45, 'cloudNinja', 10)
+    checkpoint(arm, 3.45, 'cloudNinja', 14)
     for res, t, side in (('mercury', 3.28, 1.2), ('sulfur', 3.2, -1.2), ('crystal', 3.12, 1.2), ('gems', 3.05, -1.2)):
         thing('resource/' + res, on_arm(arm, t, side))
-    checkpoint(arm, 2.92, 'mistSwordsman', 7, 'monster.treasure.%s.message' % arm, TREASURE_TEXT[c['treasure']],
+    checkpoint(arm, 2.92, 'mistSwordsman', 9, 'monster.treasure.%s.message' % arm, TREASURE_TEXT[c['treasure']],
                carries=c['treasure'])
     thing('treasureChest/treasureChest', on_arm(arm, 2.66, 1.2))
     # C: the inner road, Kiri's ground
-    checkpoint(arm, 1.98, 'waterDragon', 3)
+    checkpoint(arm, 1.98, 'waterDragon', 4)
     artifact(c['prize'], on_arm(arm, 1.85, 1.0))
     pandora('pandora.%s' % arm, on_arm(arm, 1.5, -1.0), ('The Uzumaki sealing masks still hold the chakra of the clan. It flows into you.',
             'Маски печатей Узумаки всё ещё хранят чакру клана. Она вливается в вас.'), reward(exp=3000))
@@ -616,13 +616,13 @@ header['description'] = say('header.description',
     'holds the temple at its heart and is binding Isobu, the Three-Tails, with the clan\'s own seals. Naruto lands on the '
     'north-west shore, Gaara on the south-east. Each spiral road is shut by seals whose keys lie on the other road: work '
     'together. Stone circles join the two roads.\n\n'
-    'Win: defeat Isobu in the shrine at the centre. Lose: Naruto or Gaara falls, or day 43 comes.',
+    'Win: defeat Isobu in the shrine at the centre. Lose: Naruto or Gaara falls, or day 36 comes.',
     'Кооператив для двух игроков (красный и синий — союзники). Руины Узусиогакуре, Деревни Водоворота клана Узумаки, '
     'лежат на острове, выстроенном двойной спиралью клана. Ягура, Четвёртый Мизукаге, марионетка человека в маске, '
     'держит храм в её сердце и сковывает Исобу, Трёххвостого, собственными печатями клана. Наруто высаживается на '
     'северо-западном берегу, Гаара — на юго-восточном. Каждую спиральную дорогу закрывают печати, ключи от которых '
     'лежат на другой дороге: действуйте вместе. Каменные круги соединяют две дороги.\n\n'
-    'Победа: одолеть Исобу в святилище в центре. Поражение: погибнет Наруто или Гаара, или наступит 43-й день.')
+    'Победа: одолеть Исобу в святилище в центре. Поражение: погибнет Наруто или Гаара, или наступит 36-й день.')
 header['author'] = say('header.author', 'Naruto Heroes', 'Naruto Heroes')
 header['mapVersion'] = say('header.mapVersion', '1.0', '1.0')
 header['difficulty'] = 'HARD'
@@ -648,11 +648,11 @@ def timed(name, day, text, players=('red', 'blue'), human=True, resources=None):
 KIRI = ('Kiri\'s hunter-nin gather in the temple.', 'Охотники Кири собираются в храме.')
 header['events'] = [
     timed('landing', 1, ('Uzushiogakure. Naruto and Gaara land on opposite shores of the spiral island. Tsunade\'s orders: '
-        '"Yagura holds the temple at the centre, and the masked man is chaining the Three-Tails with the Uzumaki seals. In six '
+        '"Yagura holds the temple at the centre, and the masked man is chaining the Three-Tails with the Uzumaki seals. In five '
         'weeks Isobu will be his weapon. Each of your roads is sealed, and the keys lie on the other road: help each other. '
         'The stone circles on your roads lead to each other\'s."',
         'Узусиогакуре. Наруто и Гаара высаживаются на противоположных берегах спирального острова. Приказ Цунаде: «Ягура '
-        'держит храм в центре, а человек в маске сковывает Трёххвостого печатями Узумаки. Через шесть недель Исобу станет его '
+        'держит храм в центре, а человек в маске сковывает Трёххвостого печатями Узумаки. Через пять недель Исобу станет его '
         'оружием. Каждую вашу дорогу закрывает печать, а ключи лежат на другой дороге: помогайте друг другу. Каменные круги '
         'на ваших дорогах ведут на дорогу друга.»')),
     timed('keys', 2, ('An old Uzumaki inscription on the shore: "The guardian of each road lets through whoever has visited '
@@ -666,18 +666,18 @@ header['events'] = [
         resources={'gold': 2000, 'wood': 5, 'ore': 5}),
     dict(timed('raids', 10, ('Scouts report: the masked man\'s stone circle in the temple has woken. From now on Kiri\'s '
         'hunter-nin step into it and come out on your roads, past the first seals. Guard your mines, and your towns once the '
-        'green and purple guardians are gone.',
+        'green and purple guardians are gone. Keep Naruto and Gaara with strong armies: if either falls, the mission fails.',
         'Разведчики докладывают: каменный круг человека в маске в храме проснулся. Теперь охотники Кири входят в него и '
         'выходят на ваших дорогах, за первыми печатями. Берегите шахты, а когда исчезнут зелёный и фиолетовый стражи, и '
-        'города.')),
+        'города. Держите при Наруто и Гааре сильные армии: если кто-то из них падёт, миссия провалена.')),
         deletedObjectsInstances=[m.objects.index(raid_seal)]),     # the seal on Kiri's portal goes (ids = list order)
     timed('materials', 22, ('Tsunade and the Kazekage\'s council send rare materials.',
         'Цунаде и совет Казекаге присылают редкие материалы.'), resources={'gold': 2500, 'mercury': 4, 'sulfur': 4,
                                                                             'crystal': 4, 'gems': 4}),
-    timed('halfway', 22, ('Three weeks are gone. The chains on Isobu tighten: three weeks left.',
-        'Прошло три недели. Цепи на Исобу затягиваются: осталось три недели.')),
-    timed('lastWeek', 36, ('One week left! On day 43 the binding will be complete.',
-        'Осталась одна неделя! На 43-й день сковывание завершится.')),
+    timed('halfway', 22, ('Three weeks are gone. The chains on Isobu tighten: two weeks left.',
+        'Прошло три недели. Цепи на Исобу затягиваются: осталось две недели.')),
+    timed('lastWeek', 29, ('One week left! On day 36 the binding will be complete.',
+        'Осталась одна неделя! На 36-й день сковывание завершится.')),
 ] + [timed('kiri%d' % d, d, KIRI, players=('teal',), human=False,
            resources={'gold': 3000 + 500 * (d // 7), 'wood': 6, 'ore': 6, 'mercury': 3, 'sulfur': 3, 'crystal': 3, 'gems': 3})
      for d in (8, 15, 22, 29, 36)]
@@ -714,17 +714,17 @@ header['triggeredEvents'] = {
         'message': say('header.defeat.gaara.message', 'Gaara has fallen. Without him the sand lock will never open. The '
                        'mission has failed.', 'Гаара пал. Без него песчаный замок никогда не откроется. Миссия провалена.')},
     'isobuBound': {
-        'condition': ['allOf', human, ['daysPassed', {'value': 42}]],
+        'condition': ['allOf', human, ['daysPassed', {'value': 35}]],
         'effect': {'type': 'defeat', 'messageToSend': say('header.defeat.time.others', 'Isobu is bound.', 'Исобу скован.')},
-        'message': say('header.defeat.time.message', 'Day 43: the binding is complete. Isobu rises from the sea as the masked '
-                       'man\'s weapon. The mission has failed.', '43-й день: сковывание завершено. Исобу поднимается из моря '
+        'message': say('header.defeat.time.message', 'Day 36: the binding is complete. Isobu rises from the sea as the masked '
+                       'man\'s weapon. The mission has failed.', '36-й день: сковывание завершено. Исобу поднимается из моря '
                        'оружием человека в маске. Миссия провалена.')},
     'standardDefeat': j(BASE_HEADER['triggeredEvents']['standardDefeat']),
 }
 header['victoryMessage'] = say('header.victoryMessage', 'Defeat Isobu in the shrine', 'Одолеть Исобу в святилище')
 header['victoryIconIndex'] = 7
-header['defeatMessage'] = say('header.defeatMessage', 'Lose Naruto or Gaara, or let day 43 come',
-                              'Гибель Наруто или Гаары, или 43-й день')
+header['defeatMessage'] = say('header.defeatMessage', 'Lose Naruto or Gaara, or let day 36 come',
+                              'Гибель Наруто или Гаары, или 36-й день')
 header['defeatIconIndex'] = 1
 
 # ------------------------------------------------------------------ write
