@@ -138,7 +138,14 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   ComfyUI's `homm3/screen-from-reference`, the original blurred as layout so its knight and logo
   don't survive). `buttons` turns the pink glow baked into the original buttons into shadow. The
   sub-menu labels are shipped empty (`"labels": "hide"`): they sat on Naruto's face. Picked seeds:
-  gamselbk 6, loadbar 4, gamselb0 1, gamselb1 7.
+  gamselbk 6, loadbar 4, gamselb0 1, gamselb1 7. The buttons carry their labels in the picture:
+  English in Content/, Russian in the sub-mod `mods/russian` (naruto-heroes.russian, a Translation
+  mod VCMI loads only in Russian; `screens.py ... buttons --from-mod <russian-translation>/content
+  --out mods/russian/Content`, made from russian-translation's buttons, which are full rectangles
+  with the old picture baked in). russian-translation ships the same menu files: mod.json lists it
+  in `softDepends` so ours load after it and win (unrelated mods load alphabetically, the later one
+  wins). Check menu changes in both languages. One start in English switches off every Russian
+  translation mod, ours included, for good (VCMI): re-enable them in the launcher.
 - Hero map riders (per hero class; VCMI has no per-hero map sprite, so every hero of a class rides
   the same picture): `tools/pipeline/riders.py` (docstring: concept from ComfyUI's
   `homm3/rider-from-refs`, then `make.py rider-<class>` views/model with pose `rider`,
@@ -173,7 +180,7 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   2 / 4 / 3), or the frames painted into the background show as black boxes. Hall labels
   hold about 22 characters; keep Russian names within that ("Ул." for upgrades).
 - Network play needs the identical mod on both computers (VCMI compares mod checksums):
-  `tools/package-mod.sh [out]` writes `naruto-heroes.zip` (mod.json + Content, as loaded here,
+  `tools/package-mod.sh [out]` writes `naruto-heroes.zip` (mod.json + Content + mods, as loaded here,
   maps inside) to `~/Desktop/naruto-heroes-share`; the other computer imports it with the
   launcher's "Import files". Re-send after every mod change.
 - Map texts and languages: VCMI 1.7.5 reads a map's english.json / russian.json but drops the
@@ -193,7 +200,7 @@ numbers and mechanics are ours, specified first in each area note's "Details" se
   picture lies beyond it: the script requires at least one picture tile clickable from the
   approach side and the guard attackable (VCMI starts the fight when the hero steps into its zone).
 - Publishing: the mod has its own repository, github.com/reconcrete/naruto-heroes (branches main
-  and vcmi-1.7): `tools/publish-mod.sh [checkout]` copies mod.json, Content/, publish/README.md,
+  and vcmi-1.7): `tools/publish-mod.sh [checkout]` copies mod.json, Content/, mods/, publish/README.md,
   publish/LICENSE and publish/screenshots/ there. VCMI's launcher list
   (github.com/vcmi/vcmi-mods-repository, `vcmi-1.7.json`) only lists mods inside the vcmi-mods
   organisation: a PR links our repo and a maintainer forks it. Their reviewers are strict about AI

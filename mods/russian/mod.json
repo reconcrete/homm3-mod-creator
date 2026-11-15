@@ -1,0 +1,18 @@
+{
+	"name": "Russian menu buttons",
+	"description": "The main-menu buttons with Russian labels, without the old background's glow. Loaded only when the game language is Russian.",
+	"author": "Anton Morozov",
+	"version": "1.2.1",
+	"modType": "Translation",
+	"language": "russian",
+	"softDepends": [
+		"russian-translation"
+	],
+	"compatibility": {
+		"min": "1.7.0"
+	},
+	"russian": {
+		"name": "Русские кнопки меню",
+		"description": "Кнопки главного меню с русскими надписями, без свечения старого фона. Загружаются, только когда язык игры русский."
+	}
+}

@@ -5,6 +5,7 @@ a picture of the mod's own art gives the style.
     .venv/bin/python tools/pipeline/screens.py THEME.json generate SCREEN [--seeds 1,2,3,4]
     .venv/bin/python tools/pipeline/screens.py THEME.json install SCREEN SEED
     .venv/bin/python tools/pipeline/screens.py THEME.json buttons
+    .venv/bin/python tools/pipeline/screens.py THEME.json buttons --from-mod MODDIR --out mods/russian/Content
 
 THEME.json (the mod's data, e.g. tools/menu-screens.json):
     {"style": "art/inbox/<a picture in the mod's style>",
@@ -18,9 +19,13 @@ Content/data/<NAME>.png (800x600) and Content/data2x/<NAME>.png (1600x1200, used
 scaling of 200% and with HD textures). VCMI finds both by name, nothing to register. buttons
 rewrites every main-menu button (and the sub-menu labels) with the old background's glow turned
 into plain shadow: on a new picture the original buttons show a pink halo. Then check in the
-real game (tools/playtest). A mod that ships the same file name loads after ours
-alphabetically and wins, with a "Potential conflict" warning in the log: russian-translation ships
-all of these files, so with it switched on its Russian menu shows instead.
+real game (tools/playtest). A mod that ships the same file name and loads after ours wins (mods
+without dependencies load alphabetically), with a "Potential conflict" warning in the log.
+russian-translation ships all of these files with Russian labels, so mod.json lists it in
+`softDepends` (ours loads after it) and `buttons --from-mod <russian-translation's content dir>
+--out mods/russian/Content` makes the same glow-free buttons from its Russian ones for the
+sub-mod naruto-heroes.russian (a Translation mod: VCMI loads it only when the game language is
+Russian). Our buttons have the English labels baked in.
 """
 import argparse, json, os, pathlib, sys
 
@@ -156,7 +161,72 @@ def placed(img, bg, x, y, center):
     return best
 
 
-def buttons(theme):
+def unmix_opaque(img, bg, english, shipped):
+    """unmix for buttons painted as full rectangles (russian-translation's: the menu picture is
+    baked into the whole frame, not only a glow, and it differs from the mod's GamSelBk by ~10
+    levels, so the exact fit of unmix leaves pink patches). A pixel is background (shadow, or
+    clear where brighter) when its colour points the same way as the background's and is about
+    as saturated; saturated red that is solid in our glow-free English button (banner cloth,
+    flames) stays; scraps of the old picture at the frame's edge are dropped."""
+    import numpy as np
+    from scipy.ndimage import find_objects, label, uniform_filter
+    f = np.asarray(img.convert('RGBA'), dtype=np.float32)
+    rgb, b = f[..., :3], np.asarray(bg.convert('RGB'), dtype=np.float32)
+    sat = lambda a: (a.max(-1) - a.min(-1)) / np.maximum(a.max(-1), 1)
+    red = lambda a: (a[..., 0] > 120) & (a[..., 0] > 1.6 * a[..., 1]) & (a[..., 0] > 1.6 * a[..., 2])
+    k = np.clip((rgb * b).sum(-1) / np.maximum((b * b).sum(-1), 1), 0, 2)
+    cr, cb = rgb - rgb.mean(-1, keepdims=True), b - b.mean(-1, keepdims=True)
+    cos = (cr * cb).sum(-1) / np.maximum(np.linalg.norm(cr, axis=-1) * np.linalg.norm(cb, axis=-1), 1e-3)
+    ratio = sat(rgb) / np.maximum(sat(b), 0.05)
+    halo = (cos > 0.9) & (ratio > 0.5) & (ratio < 1.45) & (k <= 1.6) & (rgb.max(-1) >= 28)
+    halo |= (np.abs(rgb - b * k[..., None]).max(-1) <= 22) & (k <= 1.02)
+    keep = red(rgb) & red(np.asarray(english.convert('RGB'), dtype=np.float32)) & \
+        (np.asarray(shipped.convert('RGBA'))[..., 3] == 255)
+    halo &= ~keep
+    out = f.copy()
+    out[..., 3] = 255
+    out[halo, :3] = 0
+    out[halo, 3] = np.clip((1 - np.minimum(k[halo], 1)) * 255, 0, 255)
+    out[halo & (out[..., 3] < 12), 3] = 0
+    solid = (out[..., 3] == 255).astype(np.float32)
+    out[(solid > 0) & (uniform_filter(solid, 5) < 0.3) & ~keep, 3] = 0
+    lab, n = label(out[..., 3] >= 200)
+    boxes = find_objects(lab)
+    sizes = np.bincount(lab.ravel(), minlength=n + 1)
+    drop = np.zeros(n + 1, bool)
+    for e in set(np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]])).tolist()) - {0}:
+        ys, xs = boxes[e - 1]       # small or thin (a strip of an old column)
+        drop[e] = sizes[e] < 400 or min(ys.stop - ys.start, xs.stop - xs.start) <= 12
+    out[drop[lab], 3] = 0
+    return Image.fromarray(out.astype('uint8'), 'RGBA')
+
+
+def align(img, bg, x, y, center):
+    """Where a full-rectangle button's baked picture matches bg: its left columns and top rows."""
+    import numpy as np
+    f, B = np.asarray(img.convert('RGB'), dtype=np.float32), np.asarray(bg, dtype=np.float32)
+    h, w = f.shape[:2]
+    x0, y0 = (x - w // 2, y - h // 2) if center else (x, y)
+    best = None
+    for dy in range(-25, 26):
+        for dx in range(-25, 26):
+            c = B[y0 + dy:y0 + dy + h, x0 + dx:x0 + dx + w]
+            if c.shape != f.shape:
+                continue
+            e = np.abs(c[:, :4] - f[:, :4]).mean() + np.abs(c[:4] - f[:4]).mean()
+            if best is None or e < best[0]:
+                best = (e, Image.fromarray(c.astype('uint8')), dx, dy)
+    return best
+
+
+def find_file(folder, name):
+    """A file in another mod's folder, by name in any letter case (CSSarm.def for CSSARM)."""
+    for p in pathlib.Path(folder).iterdir():
+        if p.name.lower() == name.lower():
+            return p
+
+
+def buttons(theme, src=None, out=None):
     """Every main-menu button and label without the original background's glow:
     Content/sprites/<NAME>.json + naruto/menu/<NAME>/N.png, Content/data/<label>.png.
     They lie on the main menu picture (gamselbk) in all of mainmenu.json's menus. The labels
@@ -164,7 +234,11 @@ def buttons(theme):
     picture may have its hero's face: "labels": "hide" in THEME.json ships them empty."""
     sys.path.insert(0, str(ROOT / 'tools'))
     import h3def, vjson
-    bg = Image.open(original('gamselbk')).convert('RGB')
+    content = ROOT / (out or 'Content')
+    if src:     # another language's buttons, drawn over that language's main menu picture
+        bg = Image.open(find_file(pathlib.Path(src) / 'data', 'GamSelBk.bmp')).convert('RGB')
+    else:
+        bg = Image.open(original('gamselbk')).convert('RGB')
     menus = vjson.load(str(MAINMENU))['window']['items']
     done = set()
     for m in menus:
@@ -173,18 +247,31 @@ def buttons(theme):
             if name in done:
                 continue
             done.add(name)
-            groups = h3def.decode(lod.read(str(SPRITES), name + '.DEF')[1], shadows=True)
+            own = src and find_file(pathlib.Path(src) / 'sprites', name + '.DEF')
+            data = own.read_bytes() if own else lod.read(str(SPRITES), name + '.DEF')[1]
+            if src and not own:
+                print(f'{name}: not in {src}, skipped')
+                continue
+            groups = h3def.decode(data, shadows=True)
             frames = [f for _, f in groups[0]]
-            share, crop, dx, dy = placed(frames[0], bg, b['x'], b['y'], b.get('center'))
-            d = ROOT / 'Content' / 'sprites' / 'naruto' / 'menu' / name
+            d = content / 'sprites' / 'naruto' / 'menu' / name
             d.mkdir(parents=True, exist_ok=True)
-            for i, f in enumerate(frames):
-                unmix(f, crop)[0].save(d / f'{i}.png', optimize=True)
-            (ROOT / 'Content' / 'sprites' / f'{name}.json').write_text(json.dumps(
+            if src:
+                err, crop, dx, dy = align(frames[0], bg, b['x'], b['y'], b.get('center'))
+                english = [f for _, f in h3def.decode(lod.read(str(SPRITES), name + '.DEF')[1], shadows=True)[0]]
+                for i, f in enumerate(frames):
+                    shipped = Image.open(ROOT / 'Content' / 'sprites' / 'naruto' / 'menu' / name / f'{i}.png')
+                    unmix_opaque(f, crop, english[i], shipped).save(d / f'{i}.png', optimize=True)
+                share = 1 - err / 255
+            else:
+                share, crop, dx, dy = placed(frames[0], bg, b['x'], b['y'], b.get('center'))
+                for i, f in enumerate(frames):
+                    unmix(f, crop)[0].save(d / f'{i}.png', optimize=True)
+            (content / 'sprites' / f'{name}.json').write_text(json.dumps(
                 {'basepath': f'naruto/menu/{name}/', 'sequences': [{'group': 0, 'frames': [f'{i}.png' for i in range(len(frames))]}]},
                 indent='\t') + '\n')
-            print(f'{name}: {len(frames)} frames, halo {share:.0%}, offset {dx},{dy}')
-        for im in m.get('images', []):
+            print(f'{name}: {len(frames)} frames, {"background fit" if src else "halo"} {share:.0%}, offset {dx},{dy}')
+        for im in ([] if src else m.get('images', [])):     # labels: the main mod's (hidden) ones win
             name = im['name'].lower()
             if name in done:
                 continue
@@ -206,10 +293,12 @@ if __name__ == '__main__':
     ap.add_argument('screen', nargs='?', choices=SCREENS)
     ap.add_argument('seed', nargs='?', type=int)
     ap.add_argument('--seeds', default='1,2,3,4')
+    ap.add_argument('--from-mod', help="buttons: another mod's content folder (e.g. russian-translation's) to take the buttons from")
+    ap.add_argument('--out', help='buttons: content folder to write to, relative to the repo (default Content)')
     a = ap.parse_args()
     theme = json.load(open(a.theme))
     if a.action == 'buttons':
-        buttons(theme)
+        buttons(theme, a.from_mod, a.out)
     elif a.action == 'generate':
         generate(theme, a.screen, [int(s) for s in a.seeds.split(',')])
     else:

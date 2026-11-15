@@ -5,12 +5,18 @@
 	"contact": "https://github.com/reconcrete/naruto-heroes",
 	"licenseName": "CC BY-NC 4.0",
 	"licenseURL": "https://creativecommons.org/licenses/by-nc/4.0/",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"modType": "Town",
+	"softDepends": [
+		"russian-translation"
+	],
 	"compatibility": {
 		"min": "1.7.0"
 	},
 	"changelog": {
+		"1.2.1": [
+			"With the russian-translation mod on, the Naruto main menu shows (it was replaced by the original one) and its buttons carry Russian labels (sub-mod \"Russian menu buttons\", loaded when the game language is Russian)"
+		],
 		"1.2.0": [
 			"New co-op story map \"Naruto: The Uzumaki Spiral\" for two allied players against the AI",
 			"The three maps ship inside the mod and appear in the scenario list",

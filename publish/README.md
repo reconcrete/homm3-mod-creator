@@ -42,6 +42,11 @@ and sounds from it; the few pictures it ships that are made from original art ar
 buttons, with the old background's glow removed, and creature portraits on the original
 portrait backgrounds. For network play both computers need the same mod version.
 
+Playing in Russian: switch the game language to Russian and enable VCMI's `russian-translation`
+mod for the engine's own texts. The mod's texts, maps and menu buttons follow the language by
+themselves (the Russian buttons are the sub-mod "Russian menu buttons"). After a start in another
+language VCMI switches Russian translation mods off: enable them again in the launcher.
+
 ## How it was made
 
 The mod was built with an LLM coding agent (Claude Code) and a self-hosted image and 3D

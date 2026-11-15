@@ -7,7 +7,7 @@ LOG="$HOME/Library/Logs/vcmi/VCMI_Server_log.txt"
 fail=0
 while IFS= read -r f; do
   python3 -c "import json,sys; json.load(open(sys.argv[1]))" "$f" 2>/dev/null || { echo "BAD JSON: $f"; python3 -c "import json,sys; json.load(open(sys.argv[1]))" "$f" 2>&1 | tail -1; fail=1; }
-done < <(find mod.json Content -name '*.json')
+done < <(find mod.json Content mods -name '*.json')
 [ $fail = 1 ] && exit 1
 /Applications/VCMI.app/Contents/MacOS/vcmiserver --dummy-run > /dev/null 2>&1
 rc=$?
